@@ -94,8 +94,8 @@ AllowList operations are operations that take advantage of GPU Tensor Cores. Den
 
 With recent updates in deep learning frameworks, a technique called Automatic Mixed Precision has been introduced. It helps the developers in performing these casting and scaling operations automatically
 
-* **Automatic loss scaling and master weights integrated into optimizer classes.**
-* **Automatic casting between float16 and float32 to maximize speed while ensuring no loss in task-specific accuracy.**
+**Automatic loss scaling and master weights integrated into optimizer classes.**
+**Automatic casting between float16 and float32 to maximize speed while ensuring no loss in task-specific accuracy.**
 
 In those frameworks with automatic support, using mixed precision can be as simple as adding one line of code or enabling a single environment variable. Currently, the frameworks with support for automatic mixed precision are TensorFlow, PyTorch, and MXNet.
 
@@ -105,10 +105,10 @@ In those frameworks with automatic support, using mixed precision can be as simp
 
 Interesting point, Nvidia’s tensor cores are designed in such fashion that keeping dimension of matrix as multiple of 8 helps in faster calculation. Do read the NVIDIA’s Mixed Precision article to understand,
 
-   * **How to set the dimension in CNN.**
-   * **How to choose mini-batch size.**
-   * **How to choose linear layer.**
-   * **How to pad the vocabulary in sequence based model.**
+   **How to set the dimension in CNN.**
+   **How to choose mini-batch size.**
+   **How to choose linear layer.**
+   **How to pad the vocabulary in sequence based model.**
 
 Details related to How to set the alpha value, How to scale & unscale a parameter, how the performance is affected if poor scaling factor is chosen, how to match the performance of FP32 using FP16, check out the reference link to NVIDIA Mixed Precision.
 
