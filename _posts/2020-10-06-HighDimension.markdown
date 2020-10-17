@@ -59,7 +59,7 @@ load_digits.data.shape
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<b>Figure 2:</b> Network architecture.
+<b>Figure 1:</b> Dimension Reduction.
 </center>
 
 Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
