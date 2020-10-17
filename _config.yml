@@ -1,2 +1,4 @@
 name: Mayur, Work To Live The Dream
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
