@@ -83,9 +83,9 @@ Based on research, certain operations tends to cause over or underflow of a para
 
 AllowList operations are operations that take advantage of GPU Tensor Cores. DenyList operations are operations that may overflow the range of FP16, or require the higher precision of FP32. InferList operations are operations that are safely done in either FP32 or FP16. Typical ops included in each list are:
 
- 1. AllowList: Convolutions, Fully-connected layers
- 2. DenyList: Large reductions, Cross entropy loss, L1 Loss, Exponential
- 3. InferList: Element-wise operations (add, multiply by a constant)
+**1. AllowList: Convolutions, Fully-connected layers.**
+**2. DenyList: Large reductions, Cross entropy loss, L1 Loss, Exponential.**
+**3. InferList: Element-wise operations (add, multiply by a constant).**
 
 ## **Automatic Mixed Precision**
 
@@ -104,9 +104,9 @@ In those frameworks with automatic support, using mixed precision can be as simp
 
 Interesting point, Nvidia’s tensor cores are designed in such fashion that keeping dimension of matrix as multiple of 8 helps in faster calculation. Do read the NVIDIA’s Mixed Precision article to understand,
 
-   **How to set the dimension in CNN.**
-   **How to choose mini-batch size.**
-   **How to choose linear layer.**
+   **How to set the dimension in CNN.**\
+   **How to choose mini-batch size.**\
+   **How to choose linear layer.**\
    **How to pad the vocabulary in sequence based model.**
 
 Details related to How to set the alpha value, How to scale & unscale a parameter, how the performance is affected if poor scaling factor is chosen, how to match the performance of FP32 using FP16, check out the reference link to NVIDIA Mixed Precision.
