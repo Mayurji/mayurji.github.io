@@ -25,16 +25,16 @@ For instance, In Pytorch, the single precision float mean float32 and by default
 
 ## **Notations**
 
-**FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.**\
-**FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.**\
-**FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory.**
+FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.
+FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.
+FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory.
 
 Since the introduction of Tensor Cores in the Volta and Turing architectures (NVIDIA), significant training speedups are experienced by switching to mixed precision — up to 3x overall speedup on the most arithmetically intense model architectures. The ability to train deep learning networks with lower precision was introduced in the Pascal architecture and first supported in CUDA® 8 in the NVIDIA Deep Learning SDK.
 
 ## **Why MPT is important**
 
-**Requires less memory, enabling training and deploying large neural networks.**\
-**Transfer is faster since the bandwidth required is reduced for transmission of data.**
+**1. Requires less memory, enabling training and deploying large neural networks.**\
+**2. Transfer is faster since the bandwidth required is reduced for transmission of data.**
 
 FP16 requires 2 bytes, as the number of bytes are reduced to capture the same numerical entity, it reduces the amount of memory required to train a model and helps in increasing the batch size for our training. And also the data transfer of type FP16 is faster compared to FP32 and FP64.
 
@@ -42,8 +42,8 @@ FP16 requires 2 bytes, as the number of bytes are reduced to capture the same nu
 
 ## **For 1 million parameters**
 
-**FP32 — 1000,000 * 4 Bytes — 4 MB**\
-**FP16 — 1000,000 * 2 Bytes — 2 MB**
+**1. FP32 — 1000,000 * 4 Bytes — 4 MB**\
+**2. FP16 — 1000,000 * 2 Bytes — 2 MB**
 
 Though its half the amount of memory in FP16, few folks many consider 2MB is not worth the headache for moving to mixed precision, then
 
@@ -58,8 +58,8 @@ There is clearly significant improvement in memory required for the same number 
 
 ## **Steps in Mixed Precision Training**
 
-**Porting the model to use FP16 wherever possible.**\
-**Adding loss scaling to preserve small gradient values.**
+**1. Porting the model to use FP16 wherever possible.**\
+**2. Adding loss scaling to preserve small gradient values.**
 
 First point, Porting model to use FP16 is simple, we access the model parameters and move it float16 or half-precision as widely known. It similar to changing the dtype of a variable.
 
@@ -93,8 +93,8 @@ AllowList operations are operations that take advantage of GPU Tensor Cores. Den
 
 With recent updates in deep learning frameworks, a technique called Automatic Mixed Precision has been introduced. It helps the developers in performing these casting and scaling operations automatically
 
-**Automatic loss scaling and master weights integrated into optimizer classes.**\
-**Automatic casting between float16 and float32 to maximize speed while ensuring no loss in task-specific accuracy.**
+**1. Automatic loss scaling and master weights integrated into optimizer classes.**\
+**2. Automatic casting between float16 and float32 to maximize speed while ensuring no loss in task-specific accuracy.**
 
 In those frameworks with automatic support, using mixed precision can be as simple as adding one line of code or enabling a single environment variable. Currently, the frameworks with support for automatic mixed precision are TensorFlow, PyTorch, and MXNet.
 
@@ -104,10 +104,10 @@ In those frameworks with automatic support, using mixed precision can be as simp
 
 Interesting point, Nvidia’s tensor cores are designed in such fashion that keeping dimension of matrix as multiple of 8 helps in faster calculation. Do read the NVIDIA’s Mixed Precision article to understand,
 
-   **How to set the dimension in CNN.**\
-   **How to choose mini-batch size.**\
-   **How to choose linear layer.**\
-   **How to pad the vocabulary in sequence based model.**
+**1. How to set the dimension in CNN.**\
+**2. How to choose mini-batch size.**\
+**3. How to choose linear layer.**\
+**4. How to pad the vocabulary in sequence based model.**
 
 Details related to How to set the alpha value, How to scale & unscale a parameter, how the performance is affected if poor scaling factor is chosen, how to match the performance of FP32 using FP16, check out the reference link to NVIDIA Mixed Precision.
 
