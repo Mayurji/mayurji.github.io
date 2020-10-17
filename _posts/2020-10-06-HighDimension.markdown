@@ -7,10 +7,10 @@ date:   2020-10-06 13:43:52 +0530
 
 ## **Topics covered**
 
-**1. What is Curse of Dimensionality**
-**2. Dimensionality Reduction**
-**3. Why Dimensionality Reduction is important**
-**4. Dimension Reduction Using PCA**
+**1. What is Curse of Dimensionality**\
+**2. Dimensionality Reduction**\
+**3. Why Dimensionality Reduction is important**\
+**4. Dimension Reduction Using PCA**\
 **5. Techniques to overcome the Curse of Dimensionality**
 
 ## **Curse Of Dimensionality**
@@ -33,7 +33,8 @@ In machine learning and statistics, dimensionality reduction or dimension reduct
 Here we’ll try to understand PCA by working on MNIST Dataset. Since images have higher dimension, we’ll be loading a built in dataset from sklearn.datasets. We make all the import statements respective from loading the dataset to measuring the metrics.
 
 #### **Loading Packages**
-**```python
+>
+```python
 from sklearn.datasets import load_digits
 from sklearn.decomposition import PCA , TruncatedSVD
 from sklearn.ensemble import RandomForestClassifier
@@ -45,23 +46,23 @@ import matplotlib.cm as cm
 import numpy as np
 import skimage as img
 import seaborn as sns
-```**
+```
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
-**```python
+```python
 load_digits = load_digits()
 load_digits.data.shape
-```**
+```
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
 ![Visualizing]({{site.url}}/assets/images/highdimension/visualize.png)
 
-**Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.**
+Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
 
-**First, we are iterating over a number of components to find the best match between variance and component. And as we notice the number of components are increased, the explained variance is also increasing but after a certain value the increase components doesn't increase the explained variance which causes saturates the explained variance.**
+First, we are iterating over a number of components to find the best match between variance and component. And as we notice the number of components are increased, the explained variance is also increasing but after a certain value the increase components doesn't increase the explained variance which causes saturates the explained variance.
 
-**From the results, we can notice how the variance value increases to 1 when all the 63 components are included.**
+From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
 ```python
 X = load_digits.data
@@ -101,7 +102,7 @@ plt.show()
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
-**```python
+```python
 pca_1_Comp = PCA(n_components=24)
 X_1 = pca_1_Comp.fit_transform(X)
 print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())
@@ -114,9 +115,9 @@ print("Accuracy: ",m.accuracy_score(y_test,y_predict))
     Explained Variance:  0.926072683352
     Accuracy:  0.936111111111
 
-**From 64 Feature vector to 24 Feature,it means we are able to maintain the good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happens with respect to number of components, these changes saturate after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain maximum variance of 0.92 with 24 principal components at the accuracy of 93%.**
+From 64 Feature vector to 24 Feature,it means we are able to maintain the good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happens with respect to number of components, these changes saturate after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain maximum variance of 0.92 with 24 principal components at the accuracy of 93%.
 
-**Thus comes the ending to Dimensionality reduction, with a small note to think about dimensionality reduction with the movie Interstellar, Where Cooper stays in 5 dimension (hypothetically) and which is difficult to visualize, but we try to understand the scene from our 2 dimension screen.**
+Thus comes the ending to Dimensionality reduction, with a small note to think about dimensionality reduction with the movie Interstellar, Where Cooper stays in 5 dimension (hypothetically) and which is difficult to visualize, but we try to understand the scene from our 2 dimension screen.
 
 
 ## **Techniques to overcome the Curse of Dimensionality**
