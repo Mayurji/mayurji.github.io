@@ -17,7 +17,7 @@ date:   2020-10-06 13:43:52 +0530
     Learning Rate\
     Minibatch Size\
     Number of Iterations\
-    Number of Hidden Units and Layers**\
+    Number of Hidden Units and Layers**
     
 
 ## **What is Hyperparameter**
