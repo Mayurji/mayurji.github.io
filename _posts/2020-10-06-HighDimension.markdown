@@ -34,7 +34,7 @@ Here we’ll try to understand PCA by working on MNIST Dataset. Since images hav
 
 #### **Loading Packages**
 >
-```python
+**```python
 from sklearn.datasets import load_digits
 from sklearn.decomposition import PCA , TruncatedSVD
 from sklearn.ensemble import RandomForestClassifier
@@ -45,8 +45,8 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 import skimage as img
-import seaborn as sns
-```
+import seaborn as sns```
+**
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
@@ -56,6 +56,7 @@ load_digits.data.shape
 ```
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
+
 ![Visualizing]({{site.url}}/assets/images/highdimension/visualize.png)
 
 Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
