@@ -12,10 +12,10 @@ date:   2020-10-05 13:43:52 +0530
 
 ## **Topics covered**
 
- **What is Mixed Precision Training**\
- **Why MPT is Important**\
- **How MPT reduces memory**\
- **Frameworks with AMP (Automatic Mixed Precision)**
+ **1. What is Mixed Precision Training**\
+ **2. Why MPT is Important**\
+ **3. How MPT reduces memory**\
+ **4. Frameworks with AMP (Automatic Mixed Precision)**
 
 ## **What is Mixed Precision Training**
 
@@ -33,7 +33,7 @@ Since the introduction of Tensor Cores in the Volta and Turing architectures (NV
 
 ## **Why MPT is important**
 
-**Requires less memory, enabling training and deploying large neural networks.**
+**Requires less memory, enabling training and deploying large neural networks.**\
 **Transfer is faster since the bandwidth required is reduced for transmission of data.**
 
 FP16 requires 2 bytes, as the number of bytes are reduced to capture the same numerical entity, it reduces the amount of memory required to train a model and helps in increasing the batch size for our training. And also the data transfer of type FP16 is faster compared to FP32 and FP64.
@@ -71,8 +71,8 @@ Interestingly, there is adaptive scaling technique is introduced for layer wise 
 
 ## **What happens when we switch to Mixed Precision**
 
-**Decreased memory usage to train and deploy a large models.**\
-**Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.**
+**1. Decreased memory usage to train and deploy a large models.**\
+**2. Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.**
 
 The term Mixed Precision Training is realized because the training utilizes both the half-precision and single precision representations.
 
@@ -83,8 +83,8 @@ Based on research, certain operations tends to cause over or underflow of a para
 
 AllowList operations are operations that take advantage of GPU Tensor Cores. DenyList operations are operations that may overflow the range of FP16, or require the higher precision of FP32. InferList operations are operations that are safely done in either FP32 or FP16. Typical ops included in each list are:
 
-**1. AllowList: Convolutions, Fully-connected layers.**
-**2. DenyList: Large reductions, Cross entropy loss, L1 Loss, Exponential.**
+**1. AllowList: Convolutions, Fully-connected layers.**\
+**2. DenyList: Large reductions, Cross entropy loss, L1 Loss, Exponential.**\
 **3. InferList: Element-wise operations (add, multiply by a constant).**
 
 ## **Automatic Mixed Precision**
@@ -93,7 +93,7 @@ AllowList operations are operations that take advantage of GPU Tensor Cores. Den
 
 With recent updates in deep learning frameworks, a technique called Automatic Mixed Precision has been introduced. It helps the developers in performing these casting and scaling operations automatically
 
-**Automatic loss scaling and master weights integrated into optimizer classes.**
+**Automatic loss scaling and master weights integrated into optimizer classes.**\
 **Automatic casting between float16 and float32 to maximize speed while ensuring no loss in task-specific accuracy.**
 
 In those frameworks with automatic support, using mixed precision can be as simple as adding one line of code or enabling a single environment variable. Currently, the frameworks with support for automatic mixed precision are TensorFlow, PyTorch, and MXNet.
