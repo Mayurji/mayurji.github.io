@@ -3,15 +3,15 @@ layout: default
 title: Blogs
 ---
 <head>
-<h2>{{ page.title }}</h2>
-
 <!-- link to main stylesheet -->
 <link rel="stylesheet" type="text/css" href="/css/main.css">
+  
+<h2>{{ page.title }}</h2>
 </head>
 <ul class="posts">
 
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> » <strong><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></strong></li>
-    <p>{{post.description}}</p>
+    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" <strong>title="{{ post.title }}">{{ post.title }}</strong>
+    <p>{{post.description}}</p></a></li>
   {% endfor %}
 </ul>
