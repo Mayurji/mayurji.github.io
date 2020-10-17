@@ -34,27 +34,28 @@ Here we’ll try to understand PCA by working on MNIST Dataset. Since images hav
 
 #### **Loading Packages**
 
-**```
-from sklearn.datasets import load_digits\
-from sklearn.decomposition import PCA , TruncatedSVD\
-from sklearn.ensemble import RandomForestClassifier\
-from sklearn.naive_bayes import GaussianNB\
-from sklearn.model_selection import train_test_split\
-import sklearn.metrics as m\
-import matplotlib.pyplot as plt\
-import matplotlib.cm as cm\
-import numpy as np\
-import skimage as img\
-import seaborn as sns```**
+{% highlight python %}
+from sklearn.datasets import load_digits
+from sklearn.decomposition import PCA , TruncatedSVD
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import train_test_split
+import sklearn.metrics as m
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import numpy as np
+import skimage as img
+import seaborn as sns
+{% endhighlight %}
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
-**load_digits = load_digits()\
-load_digits.data.shape**
+{% highlight python %}
+load_digits = load_digits()
+load_digits.data.shape
+{% endhighlight %}
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
-
-
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/visualize.png"; background-color:#DCDCDC;" /><br>
@@ -67,7 +68,7 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-```
+{% highlight python %}
 X = load_digits.data
 y = load_digits.target
 variance = []
@@ -87,24 +88,24 @@ for x in list([4,8,12,16,20,24,28,32,63]):
     print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))
     print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))
     print("--------------------------------------------------")
-```
+{% endhighlight %}
 
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
-```python
-fig = plt.figure()\
-ax = fig.add_subplot(111)\
-plt.plot(variance,components)\
-for xy in zip(variance, components):\
-    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')\
-plt.xlabel("Variance Explained")\
-plt.ylabel("Principal Components")\
+{% highlight python %}
+fig = plt.figure()
+ax = fig.add_subplot(111)
+plt.plot(variance,components)
+for xy in zip(variance, components):
+    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')
+plt.xlabel("Variance Explained")
+plt.ylabel("Principal Components")
 plt.show()
-```
+{% endhighlight %}
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
-```python
+{% highlight python %}
 pca_1_Comp = PCA(n_components=24)
 X_1 = pca_1_Comp.fit_transform(X)
 print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())
@@ -113,7 +114,7 @@ gnb = GaussianNB()
 gnb.fit(X_train,y_train)
 y_predict = gnb.predict(X_test)
 print("Accuracy: ",m.accuracy_score(y_test,y_predict))
-```
+{% endhighlight %}
     
 **Explained Variance:  0.926072683352**\
 **Accuracy:  0.936111111111**
