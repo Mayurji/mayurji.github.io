@@ -59,8 +59,7 @@ load_digits.data.shape
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/visualize.png"; background-color:#DCDCDC;" /><br>
-<b>Figure 1:</b> Dimension Reduction
-</center>
+<b>Figure 1:</b> Dimension Reduction </center>
 
 Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
 
@@ -92,30 +91,30 @@ for x in list([4,8,12,16,20,24,28,32,63]):\
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
 
-fig = plt.figure()
-ax = fig.add_subplot(111)
-plt.plot(variance,components)
-for xy in zip(variance, components):
-    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')
-plt.xlabel("Variance Explained")
-plt.ylabel("Principal Components")
+>fig = plt.figure()\
+ax = fig.add_subplot(111)\
+plt.plot(variance,components)\
+for xy in zip(variance, components):\
+    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')\
+plt.xlabel("Variance Explained")\
+plt.ylabel("Principal Components")\
 plt.show()
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
-{% highlight python %}
-pca_1_Comp = PCA(n_components=24)
-X_1 = pca_1_Comp.fit_transform(X)
-print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())
-X_train,X_test,y_train,y_test = train_test_split(X_1,y,test_size = 0.2,random_state=1)
-gnb = GaussianNB()
-gnb.fit(X_train,y_train)
-y_predict = gnb.predict(X_test)
+
+>pca_1_Comp = PCA(n_components=24)\
+X_1 = pca_1_Comp.fit_transform(X)\
+print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())\
+X_train,X_test,y_train,y_test = train_test_split(X_1,y,test_size = 0.2,random_state=1)\
+gnb = GaussianNB()\
+gnb.fit(X_train,y_train)\
+y_predict = gnb.predict(X_test)\
 print("Accuracy: ",m.accuracy_score(y_test,y_predict))
-{% endhighlight %}
+
     
-**Explained Variance:  0.926072683352**\
-**Accuracy:  0.936111111111**
+**Explained Variance:  0.92**\
+**Accuracy:  0.93**
 
 From 64 Feature vector to 24 Feature,it means we are able to maintain the good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happens with respect to number of components, these changes saturate after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain maximum variance of 0.92 with 24 principal components at the accuracy of 93%.
 
@@ -125,11 +124,11 @@ Thus comes the ending to Dimensionality reduction, with a small note to think ab
 
 There are number of ways of Dimensionality reduction such as feature selection and Feature Extraction.
 
-**1. PCA**
-**2. Missing Value Ratio**
-**3. Low Variance Filter**
-**4. Backward Feature Elimination**
-**5. Forward Feature Construction**
+**1. PCA**\
+**2. Missing Value Ratio**\
+**3. Low Variance Filter**\
+**4. Backward Feature Elimination**\
+**5. Forward Feature Construction**\
 **6. High Correlation Filter**
 
 ![High Dimension]({{site.url}}/assets/images/highdimension/hd.png)
