@@ -2,7 +2,12 @@
 layout: default
 title: Blogs
 ---
+<head>
 <h2>{{ page.title }}</h2>
+
+<!-- link to main stylesheet -->
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
 <ul class="posts">
 
   {% for post in site.posts %}
