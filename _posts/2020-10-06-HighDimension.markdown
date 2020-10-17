@@ -58,7 +58,7 @@ load_digits.data.shape
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
 
 <center>
-<img src="{​{site.baseurl}}/assets/images/highdimension/visualize.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
 <b>Figure 2:</b> Network architecture.
 </center>
 
