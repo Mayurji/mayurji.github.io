@@ -25,8 +25,8 @@ For instance, In Pytorch, the single precision float mean float32 and by default
 
 ## **Notations**
 
-FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.
-FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.
+FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.\
+FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.\
 FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory.
 
 Since the introduction of Tensor Cores in the Volta and Turing architectures (NVIDIA), significant training speedups are experienced by switching to mixed precision — up to 3x overall speedup on the most arithmetically intense model architectures. The ability to train deep learning networks with lower precision was introduced in the Pascal architecture and first supported in CUDA® 8 in the NVIDIA Deep Learning SDK.
