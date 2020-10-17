@@ -56,7 +56,7 @@ load_digits.data.shape**
 
 
 <center>
-<img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 40%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 10%; background-color:#DCDCDC;" /><br>
 <b>Figure 1:</b> Dimension Reduction.
 </center>
 
