@@ -61,6 +61,8 @@ ul.posts li {
 }
 
 img {
-  width:800px;
-  height:600px;
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
 }
