@@ -25,16 +25,16 @@ For instance, In Pytorch, the single precision float mean float32 and by default
 
 ## **Notations**
 
-**FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.**
-**FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.**
+**FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.**\
+**FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.**\
 **FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory.**
 
 Since the introduction of Tensor Cores in the Volta and Turing architectures (NVIDIA), significant training speedups are experienced by switching to mixed precision — up to 3x overall speedup on the most arithmetically intense model architectures. The ability to train deep learning networks with lower precision was introduced in the Pascal architecture and first supported in CUDA® 8 in the NVIDIA Deep Learning SDK.
 
 ## **Why MPT is important**
 
-* Requires less memory, enabling training and deploying large neural networks
-* Transfer is faster since the bandwidth required is reduced for transmission of data
+**Requires less memory, enabling training and deploying large neural networks.**
+**Transfer is faster since the bandwidth required is reduced for transmission of data.**
 
 FP16 requires 2 bytes, as the number of bytes are reduced to capture the same numerical entity, it reduces the amount of memory required to train a model and helps in increasing the batch size for our training. And also the data transfer of type FP16 is faster compared to FP32 and FP64.
 
