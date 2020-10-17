@@ -12,10 +12,10 @@ date:   2020-10-05 13:43:52 +0530
 
 ## **Topics covered**
 
-   >**What is Mixed Precision Training\
-    Why MPT is Important\
-    How MPT reduces memory\
-    Frameworks with AMP (Automatic Mixed Precision)**\
+ **What is Mixed Precision Training**\
+ **Why MPT is Important**\
+ **How MPT reduces memory**\
+ **Frameworks with AMP (Automatic Mixed Precision)**
 
 ## **What is Mixed Precision Training**
 
@@ -42,13 +42,12 @@ FP16 requires 2 bytes, as the number of bytes are reduced to capture the same nu
 
 ## **For 1 million parameters**
 
-* **FP32 — 1000,000 * 4 Bytes — 4 MB**
-
-* **FP16 — 1000,000 * 2 Bytes — 2 MB**
+**FP32 — 1000,000 * 4 Bytes — 4 MB**\
+**FP16 — 1000,000 * 2 Bytes — 2 MB**
 
 Though its half the amount of memory in FP16, few folks many consider 2MB is not worth the headache for moving to mixed precision, then
 
-> **Consider following situation of using Resnet50, The 50-layer ResNet network has ~26 million weight parameters and computes
+**Consider following situation of using Resnet50, The 50-layer ResNet network has ~26 million weight parameters and computes
  ~16 million activation’s in the forward pass. If you use a 32-bit floating-point value to store each weight and activation 
  this would give a total storage requirement of 168 MB. By using a lower precision value to store these weights and activations
  we could halve or even quarter this storage requirement, i.e. for 42 million transactions, FP16 requires 84MB.**
@@ -59,8 +58,8 @@ There is clearly significant improvement in memory required for the same number 
 
 ## **Steps in Mixed Precision Training**
 
-* Porting the model to use FP16 wherever possible
-* Adding loss scaling to preserve small gradient values.
+**Porting the model to use FP16 wherever possible.**\
+**Adding loss scaling to preserve small gradient values.**
 
 First point, Porting model to use FP16 is simple, we access the model parameters and move it float16 or half-precision as widely known. It similar to changing the dtype of a variable.
 
@@ -72,8 +71,8 @@ Interestingly, there is adaptive scaling technique is introduced for layer wise 
 
 ## **What happens when we switch to Mixed Precision**
 
-* **Decreased memory usage to train and deploy a large models.**
-* **Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.**
+**Decreased memory usage to train and deploy a large models.**\
+**Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.**
 
 The term Mixed Precision Training is realized because the training utilizes both the half-precision and single precision representations.
 
