@@ -53,7 +53,12 @@ load_digits.data.shape**
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
 
-![Visualizing]({{site.url}}/assets/images/highdimension/visualize.png)
+
+
+<center>
+<img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 40%; background-color:#DCDCDC;" /><br>
+<b>Figure 1:</b> Dimension Reduction.
+</center>
 
 Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
 
@@ -61,25 +66,27 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-**X = load_digits.data\
-y = load_digits.target\
-variance = []\
-components = [4,8,12,16,20,24,28,32,63]\
-for x in list([4,8,12,16,20,24,28,32,63]):\
-    dimReduction = PCA(n_components=x)\
-    X_DR_PCA = dimReduction.fit_transform(X)\
-    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())\
-    variance.append(dimReduction.explained_variance_ratio_.sum())\
-    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)\
-    RFC_2 = RandomForestClassifier()\
-    mnb = GaussianNB()\
-    RFC_2.fit(X_train,y_train)\
-    mnb.fit(X_train,y_train)\
-    y_pred = RFC_2.predict(X_test)\
-    y_prediction = mnb.predict(X_test)\
-    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))\
-    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))\
-    print("--------------------------------------------------")**
+```python
+X = load_digits.data
+y = load_digits.target
+variance = []
+components = [4,8,12,16,20,24,28,32,63]
+for x in list([4,8,12,16,20,24,28,32,63]):
+    dimReduction = PCA(n_components=x)
+    X_DR_PCA = dimReduction.fit_transform(X)
+    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())
+    variance.append(dimReduction.explained_variance_ratio_.sum())
+    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)
+    RFC_2 = RandomForestClassifier()
+    mnb = GaussianNB(
+    RFC_2.fit(X_train,y_train)
+    mnb.fit(X_train,y_train)
+    y_pred = RFC_2.predict(X_test)
+    y_prediction = mnb.predict(X_test)
+    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))
+    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))
+    print("--------------------------------------------------")
+```
 
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
