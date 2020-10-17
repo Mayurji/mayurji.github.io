@@ -60,7 +60,8 @@ ul.posts li {
     color: white;
 }
 
-img {
-    width:  1000px;
-    height: 600px;
+ img {
+  width: 200px;
+  height: 400px;
+  object-fit: cover;
 }
