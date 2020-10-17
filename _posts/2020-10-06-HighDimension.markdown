@@ -7,11 +7,11 @@ date:   2020-10-06 13:43:52 +0530
 
 ## **Topics covered**
 
-  * **What is Curse of Dimensionality**
-  * **Dimensionality Reduction**
-  * **Why Dimensionality Reduction is important**
-  * **Dimension Reduction Using PCA**
-  * **Techniques to overcome the Curse of Dimensionality**
+**1. What is Curse of Dimensionality**
+**2. Dimensionality Reduction**
+**3. Why Dimensionality Reduction is important**
+**4. Dimension Reduction Using PCA**
+**5. Techniques to overcome the Curse of Dimensionality**
 
 ## **Curse Of Dimensionality**
 
@@ -33,8 +33,7 @@ In machine learning and statistics, dimensionality reduction or dimension reduct
 Here we’ll try to understand PCA by working on MNIST Dataset. Since images have higher dimension, we’ll be loading a built in dataset from sklearn.datasets. We make all the import statements respective from loading the dataset to measuring the metrics.
 
 #### **Loading Packages**
-
-```python
+**```python
 from sklearn.datasets import load_digits
 from sklearn.decomposition import PCA , TruncatedSVD
 from sklearn.ensemble import RandomForestClassifier
@@ -46,14 +45,14 @@ import matplotlib.cm as cm
 import numpy as np
 import skimage as img
 import seaborn as sns
-```
+```**
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
-```python
+**```python
 load_digits = load_digits()
 load_digits.data.shape
-```
+```**
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
 ![Visualizing]({{site.url}}/assets/images/highdimension/visualize.png)
@@ -102,7 +101,7 @@ plt.show()
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
-```python
+**```python
 pca_1_Comp = PCA(n_components=24)
 X_1 = pca_1_Comp.fit_transform(X)
 print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())
@@ -124,12 +123,12 @@ print("Accuracy: ",m.accuracy_score(y_test,y_predict))
 
 There are number of ways of Dimensionality reduction such as feature selection and Feature Extraction.
 
-* **PCA**
-* **Missing Value Ratio**
-* **Low Variance Filter**
-* **Backward Feature Elimination**
-* **Forward Feature Construction**
-* **High Correlation Filter**
+**1. PCA**
+**2. Missing Value Ratio**
+**3. Low Variance Filter**
+**4. Backward Feature Elimination**
+**5. Forward Feature Construction**
+**6. High Correlation Filter**
 
 ![High Dimension]({{site.url}}/assets/images/highdimension/hd.png)
 
@@ -146,7 +145,7 @@ Each uncorrelated variable or components holds feature information which is expl
 
 The variance explained by one principal component is uncorrelated with other principal components which means with each component we are learning or explaining a new feature. Now raises a question, how many components will be able to explain the maximum variance?. We don’t have any text book method for calculating the number of components for a given number of feature or variables.But We can maintain a variance threshold which needs to explained by the variance of the components.
 
->    **Consider we have set a threshold variance of 0.8, and if have ten components with a variance as follows 0.3, 0.25, 0.15, 0.1, 0.08, 0.08, 0.07, 0.07. then we can notice 0.3 is a component with maximum variance and is called as First Principal Component. Now since the threshold is kept at 0.8, we can add up components untill it reaches a variance of 0.8.**\
+**Consider we have set a threshold variance of 0.8, and if have ten components with a variance as follows 0.3, 0.25, 0.15, 0.1, 0.08, 0.08, 0.07, 0.07. then we can notice 0.3 is a component with maximum variance and is called as First Principal Component. Now since the threshold is kept at 0.8, we can add up components untill it reaches a variance of 0.8.**\
 **By adding first 3 components, we have variance explained at 0.7 and by including 4th component we reach a variance of 0.8.So we can including 4 components instead of ten components thus reducing the dimension from 10 to 4.**
 
 ## **Missing Value Ratio**
