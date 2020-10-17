@@ -34,26 +34,26 @@ Here we’ll try to understand PCA by working on MNIST Dataset. Since images hav
 
 #### **Loading Packages**
 
-{% highlight python %}
-from sklearn.datasets import load_digits
-from sklearn.decomposition import PCA , TruncatedSVD
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.model_selection import train_test_split
-import sklearn.metrics as m
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import numpy as np
-import skimage as img
+
+>from sklearn.datasets import load_digits\
+from sklearn.decomposition import PCA , TruncatedSVD\
+from sklearn.ensemble import RandomForestClassifier\
+from sklearn.naive_bayes import GaussianNB\
+from sklearn.model_selection import train_test_split\
+import sklearn.metrics as m\
+import matplotlib.pyplot as plt\
+import matplotlib.cm as cm\
+import numpy as np\
+import skimage as img\
 import seaborn as sns
-{% endhighlight %}
+
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
-{% highlight python %}
-load_digits = load_digits()
+
+>load_digits = load_digits()\
 load_digits.data.shape
-{% endhighlight %}
+
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
 
@@ -68,7 +68,7 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-X = load_digits.data\
+>X = load_digits.data\
 y = load_digits.target\
 variance = []\
 components = [4,8,12,16,20,24,28,32,63]\
