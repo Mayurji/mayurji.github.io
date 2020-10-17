@@ -66,38 +66,39 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-**```python
-X = load_digits.data
-y = load_digits.target
-variance = []
-components = [4,8,12,16,20,24,28,32,63]
-for x in list([4,8,12,16,20,24,28,32,63]):
-    dimReduction = PCA(n_components=x)
-    X_DR_PCA = dimReduction.fit_transform(X)
-    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())
-    variance.append(dimReduction.explained_variance_ratio_.sum())
-    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)
-    RFC_2 = RandomForestClassifier()
-    mnb = GaussianNB(
-    RFC_2.fit(X_train,y_train)
-    mnb.fit(X_train,y_train)
-    y_pred = RFC_2.predict(X_test)
-    y_prediction = mnb.predict(X_test)
-    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))
-    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))
-    print("--------------------------------------------------")
+**```
+X = load_digits.data\
+y = load_digits.target\
+variance = []\
+components = [4,8,12,16,20,24,28,32,63]\
+for x in list([4,8,12,16,20,24,28,32,63]):\
+    dimReduction = PCA(n_components=x)\
+    X_DR_PCA = dimReduction.fit_transform(X)\
+    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())\
+    variance.append(dimReduction.explained_variance_ratio_.sum())\
+    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)\
+    RFC_2 = RandomForestClassifier()\
+    mnb = GaussianNB()\
+    RFC_2.fit(X_train,y_train)\
+    mnb.fit(X_train,y_train)\
+    y_pred = RFC_2.predict(X_test)\
+    y_prediction = mnb.predict(X_test)\
+    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))\
+    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))\
+    print("--------------------------------------------------")\
 ```**
 
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
-**fig = plt.figure()\
+**```
+fig = plt.figure()\
 ax = fig.add_subplot(111)\
 plt.plot(variance,components)\
 for xy in zip(variance, components):\
     ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')\
 plt.xlabel("Variance Explained")\
 plt.ylabel("Principal Components")\
-plt.show()**
+plt.show()```**
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
