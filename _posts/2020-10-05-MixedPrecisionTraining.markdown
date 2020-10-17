@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Mixed Precision Training"
+title:  Mixed Precision Training
+description: Why training a model in 16 floating point is important and how it reduces memory and increases data transfer rate.
 date:   2020-10-05 13:43:52 +0530
-categories: jekyll update
 ---
 
 ## **Mixed Precision Training**
