@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "High Dimension Curse"
+title:  Curse of High Dimensionality
+description: why high high dimensional data is difficult to act on and why its important to reduce the dimension.
 date:   2020-10-06 13:43:52 +0530
-categories: jekyll update
 ---
 
 ## **Topics covered**
