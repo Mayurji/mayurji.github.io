@@ -34,7 +34,8 @@ Here we’ll try to understand PCA by working on MNIST Dataset. Since images hav
 
 #### **Loading Packages**
 
-**from sklearn.datasets import load_digits\
+**```
+from sklearn.datasets import load_digits\
 from sklearn.decomposition import PCA , TruncatedSVD\
 from sklearn.ensemble import RandomForestClassifier\
 from sklearn.naive_bayes import GaussianNB\
@@ -44,7 +45,7 @@ import matplotlib.pyplot as plt\
 import matplotlib.cm as cm\
 import numpy as np\
 import skimage as img\
-import seaborn as sns**
+import seaborn as sns```**
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
@@ -56,8 +57,8 @@ load_digits.data.shape**
 
 
 <center>
-<img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 10%; background-color:#DCDCDC;" /><br>
-<b>Figure 1:</b> Dimension Reduction.
+<img src="{{site.url}}/assets/images/highdimension/visualize.png"; background-color:#DCDCDC;" /><br>
+<b>Figure 1:</b> Dimension Reduction
 </center>
 
 Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
@@ -66,31 +67,31 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-**```
-X = load_digits.data\
-y = load_digits.target\
-variance = []\
-components = [4,8,12,16,20,24,28,32,63]\
-for x in list([4,8,12,16,20,24,28,32,63]):\
-    dimReduction = PCA(n_components=x)\
-    X_DR_PCA = dimReduction.fit_transform(X)\
-    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())\
-    variance.append(dimReduction.explained_variance_ratio_.sum())\
-    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)\
-    RFC_2 = RandomForestClassifier()\
-    mnb = GaussianNB()\
-    RFC_2.fit(X_train,y_train)\
-    mnb.fit(X_train,y_train)\
-    y_pred = RFC_2.predict(X_test)\
-    y_prediction = mnb.predict(X_test)\
-    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))\
-    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))\
-    print("--------------------------------------------------")\
-```**
+```
+X = load_digits.data
+y = load_digits.target
+variance = []
+components = [4,8,12,16,20,24,28,32,63]
+for x in list([4,8,12,16,20,24,28,32,63]):
+    dimReduction = PCA(n_components=x)
+    X_DR_PCA = dimReduction.fit_transform(X)
+    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())
+    variance.append(dimReduction.explained_variance_ratio_.sum())
+    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)
+    RFC_2 = RandomForestClassifier()
+    mnb = GaussianNB()
+    RFC_2.fit(X_train,y_train)
+    mnb.fit(X_train,y_train)
+    y_pred = RFC_2.predict(X_test)
+    y_prediction = mnb.predict(X_test)
+    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))
+    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))
+    print("--------------------------------------------------")
+```
 
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
-**```
+```python
 fig = plt.figure()\
 ax = fig.add_subplot(111)\
 plt.plot(variance,components)\
@@ -98,19 +99,21 @@ for xy in zip(variance, components):\
     ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')\
 plt.xlabel("Variance Explained")\
 plt.ylabel("Principal Components")\
-plt.show()```**
+plt.show()
+```
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
-
-**pca_1_Comp = PCA(n_components=24)\
-X_1 = pca_1_Comp.fit_transform(X)\
-print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())\
-X_train,X_test,y_train,y_test = train_test_split(X_1,y,test_size = 0.2,random_state=1)\
-gnb = GaussianNB()\
-gnb.fit(X_train,y_train)\
-y_predict = gnb.predict(X_test)\
-print("Accuracy: ",m.accuracy_score(y_test,y_predict))**
+```python
+pca_1_Comp = PCA(n_components=24)
+X_1 = pca_1_Comp.fit_transform(X)
+print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())
+X_train,X_test,y_train,y_test = train_test_split(X_1,y,test_size = 0.2,random_state=1)
+gnb = GaussianNB()
+gnb.fit(X_train,y_train)
+y_predict = gnb.predict(X_test)
+print("Accuracy: ",m.accuracy_score(y_test,y_predict))
+```
     
 **Explained Variance:  0.926072683352**\
 **Accuracy:  0.936111111111**
