@@ -8,8 +8,6 @@ date:   2020-10-05 13:43:52 +0530
 ## **Mixed Precision Training**
 #### **Discover a way to efficiently utilize your GPU**
 
-
-
 ![GPU]({{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg)
 
 ## **Topics covered**
@@ -27,9 +25,9 @@ For instance, In Pytorch, the single precision float mean float32 and by default
 
 ## **Notations**
 
-* FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory
-* FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory
-* FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory
+**FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.**
+**FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.**
+**FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory.**
 
 Since the introduction of Tensor Cores in the Volta and Turing architectures (NVIDIA), significant training speedups are experienced by switching to mixed precision — up to 3x overall speedup on the most arithmetically intense model architectures. The ability to train deep learning networks with lower precision was introduced in the Pascal architecture and first supported in CUDA® 8 in the NVIDIA Deep Learning SDK.
 
@@ -75,10 +73,7 @@ Interestingly, there is adaptive scaling technique is introduced for layer wise 
 ## **What happens when we switch to Mixed Precision**
 
 * **Decreased memory usage to train and deploy a large models.**
-* **Less time required for inference, execution time can be sensitive to memory or 
-    arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing
-    the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half precision 
-    arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.**
+* **Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.**
 
 The term Mixed Precision Training is realized because the training utilizes both the half-precision and single precision representations.
 
@@ -89,9 +84,9 @@ Based on research, certain operations tends to cause over or underflow of a para
 
 AllowList operations are operations that take advantage of GPU Tensor Cores. DenyList operations are operations that may overflow the range of FP16, or require the higher precision of FP32. InferList operations are operations that are safely done in either FP32 or FP16. Typical ops included in each list are:
 
-    1. AllowList: Convolutions, Fully-connected layers
-    2. DenyList: Large reductions, Cross entropy loss, L1 Loss, Exponential
-    3. InferList: Element-wise operations (add, multiply by a constant)
+ 1. AllowList: Convolutions, Fully-connected layers
+ 2. DenyList: Large reductions, Cross entropy loss, L1 Loss, Exponential
+ 3. InferList: Element-wise operations (add, multiply by a constant)
 
 ## **Automatic Mixed Precision**
 
