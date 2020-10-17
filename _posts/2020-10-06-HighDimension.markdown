@@ -66,7 +66,7 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-```python
+**```python
 X = load_digits.data
 y = load_digits.target
 variance = []
@@ -86,7 +86,7 @@ for x in list([4,8,12,16,20,24,28,32,63]):
     print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))
     print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))
     print("--------------------------------------------------")
-```
+```**
 
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
