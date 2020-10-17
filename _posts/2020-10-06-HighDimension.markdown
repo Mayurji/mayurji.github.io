@@ -33,27 +33,23 @@ In machine learning and statistics, dimensionality reduction or dimension reduct
 Here we’ll try to understand PCA by working on MNIST Dataset. Since images have higher dimension, we’ll be loading a built in dataset from sklearn.datasets. We make all the import statements respective from loading the dataset to measuring the metrics.
 
 #### **Loading Packages**
->
-**```python
-from sklearn.datasets import load_digits
-from sklearn.decomposition import PCA , TruncatedSVD
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.model_selection import train_test_split
-import sklearn.metrics as m
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import numpy as np
-import skimage as img
-import seaborn as sns```
-**
+
+**from sklearn.datasets import load_digits\
+from sklearn.decomposition import PCA , TruncatedSVD\
+from sklearn.ensemble import RandomForestClassifier\
+from sklearn.naive_bayes import GaussianNB\
+from sklearn.model_selection import train_test_split\
+import sklearn.metrics as m\
+import matplotlib.pyplot as plt\
+import matplotlib.cm as cm\
+import numpy as np\
+import skimage as img\
+import seaborn as sns**
 
 **We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.**
 
-```python
-load_digits = load_digits()
-load_digits.data.shape
-```
+**load_digits = load_digits()\
+load_digits.data.shape**
 
 **We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.**
 
@@ -65,61 +61,55 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
-```python
-X = load_digits.data
-y = load_digits.target
-variance = []
-components = [4,8,12,16,20,24,28,32,63]
-for x in list([4,8,12,16,20,24,28,32,63]):
-    dimReduction = PCA(n_components=x)
-    X_DR_PCA = dimReduction.fit_transform(X)
-    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())
-    variance.append(dimReduction.explained_variance_ratio_.sum())
-    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)
-    RFC_2 = RandomForestClassifier()
-    mnb = GaussianNB()
-    RFC_2.fit(X_train,y_train)
-    mnb.fit(X_train,y_train)
-    y_pred = RFC_2.predict(X_test)
-    y_prediction = mnb.predict(X_test)
-    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))
-    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))
-    print("--------------------------------------------------")
-```
+**X = load_digits.data\
+y = load_digits.target\
+variance = []\
+components = [4,8,12,16,20,24,28,32,63]\
+for x in list([4,8,12,16,20,24,28,32,63]):\
+    dimReduction = PCA(n_components=x)\
+    X_DR_PCA = dimReduction.fit_transform(X)\
+    print("Explained Variance with", x ," Components: " ,dimReduction.explained_variance_ratio_.sum())\
+    variance.append(dimReduction.explained_variance_ratio_.sum())\
+    X_train,X_test,y_train,y_test = train_test_split(X_DR_PCA,y,test_size=0.25)\
+    RFC_2 = RandomForestClassifier()\
+    mnb = GaussianNB()\
+    RFC_2.fit(X_train,y_train)\
+    mnb.fit(X_train,y_train)\
+    y_pred = RFC_2.predict(X_test)\
+    y_prediction = mnb.predict(X_test)\
+    print("Accuracy Score with Random Forest Classifier",m.accuracy_score(y_test,y_pred))\
+    print("Accuracy Score with Gaussian NB",m.accuracy_score(y_test,y_prediction))\
+    print("--------------------------------------------------")**
 
 ![Results]({{site.url}}/assets/images/highdimension/results.png)
 
-```python
-# Plotting variance vs Components
-fig = plt.figure()
-ax = fig.add_subplot(111)
-plt.plot(variance,components)
-for xy in zip(variance, components):
-    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')
-plt.xlabel("Variance Explained")
-plt.ylabel("Principal Components")
-plt.show()
-```
+**fig = plt.figure()\
+ax = fig.add_subplot(111)\
+plt.plot(variance,components)\
+for xy in zip(variance, components):\
+    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')\
+plt.xlabel("Variance Explained")\
+plt.ylabel("Principal Components")\
+plt.show()**
 
 ![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
 
-```python
-pca_1_Comp = PCA(n_components=24)
-X_1 = pca_1_Comp.fit_transform(X)
-print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())
-X_train,X_test,y_train,y_test = train_test_split(X_1,y,test_size = 0.2,random_state=1)
-gnb = GaussianNB()
-gnb.fit(X_train,y_train)
-y_predict = gnb.predict(X_test)
-print("Accuracy: ",m.accuracy_score(y_test,y_predict))
-```
-    Explained Variance:  0.926072683352
-    Accuracy:  0.936111111111
+
+**pca_1_Comp = PCA(n_components=24)\
+X_1 = pca_1_Comp.fit_transform(X)\
+print("Explained Variance: ",pca_1_Comp.explained_variance_ratio_.sum())\
+X_train,X_test,y_train,y_test = train_test_split(X_1,y,test_size = 0.2,random_state=1)\
+gnb = GaussianNB()\
+gnb.fit(X_train,y_train)\
+y_predict = gnb.predict(X_test)\
+print("Accuracy: ",m.accuracy_score(y_test,y_predict))**
+    
+**Explained Variance:  0.926072683352**\
+**Accuracy:  0.936111111111**
 
 From 64 Feature vector to 24 Feature,it means we are able to maintain the good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happens with respect to number of components, these changes saturate after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain maximum variance of 0.92 with 24 principal components at the accuracy of 93%.
 
 Thus comes the ending to Dimensionality reduction, with a small note to think about dimensionality reduction with the movie Interstellar, Where Cooper stays in 5 dimension (hypothetically) and which is difficult to visualize, but we try to understand the scene from our 2 dimension screen.
-
 
 ## **Techniques to overcome the Curse of Dimensionality**
 
