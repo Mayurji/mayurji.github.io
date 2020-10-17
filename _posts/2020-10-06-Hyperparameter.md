@@ -17,7 +17,7 @@ date:   2020-10-06 13:43:52 +0530
     Learning Rate\
     Minibatch Size\
     Number of Iterations\
-    Number of Hidden Units/Layers**\
+    Number of Hidden Units and Layers**\
     
 
 ## **What is Hyperparameter**
@@ -125,7 +125,7 @@ To conclude, keep track of validation error while increasing the number of hidde
 
 **As stated by Andrej Karpathy, a 3 layer net outperforms the 2 layer net but going beyond that rarely helps the network. While in CNN, greater the # of layers, greater will be the performance of the network.**
 
-[Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)
+[Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)\
 [Deep Learning Book](http://www.deeplearningbook.org/contents/ml.html)
 
 
