@@ -65,12 +65,17 @@ ul.posts li {
   height: 400px;
   object-fit: cover;
 }
-
-profile {
+.user {
   display: inline-block;
-  width: 200px;
-  height: 400px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 
-  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image: url('http://placehold.it/400x200');
 }
