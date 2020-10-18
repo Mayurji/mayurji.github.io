@@ -77,4 +77,5 @@ ul.posts li {
 .circular--portrait img {
   width: 100%;
   height: auto;
+  margin-top: -50px;
 }
