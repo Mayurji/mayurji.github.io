@@ -10,7 +10,7 @@ date:   2020-10-06 13:43:52 +0530
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 1:</b></p> Hyperparameter.
+<p><b>Figure 1:</b>Hyperparameter</p> 
 </center>
 
 ## **Topics covered**
@@ -37,7 +37,7 @@ It is the most important of all hyperparameter. Even if we are using pre-trained
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/learning_rate.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 2:</b></p> Learning Rate.
+<p><b>Figure 2:</b> Learning Rate</p>
 </center>
 
 
@@ -53,7 +53,7 @@ Sometimes keeping only one learning rate may not help us in reaching the global 
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 3:</b></p> Learning Rate Decay
+<p><b>Figure 3:</b> Learning Rate Decay</p>
 </center>
 
 ### Adaptive Learning Rate
@@ -78,7 +78,7 @@ If we keep Minibatch size = 1, then the weights are updated for every record aft
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/minibatch.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 4:</b></p> Minibatch
+<p><b>Figure 4:</b> Minibatch</p>
 </center>
 
 
@@ -105,19 +105,19 @@ The number of iteration or epoch can decided based on the validation error, as l
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/iterations.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b></p> Iterations
+<p><b>Figure 5:</b>Iterations</p> 
 </center>
 
 [Validation Monitor](https://www.tensorflow.org/get_started/monitors#early_stopping_with_validationmonitor)
 
-***```python
-validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
-      test_set.data,
-      test_set.target,
-      every_n_steps=50,
-      metrics=validation_metrics,
-      early_stopping_metric="loss",
-      early_stopping_metric_minimize=True,
+***```
+validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(\
+      test_set.data,\
+      test_set.target,\
+      every_n_steps=50,\
+      metrics=validation_metrics,\
+      early_stopping_metric="loss",\
+      early_stopping_metric_minimize=True,\
       early_stopping_rounds=200)```***
 
 The last parameter indicates to ValidationMonitor that it should stop the training process if the loss did not decrease in 200 steps (rounds) of training.
@@ -143,8 +143,6 @@ To conclude, keep track of validation error while increasing the number of hidde
 **As stated by Andrej Karpathy, a 3 layer net outperforms the 2 layer net but going beyond that rarely helps the network. While in CNN, greater the # of layers, greater will be the performance of the network.**
 
 [Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)\
-[Deep Learning Book](http://www.deeplearningbook.org/contents/ml.html)
-
 
 ## References
 
