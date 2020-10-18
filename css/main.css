@@ -61,21 +61,20 @@ ul.posts li {
 }
 
  img {
-  width: 800px;
+  width: 1000px;
   height: 400px;
   object-fit: cover;
 }
-.user {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
 
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+.circular--portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
-.one {
-  background-image: url('{{site.url}}/assets/images/profile/mayur.jpg');
+.circular--portrait img {
+  width: 100%;
+  height: auto;
 }
