@@ -77,5 +77,5 @@ ul.posts li {
 }
 
 .one {
-  background-image: url('{{site.url}}/assets/images/profile/mayur.jpg/400x200');
+  background-image: url('{{site.url}}/assets/images/profile/mayur.jpg');
 }
