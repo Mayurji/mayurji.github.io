@@ -72,8 +72,6 @@ ul.posts li {
 .profile-pic {
   display: inline;
   margin: 0 auto;
-  
-  margin-bottom: -5%; //centers the image
   height: 100%;
   width: auto;
 }
