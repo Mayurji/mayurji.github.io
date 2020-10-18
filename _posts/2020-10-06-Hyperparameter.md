@@ -47,7 +47,7 @@ A **small value** of learning rate make the progress towards global minimum very
 
 An **optimum value** of learning rate will leads to global minimum, which can be viewed by constantly decreasing loss.
 
-### **Learning Rate Decay**
+#### **Learning Rate Decay**
 
 Sometimes keeping only one learning rate may not help us in reaching the global minimum, so changing the value of learning rate after a certain number of epoch such that convergence takes place if the gradient is stuck in local minimum.
 
@@ -56,7 +56,7 @@ Sometimes keeping only one learning rate may not help us in reaching the global 
 <p><b>Figure 3:</b> Learning Rate Decay</p>
 </center>
 
-### Adaptive Learning Rate
+#### Adaptive Learning Rate
 
 Sometimes its crucial to understand the problem and change the learning rate accordingly like increasing it or decreasing it. Algorithms like Adam Optimizer and Adagrad Optimizer.
 
@@ -111,13 +111,13 @@ The number of iteration or epoch can decided based on the validation error, as l
 [Validation Monitor](https://www.tensorflow.org/get_started/monitors#early_stopping_with_validationmonitor)
 
 ***```
-validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(\
-      test_set.data,\
-      test_set.target,\
-      every_n_steps=50,\
-      metrics=validation_metrics,\
-      early_stopping_metric="loss",\
-      early_stopping_metric_minimize=True,\
+validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
+      test_set.data,
+      test_set.target,
+      every_n_steps=50,
+      metrics=validation_metrics,
+      early_stopping_metric="loss",
+      early_stopping_metric_minimize=True,
       early_stopping_rounds=200)```***
 
 The last parameter indicates to ValidationMonitor that it should stop the training process if the loss did not decrease in 200 steps (rounds) of training.
