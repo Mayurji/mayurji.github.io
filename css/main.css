@@ -64,14 +64,14 @@ ul.posts li {
 
 .circular--portrait {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 190px;
+  height: 190px;
   overflow: hidden;
   border-radius: 50%;
 }
 
 .circular--portrait img {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin-top: -100px;
   margin-bottom: -150px;
