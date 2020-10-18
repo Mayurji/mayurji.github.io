@@ -92,13 +92,6 @@ If we keep Minibatch Size = value between 1 to total no. of records, then the we
 
 Most commonly used value for **Minibatch sizes are 32, 64, 128, 256.** Values more than 256 requires more memory and computational efficiency.
 
-[How batch size affects the model performance](https://arxiv.org/abs/1606.02228)
-
-[Stackexchange](https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent)
-
-[BGD vs SGD](https://towardsdatascience.com/difference-between-batch-gradient-descent-and-stochastic-gradient-descent-1187f1291aa1)
-
-
 ## **Number of Iterations**
 
 The number of iteration or epoch can decided based on the validation error, as long as validation error keeps decreasing we can assume that our model is learning and updating the weights positively. There is a technique called as early stopping which helps in determining the no. of iterations.
@@ -142,10 +135,13 @@ To conclude, keep track of validation error while increasing the number of hidde
 
 **As stated by Andrej Karpathy, a 3 layer net outperforms the 2 layer net but going beyond that rarely helps the network. While in CNN, greater the # of layers, greater will be the performance of the network.**
 
-[Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)\
+[Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)
 
 ## References
 
+[How batch size affects the model performance](https://arxiv.org/abs/1606.02228)
+[Stackexchange](https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent)
+[BGD vs SGD](https://towardsdatascience.com/difference-between-batch-gradient-descent-and-stochastic-gradient-descent-1187f1291aa1)
 [Visualizing Networks](http://jalammar.github.io)\
 [Practical recommendations for gradient-based training of deep architectures](https://arxiv.org/abs/1206.5533)\
 [Deep Learning Book by Ian Goodfellow](http://www.deeplearningbook.org/contents/guidelines.html)\
