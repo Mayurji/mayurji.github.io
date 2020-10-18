@@ -64,7 +64,7 @@ ul.posts li {
 
 .image-cropper {
     width: 160px;
-    height: 160px;
+    height: 220px;
     position: relative;
     overflow: hidden;
     border-radius: 100%;
