@@ -10,7 +10,7 @@ date:   2020-10-06 13:43:52 +0530
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 1:</b>Hyperparameter</p> 
+<p><b>Figure 1:</b>Neurons</p> 
 </center>
 
 ## **Topics covered**
