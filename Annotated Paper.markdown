@@ -15,11 +15,11 @@ optimization technique and related topics.
 
 ## **Annotated Papers**
 
-#### **<span style="color:#3333ff">Unsupervised Learning</span>**
+#### **<span style="color:#4d4dff">Unsupervised Learning</span>**
 
 [**Invariant Information Clustering for Unsupervised Image Classification and Segmentation**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Invariant%20Information%20Clustering) 
 
-#### **Supervised Learning**
+#### **<span style="color:#4d4dff">Supervised Learning</span>**
 
 [**Deep Residual Learning for Image Recognition**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Resnet) 
 
