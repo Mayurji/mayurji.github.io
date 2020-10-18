@@ -73,7 +73,7 @@ ul.posts li {
   display: inline;
   margin: 0 auto;
   
-  margin-bottom: -25%; //centers the image
+  margin-bottom: -10%; //centers the image
   height: 100%;
   width: auto;
 }
