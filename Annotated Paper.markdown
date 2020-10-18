@@ -15,7 +15,7 @@ optimization technique and related topics.
 
 ## **Annotated Papers**
 
-#### **Unsupervised Learning**
+#### **<span style="color:blue">Unsupervised Learning</span>**
 
 [**Invariant Information Clustering for Unsupervised Image Classification and Segmentation**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Invariant%20Information%20Clustering) 
 
