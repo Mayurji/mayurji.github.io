@@ -66,7 +66,7 @@ ul.posts li {
     height: 260px;
     position: relative;
     overflow: hidden;
-    border-radius: 100%;
+    border-radius: 75%;
     margin: 0px 50px;
     float: left;
 }
