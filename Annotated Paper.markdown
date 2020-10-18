@@ -3,14 +3,15 @@ layout: default
 title: Annotated Papers
 permalink: /papers/
 ---
+## Why reading research paper is important
 
-**Deep Learning is a vast field of research and understanding the nitty-gritty details of
+Deep Learning is a vast field of research and understanding the nitty-gritty details of
 deep learning model helps an individual to become a better researcher and a Deep Learning Practitioner.
 With 30000+ Deep Learning paper getting published every year it becomes quite stressful to keep track of
-all the research.**
+all the research.
 
-**Thus, the objective to annotate paper is to understand the important details of the paper like the Objective function,
-optimization technique and related topics.**
+Thus, the objective to annotate paper is to understand the important details of the paper like the Objective function,
+optimization technique and related topics.
 
 ## **Annotated Papers**
 
@@ -24,11 +25,9 @@ optimization technique and related topics.**
 
 [**Understanding the Role of Individual Units in a Deep Neural Networks**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate DNN/)
 
-### Note
+#### Note
 
 Some of the paper has been implemented based on compute power available.
 
 GitHub: [Github](https://github.com/mayurji) \
 Medium: [Medium](https://medium.com/@mayur87545)
-
-[Github]: https://github.com/mayurji
