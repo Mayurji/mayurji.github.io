@@ -60,11 +60,7 @@ ul.posts li {
     color: white;
 }
 
- img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.post-body img { width:600px; height:auto; }
 
 .circular--portrait {
   position: relative;
