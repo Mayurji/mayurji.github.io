@@ -68,11 +68,11 @@ ul.posts li {
     position: relative;
     overflow: hidden;
     border-radius: 140%;
+    margin: 25px 10px;
     float: left;
 }
 .profile-pic {
   display: inline;
-  margin: 0 32px 32px 0;
   margin-bottom: 5%
   height: 100%;
   width: auto; 
