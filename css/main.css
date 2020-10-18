@@ -67,7 +67,7 @@ ul.posts li {
     height: 160px;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 80%;
 }
 .profile-pic {
   display: inline;
