@@ -8,7 +8,10 @@ date:   2020-10-05 13:43:52 +0530
 ## **Mixed Precision Training**
 #### **Discover a way to efficiently utilize your GPU**
 
-![GPU]({{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg)
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 1:</b>GPU</p> 
+</center>
 
 ## **Topics covered**
 
@@ -38,7 +41,10 @@ Since the introduction of Tensor Cores in the Volta and Turing architectures (NV
 
 FP16 requires 2 bytes, as the number of bytes are reduced to capture the same numerical entity, it reduces the amount of memory required to train a model and helps in increasing the batch size for our training. And also the data transfer of type FP16 is faster compared to FP32 and FP64.
 
-![Smaller Vs Faster]({{site.url}}/assets/images/mixedPrecisionTraining/small-fast.png)
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/small-fast.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 2:</b>Smaller Vs Faster</p> 
+</center>
 
 ## **For 1 million parameters**
 
@@ -54,7 +60,10 @@ Though its half the amount of memory in FP16, few folks many consider 2MB is not
 
 There is clearly significant improvement in memory required for the same number of parameters.
 
-![Training Iteration]({{site.url}}/assets/images/mixedPrecisionTraining/training_iteration.png)
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/training_iteration.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 3:</b>Training Iteration</p> 
+</center>
 
 ## **Steps in Mixed Precision Training**
 
@@ -63,7 +72,10 @@ There is clearly significant improvement in memory required for the same number 
 
 First point, Porting model to use FP16 is simple, we access the model parameters and move it float16 or half-precision as widely known. It similar to changing the dtype of a variable.
 
-![Paper]({{site.url}}/assets/images/mixedPrecisionTraining/paper-derivation.png)
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/paper-derivation.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 4:</b>Paper</p> 
+</center>
 
 Second point, Adding loss scaling to preserve small gradient values, it refer to scaling the parameter by multiplying alpha value to it, before back propagation and then unscale it by dividing the gradient by alpha before updating the weight. Loss scaling is done to avoid the gradient exploding/vanishing.
 
@@ -89,7 +101,10 @@ AllowList operations are operations that take advantage of GPU Tensor Cores. Den
 
 ## **Automatic Mixed Precision**
 
-![AMP]({{site.url}}/assets/images/mixedPrecisionTraining/amp.png)
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/amp.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 5:</b>AMP</p> 
+</center>
 
 With recent updates in deep learning frameworks, a technique called Automatic Mixed Precision has been introduced. It helps the developers in performing these casting and scaling operations automatically
 
@@ -100,7 +115,10 @@ In those frameworks with automatic support, using mixed precision can be as simp
 
 ## **Pytorch AMP**
 
-![Pytorch - AMP]({{site.url}}/assets/images/mixedPrecisionTraining/pytorch-amp.png)
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/pytorch-amp.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 6:</b>Pytorch - AMP</p> 
+</center>
 
 Interesting point, Nvidia’s tensor cores are designed in such fashion that keeping dimension of matrix as multiple of 8 helps in faster calculation. Do read the NVIDIA’s Mixed Precision article to understand,
 
