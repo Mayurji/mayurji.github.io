@@ -68,6 +68,7 @@ First, we are iterating over a number of components to find the best match betwe
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
+
 >X = load_digits.data\
 y = load_digits.target\
 variance = []\
@@ -89,7 +90,10 @@ for x in list([4,8,12,16,20,24,28,32,63]):\
     print("--------------------------------------------------")
 
 
-![Results]({{site.url}}/assets/images/highdimension/results.png)
+<center>
+<img src="{{site.url}}/assets/images/highdimension/results.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 2:</b></p> Result.
+</center>
 
 
 >fig = plt.figure()\
@@ -101,7 +105,11 @@ plt.xlabel("Variance Explained")\
 plt.ylabel("Principal Components")\
 plt.show()
 
-![Plotting]({{site.url}}/assets/images/highdimension/plots.png)
+
+<center>
+<img src="{{site.url}}/assets/images/highdimension/plots.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 3:</b></p> Plotting.
+</center>
 
 
 >pca_1_Comp = PCA(n_components=24)\
@@ -132,16 +140,17 @@ There are number of ways of Dimensionality reduction such as feature selection a
 **5. Forward Feature Construction**\
 **6. High Correlation Filter**
 
-![High Dimension]({{site.url}}/assets/images/highdimension/hd.png)
+<center>
+<img src="{{site.url}}/assets/images/highdimension/hd.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 4:</b></p> Plotting.
+</center>
 
 
 Let’s look at the image shown above. It shows 2 dimensions x1 and x2, which are let us say measurements of an object in Km (x1) and Miles (x2). Now, if you were to use both these dimensions in machine learning, they will convey similar information and introduce a lot of noise in system, so you are better of just using one dimension. Here we have converted the dimension of data from 2D (from x1 and x2) to 1D (PC1), which has made the data relatively easier to explain.
 
 ## **Principal Component Analysis**
 
-Principal Components Analysis means components which are able to explain the maximum amount of variance of the features with respect to target variable, if we include all feature as components then we get the variance of 1.
-
-PCA transforms all the interrelated variable into uncorrelated variable.Each uncorrelated variable is a Principal Component and each components is a linear combination of original variable.
+Principal Components Analysis means components which are able to explain the maximum amount of variance of the features with respect to target variable, if we include all feature as components then we get the variance of 1. PCA transforms all the interrelated variable into uncorrelated variable.Each uncorrelated variable is a Principal Component and each components is a linear combination of original variable.
 
 Each uncorrelated variable or components holds feature information which is explained as variance. Each component with its variance add up to 1. Since each principal component is combination of original variable, some principal components explains more variance than others.
 
@@ -174,13 +183,10 @@ In this Feature Selection process, we train a model with one feature and calcula
 
 ## **High Correlation Filter**
 
-Here, If the columns present in the dataset are high correlated then the information becomes redundant and we drop these highly redundant variables from features.
+Here, If the columns present in the dataset are high correlated then the information becomes redundant and we drop these highly redundant variables from features. We can calculate the **correlation coefficient** between Numerical columns / variables.We can calculate the ‘correlation coefficient’ between Nominal columns / variables.
 
-We can calculate the **correlation coefficient** between Numerical columns / variables.We can calculate the ‘correlation coefficient’ between Nominal columns / variables.
-
-We can use the **pearson product moment coefficient** between Numerical columns / variables.We can use the ‘pearson Chi squared’ value between Nominal columns / variables.
-Before doing correlation operation, Perform normalization on the columns as correlation is scale sensitive.
+We can use the **pearson product moment coefficient** between Numerical columns / variables.We can use the ‘pearson Chi squared’ value between Nominal columns / variables. Before doing correlation operation, Perform normalization on the columns as correlation is scale sensitive.
 
 ## **Note**
 
-**Both Forward Feature Construction and Backward Feature Elimination are computationally expensive tasks.**
+Both Forward Feature Construction and Backward Feature Elimination are computationally expensive tasks.
