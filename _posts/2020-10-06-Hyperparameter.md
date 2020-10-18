@@ -8,8 +8,10 @@ date:   2020-10-06 13:43:52 +0530
 ## **Hyperparameter Tuning**
 #### **Discover a way to efficiently tune hyperparameters**
 
-
-![Hyperparameter]({{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg)
+<center>
+<img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 1:</b></p> Hyperparameter.
+</center>
 
 ## **Topics covered**
 
@@ -32,7 +34,12 @@ date:   2020-10-06 13:43:52 +0530
 
 It is the most important of all hyperparameter. Even if we are using pre-trained model, we should try out multiple values of learning rate. The most commonly used learning rate is **0.1, 0.01, 0.001, 0.0001, 0.00001** etc.
 
-![Learning Rate]({{site.url}}/assets/images/Hyperparameter/learning_rate.png)
+
+<center>
+<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 2:</b></p> Learning Rate.
+</center>
+
 
 A **large value** of learning rate tend to overshoot the gradient value making it difficult to converge the weight to global minimum.
 
@@ -44,7 +51,10 @@ An **optimum value** of learning rate will leads to global minimum, which can be
 
 Sometimes keeping only one learning rate may not help us in reaching the global minimum, so changing the value of learning rate after a certain number of epoch such that convergence takes place if the gradient is stuck in local minimum.
 
-![Learning Rate Decay]({{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png)
+<center>
+<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 3:</b></p> Learning Rate Decay
+</center>
 
 ### Adaptive Learning Rate
 
@@ -65,7 +75,12 @@ It is one of the commonly tuned parameter in deep learning. If we have 1000 reco
 
 If we keep Minibatch size = 1, then the weights are updated for every record after backpropagation. It is called as Stochastic Batch Gradient Descent.
 
-![Minibatch]({{site.url}}/assets/images/Hyperparameter/minibatch.png)
+
+<center>
+<img src="{{site.url}}/assets/images/Hyperparameter/minibatch.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 4:</b></p> Minibatch
+</center>
+
 
 **Second**
 
@@ -88,11 +103,14 @@ Most commonly used value for **Minibatch sizes are 32, 64, 128, 256.** Values mo
 
 The number of iteration or epoch can decided based on the validation error, as long as validation error keeps decreasing we can assume that our model is learning and updating the weights positively. There is a technique called as early stopping which helps in determining the no. of iterations.
 
-![Iterations]({{site.url}}/assets/images/Hyperparameter/iterations.png)
+<center>
+<img src="{{site.url}}/assets/images/Hyperparameter/iterations.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 5:</b></p> Iterations
+</center>
 
 [Validation Monitor](https://www.tensorflow.org/get_started/monitors#early_stopping_with_validationmonitor)
 
-```python
+***```python
 validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
       test_set.data,
       test_set.target,
@@ -100,8 +118,7 @@ validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
       metrics=validation_metrics,
       early_stopping_metric="loss",
       early_stopping_metric_minimize=True,
-      early_stopping_rounds=200)
-```
+      early_stopping_rounds=200)```***
 
 The last parameter indicates to ValidationMonitor that it should stop the training process if the loss did not decrease in 200 steps (rounds) of training.
 
