@@ -2,6 +2,7 @@
 layout: post
 title:  Hyperparameter Tuning
 description: Why tuning hyperparameters of your model is important and how it effects the model's performance.
+category: Blog
 date:   2020-10-06 13:43:52 +0530
 ---
 
