@@ -7,9 +7,9 @@ title: Notebooks
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <ul class="posts">
-{% if site.category == "Notebook" %}
-  {% for post in site.posts %}
-    <li>title="{{ post.title }}">{{ post.title }}</li>
-  {% endfor %}
-{% endif %}
+
+{% for post in site.posts %}
+  <li>title="{{ post.title }}">{{ post.title }}</li>
+{% endfor %}
+
 </ul>
