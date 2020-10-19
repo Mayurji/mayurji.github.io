@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About Me
+category: Notebook
 ---
 
 ![Mayur]({{site.url}}/assets/images/profile/mayur.jpg) 
