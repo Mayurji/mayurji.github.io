@@ -3,9 +3,6 @@ layout: notebooks
 title: About Me
 permalink: /notebooks/
 ---
-
-
-
 I work as a Data Scientist in Verizon with experience in multiple domains. I have worked and built systems reflecting 
 better user experience with NLP systems and also enabled systems to provide solid search experience for SEO.
 
