@@ -4,4 +4,4 @@ title: Resnets Idea
 description: "Introduction to skip connection in neural network"
 ---
 
-Jupyter Notebooks
+<p>Jupyter Notebooks</p>
