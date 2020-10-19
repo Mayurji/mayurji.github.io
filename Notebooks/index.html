@@ -1,0 +1,11 @@
+<head>
+<!-- link to main stylesheet -->
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<ul class="posts">
+
+  {% for post in site.jupyter %}
+    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}
+    <p>{{post.description}}</p></a></li>
+  {% endfor %}
+</ul>
