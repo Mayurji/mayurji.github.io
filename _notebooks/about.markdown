@@ -1,7 +1,7 @@
 ---
 layout: notebooks
 title: About Me
-permalink: '/notebooks'
+permalink: /notebooks/
 ---
 
 
