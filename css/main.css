@@ -63,13 +63,13 @@ ul.posts li {
 .post-body img { width:600px; height:auto; }
 
 .image-cropper {
-    width: 160px;
-    height: 260px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0px 50px;
-    float: left;
+width: 129px;
+height: 206px;
+position: relative;
+overflow: hidden;
+border-radius: 69%;
+margin: 0px 40px;
+float: left;
 }
 .profile-pic {
   display: inline;
