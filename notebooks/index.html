@@ -1,13 +1,5 @@
----
-layout: default
-title: Notebooks
----
-<head>
-<!-- link to main stylesheet -->
-<link rel="stylesheet" type="text/css" href="/css/main.css">
-</head>
-<ul class="posts">
-
-  <p> Jupyter Notebooks to be added</p>
-
-</ul>
+{% for item in site.stories %}
+  <h2>{{ item.title }}</h2>
+  <p>{{ item.description }}</p>
+  <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+{% endfor %}
