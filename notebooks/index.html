@@ -9,8 +9,8 @@ title: Notebooks
 <ul class="posts">
 
   {% for item in site.notebooks %}
-    <h4>{{ item.title }}</h4>
-    <p>{{ item.description }}</p>
+  <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}
+    <p>{{ item.description }}</p></a></li>
   {% endfor %}
 
 </ul>
