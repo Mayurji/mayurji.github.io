@@ -8,3 +8,7 @@ permalink: /blog/:year/:month/:day/:title
 collections:
   notebooks:
     output: true
+    
+# Google services
+google_analytics: UA-108823315-1
+
