@@ -3,7 +3,7 @@ layout: post
 title:  Curse of High Dimensionality
 description: Why high dimensional data is difficult to model on and why its important to reduce the dimension.
 category: Blog
-date:   2020-10-06 13:43:52 +0530
+date:   2020-07-06 13:43:52 +0530
 ---
 
 ## **Topics covered**
