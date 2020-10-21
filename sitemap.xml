@@ -13,11 +13,11 @@ date: 2020-10-12 00:00:00 +0530
     </url>
 {% endfor %}
       
-<!-- pages -->
-{% for page in site.notebooks %}
+<!-- notebooks -->
+{% for item in site.notebooks %}
     <url>
-        <loc>{{ site.url }}{{ page.url }}</loc>
-        <lastmod>{{ page.date }}</lastmod>
+        <loc>{{ site.url }}{{ item.url }}</loc>
+        <lastmod>{{ item.date }}</lastmod>
     </url>
 {% endfor %}
 
