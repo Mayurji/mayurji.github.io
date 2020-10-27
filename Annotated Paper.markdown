@@ -3,6 +3,9 @@ layout: default
 title: Annotated Papers
 permalink: /papers/
 ---
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
 ## Why reading research paper is important
 
 Deep Learning is a vast field of research and understanding the nitty-gritty details of
