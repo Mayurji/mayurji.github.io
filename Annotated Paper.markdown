@@ -4,7 +4,7 @@ title: Annotated Papers
 permalink: /papers/
 ---
 <head>
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 ## Why reading research paper is important
