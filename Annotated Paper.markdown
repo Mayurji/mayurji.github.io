@@ -6,6 +6,7 @@ permalink: /papers/
 <head>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
+
 ## Why reading research paper is important
 
 Deep Learning is a vast field of research and understanding the nitty-gritty details of
@@ -19,8 +20,6 @@ optimization technique and related topics.
 ## **Annotated Papers**
 
 #### **<span style="color:#6666ff">Unsupervised Learning</span>**
-
-
   
 * [**Invariant Information Clustering for Unsupervised Image Classification and Segmentation**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Invariant%20Information%20Clustering)
 
