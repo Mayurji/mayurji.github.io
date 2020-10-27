@@ -25,6 +25,7 @@ optimization technique and related topics.
 [**Geometric Transformation**](https://en.wikipedia.org/wiki/Geometric_transformation), [**Mutual Information**](https://en.wikipedia.org/wiki/Mutual_information), [**Joint Entropy**](https://en.wikipedia.org/wiki/Joint_entropy), [**Joint Distribution**](https://en.wikipedia.org/wiki/Joint_probability_distribution)
 </span>
 
+
 #### **<span style="color:#6666ff">Supervised Learning</span>**
 
 [**Deep Residual Learning for Image Recognition**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Resnet) 
