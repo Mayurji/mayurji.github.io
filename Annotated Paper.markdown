@@ -21,7 +21,7 @@ optimization technique and related topics.
 
 #### **<span style="color:#6666ff">Unsupervised Learning</span>**
   
-* [**Invariant Information Clustering for Unsupervised Image Classification and Segmentation**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Invariant%20Information%20Clustering)
+<span style="color:#ffffff">*</span> [**Invariant Information Clustering for Unsupervised Image Classification and Segmentation**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Invariant%20Information%20Clustering)
 
 *Tags: [Entropy Maximization](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy), [Conditional Entropy Maximization](https://en.wikipedia.org/wiki/Conditional_entropy), [Bottleneck](https://ai.stackexchange.com/questions/4864/what-is-the-concept-of-tensorflow-bottlenecks), [Biclustering](https://en.wikipedia.org/wiki/Biclustering), [Spatio-Temporal](https://www.omnisci.com/technical-glossary/spatial-temporal), 
 [Geometric Transformation](https://en.wikipedia.org/wiki/Geometric_transformation), [Mutual Information](https://en.wikipedia.org/wiki/Mutual_information), [Joint Entropy](https://en.wikipedia.org/wiki/Joint_entropy), [Joint Distribution](https://en.wikipedia.org/wiki/Joint_probability_distribution)*
@@ -29,9 +29,9 @@ optimization technique and related topics.
 
 #### **<span style="color:#6666ff">Supervised Learning</span>**
 
-* [**Deep Residual Learning for Image Recognition**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Resnet) 
+<span style="color:#ffffff">*</span> [**Deep Residual Learning for Image Recognition**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Resnet) 
 
-* [**Understanding the Role of Individual Units in a Deep Neural Networks**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate DNN/)
+<span style="color:#ffffff">*</span> [**Understanding the Role of Individual Units in a Deep Neural Networks**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate DNN/)
 
 #### Note
 Some of the paper has been implemented based on compute power available.
