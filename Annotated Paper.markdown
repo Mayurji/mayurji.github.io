@@ -17,13 +17,12 @@ optimization technique and related topics.
 
 #### **<span style="color:#6666ff">Unsupervised Learning</span>**
 
-<span style="color:#00aaff">
+
   
 [**Invariant Information Clustering for Unsupervised Image Classification and Segmentation**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Invariant%20Information%20Clustering)
 
-**Tags:** [**Entropy Maximization**](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy), [**Conditional Entropy Maximization**](https://en.wikipedia.org/wiki/Conditional_entropy), [**Bottleneck**](https://ai.stackexchange.com/questions/4864/what-is-the-concept-of-tensorflow-bottlenecks), [**Biclustering**](https://en.wikipedia.org/wiki/Biclustering), [**Spatio-Temporal**](https://www.omnisci.com/technical-glossary/spatial-temporal), 
-[**Geometric Transformation**](https://en.wikipedia.org/wiki/Geometric_transformation), [**Mutual Information**](https://en.wikipedia.org/wiki/Mutual_information), [**Joint Entropy**](https://en.wikipedia.org/wiki/Joint_entropy), [**Joint Distribution**](https://en.wikipedia.org/wiki/Joint_probability_distribution)
-</span>
+**<span style="color:#00aaff">Tags: [Entropy Maximization](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy), [Conditional Entropy Maximization](https://en.wikipedia.org/wiki/Conditional_entropy), [Bottleneck](https://ai.stackexchange.com/questions/4864/what-is-the-concept-of-tensorflow-bottlenecks), [Biclustering](https://en.wikipedia.org/wiki/Biclustering), [Spatio-Temporal](https://www.omnisci.com/technical-glossary/spatial-temporal), 
+[Geometric Transformation](https://en.wikipedia.org/wiki/Geometric_transformation), [Mutual Information](https://en.wikipedia.org/wiki/Mutual_information), [Joint Entropy](https://en.wikipedia.org/wiki/Joint_entropy), [Joint Distribution](https://en.wikipedia.org/wiki/Joint_probability_distribution)</span>**
 
 
 #### **<span style="color:#6666ff">Supervised Learning</span>**
