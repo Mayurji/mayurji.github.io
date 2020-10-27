@@ -6,6 +6,7 @@ nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: disc;
+    color: white;
     font-weight: bold;
 }
 nav ul li, footer ul li {
