@@ -33,5 +33,5 @@ optimization technique and related topics.
 
 <span style="color:#ffffff">2.</span> [**Understanding the Role of Individual Units in a Deep Neural Networks**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate DNN/)
 
-All annotation for [**Deep Learning Papers**](https://github.com/Mayurji/Deep-Learning-Papers). Some of the paper has been implemented based on compute power available.
+All annotations for [**Deep Learning Papers**](https://github.com/Mayurji/Deep-Learning-Papers). Some of the paper has been implemented based on compute power available.
 
