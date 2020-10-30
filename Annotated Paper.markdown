@@ -29,7 +29,8 @@ optimization technique and related topics.
 
 #### **<span style="color:#6666ff">Supervised Learning</span>**
 
-<span style="color:#ffffff">1.</span> [**Deep Residual Learning for Image Recognition**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Resnet) 
+<span style="color:#ffffff">1.</span> [**Deep Residual Learning for Image Recognition**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Resnet)
+*Tags: [Highway Network](https://en.wikipedia.org/wiki/Highway_network), [Degradation Problem](https://www.quora.com/What-exactly-is-the-degradation-problem-that-Deep-Residual-Networks-try-to-alleviate), [Identity Shortcut](https://www.quora.com/What-are-shortcut-connections-how-do-they-work-and-what-is-their-role-in-the-paper-Deep-Residual-Learning-for-Image-Recognition)
 
 <span style="color:#ffffff">2.</span> [**Understanding the Role of Individual Units in a Deep Neural Networks**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate DNN/)
 
