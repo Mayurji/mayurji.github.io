@@ -6,7 +6,7 @@ kramdown:
 permalink: /blog/:year/:month/:day/:title
 
 collections:
-  notebooks:
+  deep-learning:
     output: true
     
 # Google services
