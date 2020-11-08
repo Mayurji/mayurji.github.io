@@ -1,3 +1,9 @@
+---
+layout: machine-learning
+title: Basic of Machine Learning
+description: "Key concepts of Machine Learning"
+date:   2020-11-06 13:43:52 +0530
+---
 ## Basics of Machine Learning
 
 What is Machine Learning ? 
