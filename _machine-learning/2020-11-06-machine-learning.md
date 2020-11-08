@@ -12,11 +12,11 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 ### Two types of Learning:
 
-   * ***Supervised Learning***
+***Supervised Learning***
    
-   * ***Unsupervised Learning***
+***Unsupervised Learning***
    
-   * ***Reinforcement Learning***
+***Reinforcement Learning***
 
 
 #### Supervised Learning
