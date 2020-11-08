@@ -95,9 +95,9 @@ One hot encoding increases the dimensionality of the feature vector, but transfo
 
 The raw data comes in different problems with it, sometimes the features values are missed if the dataset is prepared manually. To overcome such missing value problem, one do the following,
 
-**Drop the samples, if the dataset is big enough.**
-**Perform Data Imputation to fillin the gaps of missing values.**
-**Few algorithms are robust to missing values.**
+Drop the samples, if the dataset is big enough.\
+Perform Data Imputation to fillin the gaps of missing values.\
+Few algorithms are robust to missing values.
 
 **Data Imputation**
 
@@ -117,12 +117,10 @@ Min-Max Scaling or Normalization\
 Mean Normalization\
 Standardization or Z-score Normalization
 
-**MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1]. 
-- - 1 - -                    
+**MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].                   
 $$
 x' = x - min(x)  / max(x) - min(x)
 $$
-- - 1 - -
 
 **Mean Normalization** 
 
