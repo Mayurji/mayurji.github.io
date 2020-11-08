@@ -118,22 +118,25 @@ Mean Normalization\
 Standardization or Z-score Normalization
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1]. 
-                    
+- - 1 - -                    
 $$
 x' = x - min(x)  / max(x) - min(x)
 $$
+- - 1 - -
 
 **Mean Normalization** 
 
-\begin{equation*}
+- - 1 - -
+$$
 x' = x - \mu / max(x) - min(x)
-\end{equation*}                  
+$$
+- - 1 - -
 
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-\begin{equation*}
+- - 1 - -
 x' = x - \mu / \sigma
-\end{equation*}
+- - 1 - -
 
 $\mu$ is mean over x.
 
@@ -203,7 +206,7 @@ Test set: A set of examples used only to assess the performance [generalization]
 
 ### Principal Component Analysis
 
-Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creating lesser number of variables called as **Principal Components**.
+Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creates lesser number of variables called as **Principal Components**.
 
 ### Machine Learning Models
 
