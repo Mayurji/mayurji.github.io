@@ -71,7 +71,7 @@ ul.posts li {
     color: white;
 }
 
-.post-body img { width:600px; height:auto; }
+.post-body img { width:400px; height:auto; }
 
 .image-cropper {
 width: 122px;
