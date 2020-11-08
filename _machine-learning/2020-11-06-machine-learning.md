@@ -192,7 +192,6 @@ Based on the complexity of the data, the model tends to be complex. So the lambd
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
 
-
 #### Dataset Split
 
 Before applying ML Algorithm, we should check the dataset and split it for modelling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
@@ -209,32 +208,29 @@ Principal Component Analysis is a variable reduction technique. PCA believes tha
 
 ### Machine Learning Models
 
-**Naive Bayes**: Since Naive Bayes is simple and is based on Bayes Theorem.
+**Naive Bayes**: Naive Bayes is simple and is based on Bayes Theorem.
 
->Blog - https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c
-
->Implementation - https://github.com/udacity/NLP-Exercises/blob/master/1.5-spam-classifier/Bayesian_Inference_solution.ipynb
+[Blog](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
+[Implementation](https://github.com/udacity/NLP-Exercises/blob/master/1.5-spam-classifier/Bayesian_Inference_solution.ipynb)
 
 **Support Vector Machine**:
+**Ensemble Methods**
+**Clustering**
 
-**Ensemble Methods**:
-
-**Clustering**:
-
-* KMeans
-* Hierarchical Clustering
-* DBSCAN Clustering
-* Gaussian Mixture Model
+KMeans\
+Hierarchical Clustering\
+DBSCAN Clustering\
+Gaussian Mixture Model
 
 ### Selecting Algorithms
 
-   * Explainability
-   * In-memory Vs Out-Memory
-   * Number of Features and examples
-   * Categorical Vs Numerical Features
-   * Nonlinearity of the data
-   * Training speed
-   * Predicton speed
+Explainability\
+In-memory Vs Out-Memory\
+Number of Features and examples\
+Categorical Vs Numerical Features\
+Nonlinearity of the data\
+Training speed\
+Predicton speed
 
 
 <center>
