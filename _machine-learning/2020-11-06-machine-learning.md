@@ -84,7 +84,7 @@ For instance, cost of house of size 'a' in X locality is priced higher than same
 There are few algorithms like decision trees, which takes categorical feature like color with values as 'red', 'blue' etc as inputs but majority of the algorithms requires feature values to be numerical. To convert these features, we can use one hot encoding. 
 
 ```python
-     orange = [0, 0, 1]
+      orange = [0, 0, 1]
          red = [1, 0, 0]    
         blue = [0, 1, 0]
 ```
@@ -118,9 +118,7 @@ Mean Normalization\
 Standardization or Z-score Normalization
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].                   
-$$
-x' = x - min(x)  / max(x) - min(x)
-$$
+$x' = x - min(x)  / max(x) - min(x)$
 
 **Mean Normalization** 
 
