@@ -246,25 +246,35 @@ Principal Component Analysis is a variable reduction technique. PCA believes tha
    * Predicton speed
 
 
-
-
-![ML MAP](ml_map.png)
+<center>
+<img src="{{site.url}}/assets/images/ml/ml_map.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 1:</b>Algorithm Selection</p> 
+</center>
 
 #### Confusion Matrix 
 
 Consider a model trained two classify Cat and Dog images. And after training, we are testing the model on 100 random images of Dogs and Cats with 50 each and get an accuracy of 85%. It means that the model has misclassified 15 images. Now let's consider that out of 15 images 10 Dog images were misclassified as Cat and 5 Cat images are misclassified as Dog.
 
-![Confusion Matrix 2](Confusion_matrix_2.png)
+<center>
+<img src="{{site.url}}/assets/images/ml/Confusion_matrix_2.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 2:</b>Confusion Matrix</p> 
+</center>
 
 From above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called as False Negative and when a Dog is misclassified is called as False Positive. In essence, it consider Positive as Cat and Negative as Dog.
 
-![Confusion Matrix](confusion_matrix.png)
+<center>
+<img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 3:</b>Confusion Matrix</p> 
+</center>
 
 #### Precision & Recall
 
 **Precision** can be seen as a measure of exactness or quality, whereas **recall** is a measure of completeness or quantity. In simple terms, high precision means that an algorithm returned substantially more relevant results than irrelevant ones, while high recall means that an algorithm returned most of the relevant results.
 
-![Precision](precision.png)
+<center>
+<img src="{{site.url}}/assets/images/ml/precision.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 4:</b>Precision</p> 
+</center>
 
 **Precision** informs us, how well the model predicts the positive class. It is also known as PPV (Positive Predictive Value).
 
@@ -273,7 +283,11 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 **Recall** informs us, how well the model predicts the right class for a label. It is also known as Sensitivity.
 
-![Recall](recall.png)
+
+<center>
+<img src="{{site.url}}/assets/images/ml/recall.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 5:</b>Recall</p> 
+</center>
 
    >Recall = True Positive / (True Positive + False Negative)
 
@@ -285,7 +299,10 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 **Specificity** also known as true negative rate, measures the proportion of actual negatives that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
 
-![specificity](specificity.png)
+<center>
+<img src="{{site.url}}/assets/images/ml/specificity.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 5:</b>Specificity</p> 
+</center>
 
 > Specificity = True Negative / (True Negative + False Positive) 
 
@@ -307,15 +324,21 @@ Clearly we can see that the model failed to classify the cancer patient, and the
 
 In statistical analysis of binary classification, the F1 score (also F-score or F-measure) is a measure of a test's accuracy. It considers both the precision p and the recall r of the test to compute the score: p is the number of correct positive results divided by the number of all positive results returned by the classifier, and r is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). The F1 score is the harmonic mean of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall).
 
-
-![f1-score](f1-score.png)
+<center>
+<img src="{{site.url}}/assets/images/ml/f1-score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 5:</b>F1-score</p> 
+</center>
 
 **F1 Beta Score**
 
 As we have seen in drawback of using metrics like precision and recall alone would result it false understanding of the model output. Based on usecase, we can give importance to precision and recall with help of **F1 Beta score**.
 
 Find this below snippet from wikipedia:
-![F1 Beta Score](f1_beta_score.png)
+
+<center>
+<img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 5:</b>F1 Beta Score</p> 
+</center>
 
 
 
@@ -326,38 +349,3 @@ ROC- Receiver Operating Characteristics, its a plot between True Positive rate (
 ROC curves are frequently used to show in a graphical way the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
 
 **Reference** [ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
-
-### Cross Validation & KFoldCV
-
-While the use of a devset (validation set) avoids overfitting the test set, having a fixed training
-set, devset, and test set creates another problem: in order to save lots of data for
-training, the test set (or devset) might not be large enough to be representative. It
-would be better if we could somehow use all our data both for training and test. We
-do this by cross-validation: we randomly choose a training and test set division of
-our data, train our classifier, and then compute the error rate on the test set. Then
-we repeat with a different randomly selected training set and test set. We do this
-sampling process 10 times and average these 10 runs to get an average error rate.
-This is called 10-fold cross-validation.
-
-The only problem with cross-validation is that because all the data is used for
-testing, we need the whole corpus to be blind; we can’t examine any of the data
-to suggest possible features and in general see what’s going on. But looking at the
-corpus is often important for designing the system. For this reason, it is common
-to create a fixed training set and test set, then do 10-fold cross-validation inside
-the training set, but compute error rate the normal way in the test set,
-
-#### GridSearchCV
-[]
-
-
-
-**In Deep Learning, Why we need Activation function ?**
-
-A simple neural network with activation function is dot product of matrix (W) and vector (x), which is represented as y = Wx + b, b being the bias term. The term Wx is nothing more than matrix multiplication, as layers increases the matrix multiplication continues linearly.
-
-y = Wx + b, is linear equation, which is similar to Linear Regression model. When this linear equation moves through more layers of neural network without activation function, the linear equation just tends to perform more linear operation without learning the complex pattern that exists in the data. **Thus, to introduce the non-linearity to the neural function we pass through activation function.**
-
-
-```python
-
-```
