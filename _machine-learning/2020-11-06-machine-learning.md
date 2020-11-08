@@ -1,6 +1,6 @@
 ---
 layout: machine-learning
-title: Basic of Machine Learning
+title: Basics of Machine Learning
 description: "Key concepts of Machine Learning"
 date:   2020-11-06 13:43:52 +0530
 ---
@@ -102,11 +102,11 @@ x' = x - min(x)  / max(x) - min(x)
 
 **Mean Normalization** 
 
-x' = x - mean(x) /over max(x) - min(x)
+x' = x - mean(x) / max(x) - min(x)
 
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-x' = x - mean(x) /over \sigma
+x' = x - mean(x) / sigma
 
 sigma is Standard Deviation.
 
@@ -134,11 +134,11 @@ While calculating the error(E) we add the absolute value of the coefficients of 
 
 In simple model case, we have 2 coefficients w_1, w_2
 
-TotalError = E + |w_1| + |w_2|
+**TotalError = E + |w_1| + |w_2|**
 
 In Complex model case, lets say have 5 coefficients w_1, w_2, w_3, w_4, w_5
 
-TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|
+**TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|**
     
 So we get smaller error for simple model and will use the same for the generalization.
 
@@ -148,11 +148,11 @@ While calculating the error(E), we square the value of the coefficients of the m
 
 In simple model case, we have 2 coefficients w_1, w_2
 
-TotalError = E + (w_1)^2 + (w_2)^2
+**TotalError = E + (w_1)^2 + (w_2)^2**
 
 In Complex model case, lets say have 5 coefficients w_1, w_2, w_3, w_4, w_5
 
-TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2
+**TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2**
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
@@ -165,15 +165,19 @@ The complexity of the model is defined by the number of the parameters(w) in the
 
 Before applying ML Algorithm, we should check the dataset and split it for modelling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
 
+### Training Set 
+
+Training Set: Before Big Data came into picture of analytics, training data made around 70-75% data of total labeled data. But with millions of records or data, training data occupies 95% of the total data.
+
 #### Why Validation and Testing Set
 
-Validation set: A set of examples used to tune the parameters [i.e., architecture, not weights] of a classifier, for example to choose the number of hidden units in a neural network. 
+Validation Set: A set of examples used to tune the parameters [i.e., architecture, not weights] of a classifier, for example to choose the number of hidden units in a neural network.
 
-Test set: A set of examples used only to assess the performance [generalization] of a fully specified classifier.
+Test Set: A set of examples used only to assess the performance [generalization] of a fully specified classifier.
 
 ### Principal Component Analysis
 
-Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creates lesser number of variables called as **Principal Components**.
+Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creates lesser number of variables called as Principal Components.
 
 ### Machine Learning Models
 
