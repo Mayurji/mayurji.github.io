@@ -118,7 +118,7 @@ Mean Normalization\
 Standardization or Z-score Normalization
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].                   
-$x' = x - min(x)  / max(x) - min(x)$
+$ x' = x - min(x)  / max(x) - min(x) $
 
 **Mean Normalization** 
 
