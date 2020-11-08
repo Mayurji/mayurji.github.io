@@ -28,26 +28,6 @@ Machine learning is an application of artificial intelligence (AI) that provides
 #### Reinforcement Learning
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
 
-### Statistical Approach to Statistical Problems
-
-#### Steps
-
-**Data collection** We will use data from a large national survey that was designed explicitly with the goal of generating statistically valid inferences about the U.S. population.\
-**Descriptive statistics** We will generate statistics that summarize the data concisely, and evaluate different ways to visualize data.\
-**Exploratory data analysis** We will look for patterns, differences, and other features that address the questions we are interested in. At the same time we will check for inconsistencies and identify limitations.\
-**Estimation** We will use data from a sample to estimate characteristics of the general population.\
-**Hypothesis testing** Where we see apparent effects, like a difference between two groups, we will evaluate whether the effect might have happened by chance.
-
-## Deep Learning and Neural Networks
-
-**DL Algorithms are complex and flexible, which are built based on the complexity of the data. It is applicable for all kinds of Machine learning as mentioned above.** 
-
-**Major drawbacks of Deep Learning are as follows**
-     
-Lots of Data is required\
-High amount of Computing Power\
-Unexplainable decisions
-
 ### How to model a Supervised Algorithm:
 
 A dataset has feature ( X's ) and target ( y ). The target can be a discrete value or a continuous value based on which we can call the problem as Classification or Regression respectively.
@@ -124,14 +104,16 @@ $ x' = x - min(x)  / max(x) - min(x) $
 
 - - 1 - -
 $$
-x' = x - \mu / max(x) - min(x)
+x' = x - \mu /over max(x) - min(x)
 $$
 - - 1 - -
 
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
 - - 1 - -
-x' = x - \mu / \sigma
+$$
+x' = x - \mu /over \sigma
+$$
 - - 1 - -
 
 $\mu$ is mean over x.
