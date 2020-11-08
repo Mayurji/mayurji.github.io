@@ -233,7 +233,7 @@ Predicton speed
 
 
 <center>
-<img src="{{site.url}}/assets/images/ml/ml_map.png" style="zoom: 25%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/ml_map.png"  background-color:#DCDCDC;" /><br>
 <p><b>Figure 1:</b>Algorithm Selection</p> 
 </center>
 
