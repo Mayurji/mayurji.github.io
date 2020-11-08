@@ -50,9 +50,9 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 **Major drawbacks of Deep Learning are as follows**
      
-  **Lots of Data is required**
-  **High amount of Computing Power**
-  **Unexplainable decisions**
+**Lots of Data is required**
+**High amount of Computing Power**
+**Unexplainable decisions**
      
 
 ### How to model a Supervised Algorithm:
@@ -65,13 +65,13 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
-*Naive Bayes
-*Linear Regression
-*Logistic Regression
-*Support Vector Machine
-*Decision Trees
-*Neural Networks
-*Ensemble Model
+*Naive Bayes\
+*Linear Regression\
+*Logistic Regression\
+*Support Vector Machine\
+*Decision Trees\
+*Neural Networks\
+*Ensemble Model\
 *others (Xgboost)
 
 #### Things to keep in mind before developing ML model
