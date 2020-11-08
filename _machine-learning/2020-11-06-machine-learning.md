@@ -12,31 +12,26 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 ### Two types of Learning:
 
-***Supervised Learning***
-   
-***Unsupervised Learning***
-   
-***Reinforcement Learning***
+**Supervised Learning**
+**Unsupervised Learning**
+**Reinforcement Learning**
 
 
-#### Supervised Learning
+### Supervised Learning
    **The Algorithm learns from labeled data. It identifies/recognizes the pattern from data with labels and associates those pattern to unlabeled data.**
-       
-   >For example: Data on house price based on various factors like area, rooms, lawn and other details, where we predict the value of the house. So our label is House Price.
+   For example: Data on house price based on various factors like area, rooms, lawn and other details, where we predict the value of the house. So our label is House Price.
    
-#### Unsupervised Learning
+### Unsupervised Learning
    **The Algorithm learns from unlabeled data.**
-
-   >For example: Unstructured text documents where we cluster text or paragraphs based on word binding in the sentence using clustering algorithms, to group documents to particular topics.
+   For example: Unstructured text documents where we cluster text or paragraphs based on word binding in the sentence using clustering algorithms, to group documents to particular topics.
    
 #### Reinforcement Learning
    **The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions.**
-    
-   >For instance: Self Driving Cars and Game Playing Agents
+   For instance: Self Driving Cars and Game Playing Agents
 
-## Statistical Approach to  Statistical Problems
+### Statistical Approach to  Statistical Problems
 
-### Steps
+#### Steps
 
 **Data collection** We will use data from a large national survey that was designed explicitly with the goal of generating statistically valid inferences about the U.S. population.\
 **Descriptive statistics** We will generate statistics that summarize the data concisely, and evaluate different ways to visualize data.\
@@ -52,8 +47,7 @@ Machine learning is an application of artificial intelligence (AI) that provides
      
 **Lots of Data is required**
 **High amount of Computing Power**
-**Unexplainable decisions**
-     
+**Unexplainable decisions**    
 
 ### How to model a Supervised Algorithm:
 
@@ -102,15 +96,15 @@ One hot encoding increases the dimensionality of the feature vector, but transfo
 
 The raw data comes in different problems with it, sometimes the features values are missed if the dataset is prepared manually. To overcome such missing value problem, one do the following,
 
-* Drop the samples, if the dataset is big enough.
-* Perform Data Imputation to fillin the gaps of missing values.
-* Few algorithms are robust to missing values.
+**Drop the samples, if the dataset is big enough.**
+**Perform Data Imputation to fillin the gaps of missing values.**
+**Few algorithms are robust to missing values.**
 
 **Data Imputation**
 
-* One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)
-* Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.
-* Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
+**One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)**\
+**Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.**\
+**Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.**
    
 **Scaling** of a feature is an important task before building/applying a ML algorithm.
     
@@ -120,15 +114,15 @@ The raw data comes in different problems with it, sometimes the features values 
 
 **Types of Scaling**
    
-*Min-Max Scaling or Normalization
-
-*Mean Normalization
-
-*Standardization or Z-score Normalization
+**Min-Max Scaling or Normalization**
+**Mean Normalization**
+**Standardization or Z-score Normalization**
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1]. 
                     
-$x' = x - min(x)  / max(x) - min(x)$
+$$
+x' = x - min(x)  / max(x) - min(x)
+$$
 
 **Mean Normalization** 
 
