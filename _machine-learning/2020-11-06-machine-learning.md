@@ -233,8 +233,8 @@ Predicton speed
 
 
 <center>
-<img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;" width="800" height="600"/><br>
-<p><b>Figure 1:</b>Algorithm Selection</p> 
+<img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p><b>Figure 1:</b> Algorithm Selection</p> 
 </center>
 
 #### Confusion Matrix 
@@ -243,14 +243,14 @@ Consider a model trained two classify Cat and Dog images. And after training, we
 
 <center>
 <img src="{{site.url}}/assets/images/ml/Confusion_matrix_2.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 2:</b>Confusion Matrix</p> 
+<p><b>Figure 2:</b> Confusion Matrix</p> 
 </center>
 
 From above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called as False Negative and when a Dog is misclassified is called as False Positive. In essence, it consider Positive as Cat and Negative as Dog.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 3:</b>Confusion Matrix</p> 
+<p><b>Figure 3:</b> Confusion Matrix</p> 
 </center>
 
 #### Precision & Recall
@@ -259,7 +259,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/precision.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 4:</b>Precision</p> 
+<p><b>Figure 4:</b> Precision</p> 
 </center>
 
 **Precision** informs us, how well the model predicts the positive class. It is also known as PPV (Positive Predictive Value).
@@ -272,7 +272,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/recall.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b>Recall</p> 
+<p><b>Figure 5:</b> Recall</p> 
 </center>
 
    >Recall = True Positive / (True Positive + False Negative)
@@ -287,7 +287,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/specificity.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b>Specificity</p> 
+<p><b>Figure 5:</b> Specificity</p> 
 </center>
 
 > Specificity = True Negative / (True Negative + False Positive) 
@@ -312,7 +312,7 @@ In statistical analysis of binary classification, the F1 score (also F-score or 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1-score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b>F1-score</p> 
+<p><b>Figure 5:</b> F1-score</p> 
 </center>
 
 **F1 Beta Score**
@@ -323,7 +323,7 @@ Find this below snippet from wikipedia:
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b>F1 Beta Score</p> 
+<p><b>Figure 5:</b> F1 Beta Score</p> 
 </center>
 
 #### [ROC Curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
