@@ -38,11 +38,11 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 ### Steps
 
-* **Data collection** We will use data from a large national survey that was designed explicitly with the goal of generating statistically valid inferences about the U.S. population.
-* **Descriptive statistics** We will generate statistics that summarize the data concisely, and evaluate different ways to visualize data.
-* **Exploratory data analysis** We will look for patterns, differences, and other features that address the questions we are interested in. At the same time we will check for inconsistencies and identify limitations.
-* **Estimation** We will use data from a sample to estimate characteristics of the general population.
-* **Hypothesis testing** Where we see apparent effects, like a difference between two groups, we will evaluate whether the effect might have happened by chance.
+**Data collection** We will use data from a large national survey that was designed explicitly with the goal of generating statistically valid inferences about the U.S. population.
+**Descriptive statistics** We will generate statistics that summarize the data concisely, and evaluate different ways to visualize data.
+**Exploratory data analysis** We will look for patterns, differences, and other features that address the questions we are interested in. At the same time we will check for inconsistencies and identify limitations.
+**Estimation** We will use data from a sample to estimate characteristics of the general population.
+**Hypothesis testing** Where we see apparent effects, like a difference between two groups, we will evaluate whether the effect might have happened by chance.
 
 ## Deep Learning and Neural Networks
 
@@ -50,9 +50,9 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
    Major drawbacks of Deep Learning are as follows
      
-   * Lots of Data is required
-   * High amount of Computing Power
-   * Unexplainable decisions
+  **Lots of Data is required**
+  **High amount of Computing Power**
+  **Unexplainable decisions**
      
 
 ### How to model a Supervised Algorithm:
@@ -65,14 +65,14 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
-   * Naive Bayes
-   * Linear Regression
-   * Logistic Regression
-   * Support Vector Machine
-   * Decision Trees
-   * Neural Networks
-   * Ensemble Model
-   * others (Xgboost)
+* Naive Bayes
+* Linear Regression
+* Logistic Regression
+* Support Vector Machine
+* Decision Trees
+* Neural Networks
+* Ensemble Model
+* others (Xgboost)
 
 #### Things to keep in mind before developing ML model
 
@@ -91,9 +91,9 @@ For instance, cost of house of size 'a' in X locality is priced higher than same
 There are few algorithms like decision trees, which takes categorical feature like color with values as 'red', 'blue' etc as inputs but majority of the algorithms requires feature values to be numerical. To convert these features, we can use one hot encoding. 
 
 ```python
-       red = [1, 0, 0]    
-      blue = [0, 1, 0]
-    orange = [0, 0, 1]
+      orange = [0, 0, 1]
+         red = [1, 0, 0]    
+        blue = [0, 1, 0]
 ```
 
 One hot encoding increases the dimensionality of the feature vector, but transform colors as red as 1, blue as 2 etc would bring in order to values of the colors feature and would mess the algorithm's decision making.
@@ -102,15 +102,15 @@ One hot encoding increases the dimensionality of the feature vector, but transfo
 
 The raw data comes in different problems with it, sometimes the features values are missed if the dataset is prepared manually. To overcome such missing value problem, one do the following,
 
-   * Drop the samples, if the dataset is big enough.
-   * Perform Data Imputation to fillin the gaps of missing values.
-   * Few algorithms are robust to missing values.
-    
+* Drop the samples, if the dataset is big enough.
+* Perform Data Imputation to fillin the gaps of missing values.
+* Few algorithms are robust to missing values.
+
 **Data Imputation**
 
-   * One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)
-   * Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.
-   * Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
+* One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)
+* Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.
+* Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
    
 **Scaling** of a feature is an important task before building/applying a ML algorithm.
     
@@ -120,11 +120,11 @@ The raw data comes in different problems with it, sometimes the features values 
 
 **Types of Scaling**
    
-   * Min-Max Scaling or Normalization
-   
-   * Mean Normalization
-   
-   * Standardization or Z-score Normalization
+*Min-Max Scaling or Normalization
+
+*Mean Normalization
+
+*Standardization or Z-score Normalization
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1]. 
                     
@@ -168,32 +168,32 @@ We have a simple dataset with two features and a target variable, we can either 
 
 * **L1 Regularization**
 
-    While calculating the error(E) we add the absolute value of the coefficients of the model. 
-        
-    In simple model case, we have 2 coefficients \begin{equation*}w_1, w_2\end{equation*} 
-    
-    \begin{equation*}TotalError = E + |w_1| + |w_2|\end{equation*}
+ While calculating the error(E) we add the absolute value of the coefficients of the model. 
 
-    In Complex model case, lets say have 5 coefficients \begin{equation*}w_1, w_2, w_3, w_4, w_5\end{equation*}
-    
-    \begin{equation*}TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|\end{equation*}
+ In simple model case, we have 2 coefficients \begin{equation*}w_1, w_2\end{equation*} 
+
+ \begin{equation*}TotalError = E + |w_1| + |w_2|\end{equation*}
+
+ In Complex model case, lets say have 5 coefficients \begin{equation*}w_1, w_2, w_3, w_4, w_5\end{equation*}
+
+ \begin{equation*}TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|\end{equation*}
     
 So we get smaller error for simple model and will use the same for the generalization.
 
 
 * **L2 Regularization**
 
-    While calculating the error(E), we square the value of the coefficients of the model. 
-        
-    In simple model case, we have 2 coefficients \begin{equation*}w_1, w_2\end{equation*}
-    
-     \begin{equation*}TotalError = E + (w_1)^2 + (w_2)^2\end{equation*}
+While calculating the error(E), we square the value of the coefficients of the model. 
 
-    In Complex model case, lets say have 5 coefficients  \begin{equation*}w_1, w_2, w_3, w_4, w_5\end{equation*}
-    
-     \begin{equation*}TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2\end{equation*}
-    
-    So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is. 
+In simple model case, we have 2 coefficients \begin{equation*}w_1, w_2\end{equation*}
+
+\begin{equation*}TotalError = E + (w_1)^2 + (w_2)^2\end{equation*}
+
+In Complex model case, lets say have 5 coefficients  \begin{equation*}w_1, w_2, w_3, w_4, w_5\end{equation*}
+
+\begin{equation*}TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2\end{equation*}
+
+So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is. 
 
 
 **Now, how to select the regularization?**
@@ -339,8 +339,6 @@ Find this below snippet from wikipedia:
 <img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
 <p><b>Figure 5:</b>F1 Beta Score</p> 
 </center>
-
-
 
 #### [ROC Curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
 
