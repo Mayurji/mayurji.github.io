@@ -212,14 +212,14 @@ Principal Component Analysis is a variable reduction technique. PCA believes tha
 [Blog](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
 [Implementation](https://github.com/udacity/NLP-Exercises/blob/master/1.5-spam-classifier/Bayesian_Inference_solution.ipynb)
 
-**Support Vector Machine**
-**Ensemble Methods**
-**Clustering**
+**Support Vector Machine**\
+**Ensemble Methods**\
+**Clustering**\
 
-KMeans\
-Hierarchical Clustering\
-DBSCAN Clustering\
-Gaussian Mixture Model
+      KMeans\
+      Hierarchical Clustering\
+      DBSCAN Clustering\
+      Gaussian Mixture Model
 
 ### Selecting Algorithms
 
