@@ -38,17 +38,17 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 ### Steps
 
-**Data collection** We will use data from a large national survey that was designed explicitly with the goal of generating statistically valid inferences about the U.S. population.
-**Descriptive statistics** We will generate statistics that summarize the data concisely, and evaluate different ways to visualize data.
-**Exploratory data analysis** We will look for patterns, differences, and other features that address the questions we are interested in. At the same time we will check for inconsistencies and identify limitations.
-**Estimation** We will use data from a sample to estimate characteristics of the general population.
+**Data collection** We will use data from a large national survey that was designed explicitly with the goal of generating statistically valid inferences about the U.S. population.\
+**Descriptive statistics** We will generate statistics that summarize the data concisely, and evaluate different ways to visualize data.\
+**Exploratory data analysis** We will look for patterns, differences, and other features that address the questions we are interested in. At the same time we will check for inconsistencies and identify limitations.\
+**Estimation** We will use data from a sample to estimate characteristics of the general population.\
 **Hypothesis testing** Where we see apparent effects, like a difference between two groups, we will evaluate whether the effect might have happened by chance.
 
 ## Deep Learning and Neural Networks
 
 **DL Algorithms are complex and flexible, which are built based on the complexity of the data. It is applicable for all kinds of Machine learning as mentioned above.** 
 
-   Major drawbacks of Deep Learning are as follows
+**Major drawbacks of Deep Learning are as follows**
      
   **Lots of Data is required**
   **High amount of Computing Power**
@@ -65,14 +65,14 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
-* Naive Bayes
-* Linear Regression
-* Logistic Regression
-* Support Vector Machine
-* Decision Trees
-* Neural Networks
-* Ensemble Model
-* others (Xgboost)
+*Naive Bayes
+*Linear Regression
+*Logistic Regression
+*Support Vector Machine
+*Decision Trees
+*Neural Networks
+*Ensemble Model
+*others (Xgboost)
 
 #### Things to keep in mind before developing ML model
 
@@ -166,7 +166,7 @@ $\sigma$ is Standard Deviation.
 
 We have a simple dataset with two features and a target variable, we can either use simple model with 2 coefficients for two variables or else we use a complex model which will have more coefficients and will overfit the simple dataset. The complex model will not generalize for the new data as it is a overfit model. To overcome and choose a simple model, we can use regularization.
 
-* **L1 Regularization**
+**L1 Regularization**
 
  While calculating the error(E) we add the absolute value of the coefficients of the model. 
 
@@ -180,8 +180,7 @@ We have a simple dataset with two features and a target variable, we can either 
     
 So we get smaller error for simple model and will use the same for the generalization.
 
-
-* **L2 Regularization**
+**L2 Regularization**
 
 While calculating the error(E), we square the value of the coefficients of the model. 
 
