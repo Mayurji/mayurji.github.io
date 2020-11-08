@@ -65,14 +65,14 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
-*Naive Bayes\
-*Linear Regression\
-*Logistic Regression\
-*Support Vector Machine\
-*Decision Trees\
-*Neural Networks\
-*Ensemble Model\
-*others (Xgboost)
+**Naive Bayes**\
+**Linear Regression**\
+**Logistic Regression**\
+**Support Vector Machine**\
+**Decision Trees**\
+**Neural Networks**\
+**Ensemble Model**\
+**others (Xgboost)**
 
 #### Things to keep in mind before developing ML model
 
@@ -91,7 +91,7 @@ For instance, cost of house of size 'a' in X locality is priced higher than same
 There are few algorithms like decision trees, which takes categorical feature like color with values as 'red', 'blue' etc as inputs but majority of the algorithms requires feature values to be numerical. To convert these features, we can use one hot encoding. 
 
 ```python
-      orange = [0, 0, 1]
+     orange = [0, 0, 1]
          red = [1, 0, 0]    
         blue = [0, 1, 0]
 ```
@@ -128,9 +128,7 @@ The raw data comes in different problems with it, sometimes the features values 
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1]. 
                     
-\begin{equation*}
-x' = x - min(x)  / max(x) - min(x)
-\end{equation*}
+$x' = x - min(x)  / max(x) - min(x)$
 
 **Mean Normalization** 
 
