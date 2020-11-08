@@ -12,24 +12,23 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 ### Two types of Learning:
 
-**Supervised Learning**
-**Unsupervised Learning**
+**Supervised Learning**\
+**Unsupervised Learning**\
 **Reinforcement Learning**
 
 
 ### Supervised Learning
-   **The Algorithm learns from labeled data. It identifies/recognizes the pattern from data with labels and associates those pattern to unlabeled data.**
+   The Algorithm learns from labeled data. It identifies/recognizes the pattern from data with labels and associates those pattern to unlabeled data.
    For example: Data on house price based on various factors like area, rooms, lawn and other details, where we predict the value of the house. So our label is House Price.
    
 ### Unsupervised Learning
-   **The Algorithm learns from unlabeled data.**
+   The Algorithm learns from unlabeled data.
    For example: Unstructured text documents where we cluster text or paragraphs based on word binding in the sentence using clustering algorithms, to group documents to particular topics.
    
 #### Reinforcement Learning
-   **The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions.**
-   For instance: Self Driving Cars and Game Playing Agents
+   The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
 
-### Statistical Approach to  Statistical Problems
+### Statistical Approach to Statistical Problems
 
 #### Steps
 
@@ -45,17 +44,17 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 **Major drawbacks of Deep Learning are as follows**
      
-**Lots of Data is required**
-**High amount of Computing Power**
-**Unexplainable decisions**    
+Lots of Data is required\
+High amount of Computing Power\
+Unexplainable decisions
 
 ### How to model a Supervised Algorithm:
 
 A dataset has feature ( X's ) and target ( y ). The target can be a discrete value or a continuous value based on which we can call the problem as Classification or Regression respectively.
 
->**Classification** problem is classified as Binary or Multiclass classification. Either target value is 0/1 or else multiple values like Dogs, Person, Cat. It answers the yes or no question. It has categorical outcomes.
+**Classification** problem is classified as Binary or Multiclass classification. Either target value is 0/1 or else multiple values like Dogs, Person, Cat. It answers the yes or no question. It has categorical outcomes.
 
->**Regression** problem is like predicting a value (Numerical). For instance, predicting the house price or stock value of a product. It answers how much questions. It has numeric outcomes.
+**Regression** problem is like predicting a value (Numerical). For instance, predicting the house price or stock value of a product. It answers how much questions. It has numeric outcomes.
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
@@ -114,9 +113,9 @@ The raw data comes in different problems with it, sometimes the features values 
 
 **Types of Scaling**
    
-**Min-Max Scaling or Normalization**
-**Mean Normalization**
-**Standardization or Z-score Normalization**
+Min-Max Scaling or Normalization\
+Mean Normalization\
+Standardization or Z-score Normalization
 
 **MinMax Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1]. 
                     
@@ -208,12 +207,12 @@ Principal Component Analysis is a variable reduction technique. PCA believes tha
 
 ### Machine Learning Models
 
-**Naive Bayes**: Naive Bayes is simple and is based on Bayes Theorem.
+**Naive Bayes** - Naive Bayes is simple and is based on Bayes Theorem.
 
 [Blog](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
 [Implementation](https://github.com/udacity/NLP-Exercises/blob/master/1.5-spam-classifier/Bayesian_Inference_solution.ipynb)
 
-**Support Vector Machine**:
+**Support Vector Machine**
 **Ensemble Methods**
 **Clustering**
 
