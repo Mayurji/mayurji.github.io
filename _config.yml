@@ -8,6 +8,8 @@ permalink: /blog/:year/:month/:day/:title
 collections:
   deep-learning:
     output: true
+  machine-learning:
+    output: true
     
 # Google services
 google_analytics: UA-108823315-1
