@@ -35,6 +35,12 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
 
+
+<center>
+<img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p><b>Figure 0.1:</b> Machine Learning Algorithms</p> 
+</center>
+
 **SUPERVISED ALGORITHM**
 
 A dataset has feature ( X's ) and target ( y ). The target can be a discrete value or a continuous value based on which we can call the problem as Classification or Regression respectively.
