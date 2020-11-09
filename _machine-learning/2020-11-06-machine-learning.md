@@ -4,7 +4,7 @@ title: Basics of Machine Learning
 description: "Key concepts of Machine Learning"
 date:   2020-11-06 13:43:52 +0530
 ---
-{% include mathjax.html color='white' %}
+{% include mathjax.html %}
 
 ## Basics of Machine Learning
 
@@ -101,15 +101,15 @@ Standardization or Z-score Normalization
 
 **Min-Max Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].
 
-$$x' = x - min(x)  /over max(x) - min(x)$$
+<p>$$x' = x - min(x)  \over max(x) - min(x)$$</p>
 
 **Mean Normalization** 
 
-$$x' = x - mean(x) /over max(x) - min(x)$$
+<p>$$x' = x - mean(x) \over max(x) - min(x)$$</p>
 
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-$$x' = x - mean(x) /over \sigma$$
+<p>$$x' = x - mean(x) \over \sigma$$</p>
 
 $$\sigma$$ is Standard Deviation.
 
@@ -137,11 +137,11 @@ While calculating the error(E) we add the absolute value of the coefficients of 
 
 In simple model case, we have 2 coefficients $$w_1, w_2$$ then,
 
-$$TotalError = E + |w_1| + |w_2|$$
+<p>$$TotalError = E + |w_1| + |w_2|$$</p>
 
 In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ then,
 
-$$TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|$$
+<p>$$TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|$$</p>
     
 So we get smaller error for simple model and will use the same for the generalization.
 
@@ -151,11 +151,11 @@ While calculating the error(E), we square the value of the coefficients of the m
 
 In simple model case, we have 2 coefficients $$w_1, w_2$$ then,
 
-$$TotalError = E + (w_1)^2 + (w_2)^2$$
+<p>$$TotalError = E + (w_1)^2 + (w_2)^2$$</p>
 
 In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ then,
 
-$$TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2$$
+<p>$$TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2$$</p>
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
