@@ -71,7 +71,7 @@ When designing features or algorithms for learning features, our goal is to sepa
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 0.1:</b> Terms in Machine Learning</p> 
+<p><b>Figure 0.2:</b> Terms in Machine Learning</p> 
 </center>
 
 **FEATURE ENGINEERING**
