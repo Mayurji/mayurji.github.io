@@ -62,7 +62,9 @@ Each dataset has features and target variable. The features are parameters which
 * **DBSCAN Clustering**
 * **Gaussian Mixture Model**
 * **others (Xgboost)**
-
+            
+     **----------------------------------------------------------------------------------------------------------------------------------------------------**
+                                                                  
 **THINGS TO KEEP IN MIND**
 
 When designing features or algorithms for learning features, our goal is to separate the **factors of variation** that explain the observed data.
@@ -178,6 +180,8 @@ Based on the complexity of the data, the model tends to be complex. So the lambd
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
 
+   **----------------------------------------------------------------------------------------------------------------------------------------------------**
+
 **DATASET SPLIT**
 
 Before applying ML Algorithm, we should check the dataset and split it for modelling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
@@ -194,9 +198,13 @@ Test Set: A set of examples used only to assess the performance [generalization]
 
 The validation and testing set are also called as hold-out sets.
 
+   **----------------------------------------------------------------------------------------------------------------------------------------------------**
+
 **PRINCIPLE COMPONENT ANALYSIS**
 
 Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creates lesser number of variables called as Principal Components.
+
+   **----------------------------------------------------------------------------------------------------------------------------------------------------**
 
 **FACTORS FOR SELECTING ALGORITHM**
 
@@ -321,3 +329,5 @@ the other hand, if the threshold is 1, then no positive prediction will be made,
 The higher the area under the ROC curve (AUC), the better the classifier. A classifier with an AUC higher than 0.5 is better than a random classifier. If AUC is lower than 0.5, then something is wrong with your model. A perfect classifier would have an AUC of 1. Usually, if our model behaves well, we obtain a good classifier by selecting the value of the threshold that gives TPR close to 1 while keeping FPR near 0.
 
 **REFERENCE** [ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
+     
+   **----------------------------------------------------------------------------------------------------------------------------------------------------**
