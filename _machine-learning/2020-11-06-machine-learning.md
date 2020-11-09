@@ -4,7 +4,7 @@ title: Basics of Machine Learning
 description: "Key concepts of Machine Learning"
 date:   2020-11-06 13:43:52 +0530
 ---
-{% include mathjax.html %}
+{% include mathjax.html color='white' %}
 
 ## Basics of Machine Learning
 
