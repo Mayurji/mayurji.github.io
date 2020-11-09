@@ -240,7 +240,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 **Precision** informs us, how well the model predicts the positive class. It is also known as PPV (Positive Predictive Value).
 
-   >Precision = True Positive / (True Positive + False Positive)   
+$$Precision = {True Positive \over (True Positive + False Positive)}$$
 
 **Recall** informs us, how well the model predicts the right class for a label. It is also known as Sensitivity.
 
@@ -249,13 +249,13 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 <p><b>Figure 8:</b> Recall</p> 
 </center>
 
-   >Recall = True Positive / (True Positive + False Negative)
+$$Recall = {True Positive \over (True Positive + False Negative)}$$
 
 **SENSITIVITY AND SPECIFICITY**
 
 **Sensitivity** also known as recall or true positive rate, measures the proportion of actual positives that are correctly identified as such (e.g., the percentage of sick people who are correctly identified as having the condition).
 
-> Sensitivity = True Positive / (True Positive + False Negative)
+$$Sensitivity = {True Positive \over (True Positive + False Negative)}$$
 
 **Specificity** also known as true negative rate, measures the proportion of actual negatives that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
 
@@ -264,7 +264,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 <p><b>Figure 9:</b> Specificity</p> 
 </center>
 
-> Specificity = True Negative / (True Negative + False Positive) 
+$$Specificity = {True Negative \over (True Negative + False Positive)}$$
 
 **DRAWBACK OF USING ONLY PRECISION AND RECALL**
 
@@ -310,5 +310,14 @@ ROC- Receiver Operating Characteristics, its a plot between True Positive rate (
 </center>
 
 ROC curves are frequently used to show in a graphical way the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
+
+$$TPR = {TP \over (TP + FN)}$$
+
+$$FPR = {FP \over (FP + TN)}$$
+
+It’s easy to see that if the threshold is 0, all our predictions will be positive, so both TPR and FPR will be 1 (the upper right corner). On
+the other hand, if the threshold is 1, then no positive prediction will be made, both TPR and FPR will be 0 which corresponds to the lower left corner.
+
+The higher the area under the ROC curve (AUC), the better the classifier. A classifier with an AUC higher than 0.5 is better than a random classifier. If AUC is lower than 0.5, then something is wrong with your model. A perfect classifier would have an AUC of 1. Usually, if our model behaves well, we obtain a good classifier by selecting the value of the threshold that gives TPR close to 1 while keeping FPR near 0.
 
 **REFERENCE** [ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
