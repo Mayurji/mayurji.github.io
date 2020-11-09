@@ -100,13 +100,11 @@ Mean Normalization\
 Standardization or Z-score Normalization
 
 **Min-Max Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].
-$$
-x' = x - min(x)  / max(x) - min(x)
-$$
+$$x' = x - min(x)  / max(x) - min(x)$$
+
 **Mean Normalization** 
-$$
-x' = x - mean(x) / max(x) - min(x)
-$$
+$$x' = x - mean(x) / max(x) - min(x)$$
+
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
 $$x' = x - mean(x) / \sigma$$
@@ -135,13 +133,13 @@ We have a simple dataset with two features and a target variable, we can either 
 
 While calculating the error(E) we add the absolute value of the coefficients of the model. 
 
-In simple model case, we have 2 coefficients w_1, w_2 then,
+In simple model case, we have 2 coefficients $$w_1, w_2$$ then,
 
-**TotalError = E + |w_1| + |w_2|**
+$$TotalError = E + |w_1| + |w_2|$$
 
-In Complex model case, lets say have 5 coefficients w_1, w_2, w_3, w_4, w_5 then,
+In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ then,
 
-**TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|**
+$$TotalError = E + |w_1| + |w_2| + |w_3| + |w_4| + |w_5|$$
     
 So we get smaller error for simple model and will use the same for the generalization.
 
@@ -149,13 +147,13 @@ So we get smaller error for simple model and will use the same for the generaliz
 
 While calculating the error(E), we square the value of the coefficients of the model. 
 
-In simple model case, we have 2 coefficients w_1, w_2 then,
+In simple model case, we have 2 coefficients $$w_1, w_2$$ then,
 
-**TotalError = E + (w_1)^2 + (w_2)^2**
+$$TotalError = E + (w_1)^2 + (w_2)^2$$
 
-In Complex model case, lets say have 5 coefficients w_1, w_2, w_3, w_4, w_5 then,
+In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ then,
 
-**TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2**
+$$TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2$$
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
