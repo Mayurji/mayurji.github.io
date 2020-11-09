@@ -69,6 +69,11 @@ When designing features or algorithms for learning features, our goal is to sepa
 
 **FEATURES** are components in your dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. One such vital technique is handling categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
 
+<center>
+<img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p><b>Figure 0.1:</b> Terms in Machine Learning</p> 
+</center>
+
 **FEATURE ENGINEERING**
 
 Any problem in Machine Learning or Deep Learning requires some amount of feature engineering, one cannot simply do a ```python model.fit(x, y)``` and get SOTA results. Feature Engineering requires creativity and understanding of the domain. For instance, cost of house of size 'a' in X locality is priced higher than same size house in Y locality, even though locality is not a feature in your raw dataset.
