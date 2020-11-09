@@ -102,14 +102,14 @@ $$
 x' = x - min(x)  / max(x) - min(x)
 $$
 **Mean Normalization** 
-
+$$
 x' = x - mean(x) / max(x) - min(x)
-
+$$
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-x' = x - mean(x) / sigma
+$$x' = x - mean(x) / \sigma$$
 
-sigma is Standard Deviation.
+$$\sigma$$ is Standard Deviation.
 
 **Bias** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
 
