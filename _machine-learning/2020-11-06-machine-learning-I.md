@@ -48,19 +48,24 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 **REGRESSION** problem is like predicting a value (Numerical). For instance, predicting the house price or stock value of a product. It answers how much questions. It has numeric outcomes.
 
-Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised and unsupervised ML algorithm as follows :
+Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm.
 
-* **Naive Bayes**
-* **Linear Regression**
-* **Logistic Regression**
-* **Support Vector Machine**
-* **Decision Trees**
-* **Neural Networks**
-* **Ensemble Model**
-* **KMeans**
-* **Hierarchical Clustering**
-* **DBSCAN Clustering**
-* **Gaussian Mixture Model**
-* **others (Xgboost)**
+**UNSUPERVISED ALGORITHM**
+
+A dataset with no label is trained by unsupervised learning i.e. the patterns of such dataset is learned by widely using clustering techniques.
+
+There are tons of material, which clearly explains different algorithms, to make it easier for reference and to cross check the understanding, I will just share the reference to each blog, instead of reinventing the wheel of writing those blogs.
+
+* [**Naive Bayes**](https://www.kdnuggets.com/2020/06/naive-bayes-algorithm-everything.html)
+* [**Linear Regression**](https://towardsdatascience.com/introduction-to-machine-learning-algorithms-linear-regression-14c4e325882a)
+* [**Logistic Regression**](https://towardsdatascience.com/introduction-to-logistic-regression-66248243c148)
+* [**Support Vector Machine**](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)
+* [**Decision Trees**](https://medium.com/deep-math-machine-learning-ai/chapter-4-decision-trees-algorithms-b93975f7a1f1)
+* [**Neural Networks**](http://neuralnetworksanddeeplearning.com/chap1.html)
+* [**Ensemble Model**](https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/)
+* [**KMeans**](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a)
+* [**Hierarchical Clustering**](https://www.analyticsvidhya.com/blog/2019/05/beginners-guide-hierarchical-clustering/)
+* [**DBSCAN Clustering**](https://www.kdnuggets.com/2020/04/dbscan-clustering-algorithm-machine-learning.html)
+* [**Gaussian Mixture Model**](https://towardsdatascience.com/gaussian-mixture-models-explained-6986aaf5a95)
             
 <p align='center'>. . . . .</p>
