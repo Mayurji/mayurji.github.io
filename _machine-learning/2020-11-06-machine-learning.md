@@ -63,7 +63,7 @@ Each dataset has features and target variable. The features are parameters which
 * **Gaussian Mixture Model**
 * **others (Xgboost)**
             
-     **----------------------------------------------------------------------------------------------------------------------------------------------------**
+<p align='center'>. . . . .</p>
                                                                   
 **THINGS TO KEEP IN MIND**
 
@@ -180,7 +180,7 @@ Based on the complexity of the data, the model tends to be complex. So the lambd
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
 
-   **----------------------------------------------------------------------------------------------------------------------------------------------------**
+<p align='center'>. . . . .</p>
 
 **DATASET SPLIT**
 
@@ -198,13 +198,13 @@ Test Set: A set of examples used only to assess the performance [generalization]
 
 The validation and testing set are also called as hold-out sets.
 
-   **----------------------------------------------------------------------------------------------------------------------------------------------------**
+<p align='center'>. . . . .</p>
 
 **PRINCIPLE COMPONENT ANALYSIS**
 
 Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creates lesser number of variables called as Principal Components.
 
-   **----------------------------------------------------------------------------------------------------------------------------------------------------**
+<p align='center'>. . . . .</p>
 
 **FACTORS FOR SELECTING ALGORITHM**
 
@@ -330,4 +330,4 @@ The higher the area under the ROC curve (AUC), the better the classifier. A clas
 
 **REFERENCE** [ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
      
-   **----------------------------------------------------------------------------------------------------------------------------------------------------**
+  <p align='center'>. . . . .</p>
