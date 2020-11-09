@@ -17,23 +17,21 @@ nav ul li, footer ul li {
 }
 
 ol {
-  background: #ff9999;
   padding: 20px;
 }
 
 ul {
-  background: #3399ff;
   padding: 20px;
 }
 
 ol li {
-  background: #ffe5e5;
+  color: white;
   padding: 5px;
   margin-left: 35px;
 }
 
 ul li {
-  background: #cce5ff;
+  color: white;
   margin: 5px;
 }
 
