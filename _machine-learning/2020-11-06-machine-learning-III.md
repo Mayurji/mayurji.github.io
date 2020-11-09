@@ -166,7 +166,6 @@ If it’s the first time you are working with this dataset, you don’t know wha
 You use the training set and train 14 models, one for each combination of hyperparameters. Then you assess the performance of each model on the validation data using one of the metrics we discussed in the previous section (or some other metric that matters to you). Finally, you keep the model that performs the best according to the metric.
 
 Other techniques to find better hyperparameters
-
 * Random Search
 * Bayesian Hyperparameter
 * Gradient based techniques
@@ -181,5 +180,4 @@ cross-validation, you randomly split your training data into five folds: $${F_1 
 
 To train the first model, $$f_1$$ , you use all examples from folds $$F_2 , F_3 , F_4 , and F_5$$ as the training set and the examples from $$F_1$$ as the validation set. To train the second model, $$f_2$$ , you use the examples from folds $$F_1 , F_3, F_4 , and F_5$$ to train and the examples from $$F_2$$ as the validation set. You continue building models iteratively like this and compute the value of the metric of interest on each validation set, from $$F_1 to F_5$$. Then you average the five values of the metric to get the final value.
 
-**REFERENCE**  
-The Hundred-Page Machine Learning Book by Andriy Burkov
+**REFERENCE**  The Hundred-Page Machine Learning Book by Andriy Burkov
