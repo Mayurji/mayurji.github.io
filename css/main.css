@@ -16,6 +16,11 @@ nav ul li, footer ul li {
     color: white;
 }
 
+ul.li{
+color: white;
+}
+
+
 ul li::before {
   color: white;
   list-style: disc;
