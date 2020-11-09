@@ -6,37 +6,37 @@ date:   2020-11-06 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-## Basics of Machine Learning
+## BASICS OF MACHINE LEARNING
 
 What is Machine Learning ? 
 
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
 
-### Two types of Learning:
+### TYPES OF LEARNING
 
 **Supervised Learning**\
 **Unsupervised Learning**\
 **Reinforcement Learning**
 
 
-### Supervised Learning
+### SUPERVISED LEARNING
    The Algorithm learns from labeled data. It identifies/recognizes the pattern from data with labels and associates those pattern to unlabeled data.
    For example: Data on house price based on various factors like area, rooms, lawn and other details, where we predict the value of the house. So our label is House Price.
    
-### Unsupervised Learning
+### UNSUPERVISED LEARNING
    The Algorithm learns from unlabeled data.
    For example: Unstructured text documents where we cluster text or paragraphs based on word binding in the sentence using clustering algorithms, to group documents to particular topics.
    
-#### Reinforcement Learning
+#### REINFORCEMENT LEARNING
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
 
-### How to model a Supervised Algorithm:
+### MODELING A SUPERVISED ALGORITHM:
 
 A dataset has feature ( X's ) and target ( y ). The target can be a discrete value or a continuous value based on which we can call the problem as Classification or Regression respectively.
 
-**Classification** problem is classified as Binary or Multiclass classification. Either target value is 0/1 or else multiple values like Dogs, Person, Cat. It answers the yes or no question. It has categorical outcomes.
+**CLASSIFICATION** problem is classified as Binary or Multiclass classification. Either target value is 0/1 or else multiple values like Dogs, Person, Cat. It answers the yes or no question. It has categorical outcomes.
 
-**Regression** problem is like predicting a value (Numerical). For instance, predicting the house price or stock value of a product. It answers how much questions. It has numeric outcomes.
+**REGRESSION** problem is like predicting a value (Numerical). For instance, predicting the house price or stock value of a product. It answers how much questions. It has numeric outcomes.
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
@@ -49,19 +49,17 @@ Each dataset has features and target variable. The features are parameters which
 **Ensemble Model**\
 **others (Xgboost)**
 
-#### Things to keep in mind before developing ML model
+#### COMMON THINGS FOUND IN ML AND DL
 
 When designing features or algorithms for learning features, our goal is to separate the **factors of variation** that explain the observed data.
 
-**Features** are components in your dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. One such vital technique is handling categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
+**FEATURES** are components in your dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. One such vital technique is handling categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
 
-**Feature Engineering**
+**FEATURE ENGINEERING**
 
-Any problem in Machine Learning or Deep Learning requires some amount of feature engineering, one cannot simply do a ```python model.fit(x, y)``` and get SOTA results. Feature Engineering requires creativity and understanding of the domain. 
+Any problem in Machine Learning or Deep Learning requires some amount of feature engineering, one cannot simply do a ```python model.fit(x, y)``` and get SOTA results. Feature Engineering requires creativity and understanding of the domain. For instance, cost of house of size 'a' in X locality is priced higher than same size house in Y locality, even though locality is not a feature in your raw dataset.
 
-For instance, cost of house of size 'a' in X locality is priced higher than same size house in Y locality, even though locality is not a feature in your raw dataset.
-
-**One Hot Encoding**
+**ONE HOT ENCODING**
 
 There are few algorithms like decision trees, which takes categorical feature like color with values as 'red', 'blue' etc as inputs but majority of the algorithms requires feature values to be numerical. To convert these features, we can use one hot encoding. 
 
@@ -73,7 +71,7 @@ There are few algorithms like decision trees, which takes categorical feature li
 
 One hot encoding increases the dimensionality of the feature vector, but transform colors as red as 1, blue as 2 etc would bring in order to values of the colors feature and would mess the algorithm's decision making.
 
-**Handling Missing Values**
+**HANDLING MISSING VALUES**
 
 The raw data comes in different problems with it, sometimes the features values are missed if the dataset is prepared manually. To overcome such missing value problem, one do the following,
 
@@ -81,15 +79,15 @@ Drop the samples, if the dataset is big enough.\
 Perform Data Imputation to fillin the gaps of missing values.\
 Few algorithms are robust to missing values.
 
-**Data Imputation**
+**DATA IMPUTATION**
 
-**One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)**\
-**Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.**\
-**Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.**
+One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)\
+Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.\
+Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
    
-**Scaling** of a feature is an important task before building/applying a ML algorithm.
+**SCALING** of a feature is an important task before building/applying a ML algorithm.
     
-**Why Scaling ?**
+**WHY SCALING?**
    
    For instance, If an algorithm is not using feature scaling, then it can consider the value 300 meter to be greater than 5 km, which is not true and in this case, the algorithm will give wrong predictions by giving more importance to 300 meter than 3 km. So, we use Feature Scaling to normalize the values of it.
 
@@ -99,39 +97,39 @@ Min-Max Scaling or Normalization\
 Mean Normalization\
 Standardization or Z-score Normalization
 
-**Min-Max Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].
+**MIN-MAX SCALING** helps in rescaling the feature values into the range of [0,1] or [-1,1].
 
-<p>$$x' = x - min(x)  \over max(x) - min(x)$$</p>
+<p>$$x' = {x - min(x)}  \over {max(x) - min(x)}$$</p>
 
-**Mean Normalization** 
+**MEAN NORMALIZATION** 
 
-<p>$$x' = x - mean(x) \over max(x) - min(x)$$</p>
+<p>$$x' = {x - average(x)} \over {max(x) - min(x)}$$</p>
 
-**Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
+**STANDARDIZATION** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-<p>$$x' = x - mean(x) \over \sigma$$</p>
+<p>$$x' = {x - \mu} \over {\sigma}$$</p>
 
-$$\sigma$$ is Standard Deviation.
+<p>$$\sigma$$ is Standard Deviation.</p>
 
-**Bias** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
+**BIAS** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
 
-**Underfitting** occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Intuitively, underfitting occurs when the model or the algorithm does not fit the data well enough. Specifically, underfitting occurs if the model or algorithm shows low variance but high bias.
+**UNDERFITTING** occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Intuitively, underfitting occurs when the model or the algorithm does not fit the data well enough. Specifically, underfitting occurs if the model or algorithm shows low variance but high bias.
 
-**Variance**, in the context of Machine Learning, is a type of error that occurs due to a model's sensitivity to small fluctuations in the training set. High variance would cause an algorithm to model the noise in the training set. This is most commonly referred to as overfitting.
+**VARIANCE**, in the context of Machine Learning, is a type of error that occurs due to a model's sensitivity to small fluctuations in the training set. High variance would cause an algorithm to model the noise in the training set. This is most commonly referred to as overfitting.
 
-**Overfitting** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
+**OVERFITTING** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
 
-**Batch GD** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
+**BATCH GRADIENT DESCENT** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
 
-**Stochastic GD** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1 data point and an update is made to the weight of the model.
+**STOCHASTIC GRADIENT DESCENT** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1 data point and an update is made to the weight of the model.
 
-**Mini-Batch GD** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then we assign a value to batch_size, if batch_size is 10, then the model is trained on 10 data point and an update is made to the weight of the model. This happens iteratively taking 10 data points and updating.
+**MINI-BATCH GRADIENT DESCENT** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then we assign a value to batch_size, if batch_size is 10, then the model is trained on 10 data point and an update is made to the weight of the model. This happens iteratively taking 10 data points and updating.
 
-**Regularization**
+**REGULARIZATION**
 
 We have a simple dataset with two features and a target variable, we can either use simple model with 2 coefficients for two variables or else we use a complex model which will have more coefficients and will overfit the simple dataset. The complex model will not generalize for the new data as it is a overfit model. To overcome and choose a simple model, we can use regularization.
 
-**L1 Regularization**
+**L1 REGULARIZATION**
 
 While calculating the error(E) we add the absolute value of the coefficients of the model. 
 
@@ -145,7 +143,7 @@ In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ 
     
 So we get smaller error for simple model and will use the same for the generalization.
 
-**L2 Regularization**
+**L2 REGULARIZATION**
 
 While calculating the error(E), we square the value of the coefficients of the model. 
 
