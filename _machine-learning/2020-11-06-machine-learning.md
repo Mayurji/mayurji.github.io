@@ -6,31 +6,34 @@ date:   2020-11-06 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-## BASICS OF MACHINE LEARNING
+### BASICS OF MACHINE LEARNING
 
 What is Machine Learning ? 
 
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
 
-### TYPES OF LEARNING
+**TYPES OF LEARNING**
 
 **Supervised Learning**\
 **Unsupervised Learning**\
 **Reinforcement Learning**
 
 
-### SUPERVISED LEARNING
+**SUPERVISED LEARNING**
+
    The Algorithm learns from labeled data. It identifies/recognizes the pattern from data with labels and associates those pattern to unlabeled data.
    For example: Data on house price based on various factors like area, rooms, lawn and other details, where we predict the value of the house. So our label is House Price.
    
-### UNSUPERVISED LEARNING
+**UNSUPERVISED LEARNING**
+
    The Algorithm learns from unlabeled data.
    For example: Unstructured text documents where we cluster text or paragraphs based on word binding in the sentence using clustering algorithms, to group documents to particular topics.
    
-#### REINFORCEMENT LEARNING
+**REINFORCEMENT LEARNING**
+
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
 
-### MODELING A SUPERVISED ALGORITHM:
+**MODELING A SUPERVISED ALGORITHM**
 
 A dataset has feature ( X's ) and target ( y ). The target can be a discrete value or a continuous value based on which we can call the problem as Classification or Regression respectively.
 
@@ -99,15 +102,15 @@ Standardization or Z-score Normalization
 
 **MIN-MAX SCALING** helps in rescaling the feature values into the range of [0,1] or [-1,1].
 
-<p>$$x' = {x - min(x)}  \over {max(x) - min(x)}$$</p>
+<p>$$x' = {x - min(x)  \over max(x) - min(x)}$$</p>
 
 **MEAN NORMALIZATION** 
 
-<p>$$x' = {x - average(x)} \over {max(x) - min(x)}$$</p>
+<p>$$x' = {x - average(x) \over max(x) - min(x)}$$</p>
 
 **STANDARDIZATION** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-<p>$$x' = {x - \mu} \over {\sigma}$$</p>
+<p>$$x' = {x - \mu \over \sigma}$$</p>
 
 <p>$$\sigma$$ is Standard Deviation.</p>
 
