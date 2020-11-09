@@ -6,11 +6,9 @@ date:   2020-11-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-
-
 **CREATING DATASET AND EVALUATION METRICS**
 
-Before applying ML Algorithm, we should check the dataset and split it for modelling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
+Before applying ML Algorithm, we should check the dataset and split it for modeling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
 
 **TRAINING SET**
 
@@ -29,7 +27,7 @@ The validation and testing set are also called as hold-out sets.
 **FACTORS FOR SELECTING ALGORITHM**
 
 * Explainability
-* In-memory Vs Out-Memory
+* In-memory Vs Out-of-Memory
 * Number of Features and examples
 * Categorical Vs Numerical Features
 * Nonlinearity of the data
