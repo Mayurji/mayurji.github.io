@@ -100,14 +100,16 @@ Mean Normalization\
 Standardization or Z-score Normalization
 
 **Min-Max Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].
-$$x' = x - min(x)  / max(x) - min(x)$$
+
+$$x' = x - min(x)  /over max(x) - min(x)$$
 
 **Mean Normalization** 
-$$x' = x - mean(x) / max(x) - min(x)$$
+
+$$x' = x - mean(x) /over max(x) - min(x)$$
 
 **Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
-$$x' = x - mean(x) / \sigma$$
+$$x' = x - mean(x) /over \sigma$$
 
 $$\sigma$$ is Standard Deviation.
 
