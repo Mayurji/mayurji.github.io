@@ -10,7 +10,7 @@ date:   2020-09-05 13:43:52 +0530
 #### **Discover a way to efficiently utilize your GPU**
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="1000" height="600"/><br>
 <p><b>Figure 1:</b>GPU</p> 
 </center>
 
