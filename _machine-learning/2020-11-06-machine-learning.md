@@ -33,8 +33,7 @@ Machine learning is an application of artificial intelligence (AI) that provides
    
 **REINFORCEMENT LEARNING**
 
-   The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
-
+   The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
