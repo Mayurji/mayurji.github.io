@@ -37,7 +37,7 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 0.1:</b> Machine Learning Algorithms</p> 
+<p><b>Figure 1:</b> Machine Learning Algorithms</p> 
 </center>
 
 **SUPERVISED ALGORITHM**
@@ -71,7 +71,7 @@ When designing features or algorithms for learning features, our goal is to sepa
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 0.2:</b> Terms in Machine Learning</p> 
+<p><b>Figure 2:</b> Terms in Machine Learning</p> 
 </center>
 
 **FEATURE ENGINEERING**
@@ -210,7 +210,7 @@ Principal Component Analysis is a variable reduction technique. PCA believes tha
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 1:</b> Algorithm Selection</p> 
+<p><b>Figure 4:</b> Algorithm Selection</p> 
 </center>
 
 **CONFUSION MATRIX**
@@ -219,14 +219,14 @@ Consider a model trained two classify Cat and Dog images. And after training, we
 
 <center>
 <img src="{{site.url}}/assets/images/ml/Confusion_matrix_2.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 2:</b> Confusion Matrix</p> 
+<p><b>Figure 5:</b> Confusion Matrix</p> 
 </center>
 
 From above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called as False Negative and when a Dog is misclassified is called as False Positive. In essence, it consider Positive as Cat and Negative as Dog.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 3:</b> Confusion Matrix</p> 
+<p><b>Figure 6:</b> Confusion Matrix</p> 
 </center>
 
 **PRECISION AND RECALL**
@@ -235,7 +235,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/precision.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 4:</b> Precision</p> 
+<p><b>Figure 7:</b> Precision</p> 
 </center>
 
 **Precision** informs us, how well the model predicts the positive class. It is also known as PPV (Positive Predictive Value).
@@ -246,7 +246,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/recall.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b> Recall</p> 
+<p><b>Figure 8:</b> Recall</p> 
 </center>
 
    >Recall = True Positive / (True Positive + False Negative)
@@ -261,7 +261,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/specificity.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b> Specificity</p> 
+<p><b>Figure 9:</b> Specificity</p> 
 </center>
 
 > Specificity = True Negative / (True Negative + False Positive) 
@@ -286,7 +286,7 @@ In statistical analysis of binary classification, the F1 score (also F-score or 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1-score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b> F1-score</p> 
+<p><b>Figure 10:</b> F1-score</p> 
 </center>
 
 **F1 Beta Score**
@@ -297,12 +297,17 @@ Find this below snippet from wikipedia:
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p><b>Figure 5:</b> F1 Beta Score</p> 
+<p><b>Figure 11:</b> F1 Beta Score</p> 
 </center>
 
 **[ROC CURVE](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)**
 
 ROC- Receiver Operating Characteristics, its a plot between True Positive rate (Sensitivity) vs False Positive Rate (1 - specificity). Its a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
+
+<center>
+<img src="{{site.url}}/assets/images/ml/roc.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p><b>Figure 12:</b> Area under the ROC curve</p> 
+</center>
 
 ROC curves are frequently used to show in a graphical way the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
 
