@@ -40,8 +40,8 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
 
-**Naive Bayes**\
-**Linear Regression**\
+- **Naive Bayes**\
+- **Linear Regression**\
 **Logistic Regression**\
 **Support Vector Machine**\
 **Decision Trees**\
