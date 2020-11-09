@@ -38,7 +38,7 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 **REGRESSION** problem is like predicting a value (Numerical). For instance, predicting the house price or stock value of a product. It answers how much questions. It has numeric outcomes.
 
-Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised ML algorithm as follows :
+Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised and unsupervised ML algorithm as follows :
 
 **Naive Bayes**\
 **Linear Regression**\
