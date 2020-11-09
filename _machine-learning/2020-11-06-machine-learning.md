@@ -8,8 +8,6 @@ date:   2020-11-06 13:43:52 +0530
 
 ### BASICS OF MACHINE LEARNING
 
-What is Machine Learning ? 
-
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
 
 **TYPES OF LEARNING**
@@ -17,7 +15,6 @@ Machine learning is an application of artificial intelligence (AI) that provides
 **Supervised Learning**\
 **Unsupervised Learning**\
 **Reinforcement Learning**
-
 
 **SUPERVISED LEARNING**
 
@@ -33,7 +30,7 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. For instance: Self Driving Cars and Game Playing Agents
 
-**MODELING A SUPERVISED ALGORITHM**
+**SUPERVISED ALGORITHM**
 
 A dataset has feature ( X's ) and target ( y ). The target can be a discrete value or a continuous value based on which we can call the problem as Classification or Regression respectively.
 
@@ -50,6 +47,10 @@ Each dataset has features and target variable. The features are parameters which
 **Decision Trees**\
 **Neural Networks**\
 **Ensemble Model**\
+**KMeans**\
+**Hierarchical Clustering**\
+**DBSCAN Clustering**\
+**Gaussian Mixture Model**\
 **others (Xgboost)**
 
 **THINGS TO KEEP IN MIND**
@@ -71,7 +72,6 @@ There are few algorithms like decision trees, which takes categorical feature li
          red = [1, 0, 0]    
         blue = [0, 1, 0]
 ```
-
 One hot encoding increases the dimensionality of the feature vector, but transform colors as red as 1, blue as 2 etc would bring in order to values of the colors feature and would mess the algorithm's decision making.
 
 **HANDLING MISSING VALUES**
@@ -165,15 +165,15 @@ Based on the complexity of the data, the model tends to be complex. So the lambd
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
 
-### DATASET SPLIT
+**DATASET SPLIT**
 
 Before applying ML Algorithm, we should check the dataset and split it for modelling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
 
-### TRAINING SET
+**TRAINING SET**
 
 Training Set: Before Big Data came into the picture of analytics, training data made around 70-75% data of total data. But with millions of records or data, training data occupies 95% of the total data. We model our algorithm on training set.
 
-### VALIDATION AND TESTING SET
+**VALIDATION AND TESTING SET**
 
 Validation Set: A set of examples used to tune the parameters [i.e., architecture, not weights] of a classifier, for example to choose the number of hidden units in a neural network. Before Big Data era, validation set occupied 15-12.5% data, but in Big Data times, it occupies 2.5%.
 
@@ -181,24 +181,11 @@ Test Set: A set of examples used only to assess the performance [generalization]
 
 The validation and testing set are also called as hold-out sets.
 
-### PRINCIPLE COMPONENT ANALYSIS
+**PRINCIPLE COMPONENT ANALYSIS**
 
 Principal Component Analysis is a variable reduction technique. PCA believes that if there are large number of observed variables, then some of these observed variables tend to have redundancy of information, and PCA tries to capture the variance of these variables and creates lesser number of variables called as Principal Components.
 
-### DIFFERENT MACHINE LEARNING MODELS
-
-**Naive Bayes**\
-[Blog](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c) \
-[Implementation](https://github.com/udacity/NLP-Exercises/blob/master/1.5-spam-classifier/Bayesian_Inference_solution.ipynb)
-
-**Support Vector Machine**\
-**Ensemble Methods**\
-**KMeans**\
-**Hierarchical Clustering**\
-**DBSCAN Clustering**\
-**Gaussian Mixture Model**
-
-### FACTORS FOR SELECTING ALGORITHM
+**FACTORS FOR SELECTING ALGORITHM**
 
 Explainability\
 In-memory Vs Out-Memory\
@@ -213,7 +200,7 @@ Predicton speed
 <p><b>Figure 1:</b> Algorithm Selection</p> 
 </center>
 
-#### CONFUSION MATRIX
+**CONFUSION MATRIX**
 
 Consider a model trained two classify Cat and Dog images. And after training, we are testing the model on 100 random images of Dogs and Cats with 50 each and get an accuracy of 85%. It means that the model has misclassified 15 images. Now let's consider that out of 15 images 10 Dog images were misclassified as Cat and 5 Cat images are misclassified as Dog.
 
@@ -229,7 +216,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 <p><b>Figure 3:</b> Confusion Matrix</p> 
 </center>
 
-#### PRECISION AND RECALL
+**PRECISION AND RECALL**
 
 **Precision** can be seen as a measure of exactness or quality, whereas **recall** is a measure of completeness or quantity. In simple terms, high precision means that an algorithm returned substantially more relevant results than irrelevant ones, while high recall means that an algorithm returned most of the relevant results.
 
@@ -251,7 +238,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
    >Recall = True Positive / (True Positive + False Negative)
 
-#### SENSITIVITY AND SPECIFICITY
+**SENSITIVITY AND SPECIFICITY**
 
 **Sensitivity** also known as recall or true positive rate, measures the proportion of actual positives that are correctly identified as such (e.g., the percentage of sick people who are correctly identified as having the condition).
 
@@ -266,7 +253,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 > Specificity = True Negative / (True Negative + False Positive) 
 
-### DRAWBACK OF USING ONLY PRECISION AND RECALL
+**DRAWBACK OF USING ONLY PRECISION AND RECALL**
 
 Consider having built a model to classify whether a patient suffers from cancer or not from a sample of 1000000 (1 million). We know that 100 in 1 million suffer from cancer. After training, we test the model and it misclassifies the 100 cancer as 90 with no cancer (False Negative) and 10 with (True Positive). It correctly classifies Non-cancer patient as no cancer.
 
@@ -278,7 +265,7 @@ Lets calculate Recall, R = 10/(10 + 90) = 10%.
 
 Clearly we can see that the model failed to classify the cancer patient, and these metrics gets dominated by class with large numbers which is otherwise referred as **Imbalanced class problem**. Here, the number of non cancer class are 999900 and cancer class are 100. So its vital to check if these metric really telling story we want to hear.
 
-#### F1-SCORE AND F1-BETA SCORE
+**F1-SCORE AND F1-BETA SCORE**
 
 **F1 Score**
 
@@ -300,7 +287,7 @@ Find this below snippet from wikipedia:
 <p><b>Figure 5:</b> F1 Beta Score</p> 
 </center>
 
-#### [ROC CURVE](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+**[ROC CURVE](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)**
 
 ROC- Receiver Operating Characteristics, its a plot between True Positive rate (Sensitivity) vs False Positive Rate (1 - specificity). Its a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
 
