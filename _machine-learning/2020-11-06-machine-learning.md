@@ -10,6 +10,11 @@ date:   2020-11-06 13:43:52 +0530
 
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
 
+<center>
+<img src="{{site.url}}/assets/images/ml/ml.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p><b>Figure 0:</b> Machine Learning</p> 
+</center>
+
 **TYPES OF LEARNING**
 
 * **Supervised Learning**
