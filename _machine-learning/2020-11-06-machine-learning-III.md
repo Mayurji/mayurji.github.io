@@ -151,3 +151,34 @@ The higher the area under the ROC curve (AUC), the better the classifier. A clas
 **REFERENCE** [ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
      
   <p align='center'>. . . . .</p>
+  
+**SELECTING HYPERPARAMETERS IN ALGORITHMS**
+
+While training the model, the model learns parameters W. But there are other set of parameters called Hyperparameter, which are tuned manually by user/ML developer. For instance, there are models such Decision Tree, where we tune the **depth of the tree** or Support Vector Machine where we tune penalty parameter **C** etc.
+
+To select an optimal hyperparameter, we can use basic technique like **Grid Search**. In Grid search, we assign set of values to hyperparameters and perform modeling on each hyperparameter value, it is expensive if there many hyperparameters to tune. 
+
+Let’s say you train an SVM and you have two hyperparameters to tune: the penalty parameter C (a positive real number) and the kernel (either “linear” or “rbf”).
+
+If it’s the first time you are working with this dataset, you don’t know what is the possible range of values for C. The most common trick is to use a logarithmic scale. For example, for C you can try the following values: [0.001, 0.01, 0.1, 1.0, 10, 100, 1000]. In this case you have 14 combinations of hyperparameters to try: [(0.001, “linear”), (0.01, “linear”), (0.1, “linear”), (1.0, “linear”), (10, “linear”), (100, “linear”), (1000, “linear”), (0.001, “rbf”), (0.01, “rbf”),
+(0.1, “rbf”), (1.0, “rbf”), (10, “rbf”), (100, “rbf”), (1000, “rbf”)].
+
+You use the training set and train 14 models, one for each combination of hyperparameters. Then you assess the performance of each model on the validation data using one of the metrics we discussed in the previous section (or some other metric that matters to you). Finally, you keep the model that performs the best according to the metric.
+
+Other techniques to find better hyperparameters
+
+* Random Search
+* Bayesian Hyperparameter
+* Gradient based techniques
+* Evolutionary optimization techniques
+
+**CROSS VALIDATION**
+
+If we have less data or poor validation set for evaluating the model, then we can use cross-validation technique to find hyperparameter. Note, validation set is used for tuning model with help of better hyperparameter and reduced validation error.
+
+To perform cross-validation, Cross-validation works like follows. First, you fix the values of the hyperparameters you want to evaluate. Then you split your training set into several subsets of the same size. Each subset is called a fold. Typically, five-fold cross-validation is used in practice. With five-fold
+cross-validation, you randomly split your training data into five folds: $${F_1 , F_2 , . . . , F_5 }$$. Each $$F_k , k = 1, . . . , 5$$ contains 20% of your training data. Then you train five models as follows.
+
+To train the first model, f 1 , you use all examples from folds $$F_2 , F_3 , F_4 , and F_5$$ as the training set and the examples from $$F_1$$ as the validation set. To train the second model, $$f_2$$ , you use the examples from folds $$F_1 , F_3, F_4 , and F_5$$ to train and the examples from $$F_2$$ as the validation set. You continue building models iteratively like this and compute the value of the metric of interest on each validation set, from $$F_1 to F_5$$. Then you average the five values of the metric to get the final value.
+
+**REFERENCE**  The Hundred-Page Machine Learning Book by Andriy Burkov
