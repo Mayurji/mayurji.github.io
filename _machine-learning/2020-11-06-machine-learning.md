@@ -12,8 +12,8 @@ Machine learning is an application of artificial intelligence (AI) that provides
 
 **TYPES OF LEARNING**
 
-* **Supervised Learning**\
-* **Unsupervised Learning**\
+* **Supervised Learning**
+* **Unsupervised Learning**
 * **Reinforcement Learning**
 
 **SUPERVISED LEARNING**
@@ -40,18 +40,18 @@ A dataset has feature ( X's ) and target ( y ). The target can be a discrete val
 
 Each dataset has features and target variable. The features are parameters which affects the target variable either directly or indirectly. Now, this relationship between X and y is built by a ML algorithm. There are various supervised and unsupervised ML algorithm as follows :
 
-**Naive Bayes**\
-**Linear Regression**\
-**Logistic Regression**\
-**Support Vector Machine**\
-**Decision Trees**\
-**Neural Networks**\
-**Ensemble Model**\
-**KMeans**\
-**Hierarchical Clustering**\
-**DBSCAN Clustering**\
-**Gaussian Mixture Model**\
-**others (Xgboost)**
+* **Naive Bayes**
+* **Linear Regression**
+* **Logistic Regression**
+* **Support Vector Machine**
+* **Decision Trees**
+* **Neural Networks**
+* **Ensemble Model**
+* **KMeans**
+* **Hierarchical Clustering**
+* **DBSCAN Clustering**
+* **Gaussian Mixture Model**
+* **others (Xgboost)**
 
 **THINGS TO KEEP IN MIND**
 
@@ -78,15 +78,15 @@ One hot encoding increases the dimensionality of the feature vector, but transfo
 
 The raw data comes in different problems with it, sometimes the features values are missed if the dataset is prepared manually. To overcome such missing value problem, one do the following,
 
-Drop the samples, if the dataset is big enough.\
-Perform Data Imputation to fillin the gaps of missing values.\
-Few algorithms are robust to missing values.
+* Drop the samples, if the dataset is big enough.
+* Perform Data Imputation to fillin the gaps of missing values.
+* Few algorithms are robust to missing values.
 
 **DATA IMPUTATION**
 
-One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present)\
-Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.\
-Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
+* One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present).
+* Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.
+* Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
    
 **SCALING** of a feature is an important task before building/applying a ML algorithm.
     
@@ -96,9 +96,9 @@ Replace with value which is in middle of the range i.e. if feature x is [-1, 1] 
 
 **TYPES OF SCALING**
    
-Min-Max Scaling or Normalization\
-Mean Normalization\
-Standardization or Z-score Normalization
+* Min-Max Scaling or Normalization
+* Mean Normalization
+* Standardization or Z-score Normalization
 
 **MIN-MAX SCALING** helps in rescaling the feature values into the range of [0,1] or [-1,1].
 
@@ -111,8 +111,6 @@ Standardization or Z-score Normalization
 **STANDARDIZATION** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
 <p>$$x' = {x - \mu \over \sigma}$$</p>
-
-<p>$$\sigma$$ is Standard Deviation.</p>
 
 **BIAS** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
 
@@ -187,13 +185,13 @@ Principal Component Analysis is a variable reduction technique. PCA believes tha
 
 **FACTORS FOR SELECTING ALGORITHM**
 
-Explainability\
-In-memory Vs Out-Memory\
-Number of Features and examples\
-Categorical Vs Numerical Features\
-Nonlinearity of the data\
-Training speed\
-Predicton speed
+* Explainability
+* In-memory Vs Out-Memory
+* Number of Features and examples
+* Categorical Vs Numerical Features
+* Nonlinearity of the data
+* Training speed
+* Predicton speed
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
