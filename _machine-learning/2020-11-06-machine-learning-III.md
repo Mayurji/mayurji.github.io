@@ -179,6 +179,7 @@ If we have less data or poor validation set for evaluating the model, then we ca
 To perform cross-validation, Cross-validation works like follows. First, you fix the values of the hyperparameters you want to evaluate. Then you split your training set into several subsets of the same size. Each subset is called a fold. Typically, five-fold cross-validation is used in practice. With five-fold
 cross-validation, you randomly split your training data into five folds: $${F_1 , F_2 , . . . , F_5 }$$. Each $$F_k , k = 1, . . . , 5$$ contains 20% of your training data. Then you train five models as follows.
 
-To train the first model, f 1 , you use all examples from folds $$F_2 , F_3 , F_4 , and F_5$$ as the training set and the examples from $$F_1$$ as the validation set. To train the second model, $$f_2$$ , you use the examples from folds $$F_1 , F_3, F_4 , and F_5$$ to train and the examples from $$F_2$$ as the validation set. You continue building models iteratively like this and compute the value of the metric of interest on each validation set, from $$F_1 to F_5$$. Then you average the five values of the metric to get the final value.
+To train the first model, $$f_1$$ , you use all examples from folds $$F_2 , F_3 , F_4 , and F_5$$ as the training set and the examples from $$F_1$$ as the validation set. To train the second model, $$f_2$$ , you use the examples from folds $$F_1 , F_3, F_4 , and F_5$$ to train and the examples from $$F_2$$ as the validation set. You continue building models iteratively like this and compute the value of the metric of interest on each validation set, from $$F_1 to F_5$$. Then you average the five values of the metric to get the final value.
 
-**REFERENCE**  The Hundred-Page Machine Learning Book by Andriy Burkov
+**REFERENCE**  
+The Hundred-Page Machine Learning Book by Andriy Burkov
