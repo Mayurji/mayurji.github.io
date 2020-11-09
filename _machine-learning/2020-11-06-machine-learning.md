@@ -240,7 +240,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 **Precision** informs us, how well the model predicts the positive class. It is also known as PPV (Positive Predictive Value).
 
-$$Precision = {True Positive \over (True Positive + False Positive)}$$
+<p>$$Precision = {True Positive \over (True Positive + False Positive)}$$</p>
 
 **Recall** informs us, how well the model predicts the right class for a label. It is also known as Sensitivity.
 
@@ -249,13 +249,13 @@ $$Precision = {True Positive \over (True Positive + False Positive)}$$
 <p><b>Figure 8:</b> Recall</p> 
 </center>
 
-$$Recall = {True Positive \over (True Positive + False Negative)}$$
+<p>$$Recall = {True Positive \over (True Positive + False Negative)}$$</p>
 
 **SENSITIVITY AND SPECIFICITY**
 
 **Sensitivity** also known as recall or true positive rate, measures the proportion of actual positives that are correctly identified as such (e.g., the percentage of sick people who are correctly identified as having the condition).
 
-$$Sensitivity = {True Positive \over (True Positive + False Negative)}$$
+<p>$$Sensitivity = {True Positive \over (True Positive + False Negative)}$$</p>
 
 **Specificity** also known as true negative rate, measures the proportion of actual negatives that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
 
@@ -264,7 +264,7 @@ $$Sensitivity = {True Positive \over (True Positive + False Negative)}$$
 <p><b>Figure 9:</b> Specificity</p> 
 </center>
 
-$$Specificity = {True Negative \over (True Negative + False Positive)}$$
+<p>$$Specificity = {True Negative \over (True Negative + False Positive)}$$</p>
 
 **DRAWBACK OF USING ONLY PRECISION AND RECALL**
 
@@ -311,9 +311,9 @@ ROC- Receiver Operating Characteristics, its a plot between True Positive rate (
 
 ROC curves are frequently used to show in a graphical way the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
 
-$$TPR = {TP \over (TP + FN)}$$
+<p>$$TPR = {TP \over (TP + FN)}$$</p>
 
-$$FPR = {FP \over (FP + TN)}$$
+<p>$$FPR = {FP \over (FP + TN)}$$</p>
 
 It’s easy to see that if the threshold is 0, all our predictions will be positive, so both TPR and FPR will be 1 (the upper right corner). On
 the other hand, if the threshold is 1, then no positive prediction will be made, both TPR and FPR will be 0 which corresponds to the lower left corner.
