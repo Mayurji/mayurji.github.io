@@ -6,7 +6,9 @@ date:   2020-11-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-**DATASET SPLIT**
+
+
+**CREATING DATASET AND EVALUATION METRICS**
 
 Before applying ML Algorithm, we should check the dataset and split it for modelling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
 
