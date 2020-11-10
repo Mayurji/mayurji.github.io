@@ -32,6 +32,21 @@ provided by simple ml algorithms. While using neural networks, there is a trade-
 and performance in terms of accuracy. Currently, there is lot of active research being done to unravel the
 black box called neural nets.
 
+General Equation of Neural Network
+
+<p>$$y=f_NN(x)$$</p>
+
+Now, the function $$f_NN$$ can get very complex based on task and data. For instance, $$f_NN$$ can inherit 
+multiple functions in it as follows,
+
+<p>$$y=f_3(f_2(f_1(x)))$$</p>
+
+We can call the above equation as three layered network, because passes through three sets of functions. A layer in neural network
+are set of neurons or parameters connecting one layer to another layer with parameters getting learned in between them.
+It basically combines transformation of multiple features with help activation units. Activation units in neural network
+are simple function which introduces non-linearity to the neural network to learn better features and understand complex 
+datasets like images, texts etc.
+
 Find this annotated research paper which explains role of individual unit in neural network, [Role of Individual Units in Deep Neural Networks](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate%20DNN)
 
-<p>. . . . .</p>
+<p align=center>. . . . .</p>
