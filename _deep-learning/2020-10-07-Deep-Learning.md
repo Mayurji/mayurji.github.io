@@ -14,7 +14,7 @@ In Neural Networks, the models learns parameters w for complex unstructured data
 audio, text etc.
 
 <center>
-<img src="{{site.url}}/assets/images/resnet/mlvsdl.png" style="zoom: 5%; background-color:#DCDCDC;" width=100% height=75% /><br>
+<img src="{{site.url}}/assets/images/resnet/mlvsdl.png" style="zoom: 5%; background-color:#DCDCDC;"  width="1000" height="600" /><br>
 <p><b>Figure 1:</b> Deep Learning vs Machine Learning</p> 
 </center>
 
