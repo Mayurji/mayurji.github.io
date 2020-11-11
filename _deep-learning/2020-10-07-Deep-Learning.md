@@ -38,7 +38,7 @@ General Equation of Neural Network
 
 <p>$$y=f_N(x)$$</p>
 
-Now, the function $$f_NN$$ can get very complex based on task and data. For instance, $$f_N$$ can inherit 
+Now, the function $$f_N$$ can get very complex based on task and data. For instance, $$f_N$$ can inherit 
 multiple functions in it as follows,
 
 <p>$$y=f_3(f_2(f_1(x)))$$</p>
