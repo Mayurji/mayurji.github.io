@@ -4,6 +4,8 @@ title: Deep Learning
 description: "The idea behind neural networks and why it works for complex problems!"
 date:   2020-10-07 13:43:52 +0530
 ---
+{% include mathjax.html %}
+
 **NEURAL NETWORK**
 
 Neural Network models are similar to machine learning models in context of learning a function. 
