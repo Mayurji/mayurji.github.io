@@ -73,7 +73,7 @@ preprocess= transforms.Compose([
 img = Image.open('../Images/traffic.jpeg')
 img_p = preprocess(img)
 print(img_p.shape)
-torch.Size([3, 224, 224])
+#torch.Size([3, 224, 224])
 ```
 
 Pytorch uses first dimension of matrix to represent the batch size. So the pretrained model requires batch size as first dimension, 
@@ -82,7 +82,7 @@ so we reshape the image dimension. In pytorch, we use unsqueeze to add an dimens
 ```python
 batch_t = torch.unsqueeze(img_p, 0)
 batch_t.shape
-torch.Size([1, 3, 224, 224])
+#torch.Size([1, 3, 224, 224])
 ```
 Pytorch, we can use a model in two modes, train mode and a eval mode. In train mode, the model learns model parameters
 and we perform batch normalization and dropout to avoid overfitting. In eval mode, pytorch automatically disables the
@@ -96,6 +96,7 @@ Imagenet, which has 1000 classes.
 resnet.eval()
 out = resnet(batch_t)
 print(out.shape)
+#torch.Size([1, 1000])
 ```
 **Loading Images Classes from txt file**
 
@@ -112,7 +113,7 @@ maximum among 1000 classes.
 ```python
 _, index = torch.max(out, 1)
 index
-tensor([920])
+#tensor([920])
 ```
 **Prediction Confidence**
 
@@ -123,7 +124,7 @@ label of the class and present it as confidence percentage.
 ```python
 percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
 classes[index[0]], percentage[index[0]].item()
-('traffic_light', 99.99995422363281)
+#('traffic_light', 99.99995422363281)
 ```
 
 **Top 5 predictions**
