@@ -17,7 +17,7 @@ So, we'll learn how to use a pretrained model in Pytorch and then we'll look int
 
 #### How to load and predict using Pre-trained Model - Resnet34
 
-Pytorch provides three set of libraries i.e. torchvision, torchaudio, torchtext for Vision tasks, Audio tasks and 
+Pytorch provides three sets of libraries i.e. torchvision, torchaudio, torchtext for Vision tasks, Audio tasks and 
 Text tasks respectively.
 
 **Importing Libraries**
@@ -35,19 +35,19 @@ import matplotlib.pyplot as plt
 ```
 **Loading Pretrained Model**
 
-Using Models module from Torchvision, we can load many pretrained models which exists in pytorch. I am loading a resnet34 
+Using models module from Torchvision, we can load many pretrained models which exists in pytorch. I am loading a resnet34 
 model with pretrained=True, which means I will be using weights of the model on which it was trained on. For Instance, 
 resnet34 was trained on Imagenet dataset. On executing the below line, the models module will download the model from 
-Pytorch if it doesn't exists.
+Pytorch if it doesn't exists in your system.
 
 ```python
 resnet = models.resnet34(pretrained=True)
 ```
-pretrained=True means returns a pre-trained model.
+pretrained=True returns a pre-trained model.
 
 **Creating Transforms**
 
-Transforms is cool feature in torchvision, because we can apply a list of transforms/augmentation on an image by just simply 
+Transforms is a cool feature in torchvision, because we can apply a list of transforms/augmentation on an image by just simply 
 adding it as parameter in transforms module. We can also customize other transforms if required, if its not included in 
 torchvision.transforms.
 
@@ -84,8 +84,8 @@ batch_t = torch.unsqueeze(img_p, 0)
 batch_t.shape
 #torch.Size([1, 3, 224, 224])
 ```
-Pytorch, we can use a model in two modes, train mode and a eval mode. In train mode, the model learns model parameters
-and we perform batch normalization and dropout to avoid overfitting. In eval mode, pytorch automatically disables the
+Pytorch, we can use a model in two modes, train mode and an eval mode. In train mode, the model learns model parameters
+and we perform batch normalization and dropout layers to avoid overfitting. In eval mode, pytorch automatically disables the
 batch norm and dropout layer.
 
 Since we are predicting using pretrained model, we use model under eval mode. We are initializing the resnet34 model and predicting
