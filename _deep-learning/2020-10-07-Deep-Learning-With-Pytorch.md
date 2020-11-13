@@ -133,12 +133,13 @@ Similar to above code, only showing top five predictions of an image.
 ```python
 _, indices = torch.sort(out, descending=True)
 [(classes[idx], percentage[idx].item()) for idx in indices[0][:5]]
-```
+'''
 [('traffic_light', 99.99995422363281),\
  ('street_sign', 2.8018390366923995e-05),\
  ('pole', 9.717282409837935e-06),\
  ('loudspeaker', 2.9554805678344565e-06),\
  ('binoculars', 1.4750306718269712e-06)]
-
+'''
+```
 
 **Reference** [Deep Learning With Pytorch by Eli Stevens and Luca Antiga](https://www.manning.com/books/deep-learning-with-pytorch)
