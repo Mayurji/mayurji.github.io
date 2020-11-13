@@ -2,7 +2,7 @@
 layout: deep-learning
 title: Deep Learning with Pytorch - I
 description: "Learn how to use pytorch for deep learning"
-date:   2020-10-07 13:43:52 +0530
+date:   2020-10-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
