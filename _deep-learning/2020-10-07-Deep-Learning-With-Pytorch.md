@@ -6,6 +6,8 @@ date:   2020-10-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
+### Deep Learning Using Pytorch
+
 In Deep Learning, It was preferred to use a pre-trained model as initialization for your new model rather than 
 creating a model from scratch. Pre-training provides a major boost to your model, by capturing essential features, 
 which initial layer of pre-trained model holds. And also, the training time cost and hardware required is drastically
@@ -13,7 +15,7 @@ brought down because pretrained model are SOTA models which are trained on huge 
 
 So, we'll learn how to use a pretrained model in Pytorch and then we'll look into the basics of pytorch.
 
-## How to load and predict using Pre-trained Model - Resnet34
+#### How to load and predict using Pre-trained Model - Resnet34
 
 Pytorch provides three set of libraries i.e. torchvision, torchaudio, torchtext for Vision tasks, Audio tasks and 
 Text tasks respectively.
@@ -124,18 +126,18 @@ classes[index[0]], percentage[index[0]].item()
 ('traffic_light', 99.99995422363281)
 ```
 
-Top 5 predictions
+**Top 5 predictions**
 
 Similar to above code, only showing top five predictions of an image.
 ```python
 _, indices = torch.sort(out, descending=True)
 [(classes[idx], percentage[idx].item()) for idx in indices[0][:5]]
-
-[('traffic_light', 99.99995422363281),
- ('street_sign', 2.8018390366923995e-05),
- ('pole', 9.717282409837935e-06),
- ('loudspeaker', 2.9554805678344565e-06),
- ('binoculars', 1.4750306718269712e-06)]
 ```
+[('traffic_light', 99.99995422363281),\
+ ('street_sign', 2.8018390366923995e-05),\
+ ('pole', 9.717282409837935e-06),\
+ ('loudspeaker', 2.9554805678344565e-06),\
+ ('binoculars', 1.4750306718269712e-06)]
+
 
 **Reference** [Deep Learning With Pytorch by Eli Stevens and Luca Antiga](https://www.manning.com/books/deep-learning-with-pytorch)
