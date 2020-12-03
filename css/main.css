@@ -147,9 +147,13 @@ pre {
 .table {
 	display: table;   /* Allow the centering to work */
 	width: 89%;
-	height: 50%;
 	margin: 0 auto;
 }
+
+.th {
+height:70px
+}
+
 
 ul#horizontal-list {
 	min-width: 696px;
