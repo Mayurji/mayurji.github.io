@@ -146,9 +146,9 @@ pre {
 
 ul#horizontal-list {
 	min-width: 696px;
-	list-style: none;
+	list-style: disc;
 	padding-top: 20px;
 	}
-	ul#horizontal-list li {
-		display: inline;
-	}
+ul#horizontal-list li {
+	display: inline;
+}
