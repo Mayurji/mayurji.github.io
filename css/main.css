@@ -77,6 +77,12 @@ h4 {
     color: white;
 }
 
+h5 {
+    font-size: 1.2em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: white;
+}
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -135,7 +141,7 @@ pre {
 }
 
 #menu-outer {
-	height: 42px;
+	height: 84px;
 }
 
 .table {
