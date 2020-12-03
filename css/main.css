@@ -146,7 +146,8 @@ pre {
 ul#horizontal-list {
 	min-width: 696px;
 	list-style: disc;
-	padding-top: 20px;
+	padding-top: 10px;
+	font-weight: bold;
 	}
 ul#horizontal-list li {
 	display: inline;
