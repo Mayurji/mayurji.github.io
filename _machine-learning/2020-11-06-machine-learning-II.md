@@ -70,19 +70,33 @@ The raw data comes in different problems with it, sometimes the features values 
 
 <p>$$x' = {x - \mu \over \sigma}$$</p>
 
-**Bias** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
+<center>
+<img src="{{site.url}}/assets/images/ml/bias-variance.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p><b>Figure 3:</b> Model Complexity vs Error</p> 
+</center>
 
-**Underfitting** occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Intuitively, underfitting occurs when the model or the algorithm does not fit the data well enough. Specifically, underfitting occurs if the model or algorithm shows low variance but high bias.
+**Bias** in statistical term refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
+
+In machine learning, a model is said to be suffering from bias when the model does not perform well on training set i.e. the model is unable to recognize the data pattern of training set, making it too simplistic. As the model complexity is increased, the bias is reduced.
+
+**Underfitting** occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Intuitively, underfitting occurs when the model or the algorithm does not fit the data well enough. Specifically, underfitting occurs if the model or an algorithm shows low variance but high bias.
 
 **Variance**, in the context of Machine Learning, is a type of error that occurs due to a model's sensitivity to small fluctuations in the training set. High variance would cause an algorithm to model the noise in the training set. This is most commonly referred to as overfitting.
 
+As seen in figure 3, as the model complexity is increased, the variance is increases causing the model to overfit. To avoid such scenario, we keep track of validation loss, which is high if model is overfit. In Deep Learning, we perform *Early Stopping* to avoid overfitting.
+
 **Overfitting** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
 
-**Batch Gradient Descent** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
+<center>
+<img src="{{site.url}}/assets/images/ml/gradient-descent.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p><b>Figure 3:</b> Batch vs Stochastic vs Mini-Batch</p> 
+</center>
 
-**Stochastic Gradient Descent** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1 data point and an update is made to the weight of the model.
+**Batch Gradient Descent** refers how a gradient changes(weight updates) are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
 
-**Mini-Batch Gradient Descent** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then we assign a value to batch_size, if batch_size is 10, then the model is trained on 10 data point and an update is made to the weight of the model. This happens iteratively taking 10 data points and updating.
+**Stochastic Gradient Descent** refers how a gradient changes(weight updates) are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1 data point and an update is made to the weight of the model.
+
+**Mini-Batch Gradient Descent** refers how a gradient changes(weight updates) are applied to the weight matrix. If we have 1000 data points, then we assign a value to batch_size, if batch_size is 10, then the model is trained on 10 data point and an update is made to the weight of the model. This happens iteratively taking 10 data points and updating.
 
 **Regularization**
 
