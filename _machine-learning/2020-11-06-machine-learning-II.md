@@ -132,8 +132,10 @@ In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ 
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
-**How to select Regularization's parameter $$lambda$$ ?**
+**How to select Regularization's parameter $$\lambda$$ ?**
 Based on the complexity of the data, the model tends to be complex. So the lambda value acts like a switch either to increase the complexity or not. If we keep a small value of lambda and multiple it, with the complexity part of the model i.e. "w" parameters then we get smaller error compared to the simple model with its "w" parameters. And if lambda is large, then we punish the complexity part highly and thus making the complex model with great error.
+
+<p>$$TotalError = E + \lambda ((w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2$$)</p>
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
 
