@@ -85,7 +85,7 @@ In machine learning, a model is said to be suffering from bias when the model do
 
 **Variance**, in the context of Machine Learning, is a type of error that occurs due to a model's sensitivity to small fluctuations in the training set. High variance would cause an algorithm to model the noise in the training set. This is most commonly referred to as overfitting.
 
-As seen in figure 3, as the model complexity is increased, the variance is increases causing the model to overfit. To avoid such scenario, we keep track of validation loss, which is high if model is overfit. In Deep Learning, we perform *Early Stopping* to avoid overfitting.
+As seen in figure 2, as the model complexity is increased, the variance is increases causing the model to overfit. To avoid such scenario, we keep track of validation loss, which is high if model is overfit. In Deep Learning, we perform *Early Stopping* to avoid overfitting.
 
 **Overfitting** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
 
@@ -132,7 +132,7 @@ In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ 
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
-**How to select Regularization's parameter?**
+**How to select Regularization's parameter $$lambda$$ ?**
 Based on the complexity of the data, the model tends to be complex. So the lambda value acts like a switch either to increase the complexity or not. If we keep a small value of lambda and multiple it, with the complexity part of the model i.e. "w" parameters then we get smaller error compared to the simple model with its "w" parameters. And if lambda is large, then we punish the complexity part highly and thus making the complex model with great error.
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
