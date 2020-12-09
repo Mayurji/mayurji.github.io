@@ -124,11 +124,11 @@ While calculating the error(E), we square the value of the coefficients of the m
 
 In simple model case, we have 2 coefficients $$w_1, w_2$$ then,
 
-<p>$$TotalError = E + (w_1)^2 + (w_2)^2$$</p>
+<p>$$TotalError = E + w_1^2 + w_2^2$$</p>
 
 In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ then,
 
-<p>$$TotalError = E + (w_1)^2 + (w_2)^2 + (w_3)^2 + (w_4)^2 + (w_5)^2$$</p>
+<p>$$TotalError = E + w_1^2 + w_2^2 + w_3^2 + w_4^2 + w_5^2$$</p>
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
