@@ -89,7 +89,7 @@ As seen in figure 3, as the model complexity is increased, the variance is incre
 
 <center>
 <img src="{{site.url}}/assets/images/ml/gradient-descent.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 3:</b> Batch vs Stochastic vs Mini-Batch</p> 
+<p><b>Figure 4:</b> Batch vs Stochastic vs Mini-Batch</p> 
 </center>
 
 **Batch Gradient Descent** refers how a gradient changes(weight updates) are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
