@@ -8,13 +8,15 @@ date:   2020-11-06 15:43:52 +0530
 
 **Machine Learning Concepts**
 
+In the second part of machine learning series, we will discuss the most common concepts in machine learning. Let's start.
+
 When designing features or algorithms for learning features, our goal is to separate the **factors of variation** that explain the observed data.
 
-**Features** are components in your dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. One such vital technique is handling categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
+**Features** are the components in our dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. For instance, we can handle categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 2:</b> Terms in Machine Learning</p> 
+<p><b>Figure 1:</b> Terms in Machine Learning</p> 
 </center>
 
 **Feature Engineering**
@@ -71,8 +73,8 @@ The raw data comes in different problems with it, sometimes the features values 
 <p>$$x' = {x - \mu \over \sigma}$$</p>
 
 <center>
-<img src="{{site.url}}/assets/images/ml/bias-variance.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 3:</b> Model Complexity vs Error</p> 
+<img src="{{site.url}}/assets/images/ml/bias-variance.jpg"  style="zoom: 5%  background-color:#DCDCDC;"/><br>
+<p><b>Figure 2:</b> Model Complexity vs Error</p> 
 </center>
 
 **Bias** in statistical term refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
@@ -88,8 +90,8 @@ As seen in figure 3, as the model complexity is increased, the variance is incre
 **Overfitting** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/gradient-descent.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 4:</b> Batch vs Stochastic vs Mini-Batch</p> 
+<img src="{{site.url}}/assets/images/ml/gradient-descent.png"  style="zoom: 5%  background-color:#DCDCDC;"/><br>
+<p><b>Figure 3:</b> Batch vs Stochastic vs Mini-Batch</p> 
 </center>
 
 **Batch Gradient Descent** refers how a gradient changes(weight updates) are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
