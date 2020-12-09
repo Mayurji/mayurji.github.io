@@ -6,22 +6,22 @@ date:   2020-11-06 15:43:52 +0530
 ---
 {% include mathjax.html %}
 
-**THINGS TO KEEP IN MIND WHILE WORKING ON MACHINE LEARNING**
+**Machine Learning Concepts**
 
 When designing features or algorithms for learning features, our goal is to separate the **factors of variation** that explain the observed data.
 
-**FEATURES** are components in your dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. One such vital technique is handling categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
+**Features** are components in your dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. One such vital technique is handling categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
 <p><b>Figure 2:</b> Terms in Machine Learning</p> 
 </center>
 
-**FEATURE ENGINEERING**
+**Feature Engineering**
 
-Any problem in Machine Learning or Deep Learning requires some amount of feature engineering, one cannot simply do a ```python model.fit(x, y)``` and get SOTA results. Feature Engineering requires creativity and understanding of the domain. For instance, cost of house of size 'a' in X locality is priced higher than same size house in Y locality, even though locality is not a feature in your raw dataset.
+Any problem in Machine Learning or Deep Learning requires some amount of feature engineering, one cannot simply do a ```model.fit(x, y)``` and get SOTA results. Feature Engineering requires creativity and understanding of the domain. For instance, cost of house of size 'a' in X locality is priced higher than same size house in Y locality, even though locality is not a feature in your raw dataset.
 
-**ONE HOT ENCODING**
+**One Hot Encoding**
 
 There are few algorithms like decision trees, which takes categorical feature like color with values as 'red', 'blue' etc as inputs but majority of the algorithms requires feature values to be numerical. To convert these features, we can use one hot encoding. 
 
@@ -30,9 +30,9 @@ There are few algorithms like decision trees, which takes categorical feature li
          red = [1, 0, 0]    
         blue = [0, 1, 0]
 ```
-One hot encoding increases the dimensionality of the feature vector, but transform colors as red as 1, blue as 2 etc would bring in order to values of the colors feature and would mess the algorithm's decision making.
+One hot encoding increases the dimensionality of the feature vector, but transforming features like colors - red as 1, blue as 2 etc would bring in 'order' to the  values of the colors feature and would mess the algorithm's decision making while modelling.
 
-**HANDLING MISSING VALUES**
+**Handling Missing Values**
 
 The raw data comes in different problems with it, sometimes the features values are missed if the dataset is prepared manually. To overcome such missing value problem, one do the following,
 
@@ -40,55 +40,55 @@ The raw data comes in different problems with it, sometimes the features values 
 * Perform Data Imputation to fillin the gaps of missing values.
 * Few algorithms are robust to missing values.
 
-**DATA IMPUTATION**
+**Data Imputation**
 
 * One way to impute is to find the mean of the features and replace the missing values.(Careful if outliers are present).
 * Replace with value which is outside the range of features i.e. if feature x is [0, 1] then replace missing value with -1 or 2. It provides a distinct feature values for this sample alone.
 * Replace with value which is in middle of the range i.e. if feature x is [-1, 1] then replace missing value with 0. It makes algorithm to get less affected by 0.
    
-**SCALING** of a feature is an important task before building/applying a ML algorithm.
+**Scaling** of a feature is an important task before building/applying a ML algorithm.
     
-**WHY SCALING?**
+**Why Scaling?**
    
    For instance, If an algorithm is not using feature scaling, then it can consider the value 300 meter to be greater than 5 km, which is not true and in this case, the algorithm will give wrong predictions by giving more importance to 300 meter than 3 km. So, we use Feature Scaling to normalize the values of it.
 
-**TYPES OF SCALING**
+**Types of Scaling**
    
 * Min-Max Scaling or Normalization
 * Mean Normalization
 * Standardization or Z-score Normalization
 
-**MIN-MAX SCALING** helps in rescaling the feature values into the range of [0,1] or [-1,1].
+**Min-Max Scaling** helps in rescaling the feature values into the range of [0,1] or [-1,1].
 
 <p>$$x' = {x - min(x)  \over max(x) - min(x)}$$</p>
 
-**MEAN NORMALIZATION** 
+**Mean Normalization** 
 
 <p>$$x' = {x - average(x) \over max(x) - min(x)}$$</p>
 
-**STANDARDIZATION** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
+**Standardization** of features makes the value of each feature in the data to have zero mean and unit variance. It is a widely used normalization technique as major algorithms like SVM, Neural Nets and Logistic Regressions follow such standardization.
 
 <p>$$x' = {x - \mu \over \sigma}$$</p>
 
-**BIAS** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
+**Bias** refers to the tendency of a measurement process to over- or under-estimate the value of a population parameter. In survey sampling, for example, bias would be the tendency of a sample statistic to systematically over- or under-estimate a population parameter.
 
-**UNDERFITTING** occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Intuitively, underfitting occurs when the model or the algorithm does not fit the data well enough. Specifically, underfitting occurs if the model or algorithm shows low variance but high bias.
+**Underfitting** occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Intuitively, underfitting occurs when the model or the algorithm does not fit the data well enough. Specifically, underfitting occurs if the model or algorithm shows low variance but high bias.
 
-**VARIANCE**, in the context of Machine Learning, is a type of error that occurs due to a model's sensitivity to small fluctuations in the training set. High variance would cause an algorithm to model the noise in the training set. This is most commonly referred to as overfitting.
+**Variance**, in the context of Machine Learning, is a type of error that occurs due to a model's sensitivity to small fluctuations in the training set. High variance would cause an algorithm to model the noise in the training set. This is most commonly referred to as overfitting.
 
-**OVERFITTING** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
+**Overfitting** refers to a model that models the training data too well. Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data.
 
-**BATCH GRADIENT DESCENT** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
+**Batch Gradient Descent** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1000 data points before any update is made to the weight of the model.
 
-**STOCHASTIC GRADIENT DESCENT** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1 data point and an update is made to the weight of the model.
+**Stochastic Gradient Descent** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then the model is trained on 1 data point and an update is made to the weight of the model.
 
-**MINI-BATCH GRADIENT DESCENT** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then we assign a value to batch_size, if batch_size is 10, then the model is trained on 10 data point and an update is made to the weight of the model. This happens iteratively taking 10 data points and updating.
+**Mini-Batch Gradient Descent** refers how a gradient changes are applied to the weight matrix. If we have 1000 data points, then we assign a value to batch_size, if batch_size is 10, then the model is trained on 10 data point and an update is made to the weight of the model. This happens iteratively taking 10 data points and updating.
 
-**REGULARIZATION**
+**Regularization**
 
 We have a simple dataset with two features and a target variable, we can either use simple model with 2 coefficients for two variables or else we use a complex model which will have more coefficients and will overfit the simple dataset. The complex model will not generalize for the new data as it is a overfit model. To overcome and choose a simple model, we can use regularization.
 
-**L1 REGULARIZATION**
+**L1 Regularization**
 
 While calculating the error(E) we add the absolute value of the coefficients of the model. 
 
@@ -102,7 +102,7 @@ In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ 
     
 So we get smaller error for simple model and will use the same for the generalization.
 
-**L2 REGULARIZATION**
+**L2 Regularization**
 
 While calculating the error(E), we square the value of the coefficients of the model. 
 
@@ -116,7 +116,7 @@ In Complex model case, lets say have 5 coefficients $$w_1, w_2, w_3, w_4, w_5$$ 
 
 So we get smaller error for simple model and will use the same for the generalization. More the number of parameters, more complex the model is.
 
-**HOW TO SELECT REGULARIZATION?**
+**How to select Regularization's parameter?**
 Based on the complexity of the data, the model tends to be complex. So the lambda value acts like a switch either to increase the complexity or not. If we keep a small value of lambda and multiple it, with the complexity part of the model i.e. "w" parameters then we get smaller error compared to the simple model with its "w" parameters. And if lambda is large, then we punish the complexity part highly and thus making the complex model with great error.
 
 The complexity of the model is defined by the number of the parameters(w) in the equation.
