@@ -6,11 +6,12 @@ date:   2020-10-07 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-**NEURAL NETWORK**
+**Neural Network**
 
-Neural Network models are similar to machine learning models in context of learning a function. 
-For instance, In Linear regression, the model learns the parameter $$w$$ in equation $$y=wx+c$$.
-In Neural Networks, the models learns parameters w for complex unstructured datasets such images,
+A Neural Network is a simple system of function developed based on the complexity of the data.
+Neural Network models are similar to machine learning models in context of learning a function by learning parameters.
+For instance, In Linear regression, the model learns the parameter/coefficient $$w$$ in equation $$y=wx+c$$ by iteratively running over data.
+Similarly in Neural Networks, the models learns a matrix of parameters $$w$$ for complex unstructured datasets such images,
 audio, text etc.
 
 <center>
@@ -18,37 +19,40 @@ audio, text etc.
 <p><b>Figure 1:</b> Deep Learning vs Machine Learning</p> 
 </center>
 
-The idea behind neural network is inspired from brain, researchers believed that neurons in brain are fired 
-when it cross a threshold of sensitivity, the brain is basically a logical inference machine because neurons 
+**Idea Behind Neural Network**
+
+The idea behind neural network is inspired from human brain, researchers believed that a neuron in brain is fired,
+when it crosses a threshold of sensitivity, the brain is basically a logical inference machine because neurons 
 are binary. Neurons compute a weighted sum of inputs and compare that sum to its threshold. It turns on if 
-it’s above the threshold and turns off if it’s below, which is a simplified view of how neural networks work.
+it’s above the threshold and turns off if it’s below, which is basically how a neural networks works.
+
+**Difference between ML and DL**
 
 The key difference between ml model vs a dl model is the feature extraction technique. We perform feature
 engineering in machine learning model manually and use our creativity to build better features for the model
-to learn but a deep learning model uses multiple layers of neurons(parameters) to learns extensive features from
+to learn, but a deep learning model uses multiple layers of neurons(parameters) to learns extensive features from
 the data during training.
 
-The complexity of a neural network increases with complexity in the data and the task in hand. Neural
+The complexity of a neural network increases with the complexity in the data and the task in hand. Neural
 network are preferred less over machine learning model because of the explainability and interpretability
 provided by simple ml algorithms. While using neural networks, there is a trade-off between explainability 
 and performance in terms of accuracy. Currently, there is lot of active research being done to unravel the
 black box called neural nets.
 
-General Equation of Neural Network
+**General Equation of Neural Network**
 
 <p>$$y=f_N(x)$$</p>
 
-Now, the function $$f_N$$ can get very complex based on task and data. For instance, $$f_N$$ can inherit 
+Now, the neural net function $$f_N$$ can be very complex based on the task and data. For instance, $$f_N$$ can inherit 
 multiple functions in it as follows,
 
 <p>$$y=f_3(f_2(f_1(x)))$$</p>
 
-We can call the above equation as three layered network, because passes through three sets of functions. A layer in neural network
-are set of neurons or parameters connecting one layer to another layer with parameters getting learned in between them.
-It basically combines transformation of multiple features with help activation units. Activation units in neural network
-are simple function which introduces non-linearity to the neural network to learn better features and understand complex 
-datasets like images, texts etc.
-
-Find this annotated research paper which explains role of individual unit in neural network, [Role of Individual Units in Deep Neural Networks](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate%20DNN)
+We can call the above function as a three layered neural network, because the input passes through three sets of functions. Now, What is a layer? a layer in neural network is a set of neurons/nodes/units connecting one layer to another layer with parameters getting learned in between them during training.
+Layers basically combines transformation of multiple features with the help of activation units. Activation unit in a neural network
+is a simple function, which introduces non-linearity to the neural network to learn better features and understand complex 
+structures present in data like images, texts etc. Common activation function includes Relu, tanh, Sigmoid etc.
 
 <p align=center>. . . . .</p>
+
+Find this annotated research paper which explains role of individual unit in neural network, [Role of Individual Units in Deep Neural Networks](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate%20DNN)
