@@ -49,8 +49,8 @@ multiple functions in it as follows,
 <p>$$y=f_3(f_2(f_1(x)))$$</p>
 
 We can call the above function as a three layered neural network, because the input passes through three sets of functions. Now, What is a layer? a layer in neural network is a set of neurons/nodes/units connecting one layer to another layer with parameters getting learned in between them during training.
-Layers basically combines transformation of multiple features with the help of activation units. Activation unit in a neural network
-is a simple function, which introduces non-linearity to the neural network to learn better features and understand complex 
+Layers basically combines transformation of multiple features with the help of activation function. Activation function in a neural network
+is a simple function, which introduces non-linearity to the neural network's weights to learn better features and understand complex 
 structures present in data like images, texts etc. Common activation function includes Relu, tanh, Sigmoid etc.
 
 <p align=center>. . . . .</p>
