@@ -11,7 +11,7 @@ permalink: /papers/
 
 Deep Learning is a vast field of research and understanding the nitty-gritty details of
 deep learning model helps an individual to become a better researcher and a Deep Learning Practitioner.
-With 30000+ Deep Learning paper getting published every year it becomes quite stressful to keep track of
+With 10000+ Deep Learning paper getting published every year it becomes quite stressful to keep track of
 all the research.
 
 Thus, the objective to annotate paper is to understand the important details of the paper like the Objective function,
