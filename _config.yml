@@ -10,11 +10,6 @@ collections:
     output: true
   machine-learning:
     output: true
-    
----
-layout: default
-comments: true
-# other options
 ---
 
 # Google services
