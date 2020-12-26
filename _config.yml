@@ -11,6 +11,12 @@ collections:
   machine-learning:
     output: true
     
+---
+layout: default
+comments: true
+# other options
+---
+
 # Google services
 google_analytics: UA-108823315-1
 
