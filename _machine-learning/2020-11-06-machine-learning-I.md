@@ -31,7 +31,7 @@ Machine Learning is essentially a form of applied statistics with increased emph
 
 A *model* is a function, which is learnt based on data, complex data requires complex functions. For instance, appraisals in workplace is a complex function because various factors plays keyrole in your appraisal like your effort in team, quality deliverables, years of experience, cordial relationship with managers ;) etc. We cannot simply make linear function like increasing salary with increasing year's of experience.
 
-*Learning*, a model is said to learn from data. Learning here refers to identifying or recognizing the pattern in the data. A model is said to perform well, if it predicts accurately on unseen data.
+*Learning*, a model is said to learn from data. Learning here refers to identifying or recognizing the pattern in the data. A model is said to perform well, if it predicts accurately on unseen data. Unseen data is technically called as test data. When the model is training, it is trained on train data. The terms train and test data is explained in Machine Learning blog post II.
 
 **Types of Machine Learning**
 
