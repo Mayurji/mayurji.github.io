@@ -21,6 +21,18 @@ Machine Learning is essentially a form of applied statistics with increased emph
 <p><b>Figure 0:</b> Machine Learning</p> 
 </center>
 
+**Core of Machine Learning**
+
+* Data
+* Model
+* Learning
+
+*Data* is at the heart of machine learning, quality & clean data is like heaven on earth. But never expect your data to be as clean as given in Kaggle Competition. It is believed that larger the corpus of data, better is the generalization of the learning model. Less data results in poor generalization, thus causing the model to perform poorly on unseen data.
+
+A *model* is a function, which is learnt based on data, complex data requires complex functions. For instance, appraisals in workplace is a complex function because various factors plays keyrole in your appraisal like your effort in team, quality deliverables, years of experience, cordial relationship with managers ;) etc. We cannot simply make linear function like increasing salary with increasing year's of experience.
+
+*Learning*, a model is said to learn from data. Learning here refers to identifying or recognizing the pattern in the data. A model is said to perform well, if it predicts accurately on unseen data.
+
 **Types of Machine Learning**
 
 * **Supervised Learning**
