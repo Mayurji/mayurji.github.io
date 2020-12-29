@@ -33,6 +33,30 @@ A *model* is a function, which is learnt based on data, complex data requires co
 
 *Learning*, a model is said to learn from data. Learning here refers to identifying or recognizing the pattern in the data. A model is said to perform well, if it predicts accurately on unseen data. Unseen data is technically called as test data. When the model is training, it is trained on train data. The terms train and test data is explained in Machine Learning blog post II.
 
+**Common terms in Machine Learning**
+
+*Data*, is a set of observation we make about a system. For instance, for patient records, we keep note of their health habits, exisiting health condition, diseases XYZ exists or not etc.
+
+*Predictor*, are a set of variables, which helps in describing a system. From above patient records, if we want to predict, if the patient has disease XYZ then our predictor variable will include health habits (like smoking, drinker etc), existing health condition like blood pressure, diabeitc etc. Predictor is also referred as independent variable.
+
+*Label* is a variable, it tells what the system is meant for. From patient records system, our label is the variable disease XYZ, here we are predicting if a patient has disease XYZ or not. Labels are also called target or dependent variable. Dependent as it depends on predictor variables.
+
+*Model* is a machine learning algorithm, which is applied or trained on data like patients records to predict if patient has disease XYZ. Above example of patient has disease XYZ or not is a binary classification problem, where label variable takes Yes or No values, Binary classification model like Logistic Regression can be utilized here.
+
+*Parameters* are tunable knobs in machine learning algorithm, there are different parameters available for each algorithm like *depth of tree* in Decision Tree Algorithm, *penalty* in Logistic Regression etc. These tunable parameters are *Hyperparameter*, which are set manually by user who is performing machine learning. Other set of parameters are learnt by machine learning algorithm like *coefficient of X's* in Linear regression, Weights in Deep Learning Algorithms etc.
+
+*Dataset* is the data on which we apply machine learning algorithm after cleaning and structuring it in the form, such that it is consumable by ml algorithm. Consider we have 1000 patient records with target as *disease XYZ* with value 0 or 1. 0 represent no disease and 1 represent disease is present. To perform machine learning, we split dataset into multiple sets like train set, validation set and test set. 
+
+For training, we use train set. For identifying the hyperparameter and parameters of the model, we use validation set. For check final performance of the model, we use test set.
+
+*Training* is a process to learn the parameters of the machine learning algorithm. During this process, we keep track of training error, as the training continous to takes place, the training error reduces. Training is done on train set.
+
+*Evaluating* is a process to learn hyperparameter and try out or experiment with the best possible hyperparameter for the learning algorithm. Evaluation can take place simultaneously with training. During evaluation, we keep track of validation error. Evaluation is done on validation set of dataset.
+
+*Testing* is a process to confirm whether the model is generalized for unseen data or not. If the model performs poorly, we need to get back to training with different model or different parameter or hyperparameter or more data etc.
+
+Note: Sometimes the training error will reduce but the validation error may fail to reduce. It happens because of bias issue in the model. More detail in next blog.
+
 **Types of Machine Learning**
 
 * **Supervised Learning**
