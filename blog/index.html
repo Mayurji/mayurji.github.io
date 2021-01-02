@@ -10,7 +10,7 @@ title: Blogs
 
   {% for post in site.posts %}
     <li>
-    <img src= {{post.image_url}} style="zoom: 5%; background-color:#DCDCDC;"/>
+    <img src= "{{post.image_url}}" style="zoom: 5%; background-color:#DCDCDC;"/>
     <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}
     <p>{{post.description}}</p></a></li>
   {% endfor %}
