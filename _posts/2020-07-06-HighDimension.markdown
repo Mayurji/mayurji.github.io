@@ -15,6 +15,11 @@ date:   2020-07-06 13:43:52 +0530
 **4. Dimension Reduction Using PCA**\
 **5. Techniques to overcome the Curse of Dimensionality**
 
+<center>
+<img src="{{site.url}}/assets/images/highdimension/highdimension.jpeg" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 1:</b> Dimension Reduction.
+</center>
+
 ## **Curse Of Dimensionality**
 
 **It refers to phenomena that arise when analyzing and organizing data in high-dimensional spaces (often with hundreds or thousands of dimensions) that do not occur in low-dimensional settings such as the three-dimensional physical space of everyday experience.**
