@@ -3,6 +3,7 @@ layout: post
 title:  Mixed Precision Training
 description: Why training a model in 16 bit floating point is important and how it reduces memory and increases data transfer rate.
 category: Blog
+image_url: {{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg
 date:   2020-09-05 13:43:52 +0530
 ---
 
