@@ -3,7 +3,7 @@ layout: post
 title:  Python Profiling
 description: Coding is easy, profiling is tough!
 category: Blog
-image_url: "/assets/images/profiling/profiling.jpg"
+image_url: "/assets/images/profiling/profiling.gif"
 date:   2021-01-02 13:43:52 +0530
 ---
 
