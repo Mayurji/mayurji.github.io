@@ -1,3 +1,12 @@
+---
+layout: post
+title:  Python Profiling
+description: Coding is easy, profiling is tough!
+category: Blog
+image_url: "/assets/images/profiling/profiling.jpg"
+date:   2021-01-02 13:43:52 +0530
+---
+
 # Python Profiling
 
 ### *Tools to check, why your code is slow !*
@@ -85,13 +94,21 @@ snakeviz is a visualizer that draws the output of cProfile as a diagram in which
 
 IMAGE [cProfile statistics of the whole code.]
 
+<center>
+<img src="{{site.url}}/assets/images/profiling/cprofile.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 1:</b> cProfile statistics of the whole code
+</center>
+
 From above image, it can be noted, what is the time taken for each function. Sorting by cumulative time gives us an idea about where the majority of execution time is spent. This result shows us that 36,221,995 function calls occurred in just over 12 seconds (this time includes the overhead of using cProfile).
 
 Function call to calc_pure_python takes 1 second and function call to calculate_z_serial_purepython takes 11 seconds, these two functions are called only once.
 
 the call to calculate_z_serial_purepython function is CPU-intensive, since the manipulation happens inside this function. However, we can’t derive which lines take the time inside the function using cProfile.
 
-IMAGE[SnakeViz]
+<center>
+<img src="{{site.url}}/assets/images/profiling/snakeViz.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 2:</b> SnakeViz - cProfile
+</center>
 
 The above visualization represents the time taken for each function to execute.
 
@@ -99,7 +116,10 @@ The above visualization represents the time taken for each function to execute.
 
 cProfile acts as a guide to identify which functions is costly in terms of execution time, while the line_profiler acts on top of each function, to identify, which line takes max amount of time for execution. line_profiler helps in finding the CPU usage.
 
-IMAGE[line_profiler]
+<center>
+<img src="{{site.url}}/assets/images/profiling/line_profiler.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 3:</b> line_profilier
+</center>
 
 The % Time column is the most helpful — we can see that 38% of the time is spent on the while testing. We don’t know whether the first statement (abs(z) < 2) is more expensive than the second (n < maxiter), though. Inside the loop, we see that the update to z is also fairly expensive. Even n += 1 is expensive! Python’s dynamic lookup machinery is at work for every loop, even though we’re using the same types for each variable in each loop — this is where compiling and type specialization give us a massive win. The creation of the output list and the updates on line 20 are relatively cheap compared to the cost of the while loop.
 
@@ -110,7 +130,10 @@ memory_profiler finds the amount of memory (RAM) being used on line to line basi
 * Can a function be rewritten efficiently such that it takes less RAM?
 * Can we use more RAM and save the CPU cycle by caching?
 
-IMAGE[memory_profiler] memory_profiler
+<center>
+<img src="{{site.url}}/assets/images/profiling/memory_profiler.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 4:</b> memory_profiler
+</center>
 
 From the above image, check line no. 12, the amount of memory added to the process is 7MB i.e. the output variable increases the occupancy of RAM by 7MB.
 
@@ -120,7 +143,10 @@ To reduce the RAM usage, we can perform runtime calculation of z_serial instead 
 
 Find the below snippet
 
-IMAGE[memory_profiler_2] Creating Complex Coordinate on the fly to save RAM
+<center>
+<img src="{{site.url}}/assets/images/profiling/memory_profiler_2.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 5:</b> Creating Complex Coordinate on the fly to save RAM
+</center>
 
 After making the following changes, the amount of RAM utilized is reduced from 140MB to 60MB.
 
@@ -140,11 +166,18 @@ $ ps -A -o pid,rss,cmd | ack python
 $ sudo env "PATH=$PATH" py-spy --pid 15953
 ```
 
-IMAGE[py-spy calculating time taken by functions]
+<center>
+<img src="{{site.url}}/assets/images/profiling/pyspy.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 6:</b> py-spy calculating time taken by functions
+</center>
 
 We can utilize plots like flame chart to represent the time taken by the code. The width represents the total time taken for the program to run.
 
-IMAGE[Flame Chart]
+<center>
+<img src="{{site.url}}/assets/images/profiling/flamechart.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 7:</b> Flame Chart
+</center>
+
 
 ### Under the Hood — Bytecode
 
@@ -174,13 +207,14 @@ In [3]: %timeit fn_terse()
 ```
 Bytecode version of the functions
 
-IMAGE[Bytecode]
+<center>
+<img src="{{site.url}}/assets/images/profiling/bytecode.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<b>Figure 8:</b> Bytecode
+</center>
 
 The number of bytecode lines generated for fn_expressive is 17 and for fn_terse is 6 lines. The fn_expressive maintains two variables and a loop which checks the type of variable during addition on each iteration which makes the operation expensive compared to fn_terse, which is a optimized C list comprehension, it generates results without any python object in between.
 
 Decreasing the lines of code, automatically reduces the number of bytecodes generated, causing the time taken for execution to reduce drastically.
-
-I hope, you liked reading this article.
 
 ### References
 
