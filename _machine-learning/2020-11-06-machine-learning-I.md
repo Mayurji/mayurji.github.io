@@ -18,7 +18,7 @@ Machine Learning is essentially a form of applied statistics with increased emph
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 0:</b> Machine Learning</p> 
+<p>Figure 1: Machine Learning</p> 
 </center>
 
 **Core of Machine Learning**
@@ -38,6 +38,12 @@ A *model* is a function, which is learnt based on data, complex data requires co
 *Data*, is a set of observation we make about a system. For instance, for patient records, we keep note of their health habits, exisiting health condition, diseases XYZ exists or not etc.
 
 *Predictor*, are a set of variables, which helps in describing a system. From above patient records, if we want to predict, if the patient has disease XYZ then our predictor variable will include health habits (like smoking, drinker etc), existing health condition like blood pressure, diabeitc etc. Predictor is also referred as independent variable.
+
+
+<center>
+<img src="{{site.url}}/assets/images/ml/mlflow.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 2: Machine Learning Flow</p> 
+</center>
 
 *Label* is a variable, it tells what the system is meant for. From patient records system, our label is the variable disease XYZ, here we are predicting if a patient has disease XYZ or not. Labels are also called target or dependent variable. Dependent as it depends on predictor variables.
 
@@ -79,7 +85,7 @@ Note: Sometimes the training error will reduce but the validation error may fail
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 1:</b> Machine Learning Algorithms</p> 
+<p><b>Figure 3:</b> Machine Learning Algorithms</p> 
 </center>
 
 **Supervised Learning**
