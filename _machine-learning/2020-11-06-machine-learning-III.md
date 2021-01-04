@@ -129,7 +129,7 @@ Find this below snippet from wikipedia:
 <p>Figure 11: F1 Beta Score</p> 
 </center>
 
-**[ROC CURVE](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)**
+**[ROC Curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)**
 
 ROC- Receiver Operating Characteristics, its a plot between True Positive rate (Sensitivity) vs False Positive Rate (1 - specificity). Its a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
 
@@ -149,11 +149,13 @@ the other hand, if the threshold is 1, then no positive prediction will be made,
 
 The higher the area under the ROC curve (AUC), the better the classifier. A classifier with an AUC higher than 0.5 is better than a random classifier. If AUC is lower than 0.5, then something is wrong with your model. A perfect classifier would have an AUC of 1. Usually, if our model behaves well, we obtain a good classifier by selecting the value of the threshold that gives TPR close to 1 while keeping FPR near 0.
 
-**REFERENCE** [ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
+#### Reference
+
+[ROC Curve- what and How ?](https://acutecaretesting.org/en/articles/roc-curves-what-are-they-and-how-are-they-used)
      
   <p align='center'>. . . . .</p>
   
-**SELECTING HYPERPARAMETERS IN ALGORITHMS**
+#### Selecting Hyperparameters
 
 While training the model, the model learns parameters W. But there are other set of parameters called Hyperparameter, which are tuned manually by user/ML developer. For instance, there are models such Decision Tree, where we tune the **depth of the tree** or Support Vector Machine where we tune penalty parameter **C** etc.
 
@@ -172,7 +174,7 @@ Other techniques to find better hyperparameters
 * Gradient based techniques
 * Evolutionary optimization techniques
 
-**CROSS VALIDATION**
+#### Cross Validation
 
 If we have less data or poor validation set for evaluating the model, then we can use cross-validation technique to find hyperparameter. Note, validation set is used for tuning model with help of better hyperparameter and reduced validation error.
 
@@ -181,4 +183,6 @@ cross-validation, you randomly split your training data into five folds: $${F_1 
 
 To train the first model, $$f_1$$ , you use all examples from folds $$F_2 , F_3 , F_4 , and F_5$$ as the training set and the examples from $$F_1$$ as the validation set. To train the second model, $$f_2$$ , you use the examples from folds $$F_1 , F_3, F_4 , and F_5$$ to train and the examples from $$F_2$$ as the validation set. You continue building models iteratively like this and compute the value of the metric of interest on each validation set, from $$F_1 to F_5$$. Then you average the five values of the metric to get the final value.
 
-**REFERENCE**  The Hundred-Page Machine Learning Book by Andriy Burkov
+#### Reference
+
+The Hundred-Page Machine Learning by Andriy Burkov
