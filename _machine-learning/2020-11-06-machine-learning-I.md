@@ -85,7 +85,7 @@ Note: Sometimes the training error will reduce but the validation error may fail
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p><b>Figure 3:</b> Machine Learning Algorithms</p> 
+<p>Figure 3: Machine Learning Algorithms</p> 
 </center>
 
 **Supervised Learning**
