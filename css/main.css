@@ -32,12 +32,13 @@ ol li {
   color: white;
   padding: 5px;
   margin-left: 35px;
+  font-size: 1.4em;
 }
 
 ul li {
   color: white;
   margin: 5px;
-	
+  font-size: 1.4em;	
 }
 
 ul li::before {
