@@ -13,7 +13,7 @@ In this blog post, we’ll try to understand the data structure, List & Tuple an
 List and tuples comes under a class of data structure called *array*. Array is a collection of elements, and ordering or positioning of these element is as important as element itself. Because to retrieve an element, given a position or index, it takes O(1) time complexity, to find a element.
 
 <center>
-<img src="{{site.url}}/assets/images/lists_tuples/lists_tuples.jpg" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/lists_tuples/lists_tuples.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
 <p>Figure 1: Lists vs Tuples</p>
 </center>
 
