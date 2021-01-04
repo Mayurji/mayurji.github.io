@@ -41,7 +41,7 @@ A *model* is a function, which is learnt based on data, complex data requires co
 
 
 <center>
-<img src="{{site.url}}/assets/images/ml/mlflow.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="800"/><br>
+<img src="{{site.url}}/assets/images/ml/mlflow.png"  style="zoom: 5%  background-color:#DCDCDC;"/><br>
 <p>Figure 2: Machine Learning Flow</p> 
 </center>
 
