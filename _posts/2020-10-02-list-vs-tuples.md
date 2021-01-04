@@ -3,7 +3,7 @@ layout: post
 title:  Python - Lists vs Tuples
 description: Finding the right data structure is an art!
 category: Blog
-image_url: "/assets/images/lists_tuples/"
+image_url: "/assets/images/lists_tuples/lists_tuples.jpg"
 date:   2020-10-02 13:43:52 +0530
 ---
 Writing efficient programs involves understanding a couple of things, first, what is the input to the program and second is selecting the best data structure to process that input.
@@ -13,8 +13,8 @@ In this blog post, we’ll try to understand the data structure, List & Tuple an
 List and tuples comes under a class of data structure called *array*. Array is a collection of elements, and ordering or positioning of these element is as important as element itself. Because to retrieve an element, given a position or index, it takes O(1) time complexity, to find a element.
 
 <center>
-<img src="{{site.url}}/assets/images/lists_tuples/" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p>Figure 1: cProfile statistics of the whole code</p>
+<img src="{{site.url}}/assets/images/lists_tuples/lists_tuples.jpg" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p>Figure 1: Lists vs Tuples</p>
 </center>
 
 * List is a dynamic array, where we can modify and resize the data we are storing in it.
@@ -108,4 +108,4 @@ I hope, you liked reading the article !
 
 ### Reference
 
-High Performance Python
+[High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)
