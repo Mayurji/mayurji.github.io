@@ -6,7 +6,7 @@ date:   2020-11-06 15:43:52 +0530
 ---
 {% include mathjax.html %}
 
-**Machine Learning Concepts**
+### Machine Learning Concepts
 
 In the second part of machine learning series, we will discuss the most common concepts in machine learning. Let's start.
 
