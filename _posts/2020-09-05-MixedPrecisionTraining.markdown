@@ -38,7 +38,7 @@ Since the introduction of Tensor Cores in the Volta and Turing architectures (NV
 
 ### Why MPT is important
 
-1. Requires less memory, enabling training and deploying large neural networks.\
+1. Requires less memory, enabling training and deploying large neural networks.
 2. Transfer is faster since the bandwidth required is reduced for transmission of data.
 
 FP16 requires 2 bytes, as the number of bytes are reduced to capture the same numerical entity, it reduces the amount of memory required to train a model and helps in increasing the batch size for our training. And also the data transfer of type FP16 is faster compared to FP32 and FP64.
