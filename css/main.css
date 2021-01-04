@@ -106,7 +106,7 @@ ul.posts {
 ul.posts li {
     list-style: disc;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .post-body img { width:400px; height:auto; }
