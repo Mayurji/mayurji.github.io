@@ -68,7 +68,6 @@ def list_unique_names(phonebook):
 ```
 
 * We must go over all the items in the phone book, and thus this loop costs O(n).
-
 * then, we must check the current name against all the unique names we have already seen. If it is a new unique name, we add it to our list of unique names. We then continue through the list, performing this step for every item in the phone book.
 
 ```python
