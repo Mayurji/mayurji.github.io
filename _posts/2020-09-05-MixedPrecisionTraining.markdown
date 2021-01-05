@@ -6,8 +6,6 @@ category: Blog
 image_url: "/assets/images/mixedPrecisionTraining/mpt-bg.jpg"
 date:   2020-09-05 13:43:52 +0530
 ---
-
-## Mixed Precision Training
 ### Discover a way to efficiently utilize your GPU
 
 <center>
