@@ -32,19 +32,19 @@ ol li {
   color: white;
   padding: 5px;
   margin-left: 35px;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 ul li {
   color: white;
   margin: 5px;
-  font-size: 1.3em;	
+  font-size: 1.1em;	
 }
 
 ul li::before {
   color: white;
   list-style: disc;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 a {
