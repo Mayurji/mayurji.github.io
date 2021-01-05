@@ -1,6 +1,12 @@
-Python - Dictionary vs Sets
-
-*Understanding data structure helps in performant programming!*
+---
+layout: post
+title:  Dictionary and Sets in Python
+description: Finding the right data structure is an art!
+category: Blog
+image_url: "/assets/images/lists_tuples/lists_tuples.png"
+date:   2020-10-02 13:43:52 +0530
+---
+***Understanding data structure helps in performant programming!***
 
 In this blog post, we'll discuss the python data structures, *dict* and *set*.
 
@@ -13,7 +19,7 @@ Hashable type are those objects, which implements *__hash__* function. The hash 
 In the previous blog post, [Python - Lists vs Tuples](https://mayur-ds.medium.com/python-lists-and-tuples-760d45ebeaa8), I've mentioned the best case for a lookup in a list or tuple is O(log n) based on Binary Search. In dict and set, a element lookup takes a constant time of O(1), since the search is based on arbitary index. The speed in *dict* and *set* is achieved by using an open address hash table as its underlying data structure.
 
 
-### Where to utilize dict and set
+### Dictionary and Sets — Utilization
 
 ### Dict
 
@@ -59,7 +65,7 @@ def set_unique_names(phonebook):
 
 To achieve this speed, the dict and set uses the hash tables. Hash table is filled using hash function, which cleverly turns the arbitiary key into an index for fetching the value stored on that key.
 
-### Inserting & Resizing in Dict
+### Inserting & Resizing
 
 For creating a dict or any other data structure, we need to allocate a chunk of system memory to it. And to insert in dict, the insertion position or index depends on the data. While inserting, the key is hashed and masked to turn into an effective integer that fits the memory size allocated to it.
 
@@ -118,7 +124,10 @@ def test3(x, sin=math.sin):
 
 Bytecode generated using ***dis*** module
 
-IMAGE(bytecode)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/dicts_sets.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p>Figure 1:  for three tests</p>
+</center>
 
 In test1, *sin function* is   called explicitly by looking at math library. From bytecode generated, we can see, there are two dictionary lookup happens, one is finding the math module and then finding the sin function inside it.
 
