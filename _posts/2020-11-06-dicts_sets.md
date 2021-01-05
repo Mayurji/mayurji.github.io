@@ -1,14 +1,11 @@
 ---
 layout: post
 title:  Dictionary and Sets in Python
-description: Finding the right data structure is an art!
+description: Understanding data structure helps in performant programming!
 category: Blog
-image_url: "/assets/images/lists_tuples/lists_tuples.png"
-date:   2020-10-02 13:43:52 +0530
+date:   2021-11-06 13:43:52 +0530
 ---
-***Understanding data structure helps in performant programming!***
-
-In this blog post, we'll discuss the python data structures, *dict* and *set*.
+In this blog post, we'll discuss the python data structures, ***Dict*** and ***Set***.
 
 Sets and Dictionary are the data structures used, when the data has no intrinsic order to it. But each data has unique object to reference it. For *dict*, the reference object is called *key* and referenced data is called *value*, the widely used reference object is of type string, but any hashable type is valid. While *set* is a unique collections of *keys* alone. 
 
