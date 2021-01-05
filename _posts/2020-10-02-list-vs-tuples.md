@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Python - Lists vs Tuples
+title:  Lists and Tuples in Python
 description: Finding the right data structure is an art!
 category: Blog
 image_url: "/assets/images/lists_tuples/lists_tuples.png"
