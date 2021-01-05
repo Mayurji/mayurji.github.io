@@ -9,7 +9,7 @@ In this blog post, we'll discuss the python data structures, ***Dict*** and ***S
 
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
 <p>Figure 1:  Data Structures</p>
 </center>
 
