@@ -7,6 +7,12 @@ date:   2020-11-06 13:43:52 +0530
 ---
 In this blog post, we'll discuss the python data structures, ***Dict*** and ***Set***.
 
+
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<p>Figure 1:  Data Structures</p>
+</center>
+
 Sets and Dictionary are the data structures used, when the data has no intrinsic order to it. But each data has unique object to reference it. For *dict*, the reference object is called *key* and referenced data is called *value*, the widely used reference object is of type string, but any hashable type is valid. While *set* is a unique collections of *keys* alone. 
 
 ### Hashable Type
@@ -26,7 +32,23 @@ Consider a phonebook with list of names and phone number. To find a phone number
 *  Find the match of the name by comparison with other names
 *  Fetch the corresponding phone number, once the name match is found.
 
+```python
+def find_phonenumber(phonebook, name):
+    for n, p in phonebook:
+        if n == name:
+            return p
+    return None
+```
+
 While in *dict*, we can store the person name as the key and phone number as value. It takes O(1) to find the phone number. In dict, we can fetch the phone number by doing a lookup on person name, which is unique. It doesn't require iteration through all names.
+
+```python
+phonebook = {
+    "John Doe": "555-555-5555",
+    "Albert Einstein" : "212-555-5555",
+}
+print(f"John Doe's phone number is {phonebook['John Doe']}")
+```
 
 ### Set
 
@@ -123,7 +145,7 @@ Bytecode generated using ***dis*** module
 
 <center>
 <img src="{{site.url}}/assets/images/dicts_sets/dicts_sets.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
-<p>Figure 1:  for three tests</p>
+<p>Figure 2: Bytecode for three tests</p>
 </center>
 
 In test1, *sin function* is   called explicitly by looking at math library. From bytecode generated, we can see, there are two dictionary lookup happens, one is finding the math module and then finding the sin function inside it.
@@ -141,7 +163,7 @@ With this in mind, a more readable solution would be to set a local variable wit
 * Memory footprint is high
 * Complex hashing function leads to slower lookup.
 
-Reference
+### Reference
 
-    * [Dictionary’s Internals](https://www.freecodecamp.org/news/exploring-python-internals-the-dictionary-a32c14e73efa/)
-    * [High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)
+* [Dictionary’s Internals](https://www.freecodecamp.org/news/exploring-python-internals-the-dictionary-a32c14e73efa/)
+* [High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)
