@@ -3,7 +3,7 @@ layout: post
 title:  Dictionary and Sets in Python
 description: Understanding data structure helps in performant programming!
 category: Blog
-date:   2021-11-06 13:43:52 +0530
+date:   2020-11-06 13:43:52 +0530
 ---
 In this blog post, we'll discuss the python data structures, ***Dict*** and ***Set***.
 
