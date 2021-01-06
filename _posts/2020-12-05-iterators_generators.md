@@ -37,7 +37,7 @@ while True:
 
 <center>
 <img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="800"/><br>
-<p>Figure 1: Iterators</p>
+<p>Figure 2: Iterators</p>
 </center>
 
 *List iterator based fibonacci series*
