@@ -1,8 +1,12 @@
-# Iterators and Generators in Python
+---
+layout: post
+title:  Iterators and Generators in Python
+description: Saving memory is an essential aspect of performant programming
+category: Blog
+date:   2020-11-06 13:43:52 +0530
+---
 
-*Saving memory is an essential aspect of performant programming!*
-
-In this post, We'll discuss the python's ***iterators and generators*** objects and decode why generators are memory efficient and iterators for optimizing CPU .
+In this post, We'll discuss the python's ***Iterators and Generators*** objects and decode why generators are memory efficient and why iterators are used over generators irrespective of memory usage.
 
 <center>
 <img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
@@ -10,12 +14,6 @@ In this post, We'll discuss the python's ***iterators and generators*** objects 
 </center>
 
 In python, *for* loop requries an object we are looping through to support iterator function, python provides a built-in function *__iter__* to convert lists, set, dictionary, tuples into an iterator such that we can iterate over keys or items in that object. While building an iterator like list iterator, a number of functions are built like *__iter__*, *__next__*, keeping track of the states and raising exception *StopIteration* when no values are present to iterate over.
-
-
-<center>
-<img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
-<p>Figure 1: Iterators</p>
-</center>
 
 ### Dismantling For loops
 
@@ -35,7 +33,13 @@ while True:
         do_work(i)
 ```
 
-	IMAGE(Iterators)
+<center>
+<img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 1: Iterators</p>
+</center>
+
+
+*List iterator based fibonacci series*
 
 ```python
 def fibonacci_list(num_items):
@@ -49,7 +53,7 @@ def fibonacci_list(num_items):
 
 Generator is a function that returns an object(iterator) which we can iterate over (one value at a time). A normal function terminates with return statement, it evaluation comes out of the function, while a generator function *yields* the results of evaluation while pausing the execution, starts again with next value of iteration, during the pause state, the control is passed to the caller. Function like *__iter__*, *__next__* are implemented automatically. 
 
-*Generator based fibonacci*
+*Generator based fibonacci series*
 
 ```python
 def fibonacci_gen(num_items):
@@ -61,7 +65,6 @@ def fibonacci_gen(num_items):
 ```
 
 In Generator, we don't store the element in array for further evaluation/usage, unlike in lists, where we can reference the list anywhere, without performing iteration over all elements again.
-
 
 <center>
 <img src="{{site.url}}/assets/images/iterators/generators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
@@ -124,3 +127,9 @@ divisible_by_three = len([n for n in fibonacci_gen(100000) if n % 3 == 0])
 ```python
 divisible_by_three = sum(1 for n in fibonacci_gen(100000) if n % 3 == 0)
 ```
+
+In conclusion, both the iterators and generator are applied based on requirement, as mentioned earlier the trade-off between the CPU optimization and Memory consumption. It's upto the individual, how to utilize these python objects efficiently.
+
+### Reference
+
+* [High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)
