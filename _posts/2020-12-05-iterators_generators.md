@@ -40,6 +40,8 @@ while True:
 <p>Figure 2: Iterators</p>
 </center>
 
+In the above image, once the iteration starts, the for loop iterates over all the elements one by one, processes it and then store the elements in list inside the *for loop* as shown in green circle. The processed element are made accessible after all the elements are iterated over, the unpause here refers to accessing or a call to the *__next__* function of the list.
+
 *List iterator based fibonacci series*
 
 ```python
@@ -72,6 +74,8 @@ In Generator, we don't store the element in array for further evaluation/usage, 
 <img src="{{site.url}}/assets/images/iterators/generator.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
 <p>Figure 3: Generator</p>
 </center>
+
+In the above image, once the generator starts, the for loop iterates over all the elements one by one and processes it and then make it accessible outside the function and then unpause by moving to next element in generator, thus avoiding memory cost.
 
 ### Memory Efficiency 
 
