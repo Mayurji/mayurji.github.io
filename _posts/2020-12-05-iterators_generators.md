@@ -4,7 +4,18 @@
 
 In this post, We'll discuss the python's ***iterators and generators*** objects and decode why generators are memory efficient and iterators for optimizing CPU .
 
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 1: Data Structures</p>
+</center>
+
 In python, *for* loop requries an object we are looping through to support iterator function, python provides a built-in function *__iter__* to convert lists, set, dictionary, tuples into an iterator such that we can iterate over keys or items in that object. While building an iterator like list iterator, a number of functions are built like *__iter__*, *__next__*, keeping track of the states and raising exception *StopIteration* when no values are present to iterate over.
+
+
+<center>
+<img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 1: Iterators</p>
+</center>
 
 ### Dismantling For loops
 
@@ -36,11 +47,9 @@ def fibonacci_list(num_items):
     return numbers
 ```
 
-Generator is a function that returns an object(iterator) which we can iterate over (one value at a time). A normal function terminates with return statement, it evaluation comes out of the function, while a generator function *yields* the results of evaluation while pausing the execution, starts again with next value of iteration, during the pause state, the control is passed to the caller. Function like *__iter__*, *__next__* are implemented automatically. In Simple terms, it follows 
+Generator is a function that returns an object(iterator) which we can iterate over (one value at a time). A normal function terminates with return statement, it evaluation comes out of the function, while a generator function *yields* the results of evaluation while pausing the execution, starts again with next value of iteration, during the pause state, the control is passed to the caller. Function like *__iter__*, *__next__* are implemented automatically. 
 
-	Start -> Process -> Result & Pause -> Output the Result -> Unpause the function -> Repeat
-
-	IMAGE(Generator)
+*Generator based fibonacci*
 
 ```python
 def fibonacci_gen(num_items):
@@ -52,6 +61,12 @@ def fibonacci_gen(num_items):
 ```
 
 In Generator, we don't store the element in array for further evaluation/usage, unlike in lists, where we can reference the list anywhere, without performing iteration over all elements again.
+
+
+<center>
+<img src="{{site.url}}/assets/images/iterators/generators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 3: Generator</p>
+</center>
 
 A major benefit of using a Generator is the memory saved during the iteration, because don't store the element anywhere. For instance, consider an iteration over a million numbers, if we store the numbers in a list, it occupies hundreds of megabytes for storing it, while on the other hand, generator there is no concept for storing the items, we perform lazy evaluation when the generator is called.
 
