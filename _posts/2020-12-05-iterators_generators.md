@@ -3,7 +3,7 @@ layout: post
 title:  Iterators and Generators in Python
 description: Saving memory is an essential aspect of performant programming
 category: Blog
-date:   2020-11-06 13:43:52 +0530
+date:   2020-12-05 13:43:52 +0530
 ---
 
 In this post, We'll discuss the python's ***Iterators and Generators*** objects and decode why generators are memory efficient and why iterators are used over generators irrespective of memory usage.
