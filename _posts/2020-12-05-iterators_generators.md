@@ -36,7 +36,7 @@ while True:
 ```
 
 <center>
-<img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="800"/><br>
+<img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
 <p>Figure 2: Iterators</p>
 </center>
 
@@ -69,7 +69,7 @@ def fibonacci_gen(num_items):
 In Generator, we don't store the element in array for further evaluation/usage, unlike in lists, where we can reference the list anywhere, without performing iteration over all elements again.
 
 <center>
-<img src="{{site.url}}/assets/images/iterators/generator.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="800"/><br>
+<img src="{{site.url}}/assets/images/iterators/generator.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
 <p>Figure 3: Generator</p>
 </center>
 
