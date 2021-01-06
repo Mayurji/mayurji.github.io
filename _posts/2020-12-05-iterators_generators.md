@@ -79,7 +79,7 @@ In the above image, once the generator starts, the for loop iterates over all th
 
 ### Memory Efficiency 
 
-A major benefit of using a Generator is the memory saved during the iteration, because don't store the element anywhere. For instance, consider an iteration over a million numbers, if we store the numbers in a list, it occupies hundreds of megabytes for storing it, while on the other hand, generator there is no concept for storing the items, we perform lazy evaluation when the generator is called.
+A major benefit of using a Generator is the memory saved during the iteration, because we don't store the elements anywhere after processing. For instance, consider an iteration over a million numbers, if we store the numbers in a list, it occupies hundreds of megabytes for storing it, while on the other hand, generator there is no concept of storing the items, we perform lazy evaluation when the generator is called. ***Lazy Evaluation, we don't priorly identify or evaluate all the element, we evaluate element when required.***
 
 ```python
 def test_fibonacci_list():
@@ -114,13 +114,13 @@ Thus, it comes to down what you want optimize, ***memory consumption or CPU opti
 
 ### Generator Example
 
-**Analysis**
+**In Data Analysis**
 
-*Consider working on a NLP based project, where we iterate over millions of text samples from csv file or text file for text processing or clean up. If we use a generator, we might end up doing processing without storing the processed text. And performing nlp text processing is computionally expensive task, it better to avoid generator on such occasion.*
+*Consider working on a NLP based project, where we iterate over millions of text samples from a csv or a text file for text processing. If we use a generator, we might end up doing processing faster, but, without storing the processed text. We know that text processing is a computionally expensive task, and it is better to avoid generator on such occasion.*
 
-*Anyway, while working on such huge files, we can apply filter function on each row of text samples, the filter function, internally runs an generator based iteration, just fetching the records with conditon (mentioned below example, finding numbers divisible by 3).*
+*Anyway, while working on such huge files, we can apply filter function on each row of the text samples and interestingly, the filter function, internally runs on generator based iteration, just fetching the records with conditon (as mentioned below in example, finding numbers divisible by 3).*
 
-**Reduce memory consumption**
+**In Reducing Memory**
 
 *Creating a list of numbers that are divisible by 3. The memory consumption is high and can be avoided by using generator.*
 
