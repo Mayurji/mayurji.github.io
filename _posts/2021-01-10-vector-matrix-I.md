@@ -129,16 +129,16 @@ It is a tool to find the performance metrics of the code under scrutiny. We'll a
 <p>Figure 4: Perf's Insights</p>
 </center>
 
-*task-clock:* how many clock cycles did our task took. If 1 second is the total run time of the program with 2 CPUs, then our task-cycle is 2000ms.
-*instruction:* the number of CPU instructions our code as issued.
-*cycles:* number of cycles to run all the instruction.
-*context-switching(cs):* program halting during kernel i/o operation or moving to another cpu core.
-*context-migration:* program halted and resumed on different cpu than it was on before, in order to have same level of utilization.
-*fault:* its an interrupt given to program when the memory on which its running is filled, its a lazy allocation system.
-*cache-references:* when data is moved across system, it traverse through l1/l2/l3 cache. So anyway, when we refer data that is present in cache, its called cache-references.
-*cache-misses:* when data is not present in cache and had to be loaded from RAM then its called cache-misses.
-*branch:* when execution flow changes, like if and else statements. CPU predicts which branch will execute next and loads the instruction.
-*branch-miss:* wrong prediction of branch from CPU leads to branch-miss.
+*task-clock:* how many clock cycles did our task took. If 1 second is the total run time of the program with 2 CPUs, then our task-cycle is 2000ms.\
+*instruction:* the number of CPU instructions our code as issued.\
+*cycles:* number of cycles to run all the instruction.\
+*context-switching(cs):* program halting during kernel i/o operation or moving to another cpu core.\
+*context-migration:* program halted and resumed on different cpu than it was on before, in order to have same level of utilization.\
+*fault:* its an interrupt given to program when the memory on which its running is filled, its a lazy allocation system.\
+*cache-references:* when data is moved across system, it traverse through l1/l2/l3 cache. So anyway, when we refer data that is present in cache, its called cache-references.\
+*cache-misses:* when data is not present in cache and had to be loaded from RAM then its called cache-misses.\
+*branch:* when execution flow changes, like if and else statements. CPU predicts which branch will execute next and loads the instruction.\
+*branch-miss:* wrong prediction of branch from CPU leads to branch-miss.\
 
 Reading through an array in order will give many cache-references but not many cache-misses since if we read element i, element i + 1 will already be in cache. If, however, we read randomly through an array or otherwise don’t layout our data in memory well, every read will require access to data that couldn’t possibly already be in cache.
 
