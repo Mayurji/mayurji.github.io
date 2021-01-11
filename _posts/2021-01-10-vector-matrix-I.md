@@ -1,6 +1,18 @@
-## Vector Computation in Python
+---
+layout: post
+title: Vector Computation in Python
+description: Saving memory is an essential aspect of performant programming!
+category: Blog
+date:   2021-01-10 13:43:52 +0530
+---
 
-To understand and work better with computationally extensive task requires us to understand the working of python under the hood. So in this post, we'll discuss and understand, how python interacts at the system level, to identify the bottlenecks and how to overcome it. Unsurprisingly, vector and matrix computation plays a key role in making the system run faster and we'll see, how different python codes affects the CPU performance and how can we effectively reduce the cost of performance. And at the end, we'll see Numpy, the master of vector and matrix operation.
+To understand and work better with computationally extensive task requires us to understand the working of python under the hood. So in this post, we'll discuss and understand, how python interacts at the system level, to identify the bottlenecks and how to overcome it. Unsurprisingly, vector computation plays a key role in making the system run faster and we'll see, how different python codes affects the CPU performance and how can we effectively reduce the cost of performance. And at the end, we'll see Numpy, numexpr tools to the master of vector operation.
+
+
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 1: Data Structures</p>
+</center>
 
 ## How python moves in system
 
@@ -64,7 +76,10 @@ In previous blog post, [python profiling](https://mayurji.github.io/blog/2021/01
 
 Now, we can run a line_profiler on top of this code to check the time taken for each line to execute.
 
-Image (Line Profiler)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/diffusion_lr.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 2: Line Profile on Diffusion Equation</p>
+</center>
 
 We can notice in *per hit* column, the time taken for line 15 to execute is far more than other lines. If we make 500 calls to evolve function, the line 15 will still do the same assignment of 0.0 throughout the lists of list. So we can declare such assignment or dummy declaration of grid in parent function (run_experiment) to avoid such overhead of memory allocation each time we call evolve function.
 
@@ -100,8 +115,10 @@ def run_experiment(num_iterations):
         grid, next_grid = next_grid, grid
     return time.time() - start
 ```
-
-Image(diffusion_lr_2)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/diffusion_lr_2.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 3: Line Profile on optimized Diffusion Equation</p>
+</center>
 
 After creating the next_grid in run_experiment function as mentioned above, the modified version of the speed increases by 31.25% which makes it clear that memory allocation is an expensive task.
 
@@ -109,7 +126,10 @@ After creating the next_grid in run_experiment function as mentioned above, the 
 
 It is a tool to find the performance metrics of the code under scrutiny. We'll apply this tool to check the performance of the sample code above.
 
-Image(Perf)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/perfs.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 4: Perf's Insights</p>
+</center>
 
 *task-clock:* how many clock cycles did our task took. If 1 second is the total run time of the program with 2 CPUs, then our task-cycle is 2000ms.
 *instruction:* the number of CPU instructions our code as issued.
@@ -194,7 +214,10 @@ Numpy based sum of square (norm_square_numpy), it performs iteration over two lo
 
 The reason why Numpy is faster, is because it is built on top of native C code, a finely tuned & specially built object for dealing with array of numbers. It takes any vectorization advantage that the CPU is enabled with. *numpy.dot* outperforms all other variants of numpy and pure python codes by a great margin because, it doesn't store the intermediate value vector * vector operation in memory.
 
-IMAGE(Numpy vs rest)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/numpy_dot.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 5: Numpy's Dot vs Rest</p>
+</center>
 
 ## Numpy - Diffusion Equation
 
@@ -247,7 +270,10 @@ def run_experiment(num_iterations):
 
 Let's do a perf on this code
 
-IMAGE(perf_diffusion_code)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/perf_numpy_diffusion.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 6: Perf's Numpy Code</p>
+</center>
 
 There is a 63.3x speedup in numpy code over pure python implementation. The total number of cycles and instruction is reduced, informing us about the vectorized operation rather than individual operation of an element. Important factor to note is the cache-misses, in pure-python we saw a 53.259% cache-misses and it is brought down to 20.8%, meaning the CPU was not idle and the relevant data was available in cache for CPU to manipulate.
 
@@ -316,7 +342,10 @@ In the above case, we chose to use the `out` parameter of the `evaluate` functio
 
 ***The key aspect of numexpr is the consideration of CPU caches. It moves data around so that the various CPU caches have the correct data in order to minimize cache misses.***
 
-Image (Numexpr)
+<center>
+<img src="{{site.url}}/assets/images/dicts_sets/numexpr.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 7: Numpexpr</p>
+</center>
 
 Much of the extra machinery we are bringing into our program with `numexpr` deals with cache considerations.  When our grid size is small and all the data we need for our calculations fits in the cache, this extra machinery simply adds more instructions that don’t help performance.  In addition, compiling the vector operation that we encoded as a string adds a large overhead.  When the total runtime of the program is small, this overhead can be quite noticeable. However, as we increase the grid size, we should expect to see `numexpr` utilize our cache better than native `numpy` does.  In addition, `numexpr` utilizes multiple cores to do its calculation and tries to saturate each of the cores’ caches.  When the size of the grid is small, the extra overhead of managing the multiple cores overwhelms any possible increase in speed.
 
