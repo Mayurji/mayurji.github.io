@@ -3,7 +3,7 @@ layout: post
 title: Vector Computation in Python
 description: Do it Parallelly!
 category: Blog
-date:   2021-01-10 13:43:52 +0530
+date:   2021-01-07 13:43:52 +0530
 ---
 To understand and work better with computationally extensive task requires us to understand the working of python under the hood. In this post, we'll discuss and understand, how python interacts at the system level, to identify the bottlenecks and how to overcome it. Unsurprisingly, vector computation plays a key role in making the system run faster and we'll see, how different python codes affects the CPU performance and how can we effectively reduce the cost of performance. And at the end, we'll see Numpy, numexpr tools for faster computation.
 
