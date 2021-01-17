@@ -1,6 +1,11 @@
-## Making Python Faster - Part I
-
-To make code run faster, a number of things can be done like reducing the number of preprocessing steps and compile the code down to machine code. 
+---
+layout: post
+title: Making Python Faster - Part I
+description: Compile it down!
+category: Blog
+date:   2021-01-09 13:43:52 +0530
+---
+To make code run faster, a number of things can be done like reducing the number of preprocessing steps or compile the code down to machine code or use a machine which has high clock speed. 
 
 Python offers many options to perform efficient compiling like pure C compilers, Cython and LLVM-based compiling via Numba or a replacement virtual machine PyPy, which has Just-In-Time Compiler. 
 
@@ -12,7 +17,10 @@ Python offers many options to perform efficient compiling like pure C compilers,
 
 Sometimes even compiled code will not bring in greater gains, for instance, if the code requires to call out different external libraries like string operation with regex, database calls, or programs with I/O operations, etc. Python code that tends to run faster after compiling is mathematical, and it has lots of loops that repeat the same operations many times. Inside these loops, you’re probably making lots of temporary objects.
 
-Image (compiler)
+<center>
+<img src="{{site.url}}/assets/images/PythonFaster/compiler.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 1: Compilers</p>
+</center>
 
 ### JIT and AOT
 
@@ -110,8 +118,6 @@ setup(ext_modules=cythonize("cythonfn.pyx",
                             compiler_directives={"language_level": "3"})) # 3 represent to force python3.x support 
 ```
 
-
-
 For the Julia example, we’ll use the following:
 
 - *julia.py* to build the input lists and call the calculation function
@@ -149,15 +155,21 @@ import cythonfn
 
 Lets view the intermediate `cythonfn.c` file, we can type `cython -a cythonfn.pyx` , and generate `cythonfn.html` file. We cannot optimize any block of code blindly, that's why we can check if line acts as bottleneck. Once the `html` file is generated, we can view it in a browser.
 
-Image(cython code Shrinked)
+<center>
+<img src="{{site.url}}/assets/images/PythonFaster/shrinked_cython.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<p>Figure 2: Identifying the Bottleneck in Code</p>
+</center>
 
 #### Cython Annotation
 
 Each line can be expanded with a double-click to show the generated C code. More yellow means “more calls into the Python virtual machine,” while more white means “more non-Python C code.” The goal is to remove as many of the yellow lines as possible and end up with as much white as possible.
 
-Although “more yellow lines” means more calls into the virtual machine, this won’t necessarily cause your code to run slower. Each call into the virtual machine has a cost, but the cost of those calls will be significant only if the calls occur inside large loops. Calls outside large loops (for example, the line used to create `output` at the start of the function) are not expensive relative to the cost of the inner calculation loop. 
+<center>
+<img src="{{site.url}}/assets/images/PythonFaster/expanded_cython.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<p>Figure 3: Under The Hood: Cython</p>
+</center>
 
-Image(cython code Expanded)
+Although “more yellow lines” means more calls into the virtual machine, this won’t necessarily cause your code to run slower. Each call into the virtual machine has a cost, but the cost of those calls will be significant only if the calls occur inside large loops. Calls outside large loops (for example, the line used to create `output` at the start of the function) are not expensive relative to the cost of the inner calculation loop. 
 
 In above example, the lines with the most calls back into the Python virtual machine (the “most yellow”) are lines 4 and 8. From previous [profiling blog](https://mayurji.github.io/blog/2021/01/02/profiling), we know that line 8 is likely to be called over 30 million times, so that’s a great candidate to focus on.
 
@@ -195,10 +207,12 @@ def calculate_z(int maxiter, zs, cs):
         output[i] = n
     return output
 ```
+<center>
+<img src="{{site.url}}/assets/images/PythonFaster/cython_annotations.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<p>Figure 4: Cython Annotations</p>
+</center>
 
 *The `cdef` keyword lets us declare variables inside the function body. These changes are made in .pyx file*
-
-Image( Cython Annotation)
 
 The benefits of giving annotation to variable is visible from the above images, critically,  we can see that line no. 11 and 12—**two of the most frequently called lines—have now turned from yellow to white, indicating that they no longer call back to the Python virtual machine.** We can anticipate a great speedup compared to the previous version.
 
