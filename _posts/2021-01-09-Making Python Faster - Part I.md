@@ -219,7 +219,7 @@ After compiling, this version takes 0.49 seconds to complete. With only a few ch
 
 In previous example, we saw that ***abs*** on complex number leads to square root of the sum of the squares of the real and imaginary components. In above example, we can perform few changes such that instead of calculating the square root, we can square on both sides, and avoid square root operation as follows
 <p>
-$$ sqrt{c.real^2 + c.imaginary^2} < \sqrt{4}  \to {c.real^2 + c.imaginary^2} < {4} $$
+$$ \sqrt{c.real^2 + c.imaginary^2} < \sqrt{4}  \to {c.real^2 + c.imaginary^2} < {4} $$
 </p>
 *square root is an expensive operation!*
 
