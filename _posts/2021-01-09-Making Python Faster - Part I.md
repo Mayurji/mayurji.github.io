@@ -43,9 +43,9 @@ print(type(v), abs(v))
 <class 'complex'> 1.4142135623730951
 ```
 When we perform an ***abs*** on v as floating number, we find the absolute value of -1 as 1. And performing ***abs*** on complex number leads to different formulation as follows 
-
+<p>
 $$ abs (c) = \sqrt {c.real^2 + c.imaginary^2} $$
-
+</p>
 Before calling `abs` on a variable, Python first has to look up the type of the variable and then decide which version of a function to call—this overhead adds up when you make a lot of repeated calls. 
 
 #### Sample Code
@@ -218,9 +218,9 @@ The benefits of giving annotation to variable is visible from the above images, 
 After compiling, this version takes 0.49 seconds to complete. With only a few changes to the function, we are running at 15 times the speed of the original Python version.
 
 In previous example, we saw that ***abs*** on complex number leads to square root of the sum of the squares of the real and imaginary components. In above example, we can perform few changes such that instead of calculating the square root, we can square on both sides, and avoid square root operation as follows
-
+<p>
 $$ sqrt{c.real^2 + c.imaginary^2} < \sqrt{4}  \to {c.real^2 + c.imaginary^2} < {4} $$
-
+</p>
 *square root is an expensive operation!*
 
 ```python
