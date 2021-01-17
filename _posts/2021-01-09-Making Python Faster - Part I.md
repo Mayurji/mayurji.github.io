@@ -28,7 +28,7 @@ Just-in-time compiler, compiles just the right parts of the code at the time of 
 
 The current state of affairs shows us that compiling ahead of time buys us the best speedups, but often this requires the most manual effort. Just-in-time compiling offers some impressive speedups with very little manual intervention, but it can also run into the problem just described. You’ll have to consider these trade-offs when choosing the right technology for your problem.
 
-## Python Overhead
+### Python Overhead
 
 Python is a dynamically typed language -- a variable can refer to an object of any type and any line of code can change the type of the object that is referred to. It makes it difficult for machine code to understand such changes of variable type. 
 
@@ -44,9 +44,7 @@ print(type(v), abs(v))
 ```
 
 When we perform an ***abs*** on v as floating number, we find the absolute value of -1 as 1. And performing ***abs*** on complex number leads to different formulation as follows 
-$$
-abs (c) = \sqrt {c.real^2 + c.imaginary^2}
-$$
+$abs (c) = \sqrt {c.real^2 + c.imaginary^2}$
 Before calling `abs` on a variable, Python first has to look up the type of the variable and then decide which version of a function to call—this overhead adds up when you make a lot of repeated calls. 
 
 ## Sample Code
