@@ -3,7 +3,7 @@ layout: post
 title: Making Python Faster - Part III
 description: If not libraries then use hardwares!
 category: Blog
-date:   2021-01-07 13:43:52 +0530
+date:   2021-01-17 13:43:52 +0530
 ---
 ### GPUs and Pytorch
 
