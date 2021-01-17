@@ -1,6 +1,17 @@
-## Making Python Faster - Part II
-
+---
+layout: post
+title: Making Python Faster - Part II
+description: Get the tools working!
+category: Blog
+date:   2021-01-14 13:43:52 +0530
+---
 In previous blog on [vector computation in python](https://mayurji.github.io/blog/2021/01/10/vector-matrix-I), we've come across the overhead caused by list for each dereference, as the objects they reference can occur anywhere in memory. While  `arrays` are stored in contiguous block of memory, which enables faster addressing. We'll address this overhead by using numpy object along with Cython annotation.
+
+
+<center>
+<img src="{{site.url}}/assets/images/PythonFaster/fasterPython(1).png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<p>Figure 1: Making Python Faster - Tools</p>
+</center>
 
 ### Cython and NumPy
 
@@ -91,13 +102,9 @@ By introducing OpenMP and using `schedule="guided"`, we drop our execution time 
 
 We also could have disabled the bounds checking for this example by using `#cython: boundscheck=False`, but it wouldn’t improve our runtime.
 
-
-
-## Numba
+### Numba
 
 Numba is a just-in-time compiler specialized for `numpy` code. It compiles the code using LLVM compiler at runtime. It provides a decorator, which points to function that needs to be taken care by Numba and it aims to run on all standard numpy code.
-
-
 
 ```python
 from numba import jit
@@ -105,7 +112,6 @@ from numba import jit
 @jit
 def z_serial_purepython(maxiter, zs, cs, output):
 ```
-
 Above is a function from Julia code defined previously, once numba is imported, LLVM starts to complie this function behind the scenes during execution.
 
 We have discussed about Cython and Numpy, where we provide annotations to compile the python code into C code and reduce the time taken to less than 1 second. We can achieve the similar performance by using just the `@jit` decorator on top of a function, without any annotation.
