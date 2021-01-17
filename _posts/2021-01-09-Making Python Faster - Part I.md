@@ -5,6 +5,8 @@ description: Compile it down!
 category: Blog
 date:   2021-01-09 13:43:52 +0530
 ---
+{% include mathjax.html %}
+
 To make code run faster, a number of things can be done like reducing the number of preprocessing steps or compile the code down to machine code or use a machine which has high clock speed. 
 
 Python offers many options to perform efficient compiling like pure C compilers, Cython and LLVM-based compiling via Numba or a replacement virtual machine PyPy, which has Just-In-Time Compiler. 
