@@ -12,9 +12,7 @@ To make code run faster, a number of things can be done like reducing the number
 Python offers many options to perform efficient compiling like pure C compilers, Cython and LLVM-based compiling via Numba or a replacement virtual machine PyPy, which has Just-In-Time Compiler. 
 
 * Cython, the most commonly used tool for compiling to C, covering both `numpy` and normal Python code (requires some knowledge of C)
-
 * Numba, a new compiler specialized for `numpy` code
-
 * PyPy, a stable just-in-time compiler for non-`numpy` code that is a replacement for the normal Python executable
 
 Sometimes even compiled code will not bring in greater gains, for instance, if the code requires to call out different external libraries like string operation with regex, database calls, or programs with I/O operations, etc. Python code that tends to run faster after compiling is mathematical, and it has lots of loops that repeat the same operations many times. Inside these loops, you’re probably making lots of temporary objects.
@@ -46,7 +44,7 @@ print(type(v), abs(v))
 ```
 When we perform an ***abs*** on v as floating number, we find the absolute value of -1 as 1. And performing ***abs*** on complex number leads to different formulation as follows 
 
-$ abs (c) = \sqrt {c.real^2 + c.imaginary^2} $
+$$ abs (c) = \sqrt {c.real^2 + c.imaginary^2} $$
 
 Before calling `abs` on a variable, Python first has to look up the type of the variable and then decide which version of a function to call—this overhead adds up when you make a lot of repeated calls. 
 
@@ -221,7 +219,7 @@ After compiling, this version takes 0.49 seconds to complete. With only a few ch
 
 In previous example, we saw that ***abs*** on complex number leads to square root of the sum of the squares of the real and imaginary components. In above example, we can perform few changes such that instead of calculating the square root, we can square on both sides, and avoid square root operation as follows
 
-$ sqrt{c.real^2 + c.imaginary^2} < \sqrt{4}  \to {c.real^2 + c.imaginary^2} < {4}$
+$$ sqrt{c.real^2 + c.imaginary^2} < \sqrt{4}  \to {c.real^2 + c.imaginary^2} < {4} $$
 
 *square root is an expensive operation!*
 
