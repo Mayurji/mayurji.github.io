@@ -253,13 +253,12 @@ Cython has a set of flags that can be expressed in various ways. The easiest is 
 ```python
 #cython: boundscheck=False
 def calculate_z(int maxiter, zs, cs):
-```
-
-​																																..................
+```								
 
 *From **Wikipedia***
 
 *In computer programming, **bounds checking** is any method of detecting whether a variable is within some **bounds** before it is used. It is usually used to ensure that a number fits into a given type (range **checking**), or that a variable being used as an array index is within the **bounds** of the array (index **checking**).*
 
-​																																..................
+### References
 
+[High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)																				
