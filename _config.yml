@@ -10,8 +10,9 @@ collections:
     output: true
   machine-learning:
     output: true
+  data-structure-algorithms:
+    output: true
 ---
 
 # Google services
 google_analytics: UA-108823315-1
-
