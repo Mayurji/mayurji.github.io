@@ -1,1 +1,17 @@
-Data Structure algorithms
+---
+layout: default
+title: Data structure and Algorithms
+---
+<head>
+      <!-- link to main stylesheet -->
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+</head>
+<ul class="posts">
+
+  {% for item in site.data-structure-algorithms %}
+  <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}
+    <p>{{ item.description }}</p></a></li>
+  {% endfor %}
+
+</ul>
