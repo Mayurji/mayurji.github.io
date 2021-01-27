@@ -9,7 +9,8 @@ title: Deep Learning
 </head>
 <ul class="posts">
 
-  {% for item in site.deep-learning %}
+  {% assign sorted_pages = site.deep-learning | sort:"date" %}
+  {% for item in sorted_pages reversed %}
   <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}
     <p>{{ item.description }}</p></a></li>
   {% endfor %}
