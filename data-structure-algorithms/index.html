@@ -10,7 +10,7 @@ title: Data structure and Algorithms
 <ul class="posts">
 
   {% assign sorted_pages = site.data-structure-algorithms | sort:"date" %}
-  {% for item in site.data-structure-algorithms %}
+  {% for item in sorted_pages %}
   <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}
     <p>{{ item.description }}</p></a></li>
   {% endfor %}
