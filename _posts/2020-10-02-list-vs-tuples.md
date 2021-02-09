@@ -13,7 +13,7 @@ In this blog post, we’ll try to understand the data structure, List & Tuple an
 List and tuples comes under a class of data structure called *array*. Array is a collection of elements, and ordering or positioning of these element is as important as element itself. Because to retrieve an element, given a position or index, it takes O(1) time complexity, to find a element.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Data Structure</p>
 </center>
 
@@ -24,7 +24,7 @@ List and tuples comes under a class of data structure called *array*. Array is a
 In a computer system, the memory is a series of numbered buckets, each capable of holding a number. Python stores data in these buckets by reference, which means the number itself simply points to, or refers to, the data we actually care about.
 
 <center>
-<img src="{{site.url}}/assets/images/lists_tuples/system_memory.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/lists_tuples/system_memory.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Example of system memory layout for an array of size 6</p>
 </center>
 
@@ -51,14 +51,14 @@ M = (N >> 3) + (3 if N < 9 else 6)
 ```
 
 <center>
-<img src="{{site.url}}/assets/images/lists_tuples/overallocation_in_lists.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/lists_tuples/overallocation_in_lists.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: Overallocation in Lists</p>
 </center>
 
 *Graph showing how many extra elements are being allocated to a list of a particular size. For example, if you create a list with 8,000 elements using appends, Python will allocate space for about 8,600 elements, overallocating 600 elements!*
 
 <center>
-<img src="{{site.url}}/assets/images/lists_tuples/append_vs_comprehension.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/lists_tuples/append_vs_comprehension.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Memory and time consequences of appends versus list comprehensions</p>
 </center>
 
