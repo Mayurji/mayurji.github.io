@@ -12,7 +12,7 @@ A Neural Network is a simple system of function developed based on the complexit
 audio, text etc.
 
 <center>
-<img src="{{site.url}}/assets/images/resnet/mlvsdl.png" style="zoom: 5%; background-color:#DCDCDC;"  width="1000" height="600" /><br>
+<img src="{{site.url}}/assets/images/resnet/mlvsdl.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto /><br>
 <p>Figure 1: Deep Learning vs Machine Learning</p> 
 </center>
 
