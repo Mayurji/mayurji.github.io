@@ -9,12 +9,14 @@ date:   2021-01-17 13:43:52 +0530
 
 In this blog post, we'll discuss about GPU and why it is becoming a must have tool in your arsenal for massive data computation especially in the field of Deep Learning, where we require max. parallelism with matrix and vector computation.
 
-GPU is a immensely popular tool for performing heavy arithmetic workloads. It was originally designed for gaming, generating graphics as it solves easy parallelizable problems. When compared with CPU, GPU computing rate is slower i.e. it has lower clock speed. Even though, it sounds counterintuitive, GPU gains its parallel processing power from the number of cores available. The number of cores in CPUs are at most 12 or less, but modern-day GPU comes with thousands of cores available for parallel processing. 
+GPU is a immensely popular tool for performing heavy arithmetic workloads. It was originally designed for gaming, generating graphics as it solves easy parallelizable problems. When compared with CPU, GPU computing rate is slower i.e. it has lower clock speed. Even though, it sounds counterintuitive, GPU gains its parallel processing power from the number of cores available. The number of cores in CPUs are at most 12 or less, but modern-day GPU comes with thousands of cores available for parallel processing.
 
+<div>
 <center>
 <img src="{{site.url}}/assets/images/PythonFaster/fasterPython(1).png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
 <p>Figure 1: Making Python Faster - Tools</p>
 </center>
+</div>
 
 Anyway, it is quite tough to program for these devices, which makes it difficult to attain the maximum performance from it. However, the needs of modern deep learning algorithms have been pushing new interfaces into GPUs that are easy and intuitive to use. The two front-runners in terms of easy-to-use GPU mathematics libraries are TensorFlow and PyTorch.
 
