@@ -15,7 +15,7 @@ When designing features or algorithms for learning features, our goal is to sepa
 **Features** are the components in our dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. For instance, we can handle categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p><b>Figure 1:</b> Terms in Machine Learning</p> 
 </center>
 
@@ -77,7 +77,7 @@ The raw data comes in different problems with it, sometimes the features values 
 <p align='center'>. . . . .</p>
 
 <center>
-<img src="{{site.url}}/assets/images/ml/bias-variance.jpg"  style="zoom: 5%  background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/ml/bias-variance.jpg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p><b>Figure 2:</b> Model Complexity vs Error</p> 
 </center>
 
@@ -95,7 +95,7 @@ As seen in figure 2, as the model complexity is increased, the variance is incre
 <p align='center'>. . . . .</p>
 
 <center>
-<img src="{{site.url}}/assets/images/ml/gradient-descent.png"  style="zoom: 5%  background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/ml/gradient-descent.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p><b>Figure 3:</b> Batch vs Stochastic vs Mini-Batch</p> 
 </center>
 
