@@ -17,7 +17,7 @@ Machine Learning is essentially a form of applied statistics with increased emph
 "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
 
 <center>
-<img src="{{site.url}}/assets/images/ml/ml.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/ml/ml.jpg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Machine Learning</p> 
 </center>
 
@@ -40,8 +40,8 @@ A *model* is a function, which is learnt based on data, complex data requires co
 *Predictor*, are a set of variables, which helps in describing a system. From above patient records, if we want to predict, if the patient has disease XYZ then our predictor variable will include health habits (like smoking, drinker etc), existing health condition like blood pressure, diabeitc etc. Predictor is also referred as independent variable.
 
 
-<center>
-<img src="{{site.url}}/assets/images/ml/mlflow.png"  style="zoom: 5%  background-color:#DCDCDC;"/><br>
+<center> 
+<img src="{{site.url}}/assets/images/ml/mlflow.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Machine Learning Flow</p> 
 </center>
 
@@ -84,7 +84,7 @@ Note: Sometimes the training error will reduce but the validation error may fail
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. Here, the algorithms interact with an environment, so there is a feedback loop between the learning system and its experience. For instance: Self Driving Cars and Game Playing Agents.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/ml/ml_algo.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 3: Machine Learning Algorithms</p> 
 </center>
 
