@@ -6,7 +6,7 @@ category: Blog
 image_url: "/assets/images/profiling/profiling.gif"
 date:   2021-01-02 13:43:52 +0530
 ---
-### *Why my code walks like a snail!*
+### *Finding Bottlenecks in Code!*
 
 Code is a simple set of instruction to perform an action. It occupies resources like RAM and CPU for its compilation. But a explainable and efficient code should occupy less time and resources to complete its execution. There are various techniques to check out the performance of the code written.
 
@@ -90,7 +90,7 @@ cProfile is one of two profilers in the standard library, alongside profile. pro
 snakeviz is a visualizer that draws the output of cProfile as a diagram in which larger boxes are areas of code that take longer to run. It replaces the older runsnake tool.
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/cprofile.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/cprofile.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: cProfile statistics of the whole code</p>
 </center>
 
@@ -101,7 +101,7 @@ Function call to calc_pure_python takes 1 second and function call to calculate_
 the call to calculate_z_serial_purepython function is CPU-intensive, since the manipulation happens inside this function. However, we can’t derive which lines take the time inside the function using cProfile.
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/snakeViz.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/snakeViz.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: SnakeViz - cProfile</p>
 </center>
 
@@ -112,7 +112,7 @@ The above visualization represents the time taken for each function to execute.
 cProfile acts as a guide to identify which functions is costly in terms of execution time, while the line_profiler acts on top of each function, to identify, which line takes max amount of time for execution. line_profiler helps in finding the CPU usage.
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/line_profiler.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/line_profiler.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: line_profilier</p>
 </center>
 
@@ -126,7 +126,7 @@ memory_profiler finds the amount of memory (RAM) being used on line to line basi
 * Can we use more RAM and save the CPU cycle by caching?
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/memory_profiler.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/memory_profiler.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: memory_profiler</p>
 </center>
 
@@ -139,7 +139,7 @@ To reduce the RAM usage, we can perform runtime calculation of z_serial instead 
 Find the below snippet
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/memory_profiler_2.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/memory_profiler_2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 5: Creating Complex Coordinate on the fly to save RAM</p>
 </center>
 
@@ -162,14 +162,14 @@ $ sudo env "PATH=$PATH" py-spy --pid 15953
 ```
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/pyspy.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/pyspy.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 6: py-spy calculating time taken by functions</p>
 </center>
 
 We can utilize plots like flame chart to represent the time taken by the code. The width represents the total time taken for the program to run.
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/flamechart.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/flamechart.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 7: Flame Chart</p>
 </center>
 
@@ -203,7 +203,7 @@ In [3]: %timeit fn_terse()
 Bytecode version of the functions
 
 <center>
-<img src="{{site.url}}/assets/images/profiling/bytecode.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/profiling/bytecode.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 8: Bytecode</p>
 </center>
 
