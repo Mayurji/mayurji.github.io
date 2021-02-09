@@ -11,7 +11,7 @@ date:   2020-08-06 13:43:52 +0530
 #### Discover a way to efficiently tune hyperparameters
 
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Neurons</p> 
 </center>
 
@@ -37,7 +37,7 @@ date:   2020-08-06 13:43:52 +0530
 It is the most important of all hyperparameter. Even if we are using pre-trained model, we should try out multiple values of learning rate. The most commonly used learning rate is **0.1, 0.01, 0.001, 0.0001, 0.00001** etc.
 
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Learning Rate</p>
 </center>
 
@@ -52,7 +52,7 @@ An **optimum value** of learning rate will leads to global minimum, which can be
 Sometimes keeping only one learning rate may not help us in reaching the global minimum, so changing the value of learning rate after a certain number of epoch such that convergence takes place if the gradient is stuck in local minimum.
 
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: Learning Rate Decay</p>
 </center>
 
@@ -76,7 +76,7 @@ It is one of the most commonly tuned hyperparameter in deep learning. If we have
 If we keep Minibatch size = 1, then the weights are updated for every record after backpropagation. It is called as Stochastic Batch Gradient Descent.
 
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/minibatch.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/Hyperparameter/minibatch.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Minibatch</p>
 </center>
 
@@ -96,7 +96,7 @@ Most commonly used value for **Minibatch sizes are 32, 64, 128, 256.** Values mo
 The number of iteration or epoch can decided based on the validation error, as long as validation error keeps decreasing we can assume that our model is learning and updating the weights positively. There is a technique called as early stopping which helps in determining the no. of iterations.
 
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/iterations.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/Hyperparameter/iterations.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 5: Iterations</p> 
 </center>
 
