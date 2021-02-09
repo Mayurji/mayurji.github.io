@@ -9,7 +9,7 @@ date:   2020-12-05 13:43:52 +0530
 In this post, We'll discuss the python's ***Iterators and Generators*** objects and decode why generators are memory efficient and why iterators are used over generators irrespective of memory usage.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Data Structures</p>
 </center>
 
@@ -36,7 +36,7 @@ while True:
 ```
 
 <center>
-<img src="{{site.url}}/assets/images/iterators/iterators.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/iterators/iterators.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 2: Iterators</p>
 </center>
 
@@ -71,7 +71,7 @@ def fibonacci_gen(num_items):
 In Generator, we don't store the element in array for further evaluation/usage, unlike in lists, where we can reference the list anywhere, without performing iteration over all elements again.
 
 <center>
-<img src="{{site.url}}/assets/images/iterators/generator.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/iterators/generator.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 3: Generator</p>
 </center>
 
