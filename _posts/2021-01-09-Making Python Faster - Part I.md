@@ -18,7 +18,7 @@ Python offers many options to perform efficient compiling like pure C compilers,
 Sometimes even compiled code will not bring in greater gains, for instance, if the code requires to call out different external libraries like string operation with regex, database calls, or programs with I/O operations, etc. Python code that tends to run faster after compiling is mathematical, and it has lots of loops that repeat the same operations many times. Inside these loops, you’re probably making lots of temporary objects.
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/compiler.png" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/PythonFaster/compiler.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Compilers</p>
 </center>
 
