@@ -16,7 +16,7 @@ date:   2020-07-06 13:43:52 +0530
 5. Techniques to overcome the Curse of Dimensionality
 
 <center>
-<img src="{{site.url}}/assets/images/highdimension/highdimension.jpeg" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/highdimension.jpeg" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Curse of Dimensionality</p>
 </center>
 
@@ -65,7 +65,7 @@ load_digits = load_digits()
 We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.
 
 <center>
-<img src="{{site.url}}/assets/images/highdimension/visualize.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Dimension Reduction</p>
 </center>
 
@@ -97,7 +97,7 @@ for x in list([4,8,12,16,20,24,28,32,63]):
     print("--------------------------------------------------")
 ```
 <center>
-<img src="{{site.url}}/assets/images/highdimension/results.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/results.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: Result</p>
 </center>
 
@@ -114,7 +114,7 @@ plt.show()
 ```
 
 <center>
-<img src="{{site.url}}/assets/images/highdimension/plots.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/plots.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Plotting</p>
 </center>
 
@@ -151,7 +151,7 @@ There are number of ways of Dimensionality reduction such as feature selection a
 6. High Correlation Filter
 
 <center>
-<img src="{{site.url}}/assets/images/highdimension/hd.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/highdimension/hd.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 5: 2D to 1D</p>
 </center>
 
@@ -193,9 +193,9 @@ In this Feature Selection process, we train a model with one feature and calcula
 
 ### High Correlation Filter
 
-Here, If the columns present in the dataset are high correlated then the information becomes redundant and we drop these highly redundant variables from features. We can calculate the **correlation coefficient** between Numerical columns / variables.We can calculate the ‘correlation coefficient’ between Nominal columns / variables.
+Here, If the columns present in the dataset are high correlated then the information becomes redundant and we drop these highly redundant variables from features. We can calculate the **correlation coefficient** between Numerical columns/variables.We can calculate the ‘correlation coefficient’ between Nominal columns / variables.
 
-We can use the **pearson product moment coefficient** between Numerical columns / variables.We can use the ‘pearson Chi squared’ value between Nominal columns / variables. Before doing correlation operation, Perform normalization on the columns as correlation is scale sensitive.
+We can use the **pearson product moment coefficient** between Numerical columns/variables. We can use the ‘pearson Chi squared’ value between Nominal columns / variables. Before doing correlation operation, Perform normalization on the columns as correlation is scale sensitive.
 
 ### Note
 
