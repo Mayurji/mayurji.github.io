@@ -174,3 +174,14 @@ ul#horizontal-list {
 ul#horizontal-list li {
 	display: inline;
 }
+
+div {
+  width: 500px;
+  display: flex;
+}
+
+div img {
+  width: 100px;
+  height: auto;
+}
+
