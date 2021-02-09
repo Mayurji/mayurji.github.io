@@ -9,7 +9,7 @@ In previous blog on [vector computation in python](https://mayurji.github.io/blo
 
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/fasterPython(1).png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/PythonFaster/fasterPython(1).png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Making Python Faster - Tools</p>
 </center>
 
