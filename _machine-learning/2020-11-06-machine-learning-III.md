@@ -23,8 +23,6 @@ Test Set: A set of examples used only to assess the performance [generalization]
 
 The validation and testing set are also called as hold-out sets.
 
-<p align='center'>. . . . .</p>
-
 #### Factors for selecting an algorithm
 
 * Explainability
@@ -36,7 +34,7 @@ The validation and testing set are also called as hold-out sets.
 * Predicton speed
 
 <center>
-<img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Algorithm Selection</p> 
 </center>
 
@@ -47,14 +45,14 @@ The validation and testing set are also called as hold-out sets.
 Consider a model trained two classify Cat and Dog images. And after training, we are testing the model on 100 random images of Dogs and Cats with 50 each and get an accuracy of 85%. It means that the model has misclassified 15 images. Now let's consider that out of 15 images 10 Dog images were misclassified as Cat and 5 Cat images are misclassified as Dog.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/Confusion_matrix_2.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/Confusion_matrix_2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 5: Confusion Matrix</p> 
 </center>
 
 From above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called as False Negative and when a Dog is misclassified is called as False Positive. In essence, it consider Positive as Cat and Negative as Dog.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 6: Confusion Matrix</p> 
 </center>
 
@@ -63,7 +61,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 **Precision** can be seen as a measure of exactness or quality, whereas **recall** is a measure of completeness or quantity. In simple terms, high precision means that an algorithm returned substantially more relevant results than irrelevant ones, while high recall means that an algorithm returned most of the relevant results.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/precision.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/precision.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 7: Precision</p> 
 </center>
 
@@ -74,7 +72,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 **Recall** informs us, how well the model predicts the right class for a label. It is also known as Sensitivity.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/recall.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/recall.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 8: Recall</p> 
 </center>
 
@@ -89,7 +87,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 **Specificity** also known as true negative rate, measures the proportion of actual negatives that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
 
 <center>
-<img src="{{site.url}}/assets/images/ml/specificity.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/specificity.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 9: Specificity</p> 
 </center>
 
@@ -114,7 +112,7 @@ Clearly we can see that the model failed to classify the cancer patient, and the
 In statistical analysis of binary classification, the F1 score (also F-score or F-measure) is a measure of a test's accuracy. It considers both the precision p and the recall r of the test to compute the score: p is the number of correct positive results divided by the number of all positive results returned by the classifier, and r is the number of correct positive results divided by the number of all relevant samples (all samples that should have been identified as positive). The F1 score is the harmonic mean of the precision and recall, where an F1 score reaches its best value at 1 (perfect precision and recall).
 
 <center>
-<img src="{{site.url}}/assets/images/ml/f1-score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/f1-score.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 10: F1-score</p> 
 </center>
 
@@ -125,7 +123,7 @@ As we have seen in drawback of using metrics like precision and recall alone wou
 Find this below snippet from wikipedia:
 
 <center>
-<img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 11: F1 Beta Score</p> 
 </center>
 
@@ -134,7 +132,7 @@ Find this below snippet from wikipedia:
 ROC- Receiver Operating Characteristics, its a plot between True Positive rate (Sensitivity) vs False Positive Rate (1 - specificity). Its a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/roc.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/ml/roc.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 12: Area under the ROC curve</p> 
 </center>
 
