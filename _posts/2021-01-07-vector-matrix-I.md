@@ -8,7 +8,7 @@ date:   2021-01-07 13:43:52 +0530
 To understand and work better with computationally extensive task requires us to understand the working of python under the hood. In this post, we'll discuss and understand, how python interacts at the system level, to identify the bottlenecks and how to overcome it. Unsurprisingly, vector computation plays a key role in making the system run faster and we'll see, how different python codes affects the CPU performance and how can we effectively reduce the cost of performance. And at the end, we'll see Numpy, numexpr tools for faster computation.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 1: Data Structures</p>
 </center>
 
@@ -75,7 +75,7 @@ In previous blog post, [python profiling](https://mayurji.github.io/blog/2021/01
 Now, we can run a line_profiler on top of this code to check the time taken for each line to execute.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/diffusion_lr.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/diffusion_lr.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Line Profile on Diffusion Equation</p>
 </center>
 
@@ -114,7 +114,7 @@ def run_experiment(num_iterations):
     return time.time() - start
 ```
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/diffusion_lr_2.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/diffusion_lr_2.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 3: Line Profile on optimized Diffusion Equation</p>
 </center>
 
@@ -125,7 +125,7 @@ After creating the next_grid in run_experiment function as mentioned above, the 
 It is a tool to find the performance metrics of the code under scrutiny. We'll apply this tool to check the performance of the sample code above.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/perfs.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/perfs.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Perf's Insights</p>
 </center>
 
@@ -213,7 +213,7 @@ Numpy based sum of square (norm_square_numpy), it performs iteration over two lo
 The reason why Numpy is faster, is because it is built on top of native C code, a finely tuned & specially built object for dealing with array of numbers. It takes any vectorization advantage that the CPU is enabled with. *numpy.dot* outperforms all other variants of numpy and pure python codes by a great margin because, it doesn't store the intermediate value vector * vector operation in memory.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/numpy_dot.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/numpy_dot.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 5: Numpy's Dot vs Rest</p>
 </center>
 
@@ -269,7 +269,7 @@ def run_experiment(num_iterations):
 Let's do a perf on this code
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/perf_numpy_diffusion.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/perf_numpy_diffusion.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 6: Perf's Numpy Code</p>
 </center>
 
@@ -341,7 +341,7 @@ In the above case, we chose to use the `out` parameter of the `evaluate` functio
 ***The key aspect of numexpr is the consideration of CPU caches. It moves data around so that the various CPU caches have the correct data in order to minimize cache misses.***
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/numexpr.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/numexpr.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 7: Numpexpr</p>
 </center>
 
