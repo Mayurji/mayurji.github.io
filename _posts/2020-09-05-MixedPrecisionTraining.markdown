@@ -3,13 +3,12 @@ layout: post
 title:  Mixed Precision Training
 description: Why training a model in 16 bit floating point is important and how it reduces memory and increases data transfer rate.
 category: Blog
-image_url: "/assets/images/mixedPrecisionTraining/mpt-bg.jpg"
 date:   2020-09-05 13:43:52 +0530
 ---
 ### Discover a way to efficiently utilize your GPU
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;"   width="80%" height=auto/><br>
 <p>Figure 1: GPU</p> 
 </center>
 
@@ -42,7 +41,7 @@ Since the introduction of Tensor Cores in the Volta and Turing architectures (NV
 FP16 requires 2 bytes, as the number of bytes are reduced to capture the same numerical entity, it reduces the amount of memory required to train a model and helps in increasing the batch size for our training. And also the data transfer of type FP16 is faster compared to FP32 and FP64.
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/small-fast.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/small-fast.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Smaller Vs Faster</p>
 </center>
 
@@ -61,7 +60,7 @@ Though its half the amount of memory in FP16, few folks many consider 2MB is not
 There is clearly significant improvement in memory required for the same number of parameters.
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/training_iteration.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/training_iteration.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: Training Iteration</p> 
 </center>
 
@@ -73,7 +72,7 @@ There is clearly significant improvement in memory required for the same number 
 First point, Porting model to use FP16 is simple, we access the model parameters and move it float16 or half-precision as widely known. It similar to changing the dtype of a variable.
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/paper-derivation.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/paper-derivation.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Paper</p> 
 </center>
 
@@ -101,7 +100,7 @@ AllowList operations are operations that take advantage of GPU Tensor Cores. Den
 ### Automatic Mixed Precision
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/amp.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/amp.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 5: AMP</p> 
 </center>
 
@@ -115,7 +114,7 @@ In those frameworks with automatic support, using mixed precision can be as simp
 ### Pytorch AMP
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/pytorch-amp.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/pytorch-amp.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 6: Pytorch - AMP</p> 
 </center>
 
