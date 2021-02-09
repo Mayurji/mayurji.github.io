@@ -10,7 +10,7 @@ In this blog post, we'll discuss the python data structures, ***Dictionary*** an
 Sets and Dictionary are the data structures used, when the data has no intrinsic order to it. But each data has unique object to reference it. For *dict*, the reference object is called *key* and referenced data is called *value*, the widely used reference object is of type string, but any hashable type is valid. While *set* is a unique collections of *keys* alone.
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1:  Data Structures</p>
 </center>
 
@@ -142,7 +142,7 @@ def test3(x, sin=math.sin):
 Bytecode generated using ***dis*** module
 
 <center>
-<img src="{{site.url}}/assets/images/dicts_sets/dicts_sets.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/dicts_sets/dicts_sets.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Bytecode for three tests</p>
 </center>
 
