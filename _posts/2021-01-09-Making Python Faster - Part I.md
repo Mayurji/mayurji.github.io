@@ -18,7 +18,7 @@ Python offers many options to perform efficient compiling like pure C compilers,
 Sometimes even compiled code will not bring in greater gains, for instance, if the code requires to call out different external libraries like string operation with regex, database calls, or programs with I/O operations, etc. Python code that tends to run faster after compiling is mathematical, and it has lots of loops that repeat the same operations many times. Inside these loops, you’re probably making lots of temporary objects.
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/compiler.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
+<img src="{{site.url}}/assets/images/PythonFaster/compiler.png" style="zoom: 5%; background-color:#DCDCDC;" width="1000" height="600"/><br>
 <p>Figure 1: Compilers</p>
 </center>
 
@@ -155,7 +155,7 @@ import cythonfn
 Lets view the intermediate `cythonfn.c` file, we can type `cython -a cythonfn.pyx` , and generate `cythonfn.html` file. We cannot optimize any block of code blindly, that's why we can check if line acts as bottleneck. Once the `html` file is generated, we can view it in a browser.
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/shrinked_cython.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/PythonFaster/shrinked_cython.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Identifying the Bottleneck in Code</p>
 </center>
 
@@ -164,7 +164,7 @@ Lets view the intermediate `cythonfn.c` file, we can type `cython -a cythonfn.py
 Each line can be expanded with a double-click to show the generated C code. More yellow means “more calls into the Python virtual machine,” while more white means “more non-Python C code.” The goal is to remove as many of the yellow lines as possible and end up with as much white as possible.
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/expanded_cython.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/PythonFaster/expanded_cython.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: Under The Hood: Cython</p>
 </center>
 
@@ -207,7 +207,7 @@ def calculate_z(int maxiter, zs, cs):
     return output
 ```
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/cython_annotations.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"/><br>
+<img src="{{site.url}}/assets/images/PythonFaster/cython_annotations.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 4: Cython Annotations</p>
 </center>
 
