@@ -13,7 +13,7 @@ GPU is a immensely popular tool for performing heavy arithmetic workloads. It wa
 
 <div>
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/fasterPython(1).png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/PythonFaster/fasterPython(1).png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
 <p>Figure 1: Making Python Faster - Tools</p>
 </center>
 </div>
@@ -70,7 +70,7 @@ def run_experiment(num_iterations):
 This speedup is a result of how parallelizable the diffusion problem is. As we said before, the GPU we are using has 4,362 independent computation cores (GPU RTX 2080 TI). It seems that once the diffusion problem is parallelized, none of these GPU cores are being fully utilized. Next, we can profile GPU and see how efficiently GPU is utilized.
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/gpu-profile.png" class="post-body" style="zoom: 5%; background-color:#DCDCDC;" /><br>
+<img src="{{site.url}}/assets/images/PythonFaster/gpu-profile.png" style="zoom: 5%; background-color:#DCDCDC;" /><br>
 <p>Figure 3: Profiling GPU</p>
 </center>
 
