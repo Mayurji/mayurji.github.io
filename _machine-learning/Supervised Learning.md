@@ -54,15 +54,19 @@ A model can learn to classify animals or predict the price of the stock in two d
 
 First, Discriminative Model, where the model learns to build an decision boundary based on which it classifies predictors as target A or B. Discriminative modeling tries to directly predict y given x. Examples-Linear Regression.
 <br>
+<center>
 $$
 Discriminative\ Model: P(y\ | \ x)
 $$
+</center>
 <br>
 Second, Generative Model, where the model learns from the probability distribution of predictors *x* based on given y and then deduce the target *y* given *x*. Example-Naive Bayes.
 <br>
+<center>
 $$
 Generative \ Model: Estimate \ P(x \ | \ y) \ and \ deduce \ P(y \ | \ x)
 $$
+</center>
 <br>
 Thus, we can perform classification or regression based on either discriminative approach or generative approach. 
 
