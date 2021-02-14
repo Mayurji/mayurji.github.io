@@ -35,7 +35,7 @@ The validation and testing set are also called as hold-out sets.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 4: Algorithm Selection</p> 
+<p>Figure 1: Algorithm Selection</p> 
 </center>
 
 #### Evaluation Metrics
@@ -46,14 +46,14 @@ Consider a model trained two classify Cat and Dog images. And after training, we
 
 <center>
 <img src="{{site.url}}/assets/images/ml/Confusion_matrix_2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 5: Confusion Matrix</p> 
+<p>Figure 2: Confusion Matrix</p> 
 </center>
 
 From above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called as False Negative and when a Dog is misclassified is called as False Positive. In essence, it consider Positive as Cat and Negative as Dog.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 6: Confusion Matrix</p> 
+<p>Figure 3: Confusion Matrix</p> 
 </center>
 
 **Precision and Recall**
@@ -62,7 +62,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/precision.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 7: Precision</p> 
+<p>Figure 4: Precision</p> 
 </center>
 
 **Precision** informs us, how well the model predicts the positive class. It is also known as PPV (Positive Predictive Value).
@@ -73,7 +73,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/recall.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 8: Recall</p> 
+<p>Figure 5: Recall</p> 
 </center>
 
 <p>$$Recall = {True Positive \over (True Positive + False Negative)}$$</p>
@@ -88,7 +88,7 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/specificity.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 9: Specificity</p> 
+<p>Figure 6: Specificity</p> 
 </center>
 
 <p>$$Specificity = {True Negative \over (True Negative + False Positive)}$$</p>
@@ -113,7 +113,7 @@ In statistical analysis of binary classification, the F1 score (also F-score or 
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1-score.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 10: F1-score</p> 
+<p>Figure 7: F1-score</p> 
 </center>
 
 **F1 Beta Score**
@@ -124,7 +124,7 @@ Find this below snippet from wikipedia:
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 11: F1 Beta Score</p> 
+<p>Figure 8: F1 Beta Score</p> 
 </center>
 
 **[ROC Curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)**
@@ -133,7 +133,7 @@ ROC- Receiver Operating Characteristics, its a plot between True Positive rate (
 
 <center>
 <img src="{{site.url}}/assets/images/ml/roc.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 12: Area under the ROC curve</p> 
+<p>Figure 9: Area under the ROC curve</p> 
 </center>
 
 ROC curves are frequently used to show in a graphical way the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
