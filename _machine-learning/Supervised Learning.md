@@ -19,10 +19,13 @@ In this blog post, we'll discuss about supervised learning and the class of prob
 ### 📌Supervised Observation
 
 In Machine Learning,  if a label or target is available for an observation then such an observation is called **Supervised Observation**. From technical standpoint, given a set of data points X's associated to set of labels or outcomes Y's, we try to build a model that learns to predict *y* from *x.*
+<center>
+<p>
 $$
 \{x^{(1)},...,\ x^{(m)}\} \ and \ \{y^{(1)}, ..., \ y^{(m)}\}
 $$
-
+</p>
+</center>
 ### 📌Type of Prediction
 
 Consider observing animals, when we see an animal before we label it as Dog or Cat, we with our super speed consciousness, we check for features like number of legs, eyes, head, body, whiskers etc and then label it as animal A, B, C etc.
@@ -53,21 +56,25 @@ Problems like stock price prediction, house price prediction etc all come under 
 A model can learn to classify animals or predict the price of the stock in two different ways. 
 
 First, Discriminative Model, where the model learns to build an decision boundary based on which it classifies predictors as target A or B. Discriminative modeling tries to directly predict y given x. Examples-Linear Regression.
-<br>
+
 <center>
+<p>
 $$
 Discriminative\ Model: P(y\ | \ x)
 $$
+</p>
 </center>
-<br>
+
 Second, Generative Model, where the model learns from the probability distribution of predictors *x* based on given y and then deduce the target *y* given *x*. Example-Naive Bayes.
-<br>
+
 <center>
+<p>
 $$
 Generative \ Model: Estimate \ P(x \ | \ y) \ and \ deduce \ P(y \ | \ x)
 $$
+</p>
 </center>
-<br>
+
 Thus, we can perform classification or regression based on either discriminative approach or generative approach. 
 
 ### 📌Loss Function 
