@@ -227,8 +227,7 @@ y' is the predicted label and the raw value of y' is > 1 or < 0, to convert it i
 <p>Figure 4: Loss Function - Log Loss</p> 
 </center>
 
-
-1. When the actual class y is 1: second term in the Log Loss = 0 and we will be left with first term 
+* When the actual class y is 1: second term in the Log Loss = 0 and we will be left with first term 
 
 <p>
    $$
@@ -236,7 +235,7 @@ y' is the predicted label and the raw value of y' is > 1 or < 0, to convert it i
    $$
 </p>
 
-2. When the actual class y is 0: The first term = 0 and second term will turn into as follows
+* When the actual class y is 0: The first term = 0 and second term will turn into as follows
 
 <p>
 $$
