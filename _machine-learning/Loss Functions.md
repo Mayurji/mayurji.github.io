@@ -16,9 +16,13 @@ date:   2021-02-20 17:43:52 +0530
 In this blog post, we'll discuss about Loss function, parameter θ and different types of loss function. I've learnt a lot while researching about this topic and hope you'll feel the same. Without further a due, lets starts off with loss function. 
 
 In simple terms, the objective of loss function is to find the difference between or deviation between the actual ground truth of a value and an estimated approximation of the same value.
+
+<p>
 $$
 Loss \ Function \ = y_{actual} \ - y_{estimate}
 $$
+</p>
+
 Above equation is the simplest form loss function.
 
 > In a more technical and wikipedia terms - In mathematical optimization and decision theory, a loss function or cost function is a function that maps an event or values of one or  more variables onto a real number intuitively representing some "cost"  associated with the event. An optimization problem seeks to minimize a loss function.
@@ -26,13 +30,21 @@ Above equation is the simplest form loss function.
 ## Why we are learning about Loss Function
 
 Loss function is a key component of any learning mechanism in AI, either be it machine learning or deep learning or reinforcement Learning. Loss function acts a feedback to the system we are building, without feedback the system will never know **where** and **what** should be improved.  
+
+<p>
 $$
 Trained \ model's function \ M \ = \ \theta_1 x_1 \ + \theta_2 x_2 \ + \theta_3 x_3 \ +\ .....\ +  \theta_{n-1} x_{n-1} \ + \theta_n x_n 
 $$
+</p>
+
 θ is the parameter of the trained model M. Loss function helps the model in answering the **what and where** question. Answer to the **what** 🔍 question is "θ", which should be improved to reduce the difference between the actual vs estimate. And **where** 🔍 question means which θ, either its 
+
+<p>
 $$
 \theta_1 \ or \ \theta_{n-1} \ or \ any\ other \ \theta.
 $$
+</p>
+
 With repeated iteration over model with different set of samples of the dataset, we identify the answer to **what and where** questions.
 
 ## Role of θ
