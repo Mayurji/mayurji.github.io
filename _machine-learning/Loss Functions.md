@@ -2,7 +2,7 @@
 layout: machine-learning
 title: Loss Function
 description: Loss function is the brain of a learning system.
-date:   2021-02-14 17:43:52 +0530
+date:   2021-02-20 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
