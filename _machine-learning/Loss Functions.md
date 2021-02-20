@@ -1,4 +1,17 @@
+---
+layout: machine-learning
+title: Loss Function
+description: Loss function is the brain of a learning system.
+date:   2021-02-14 17:43:52 +0530
+---
+{% include mathjax.html %}
+
 # Loss Functions
+
+<center>
+<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
+<p><span>Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/books?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
+</center>
 
 In this blog post, we'll discuss about Loss function, parameter θ and different types of loss function. I've learnt a lot while researching about this topic and hope you'll feel the same. Without further a due, lets starts off with loss function. 
 
@@ -99,16 +112,23 @@ For sample x_train[3], the y_train[3] is 0, thus the confidence score of class 0
 ### Mean Squared Error or L2 Loss
 
 MSE of an estimator measures the average of the square of the errors. It is the averaged squared difference between the estimated values and the actual values. 
+
+<p>
 $$
-MSE \ = \ {1 \over m} \sum_{i=1}^{m} \ (y_i - y_{i}^`)^2 \\
+MSE \ = \ {1 \over m} \sum_{i=1}^{m} \ (y_i - y_{i}')^2 \\
 
 where, m \ is \ the \ number \ of \ samples \\
 y_i \ is \ the \ actual \ value \\
-y_{i}^` is \ the \ estimated \ value.
+y_{i}' is \ the \ estimated \ value.
 $$
+</p>
+
 MSE values are mostly positive and not zero, because of the uncertainty of the estimator and also the loss of information during estimation which accounts for actual ground truth.
 
-IMAGE MSE
+<center>
+<img src="{{site.url}}/assets/images/ml/mse.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 1: Loss Function - Mean Squared Error</p> 
+</center>
 
 #### Mean Squared Error Code 
 
@@ -125,14 +145,21 @@ Also note, that increasing the sample size m leads to decrease in MSE, because l
 
 MAE is the measure of error between a pair of variable such as predicted vs actual. MAE is the average absolute difference between X and Y. MAE is widely used for forecast error in time series analysis.
 
-IMAGE MAE
+<center>
+<img src="{{site.url}}/assets/images/ml/mae.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 2: Loss Function - Mean Absolute Error</p> 
+</center>
+
+<p>
 $$
-MAE \ = \ {1 \over m} \sum_{i=1}^{m} \ |y_i - y_{i}^`| \\
+MAE \ = \ {1 \over m} \sum_{i=1}^{m} \ |y_i - y_{i}'| \\
 
 where, m \ is \ the \ number \ of \ samples \\
 y_i \ is \ the \ actual \ value \\
-y_{i}^` is \ the \ estimated \ value.
+y_{i}' is \ the \ estimated \ value.
 $$
+</p>
+
 #### Mean Absolute Loss Code
 
 ```python
@@ -146,12 +173,19 @@ MAE is less sensitive to outliers. [To reduce MAE, minimize the median and to re
 
 Hinge Loss is used for Maximum Margin Classifier. The sound of maximum margin classifier takes us to SVM (support vector machine), where the distance between the data point and decision boundary is kept at max. **The loss function's penalization depends on how badly the data point is misclassified, meaning how far the data point is present on the wrong side of the decision boundary.**
 
-Image Maximum Margin Classifier
+<center>
+<img src="{{site.url}}/assets/images/ml/maximum_margin.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 3: Loss Function - Maximum Margin Classifier</p> 
+</center>
+
+<p>
 $$
 Loss \ = \ max(0, \ 1 - \ y \ . \ \hat{y}) \\
 where, \ y \ is \ the \ actual \ value \\
 \hat{y} \ is \ the \ predicted \ value.
 $$
+</p>
+
 #### Hinge Loss Code
 
 ```python
@@ -164,34 +198,51 @@ where *y_hat* is the output of the SVM, and *y* is the true class (-1 or 1). Not
 ### Log Loss or Cross Entropy Loss
 
 Logistic Loss is also known as Log Loss. It is used in calculating the loss in Logistic Regression. When number of class is 2 the cross entropy is calculated as
+
+<p>
 $$
 Log \ Loss \ =  - \ {1 \over N}\ \sum_{(x,y) \ \epsilon \ D}\ y \ log( \ p(y') \ ) \ + \ (1 \ - \ y) \ log(1 \ - \ p(y') \ ) \\
 where, \ y \ is \ the \ ground \ truth \ label \\
 y' \ is \ predicted \ label \ with \ value \ between \ (0, \ 1) \\
 p \ is \ the \ probability \ score \ of \ the \ estimator.
 $$
+</p>
 
 y' is the predicted label and the raw value of y' is > 1 or < 0, to convert it into probability score we use **sigmoid function** on top of y' to make the raw values as probabilities. By default, the output of the logistics regression model is the probability of the sample being positive, hence the probability score tends to be high and has a ideal score of 1 for positive class and small probability value for negative class i.e. ideal value 0 for negative class. 
 
+<center>
+<img src="{{site.url}}/assets/images/ml/logloss.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 4: Loss Function - Log Loss</p> 
+</center>
+
+
 1. When the actual class y is 1: second term in the Log Loss = 0 and we will be left with first term 
+
+<p>
    $$
    - y \ log( \ p (y') \ )
    $$
+</p>
 
 2. When the actual class y is 0: The first term = 0 and second term will turn into as follows
 
+<p>
 $$
 - \ (1 \ - \ y\ ) \ log(1 \ - \ p(y') \ )
 $$
+</p>
 
 By assigning actual value for y and its estimated probability score, we find if the predicted probability leans towards the class which is close to actual class, then the loss is value is reduced, otherwise the loss is increased. I would encourage you to assign value of y=1 and p(y')=0.1 and then p(y')=0.9.
 
 When number of class > 2 in multiclass classification, we calculate a separate loss for each class label per observation and sum the result.
+
+<p>
 $$
 −∑_{c=1}^M \ y_{o,c} \ log(p_{o,c}) \\
 
 where, \ c - \ number \ of \ classes.
 $$
+</p>
 
 #### Cross Entropy Loss Code
 
@@ -209,7 +260,7 @@ For more information on log loss, [find this amazing blog on Log Loss](https://t
 
 [W. Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming) and [Nassim Nicholas Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb) argue that **empirical reality**, not nice mathematical properties, should  be the sole basis for selecting loss functions, and real losses often  aren't mathematically nice and aren't differentiable, continuous,  symmetric, etc. For example, a person who arrives before a plane gate  closure can still make the plane, but a person who arrives after can  not, a discontinuity and asymmetry which makes arriving slightly late  much more costly than arriving slightly early. In drug dosing, the cost  of too little drug may be lack of efficacy, while the cost of too much  may be tolerable toxicity, another example of asymmetry. Traffic, pipes, beams, ecologies, climates, etc. may tolerate increased load or stress  with little noticeable change up to a point, then become backed up or  break catastrophically. These situations, Deming and Taleb argue, are  common in real-life problems, perhaps more common than classical smooth, continuous, symmetric, differentials cases.[[13\]](https://en.wikipedia.org/wiki/Loss_function#cite_note-13)
 
-Long story short, the loss function built should be based on problem in-hand and how small changes in some factor has diverse changes 
+Long story short, the loss function built should be based on problem in-hand and how small changes in some factor has significant impact on the system.
 
 ### Reference
 
