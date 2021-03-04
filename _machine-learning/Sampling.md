@@ -1,10 +1,26 @@
+---
+layout: machine-learning
+title: Sampling
+description: Sampling is the art of selecting the best.
+date:   2021-02-20 17:43:52 +0530
+---
+{% include mathjax.html %}
+
 # Sampling
+
+<center>
+<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
+<p><span>Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/books?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
+</center>
 
 In this blog post, we'll discuss about sampling and its related components. This topic is usually not given much importance compared to other fancy statistics terms such as bayes, frequency, distribution etc. In machine learning, sampling refers to the subset of the data from the population, where the population means every possible data available for the task, which is infinite because in real-world task, we are continuously collecting data for the model to train and validate on.
 
 The topic of sampling is quite dry and requires special effort from the user reading it. My objective from this blog is to share the sampling topic in a more visual form.
 
-Image Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/Sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 1: Sampling</p> 
+</center>
 
 ## Types of Sampling
 
@@ -17,21 +33,33 @@ Two broad of sampling types
 
 The subset of we select here is based on the individual or the users, who are improbable. Since it based users or an individual, it comes with **bias**. There are various examples of Non-probability sampling as follows
 
-* Convenient Sampling: Subset selection is done based on availability. Thus its convenient
+* Convenient Sampling: Subset selection is done based on availability. Thus it is convenient.
 
-Image Convenient Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/convenient_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 2: Convenient Sampling</p> 
+</center>
 
 * Snowball Sampling: Existing subset helps in finding the next set of subset. It rolls from subset of sample to other.
 
-Image Snowball Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/snowball_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 3: Snowball Sampling</p> 
+</center>
 
 * Judgement Sampling: Subset selection based on experts advice, who judges the sample for the task.
 
-Image Judgement sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/judgement_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 4: Judgement Sampling</p> 
+</center>
 
 * Quota Sampling: Subset selection happens in a predetermined order from the available quotas without any randomization.
 
-Image Quota Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/quota_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 5: Quota Sampling</p> 
+</center>
 
 As ML candidate, we can think that having bias in selecting the data is bad for the model to train on but it is the best option available because the data for ML is available at convenience and is not generated randomly.
 
@@ -45,7 +73,10 @@ As ML candidate, we can think that having bias in selecting the data is bad for 
 
 In random sampling, the selection of each sample from the population has equal probabilities. Consider a slot machine where each reel represent a set of items or number, lets assume there are 10 items in each reel, the chances of each item in each reel is 1/10th and the selection is done randomly.
 
-Image Random Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/random_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 6: Random Sampling</p> 
+</center>
 
 Implementing above sampling is quite easier but consider the situation, where we want to select 10% of all samples. And if there are some rare classes which occurs only in 0.1% of population, then there is a great chance to miss out the samples from that rare class completely. Model trained on such selection process may think that the rare class is not available.
 
@@ -53,7 +84,10 @@ Implementing above sampling is quite easier but consider the situation, where we
 
 Consider we have 10 different classes to predict from and each class has some set of data points to represent the class. Now when we perform random sampling like selecting 10% from each class, there is no possibility we can miss out a class completely. This is called stratified sampling.
 
-Image Stratified Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/stratified_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 7: Stratified Sampling</p> 
+</center>
 
 In stratified sampling, we group the samples based on some common link and select accordingly. For instance, we can have a divide the group based on gender and select 10% from each, keeping the variation in samples intact. Each group is called as Strata.
 
@@ -63,7 +97,10 @@ Downside of stratified sampling is when we cannot create subgroup from the avail
 
 In weighted sampling, each sample is given a weight, which determines the probability of it being selected. For example, if you want a sample to be selected 30% of the time, give it weight 0.3. This method allows you to embed subject matter expertise. For example, if you know that more recent data is more valuable to your model, you can give recent data more weight.
 
-Image Weighted Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/weighted_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 8: Weighted Sampling</p> 
+</center>
 
 This also helps with the case when our available data comes from a different distribution compared to true data. For example, in our data, red samples account for only 25% and blue samples account for 75%, but we know that in the real world, red and blue have equal probability to happen, so we would give red samples weights three times the weights of blue samples.
 
@@ -96,7 +133,10 @@ One solution for that is reservoir sampling. The algorithm goes like this:
 
 Each incoming ith element has (k / i) probability of being in the reservoir. You can also prove that each element in the reservoir has (k / i) probability of being there.
 
-Image Reservoir Sampling
+<center>
+<img src="{{site.url}}/assets/images/ml/reservoir_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 9: Reservoir Sampling</p> 
+</center>
 
 For example, we would process a stream with three elements as follows:
 
