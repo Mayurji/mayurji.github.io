@@ -2,7 +2,7 @@
 layout: machine-learning
 title: Sampling
 description: Sampling is the art of selecting the best.
-date:   2021-02-20 17:43:52 +0530
+date:   2021-03-04 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
