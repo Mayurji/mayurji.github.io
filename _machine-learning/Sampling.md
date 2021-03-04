@@ -18,11 +18,11 @@ In this blog post, we'll discuss about sampling and its related components. This
 The topic of sampling is quite dry and requires special effort from the user reading it. My objective from this blog is to share the sampling topic in a more visual form.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/Sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/Sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 1: Sampling</p> 
 </center>
 
-## Types of Sampling
+### Types of Sampling
 
 Two broad of sampling types
 
@@ -33,31 +33,31 @@ Two broad of sampling types
 
 The subset of we select here is based on the individual or the users, who are improbable. Since it based users or an individual, it comes with **bias**. There are various examples of Non-probability sampling as follows
 
-* Convenient Sampling: Subset selection is done based on availability. Thus it is convenient.
+* **Convenient Sampling:** Subset selection is done based on availability. Thus it is convenient.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/convenient_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/convenient_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 2: Convenient Sampling</p> 
 </center>
 
-* Snowball Sampling: Existing subset helps in finding the next set of subset. It rolls from subset of sample to other.
+* **Snowball Sampling:** Existing subset helps in finding the next set of subset. It rolls from subset of sample to other.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/snowball_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/snowball_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 3: Snowball Sampling</p> 
 </center>
 
-* Judgement Sampling: Subset selection based on experts advice, who judges the sample for the task.
+* **Judgement Sampling:** Subset selection based on experts advice, who judges the sample for the task.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/judgement_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/judgement_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 4: Judgement Sampling</p> 
 </center>
 
-* Quota Sampling: Subset selection happens in a predetermined order from the available quotas without any randomization.
+* **Quota Sampling:** Subset selection happens in a predetermined order from the available quotas without any randomization.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/quota_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/quota_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 5: Quota Sampling</p> 
 </center>
 
@@ -74,7 +74,7 @@ As ML candidate, we can think that having bias in selecting the data is bad for 
 In random sampling, the selection of each sample from the population has equal probabilities. Consider a slot machine where each reel represent a set of items or number, lets assume there are 10 items in each reel, the chances of each item in each reel is 1/10th and the selection is done randomly.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/random_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/random_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 6: Random Sampling</p> 
 </center>
 
@@ -85,7 +85,7 @@ Implementing above sampling is quite easier but consider the situation, where we
 Consider we have 10 different classes to predict from and each class has some set of data points to represent the class. Now when we perform random sampling like selecting 10% from each class, there is no possibility we can miss out a class completely. This is called stratified sampling.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/stratified_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/stratified_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 7: Stratified Sampling</p> 
 </center>
 
@@ -98,7 +98,7 @@ Downside of stratified sampling is when we cannot create subgroup from the avail
 In weighted sampling, each sample is given a weight, which determines the probability of it being selected. For example, if you want a sample to be selected 30% of the time, give it weight 0.3. This method allows you to embed subject matter expertise. For example, if you know that more recent data is more valuable to your model, you can give recent data more weight.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/weighted_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/weighted_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 8: Weighted Sampling</p> 
 </center>
 
@@ -108,7 +108,7 @@ This also helps with the case when our available data comes from a different dis
 
 Importance sampling is a technique used for estimating properties of particular distribution, while having only samples generated from different distribution rather than that of interested distribution. 
 
-From Wiki: Importance sampling is a [variance reduction](https://en.wikipedia.org/wiki/Variance_reduction) technique that can be used in the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method). The idea behind importance sampling is that certain values of the input [random variables](https://en.wikipedia.org/wiki/Random_variables) in a [simulation](https://en.wikipedia.org/wiki/Simulation) have more impact on the parameter being estimated than others. If these "important" values are emphasized by sampling more frequently, then the [estimator](https://en.wikipedia.org/wiki/Estimator) variance can be reduced. Hence, the basic methodology in importance sampling is to choose a distribution which "encourages" the important values.
+*From Wiki: Importance sampling is a [variance reduction](https://en.wikipedia.org/wiki/Variance_reduction) technique that can be used in the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method). The idea behind importance sampling is that certain values of the input [random variables](https://en.wikipedia.org/wiki/Random_variables) in a [simulation](https://en.wikipedia.org/wiki/Simulation) have more impact on the parameter being estimated than others. If these "important" values are emphasized by sampling more frequently, then the [estimator](https://en.wikipedia.org/wiki/Estimator) variance can be reduced. Hence, the basic methodology in importance sampling is to choose a distribution which "encourages" the important values.*
 
 Challenge in Importance Sampling is that finding the distribution that encourages the important values. [Importance sampling has wide application in RL](https://jonathan-hui.medium.com/rl-importance-sampling-ebfb28b4a8c6)
 
@@ -116,7 +116,7 @@ For deep dive on Importance Sampling: [RL — Importance Sampling ](https://jona
 
 ### Reservoir sampling
 
-Motivation between Reservoir Sampling: Suppose we see a sequence of items, one at a time. We want to keep ten  items in memory, and we want them to be selected at random from the  sequence. If we know the total number of items *n* and can access the items arbitrarily, then the solution is easy: select 10 distinct indices *i* between 1 and *n* with equal probability, and keep the *i*-th elements. The problem is that we do not always know the exact *n* in advance.
+*Motivation between Reservoir Sampling: Suppose we see a sequence of items, one at a time. We want to keep ten  items in memory, and we want them to be selected at random from the  sequence. If we know the total number of items **n** and can access the items arbitrarily, then the solution is easy: select 10 distinct indices **i** between 1 and **n** with equal probability, and keep the **i**-th elements. The problem is that we do not always know the exact **n** in advance.*
 
 **Key here is that we want to select k items at random with each having equal probability from an unknown sample size n.**
 
@@ -134,7 +134,7 @@ One solution for that is reservoir sampling. The algorithm goes like this:
 Each incoming ith element has (k / i) probability of being in the reservoir. You can also prove that each element in the reservoir has (k / i) probability of being there.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/reservoir_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/reservoir_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 9: Reservoir Sampling</p> 
 </center>
 
@@ -142,11 +142,8 @@ For example, we would process a stream with three elements as follows:
 
 1. Store the first element.
 2. Store the second element with a probability of 1/2. Now both elements have equal probabilities of being in the reservoir.
-3. Store the third element with a probability of 1/3. The previous two elements also have a final probability of (1/2)∗(2/3)=1/3 to be chosen.
+3. Store the third element with a probability of 1/3. The previous two elements also have a final probability of (1/2) ∗ (2/3) = 1/3 to be chosen.
 
 ### Reference
 
 * **CS 329S: Machine Learning Systems Design** By [Chip Huyen](https://huyenchip.com), [Michael Cooper](https://michaeljohncooper.com/)
-
-
-
