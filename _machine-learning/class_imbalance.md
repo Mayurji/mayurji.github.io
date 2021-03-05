@@ -1,10 +1,17 @@
-# Deep Dive into Class Imbalance I 
+---
+layout: machine-learning
+title: A Deep Dive Into Class Imbalance
+description: To avoid chaos, things must be balanced.
+date:   2021-03-05 17:43:52 +0530
+---
+{% include mathjax.html %}
 
-Image Random
+<center>
+<img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
+<p>Photo by Chris Liverani on Unsplash</p>
+</center>
 
 In this blog post, we'll discuss about class imbalance problem in machine learning, what causes it and how to overcome it. From my experience of attending interviews, interviewers ask at least one scenario based question on **Class Imbalance**, widely being *how to handle class imbalance?*
-
-
 
 ![img](https://lh6.googleusercontent.com/vv7B7vPMZaSWQur7CiItyc3nKS_41t5kp_u2EqPEqQBk6AfAfnRP-Lmr2TZKHqDXu1XIgsxfRth7bRJeFwY0WzImWO-BN2GIYR_80AnwcV2NY0qgmEr30fm5leaxEqtLHoHnAtjc)
 																					 [Andrew Ng: Bridging AI's Proof-of-Concept to Production Gap](https://www.youtube.com/watch?v=tsPuVAMaADY&ab_channel=StanfordHAI)
