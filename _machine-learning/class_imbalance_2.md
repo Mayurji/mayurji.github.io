@@ -1,8 +1,17 @@
-# How To Mitigate Class Imbalance
+---
+layout: machine-learning
+title: How To Mitigate Class Imbalance
+description: To avoid chaos, things must be balanced.
+date:   2021-03-05 17:43:52 +0530
+---
+{% include mathjax.html %}
 
 In the previous blog post, I've discussed about [what and why of class imbalance](mayurji.github.io/machine-learning/class_imbalance), and I have briefly touched upon the solutions for class imbalance. Now, we'll deep dive into solving class imbalance problem with proposed solution from previous blog post.
 
-Random Image
+<center>
+<img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
+<p>Photo by Chris Liverani on Unsplash</p>
+</center>
 
 * **Resampling**
 * **Weight Balancing Loss** 
@@ -10,7 +19,10 @@ Random Image
 
 ### Resampling
 
-Image Over and Under sampling ([Resampling strategies for imbalanced datasets](https://www.kaggle.com/rafjaa/resampling-strategies-for-imbalanced-datasets#t1))
+<center>
+<img src="{{site.url}}/assets/images/ml/over_under_sampling.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<p>Resampling strategies for imbalanced datasets: Kaggle</p>
+</center>
 
 The idea is to rebalance the class distribution by resampling the data space. Resampling is done by either adding more minority samples or removing majority samples. It avoids the modification of learning algorithm by trying to decrease the effect caused by data imbalance with a preprocessing step, so it is usually more versatile than the other imbalance learning methods. The algorithms learning about imbalance data is called as **Imbalance Learning**.
 
@@ -21,7 +33,10 @@ The idea is to rebalance the class distribution by resampling the data space. Re
 
 In this resampling technique, the minority samples are replicated randomly to create balance class distribution. This method might cause overfitting to minority samples, since it makes exact copies of existing samples.
 
-IMAGE SMOTE (https://www.datacamp.com/community/tutorials/diving-deep-imbalanced-data)
+<center>
+<img src="{{site.url}}/assets/images/ml/smote_oversampling.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<p>Imbalanced Data: Datacamp</p>
+</center>
 
 SMOTE (Synthetic Minority Over-sampling Technique) is a popular oversampling technique. The main idea is to create new instance of minority samples by interpolating several minority class instances that lie together. SMOTE uses k-nearest neighbors to create synthetic examples of the minority class. SMOTE can avoid the overfitting problem. A major disadvantage of SMOTE is that While generating synthetic examples, SMOTE does not take into consideration neighboring examples can be from other classes. This can increase the overlapping of classes (making wrong labeling) and can introduce additional noise.
 
@@ -31,7 +46,10 @@ To overcome SMOTE issues, there is modified SMOTE calles MSMOTE. The main idea o
 
 In this resampling technique, the majority class samples are randomly dropped to create a balance class distribution. The downside is we might lose some potentially important information about the majority class.
 
-IMAGE Tomek Links
+<center>
+<img src="{{site.url}}/assets/images/ml/under_sampling_tomek_links.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<p>Resampling strategies for imbalanced datasets: Kaggle</p>
+</center>
 
 A popular technique for Undersampling is Tomek Links. The main idea is to **find pairs of closest samples of opposite classes and drop the class which belongs to majority samples.** While this makes the decision boundary more clear and arguably helps models learn the boundary better, it may make the model less robust (by removing some of the subtleties of the true decision boundary).
 
@@ -47,22 +65,30 @@ Two methods for weight balancing loss
 **Biasing toward rare classes** : As mentioned above, the model assigns more weights to majority class, it can also be termed as that, it'll bias toward majority class and making wrong prediction on minority class. What if we punish the model for making wrong predictions on minority classes to correct this bias?
 
 A general loss function for over a set of samples:
+
 $$
 L(X_i, \ \theta) =  \ \sum_i \ L(x_i ; \ \theta)
 $$
+
 A simple weighted loss function can written as follows:
 
 The weight of the class is inversely proportional to number of samples in that class, which makes class with less samples to have more weights.
+
 $$
 L(X_i, \ \theta) =  \ \sum_i \ W_{y_i} \ L(x_i ; \ \theta) \\
 W_c =  {N  \over number \ of \ samples \ of \ class \ C} \\
 N - \ total \ number \ of \ samples
 $$
+
 A more sophisticated version of this loss can take in account the overlapping among existing samples, such as [Class-Balanced Loss Based on Effective Number of Samples](https://openaccess.thecvf.com/content_CVPR_2019/papers/Cui_Class-Balanced_Loss_Based_on_Effective_Number_of_Samples_CVPR_2019_paper.pdf) (Cui et al., CVPR 2019).
 
 **Biasing toward difficult samples** : When a model is trained, the model will predict with great confidence on certain samples and may perform poorly or predict with less confidence on certain samples. The idea here is to make the model to be incentivize towards samples which are difficult to learn. What if, we can adjust the weights to high, whenever a samples has lower probability of being right. Focal Loss is a loss function, which does exactly what we have described before.
 
-IMAGE Focal Loss (https://arxiv.org/pdf/1708.02002.pdf)
+<center>
+<img src="{{site.url}}/assets/images/ml/focal_loss.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<p>Focal Loss: arxiv.org/pdf/1708.02002.pdf</p>
+</center>
+
 
 ### Ensemble Models
 
@@ -72,7 +98,11 @@ We'll discuss about two ensemble models bagging and boosting for class imbalance
 
 How it works? Instead of training a model on entire dataset at one time, we create a multiple subsample of the dataset with replacement, making different dataset, called as bootstraps. And then we train a model on each of these bootstraps. Sampling with replacement ensures each bootstrap is independent from its peers.
 
-IMAGE Bagging ([Sirakorn](https://en.wikipedia.org/wiki/Bootstrap_aggregating#/media/File:Ensemble_Bagging.svg))
+<center>
+<img src="{{site.url}}/assets/images/ml/bagging.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<p>Bagging - Sirakorn: Wikipedia</p>
+</center>
+
 
 If the problem is **classification**, the final prediction is decided by the majority vote of all models. For example, if 10 classifiers vote SPAM and 6 models vote NOT SPAM, the final prediction is SPAM.
 
@@ -92,7 +122,10 @@ There are other approaches to bagging for class imbalance such as **SMOTEBagging
 
 Boosting is a family of iterative ensemble algorithms that convert weak learners to strong ones. Each learner in this ensemble is trained on the same set of samples but the samples are weighted differently among iterations. Thus, future weak learners focus more on the examples that previous weak learners misclassified. 
 
-IMAGE Boosting [Sirakorn](https://en.wikipedia.org/wiki/Boosting_(machine_learning)#/media/File:Ensemble_Boosting.svg)
+<center>
+<img src="{{site.url}}/assets/images/ml/boosting.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<p>Boosting - Sirakorn: Wikipedia</p>
+</center>
 
 How it works? 
 
