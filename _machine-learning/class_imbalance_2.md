@@ -6,12 +6,12 @@ date:   2021-03-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-In the previous blog post, I've discussed about [what and why of class imbalance](mayurji.github.io/machine-learning/class_imbalance), and I have briefly touched upon the solutions for class imbalance. Now, we'll deep dive into solving class imbalance problem with proposed solution from previous blog post.
-
 <center>
 <img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
 <p>Photo by Chris Liverani on Unsplash</p>
 </center>
+
+In the previous blog post, I've discussed about [what and why of class imbalance](mayurji.github.io/machine-learning/class_imbalance), and I have briefly touched upon the solutions for class imbalance. Now, we'll deep dive into solving class imbalance problem with proposed solution from previous blog post.
 
 * **Resampling**
 * **Weight Balancing Loss** 
@@ -34,7 +34,7 @@ The idea is to rebalance the class distribution by resampling the data space. Re
 In this resampling technique, the minority samples are replicated randomly to create balance class distribution. This method might cause overfitting to minority samples, since it makes exact copies of existing samples.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/smote_oversampling.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<img src="{{site.url}}/assets/images/ml/smote_oversampling.png"  style="zoom: 5%  background-color:#DCDCDC;" width="60%" height=auto/>	
 <p>Imbalanced Data: Datacamp</p>
 </center>
 
@@ -66,26 +66,29 @@ Two methods for weight balancing loss
 
 A general loss function for over a set of samples:
 
+<p>
 $$
 L(X_i, \ \theta) =  \ \sum_i \ L(x_i ; \ \theta)
 $$
+</p>
 
 A simple weighted loss function can written as follows:
 
 The weight of the class is inversely proportional to number of samples in that class, which makes class with less samples to have more weights.
-
+<p>
 $$
 L(X_i, \ \theta) =  \ \sum_i \ W_{y_i} \ L(x_i ; \ \theta) \\
 W_c =  {N  \over number \ of \ samples \ of \ class \ C} \\
 N - \ total \ number \ of \ samples
 $$
+</p>
 
 A more sophisticated version of this loss can take in account the overlapping among existing samples, such as [Class-Balanced Loss Based on Effective Number of Samples](https://openaccess.thecvf.com/content_CVPR_2019/papers/Cui_Class-Balanced_Loss_Based_on_Effective_Number_of_Samples_CVPR_2019_paper.pdf) (Cui et al., CVPR 2019).
 
 **Biasing toward difficult samples** : When a model is trained, the model will predict with great confidence on certain samples and may perform poorly or predict with less confidence on certain samples. The idea here is to make the model to be incentivize towards samples which are difficult to learn. What if, we can adjust the weights to high, whenever a samples has lower probability of being right. Focal Loss is a loss function, which does exactly what we have described before.
 
 <center>
-<img src="{{site.url}}/assets/images/ml/focal_loss.png"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/>	
+<img src="{{site.url}}/assets/images/ml/focal_loss.png"  style="zoom: 5%  background-color:#DCDCDC;" width="60%" height=auto/>	
 <p>Focal Loss: arxiv.org/pdf/1708.02002.pdf</p>
 </center>
 
