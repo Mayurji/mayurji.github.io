@@ -2,7 +2,7 @@
 layout: machine-learning
 title: How To Mitigate Class Imbalance
 description: To avoid chaos, things must be balanced.
-date:   2021-03-05 17:43:52 +0530
+date:   2021-03-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
