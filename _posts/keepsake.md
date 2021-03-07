@@ -1,12 +1,22 @@
-# Keepsake - Version Control For Machine Learning Model
+---
+layout: post
+title: Keepsake - A Version Control For Machine Learning
+description:  Machines - Deploy, Track, Repair and Repeat
+category: Blog
+date:   2021-03-05 13:43:52 +0530
+---
+{% include mathjax.html %}
 
-Hey everyone, I am a Machine Learning Engineer and I've been experimenting with different tools in ML for deployment. When ML was getting started like 4 to 5 years back, everyone were talking about how to build great models either by classical machine learning or DNN etc, and today with tools like AutoML and Model Search, building models has taken a little backseat. **Today, a major challenge is not about building a great model but its about keeping track of all the built models.**
+<center>
+<img src="{{site.url}}/assets/images/ml/dmitry-pavlovsky-mZrBq4iklHY-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
+<p>Photo by Dmitry Pavlovsky on Unsplash</p>
+</center>
 
-Random Image 
+Hey everyone, I am a Machine Learning Engineer and I've been experimenting with different tools in ML for deployment. When ML was getting started like 4 to 5 years back in all the industry, everyone were talking about how to build great models either by classical machine learning or DNN etc, and today with tools like AutoML and Model Search, building models has taken a little backseat. **Today, a major challenge is not about building a great model but its about keeping track of all the built models.**
 
 In this blog post, we'll discuss about **Keepsake**. In simple terms, we can think of keepsake as the **version control** tool for machine learning.
 
-**Keepsake Official Documents**
+**From Keepsake Official Documents**
 
 *Everyone uses version control for their software and it's much less common in Machine Learning. This causes all sorts of problems: people are manually keeping track  of things in spreadsheets, model weights are scattered on S3, and  nothing is reproducible. It's hard enough getting your own model from a  month ago running, let alone somebody else's.*
 
@@ -133,9 +143,23 @@ repository: "s3://keepsake-trial"
 
 ### Running and Checkpoint Experiment
 
-Image run_experiment
+**Executing main.py**
 
-Image creating_checkpoint
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/run_experiment.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 1: Run Experiments</p>
+</center>
+</div>
+
+**Checkpoints are stored and can be seen in the last step**
+
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/creating_checkpoint.png " style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 2: Creating Checkpoints</p>
+</center>
+</div>
 
 **Setting Up AWS For Keepsake**
 
@@ -144,7 +168,12 @@ Image creating_checkpoint
 * Create bucket in S3, keep the required options default if you don't know what to give while creating S3 bucket.
 * Go to your profile name on the top right corner and go to **My Security Credentials** for access key and secret key, store it in some text file if required.
 
-Image access key and security key
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/access_and_secret_key.png " style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 3: Access Key and Secret Key in AWS</p>
+</center>
+</div>
 
 * Then Install AWS Cli for the system. Installing [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html). 
 
@@ -152,12 +181,17 @@ Image access key and security key
 
   `aws configure`
 
-​       I've done it on Ubuntu, I am not sure if the command changes in other OS. 
+​ I've done it on Ubuntu, I am not sure if the command changes in other OS. 
 
-Image aws configure
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/aws_configure.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 4: AWS configure</p>
+</center>
+</div>
 
-* Fill in the details as mentioned in the image.
-* **JSON is default for last question, and for region check out the what is mentioned in S3 bucket.**
+* Fill in the details as mentioned in the above image.
+* **JSON is default option for last question, and for region, check out the what is mentioned in S3 bucket.**
 
 Note: While trying to save experiment in S3, keep the yaml with S3 and bucket name as the option.
 
@@ -167,14 +201,34 @@ Note: While trying to save experiment in S3, keep the yaml with S3 and bucket na
 
 Each experiment has **experiment id** and **checkpoint id**
 
-Image ls_command
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/ls_command.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 5: All Experiments</p>
+</center>
+</div>
 
 **Find out details of each experiment with *show* command**
 
-Image show_command experiment
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/show_command.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 6: Show Experiment</p>
+</center>
+</div>
 
-Image show_command checkpoint
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/keepsake_checkpoint.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 7: Show Checkpoint</p>
+</center>
+</div>
 
-**Find out difference between multiple experiment with *diff* command**
+**Find out difference between multiple experiment or checkpoints with *diff* command**
 
-Image diff_checkpoint 
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/diff_checkpoint.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 8: Difference between Checkpoints</p>
+</center>
+</div>
