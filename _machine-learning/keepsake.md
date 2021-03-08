@@ -121,7 +121,6 @@ if __name__ == "__main__":
 ```
 
 * First line, we initialize **keepsake.init()**, which creates an experiment, each experiment is the one run of our training script. It stores hyperparameter and makes the copy of our training code and stores it into the path mentioned in the *init()*.
-
 * Second line is **experiment.checkpoint()**, It creates an checkpoint for the experiment we are running. It tracks and saves all metrics we want to the path as mentioned in **checkpoint function**.
 
 **Each experiment contains multiple checkpoints.** You  typically save your model periodically during training, because the best result isn't necessarily the most recent one. A checkpoint is created  just after you save your model, so Keepsake can keep track of versions  of your saved model.
@@ -130,7 +129,7 @@ if __name__ == "__main__":
 
 To store the experiments, we need to tell keepsake where to dump for experiment.
 
-**For Local** : With below, we will create a hidden folder with name **.keepsake** and store the experiments, checkpoints and related metadata inside it. **Store the below line in a .yaml in the same path as your training script.**
+**For Local** : With below, we will create a hidden folder with name **.keepsake** and store the experiments, checkpoints and related metadata inside it. **Store the below line in a .yaml file and in the same path as your training script.**
 
 ```yaml
 repository: "file://.keepsake"
@@ -228,5 +227,14 @@ Each experiment has **experiment id** and **checkpoint id**
 <center>
 <img src="{{site.url}}/assets/images/ml/diff_checkpoint.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 8: Difference between Checkpoints</p>
+</center>
+</div>
+
+**How the files are created and stored in AWS Bucket**
+
+<div>
+<center>
+<img src="{{site.url}}/assets/images/ml/aws_s3_bucket.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 9: Experiment Stored in AWS Bucket</p>
 </center>
 </div>
