@@ -177,11 +177,8 @@ repository: "s3://keepsake-trial"
 </div>
 
 * Then Install AWS Cli for the system. Installing [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html). 
-
 * Once the installation is done, Go to terminal and type
-
   `aws configure`
-
 * I've done it on Ubuntu, I am not sure if the command changes in other OS. 
 
 <div>
@@ -213,7 +210,7 @@ Each experiment has **experiment id** and **checkpoint id**
 
 <div>
 <center>
-<img src="{{site.url}}/assets/images/ml/show_command.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/show_command.png" style="zoom: 5%; background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 6: Show Experiment</p>
 </center>
 </div>
