@@ -43,7 +43,7 @@ Deploying memory intensive large deep models has a great downside if you're plan
 Conversion from float to Int is the ultimate goal of quantization.
 
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/float_to_int.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/float_to_int.png" style="zoom: 5%; background-color:#DCDCDC;"  width="60%" height=auto/><br>
 <p>Figure 1: Float to Int</p> 
 </center>
 
@@ -143,7 +143,6 @@ We have just scratched the surface of quantization, it is a wide topic with diff
 **Reference and more reading material**
 
 * [Math behind Quantization](https://leimao.github.io/article/Neural-Networks-Quantization/)
-
 * [Pytorch Quantization](https://pytorch.org/docs/stable/quantization.html)
 
   
