@@ -1,6 +1,15 @@
-# Introduction to Quantization
+---
+layout: deep-learning
+title: Introduction to Quantization
+description: Making model small with faster inference
+date:   2021-03-07 16:43:52 +0530
+---
+{% include mathjax.html %}
 
-Image
+<center>
+<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="100%" height=auto/><br>
+<p>Photo by Patrick Tomasso - Unsplash</p> 
+</center>
 
 Deploying memory intensive large deep models has a great downside if you're planning to deploy the model in edge devices for real time inference or systems with memory constraints. Edge devices have limited memory, computing resources, and power that means a deep learning network must be optimized for embedded deployment. For instance, a relatively simple network like AlexNet is over 200 MB, while a large network like VGG-16 is over 500 MB. Networks of this  size cannot fit on low-power micro-controllers and smaller FPGAs. To overcome such challenges, techniques like Quantization, Distallation are introduced.
 
@@ -12,19 +21,15 @@ Deploying memory intensive large deep models has a great downside if you're plan
 * Without Quantization, the default type of model parameter is float.
 * Idea with quantization is to move the model parameter's type from float to integer type.
 * **Changing parameter type from FP32 to INT8 reduces the memory by 4X.**
-
 * Quantized model executes some or all the operations on tensor with **Integer values**.
 
-### Good things
+### What Quantization Brings In
 
 * Compact size model
 * Memory bandwidth required reduces by 4X
 * Hardware support for integer computation is 2x to 4x faster than FP32.
 * Power consumed in transferring all the data, since energy consumption is dominated by memory access.
-
-**Where its used**
-
-* For faster inference, we use quantized model.
+* Faster inference
 
 **Currently, Tensorflow and Pytorch natively supports quantization modules.** Two ways to use quantization, 
 
@@ -35,10 +40,17 @@ Deploying memory intensive large deep models has a great downside if you're plan
 
 Conversion from float to Int is the ultimate goal of quantization.
 
-Image Float to Int
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/float_to_int.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 1: Float to Int</p> 
+</center>
+
+<p>
 $$
 x_{int} \ = \ {x_{float} \over x_{scale}} \ + \ x_{offset}
 $$
+</p> 
+
 In a trained model, we'll have parameters values in float between a range of floating point numbers and now we need to map these float numbers range to integer number range using above mapping function. 
 
 Say the trained weights have floating range of between -1.0 and +1.0 and integer has range between 0 and 128. Now mark a point (-1.0, 0) and  another point (+1.0, 128), then draw a straight line connecting them.  The inverse of the slop of line is the scale and the y-value at the  intersection of the line with x=0 is the offset which is 64 (rounded  from 63.5) in this example.
@@ -119,7 +131,10 @@ res = model_int8(input_fp32)
 
 ### Performance Measure After Quantization
 
-Image performance Quantization
+<center>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/performance_quantization.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 2: Performance After Quantization</p> 
+</center>
 
 We have just scratched the surface of quantization, it is a wide topic with different variants of quantization. But we can get the idea that we can reduce our model inference time using quantization because of the computation in type INT is faster than floating point.
 
