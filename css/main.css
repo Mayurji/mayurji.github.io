@@ -109,6 +109,11 @@ ul.posts li {
     font-size: 1.0em;
 }
 
+img {
+max-width: 100%;
+display: block;
+}
+
 /*.post-body img { width:400px; height:auto; }*/
 
 .image-cropper {
