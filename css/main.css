@@ -182,7 +182,7 @@ ul#horizontal-list li {
 
 .sidebar {
   height: 100%;
-  width: 42px;
+  width: 160px;
   position: fixed;
   z-index: 1;
   top: 0;
