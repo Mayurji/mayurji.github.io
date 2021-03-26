@@ -23,7 +23,13 @@ nav select {
 }
 
 @media (max-width: 960px) {
-  nav ul     { display: none; }
+  nav ul { display: none; 
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: disc;
+    font-weight: bold;
+    font-size: 1.1vw;
+    color: white;}
   nav select { display: inline-block; }
 }
 
