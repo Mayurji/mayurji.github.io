@@ -4,38 +4,50 @@ body {
 }
 
 nav {
-    background: #333;
+    background: #17202a;
     color: #fff;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 nav .mainMenu {
+    display: flex;
     list-style: none;
 }
 nav .mainMenu li a {
     display: inline-block;
-    text-align: center;
-    padding: 0px;
+    padding: 15px;
     text-decoration: none;
+    text-transform: uppercase;
     color: #fff;
+    font-size: 1.5rem;
+}
+nav .mainMenu li a:hover {
+    background: rgb(255,94,0);
 }
 nav .openMenu {
-
+    font-size: 2rem;
     margin: 20px;
     display: none;
     cursor: pointer;
 }
 nav .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
     display: none;
     cursor: pointer;
 }
+.fa-facebook:hover {color: rgb(0, 110, 255);}
+.fa-twitter:hover {color: rgb(86, 154, 243);}
+.fa-instagram:hover {color: rgb(255, 0, 191);}
+.fa-github:hover {color: rgb(255, 123, 0);}
+
 nav .logo {
     margin: 6px;
-    /*font-size: 25px;*/
+    font-size: 25px;
     cursor: pointer;
 }
 @media(max-width: 800px){
     nav .mainMenu {
-        height: 80vh;
+        height: 70vh;
         position: fixed;
         top: 0;
         right: 0;
@@ -44,7 +56,7 @@ nav .logo {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #333;
+        background: #17202a;
         transition: top 1s ease;
         display: none;
     }
@@ -61,14 +73,13 @@ nav .logo {
     nav .mainMenu li a:hover {
         background: none;
         color: rgb(255, 123, 0);
-        /*font-size: 1.6rem;*/
+        font-size: 1.6rem;
     }
     .icons i {
         display: inline-block;
         padding: 12px;
     }
 }
-
 
 
 ol {
