@@ -55,19 +55,19 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 5vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 3vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
@@ -80,13 +80,13 @@ p {
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 h5 {
-    font-size: 1.0em;
+    font-size: 1.0vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
     height: 0px;
@@ -94,20 +94,20 @@ h5 {
 
 footer {
     border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    font-size: 1vw;
 	
 }
 
 ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1.2em;
+    font-size: 1vw;
     color: white;
 }
 
 ul.posts li {
     list-style: disc;
     color: white;
-    font-size: 1.0em;
+    font-size: 1vw;
 }
 
 img {
