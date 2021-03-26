@@ -21,15 +21,17 @@ nav ul li, footer ul li {
 nav select {
   display: none;
 }
-
-@media (max-width: 960px) {
-  nav ul { display: none; 
-	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: disc;
     font-weight: bold;
     font-size: 1.1vw;
-    color: white;}
+    color: white;
+}
+
+@media (max-width: 960px) {
+  nav ul { display: none; }
   nav select { display: inline-block; }
 }
 
