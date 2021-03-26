@@ -175,46 +175,6 @@ max-width: 100%;
 display: block;
 }
 
-/*.post-body img { width:400px; height:auto; }*/
-
-/*.image-cropper {
-width: 122px;
-height: 220px;
-position: relative;
-overflow: hidden;
-border-radius: 69%;
-margin: 0px 40px;
-float: left;
-}
-.profile-pic {
-  display: inline;
-  margin-bottom: 5%
-  height: 100%;
-  width: auto; 
-}
-
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    color: white;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}*/
 
 #menu-outer {
 	height: 120px;
@@ -231,7 +191,7 @@ height:70px
 }
 
 
-ul#horizontal-list {
+/*ul#horizontal-list {
 	min-width: 696px;
 	list-style: disc;
 	padding-top: 10px;
@@ -239,7 +199,7 @@ ul#horizontal-list {
 	}
 ul#horizontal-list li {
 	display: inline;
-}
+}*/
 /*
 .sidebar {
   height: 100%;
@@ -282,11 +242,11 @@ ul#horizontal-list li {
          width: 400px;
     }
 }
-*/
+
 
 html {
   font-size: 20px;
-}
+}*/
 
 @media (max-width: 1921px) {
   html {
@@ -305,5 +265,18 @@ html {
     font-size: 18px;
   }
 }
+
+@media (max-width: 821px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 599px) {
+  html {
+    font-size: 10px;
+  }
+}
+
 
 .social-icon {display: inline-block; margin: 10px 10px}
