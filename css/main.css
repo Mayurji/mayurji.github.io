@@ -117,7 +117,7 @@ display: block;
 
 /*.post-body img { width:400px; height:auto; }*/
 
-.image-cropper {
+/*.image-cropper {
 width: 122px;
 height: 220px;
 position: relative;
@@ -135,7 +135,7 @@ float: left;
 
 pre,
 code {
-    /*font-size: 15px;*/
+    font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     color: white;
@@ -154,7 +154,7 @@ pre {
         padding-right: 0;
         padding-left: 0;
     }
-}
+}*/
 
 #menu-outer {
 	height: 120px;
@@ -221,6 +221,13 @@ ul#horizontal-list li {
          width: 400px;
     }
 }
+
+@media screen and (max-width: 640px) {
+    img {
+         width: 560px;
+    }
+}
+
 html {
   font-size: 24px;
 }
