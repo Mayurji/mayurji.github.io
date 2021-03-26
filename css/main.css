@@ -7,44 +7,44 @@ nav ul, footer ul {
     padding: 0px;
     list-style: disc;
     font-weight: bold;
-    font-size: 1.1vw;
+    /*font-size: 1.1vw;*/
     color: white;
 }
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
     list-style: disc;
-    font-size: 1.1vw;
+    /*font-size: 1.1vw;*/
     color: white;
 }
 
 ol {
   padding: 20px;
-  font-size: 1.1vw;
+  /*font-size: 1.1vw;*/
 }
 
 ul {
   padding: 20px;
-  font-size: 1.1vw;
+  /*font-size: 1.1vw;*/
 }
 
 ol li {
   color: white;
   padding: 0px;
   margin-left: 35px;
-  font-size: 1.1vw;
+  /*font-size: 1.1vw;*/
 }
 
 ul li {
   color: white;
   margin: 5px;
-  font-size: 1.1vw;	
+  /*font-size: 1.1vw;	*/
 }
 
 ul li::before {
   color: white;
   list-style: disc;
-  font-size: 1.1vw;
+  /*font-size: 1.1vw;*/
 }
 
 a {
@@ -55,38 +55,38 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3vw;
+    /*font-size: 3vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 h2 {
-    font-size: 2vw;
+    /*font-size: 2vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 h3 {
-    font-size: 1.5vw;
+    /*font-size: 1.5vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 p {
     /*font-size: 1.3em;*/
-    font-size: 1vw;
+    /*font-size: 1vw;*/
     line-height: 1.4em;
     color: white;
 }
 
 h4 {
-    font-size: 1.3vw;
+    /*font-size: 1.3vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
 h5 {
-    font-size: 1.0vw;
+    /*font-size: 1.0vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
     height: 0px;
@@ -94,20 +94,20 @@ h5 {
 
 footer {
     border-top: 1px solid #d5d5d5;
-    font-size: 1vw;
+    /*font-size: 1vw;*/
 	
 }
 
 ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1vw;
+    /*font-size: 1vw;*/
     color: white;
 }
 
 ul.posts li {
     list-style: disc;
     color: white;
-    font-size: 1vw;
+    /*font-size: 1vw;*/
 }
 
 img {
@@ -135,7 +135,7 @@ float: left;
 
 pre,
 code {
-    font-size: 15px;
+    /*font-size: 15px;*/
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     color: white;
@@ -197,7 +197,7 @@ ul#horizontal-list li {
   /*padding: 6px 8px 6px 16px;*/
   padding: 20px 0px 2px 0px;
   text-decoration: none;
-  font-size: 20px;
+  /*font-size: 20px;*/
   color: #818181;
   display: block;
 }
@@ -220,4 +220,25 @@ ul#horizontal-list li {
     img {
          width: 400px;
     }
+}
+html {
+  font-size: 24px;
+}
+
+@media (max-width: 1921px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1441px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1025px) {
+  html {
+    font-size: 18px;
+  }
 }
