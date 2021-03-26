@@ -6,12 +6,14 @@ body {
 nav {
     background: #333;
     color: #fff;
+    overflow: hidden;
 }
 nav .mainMenu {
     list-style: none;
 }
 nav .mainMenu li a {
     display: inline-block;
+    text-align: center;
     padding: 0px;
     text-decoration: none;
     color: #fff;
@@ -42,7 +44,7 @@ nav .logo {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #000;
+        background: #333;
         transition: top 1s ease;
         display: none;
     }
