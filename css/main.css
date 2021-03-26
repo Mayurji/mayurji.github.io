@@ -38,6 +38,7 @@ nav .mainMenu .closeMenu , .icons i {
 nav .logo {
     margin: 6px;
     cursor: pointer;
+    align-self: center;
 }
 @media(max-width: 800px){
     nav .mainMenu {
