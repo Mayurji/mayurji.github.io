@@ -5,21 +5,22 @@
 		<!-- link to main stylesheet -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-		<link rel="stylesheet" type="text/scss" href="/css/nav_bar.scss">
 		<meta name="google-site-verification" content="Qml5-eorENd39vL-Z5OR_K_4Bj_tpO87ApQX8cGYQkc" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 		
 	</head>
 	<body style="background-color:#17202a;" style="width:90%"> <!-- #d9d6d6 -->
-		<nav>
-    		     <ul>
-        		<!--<li><a href="/papers">Papers</a></li>-->
-        		<li><a href="/">Blogs</a></li>
+		 <nav>
+		    <div class="logo"><h1>Math + Computing = AI</h1></div>
+		    <div class="openMenu"><i class="fa fa-bars"></i></div>
+		    <ul class="mainMenu">
+			<li><a href="/">Blogs</a></li>
 			<li><a href="/machine-learning">Machine Learning</a></li>
 			<li><a href="/deep-learning">Deep Learning</a></li>
 			<li><a href="/data-structure-algorithms">DSA</a></li>
 			<li><a href="/about">About Me</a></li>
-    		    </ul>
-			
+			<div class="closeMenu"><i class="fa fa-times"></i></div>
+		    </ul>
 		</nav>
 		
 		
@@ -52,5 +53,6 @@
 		</div>
 		-->
 		{% include head.html %}
+		<script src="/css/app.js"></script>
 	</body>
 </html>
