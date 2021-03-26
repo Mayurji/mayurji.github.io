@@ -1,22 +1,7 @@
 body {
     margin: 60px auto;
-    width: 70%;
+    width: 80%;
 }
-/*nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: disc;
-    font-weight: bold;
-    font-size: 1.1vw;
-    color: white;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-    list-style: disc;
-    font-size: 1.1vw;
-    color: white;
-}*/
 
 nav select {
   display: none;
@@ -206,7 +191,7 @@ ul#horizontal-list {
 ul#horizontal-list li {
 	display: inline;
 }
-
+/*
 .sidebar {
   height: 100%;
   width: 5%;
@@ -220,28 +205,28 @@ ul#horizontal-list li {
 }
 
 .sidebar a {
-  /*padding: 6px 8px 6px 16px;*/
   padding: 20px 0px 2px 0px;
   text-decoration: none;
-  /*font-size: 20px;*/
+  font-size: 20px;
   color: #818181;
   display: block;
-}
-
+}*/
+/*
 .sidebar a:hover {
   color: #f1f1f1;
-}
+}*/
 
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
+/*.main {
+  margin-left: 160px; 
+# Same as the width of the sidenav
   padding: 0px 10px;
-}
-
+}*/
+/*
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
-
+*/
 /*
 @media screen and (max-width: 480px) {
     img {
