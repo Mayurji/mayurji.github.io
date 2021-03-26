@@ -255,3 +255,5 @@ html {
     font-size: 18px;
   }
 }
+
+.social-icon {display: inline-block; margin: 0 10px}
