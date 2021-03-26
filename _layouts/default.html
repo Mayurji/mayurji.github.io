@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/scss" href="/css/nav_bar.scss">
 		<meta name="google-site-verification" content="Qml5-eorENd39vL-Z5OR_K_4Bj_tpO87ApQX8cGYQkc" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<!--
+		
 		<script>
 		 // DOM ready
 		 $(function() {
@@ -39,13 +39,9 @@
 	      });
 
 		 });
-		</script> -->
+		</script>
 		            
-		$(document).ready(function() {
-		  $('.menu__icon').click(function(){
-				$('body').toggleClass('menu_shown');
-			});
-		});
+		
 	</head>
 	<body style="background-color:#17202a;" style="width:90%"> <!-- #d9d6d6 -->
 		<nav style="width:90%">
@@ -57,14 +53,15 @@
 			<li><a href="/data-structure-algorithms">DSA</a></li>
 			<li><a href="/about">About Me</a></li>
     		</ul>
-			<a class="menu__icon mobile"><span></span></a>
-			    <ul class="menu mobile">
-				<li><a href="/" class="menu__item">Blogs</a></li>
-				<li><a href="/machine-learning" class="menu__item">Machine Learning</a></li>
-				<li><a href="/deep-learning" class="menu__item">Deep Learning</a></li>
-				<li><a href="/data-structrue-algorithms" class="menu__item">DSA</a></li>
-				<li><a href="/about" class="menu__item">About Me</a></li>
-			    </ul>
+			<select> 
+			    <option value="" selected="selected">Select</option> 
+
+			    <option value="/">Blogs</option> 
+			    <option value="/machine-learning">Machine Learning</option> 
+			    <option value="/deep-learning">Deep Learning</option> 
+			    <option value="/data-structure-algorithms">DSA</option> 
+			    <option value="/about">About Me</option> 
+			  </select> 
 			
 		</nav>
 		
