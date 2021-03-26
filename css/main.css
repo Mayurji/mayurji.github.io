@@ -35,10 +35,6 @@ nav .mainMenu .closeMenu , .icons i {
     display: none;
     cursor: pointer;
 }
-.fa-facebook:hover {color: rgb(0, 110, 255);}
-.fa-twitter:hover {color: rgb(86, 154, 243);}
-.fa-instagram:hover {color: rgb(255, 0, 191);}
-.fa-github:hover {color: rgb(255, 123, 0);}
 
 nav .logo {
     margin: 6px;
