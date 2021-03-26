@@ -52,7 +52,8 @@ nav .logo {
         justify-content: center;
         align-items: center;
         background: #17202a;
-        transition: top 1s ease;
+        /*transition: top 1s ease;*/
+	transition: top 1s cubic-bezier(.68,-0.55,.27,1.55);
         display: none;
     }
     nav .mainMenu .closeMenu {
