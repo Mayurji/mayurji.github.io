@@ -7,44 +7,44 @@ nav ul, footer ul {
     padding: 0px;
     list-style: disc;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.1vw;
     color: white;
 }
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
     list-style: disc;
-    font-size: 1.1em;
+    font-size: 1.1vw;
     color: white;
 }
 
 ol {
   padding: 20px;
-  font-size: 1.1em;
+  font-size: 1.1vw;
 }
 
 ul {
   padding: 20px;
-  font-size: 1.1em;
+  font-size: 1.1vw;
 }
 
 ol li {
   color: white;
   padding: 0px;
   margin-left: 35px;
-  font-size: 1.1em;
+  font-size: 1.1vw;
 }
 
 ul li {
   color: white;
   margin: 5px;
-  font-size: 1.1em;	
+  font-size: 1.1vw;	
 }
 
 ul li::before {
   color: white;
   list-style: disc;
-  font-size: 1.1em;
+  font-size: 1.1vw;
 }
 
 a {
@@ -55,19 +55,19 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 5vw;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: white;
-}
-
-h2 {
     font-size: 3vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
 
-h3 {
+h2 {
     font-size: 2vw;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: white;
+}
+
+h3 {
+    font-size: 1.5vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
@@ -80,7 +80,7 @@ p {
 }
 
 h4 {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: white;
 }
