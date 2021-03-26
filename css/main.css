@@ -21,6 +21,7 @@ nav ul li, footer ul li {
 nav select {
   display: none;
 }
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -30,11 +31,18 @@ nav ul, footer ul {
     color: white;
 }
 
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+    list-style: disc;
+    font-size: 1.1vw;
+    color: white;
+}
+
 @media (max-width: 960px) {
   nav ul { display: none; }
   nav select { display: inline-block; }
 }
-
 
 ol {
   padding: 20px;
