@@ -20,9 +20,9 @@ nav .mainMenu li a {
     color: #fff;
     
 }
-nav .mainMenu li a:hover {
+/*nav .mainMenu li a:hover {
     background: rgb(255,94,0);
-}
+}*/
 nav .openMenu {
 
     margin: 20px;
@@ -37,7 +37,6 @@ nav .mainMenu .closeMenu , .icons i {
 
 nav .logo {
     margin: 6px;
-
     cursor: pointer;
 }
 @media(max-width: 800px){
