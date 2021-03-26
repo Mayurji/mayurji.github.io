@@ -19,26 +19,26 @@ nav .mainMenu li a {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
 }
 nav .mainMenu li a:hover {
     background: rgb(255,94,0);
 }
 nav .openMenu {
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     margin: 20px;
     display: none;
     cursor: pointer;
 }
 nav .mainMenu .closeMenu , .icons i {
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     display: none;
     cursor: pointer;
 }
 
 nav .logo {
     margin: 6px;
-    font-size: 25px;
+    /*font-size: 25px;*/
     cursor: pointer;
 }
 @media(max-width: 800px){
@@ -69,7 +69,7 @@ nav .logo {
     nav .mainMenu li a:hover {
         background: none;
         color: rgb(255, 123, 0);
-        font-size: 1.6rem;
+        /*font-size: 1.6rem;*/
     }
     .icons i {
         display: inline-block;
