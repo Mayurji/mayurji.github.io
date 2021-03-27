@@ -49,8 +49,8 @@ nav .logo {
         left: 0;
         z-index: 10;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: safe;
+        align-items: safe;
         background: #17202a;
         /*transition: top 1s ease;*/
 	transition: top 1s linear;
