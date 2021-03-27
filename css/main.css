@@ -7,7 +7,8 @@ nav {
     background: #17202a;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content: center;
 }
 nav .mainMenu {
     display: flex;
