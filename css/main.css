@@ -26,7 +26,7 @@ nav .mainMenu li a {
 nav .openMenu {
 
     margin: 20px;
-    display: none;
+    display: list-item;
     cursor: pointer;
 }
 nav .mainMenu .closeMenu , .icons i {
