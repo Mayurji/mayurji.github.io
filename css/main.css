@@ -43,7 +43,7 @@ nav .mainMenu .closeMenu , .icons i {
   justify-content: left;
    text-indent: -1100%;
 }*/
-@media(max-width: 800px){
+@media(max-width: 900px){
     nav .mainMenu {
         height: 70vh;
         position: fixed;
@@ -253,43 +253,43 @@ html {
 
 @media (max-width: 1921px) {
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 1441px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 1025px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 821px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 599px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 380px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
 @media (max-width: 240px) {
   html {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 .social-icon {display: inline-block; margin: 10px 10px}
