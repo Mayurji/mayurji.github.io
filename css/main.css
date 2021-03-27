@@ -268,15 +268,25 @@ html {
 
 @media (max-width: 821px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 599px) {
   html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
     font-size: 12px;
   }
 }
 
-
+@media (max-width: 380px) {
+  html {
+    font-size: 10px;
+  }
+}
 .social-icon {display: inline-block; margin: 10px 10px}
