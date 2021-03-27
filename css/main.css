@@ -36,13 +36,13 @@ nav .mainMenu .closeMenu , .icons i {
     cursor: pointer;
 }
 
-nav .logo {
+/*nav .logo {
     margin: 6px;
     cursor: pointer;
     align-self: center;
-    /*justify-content: left;	*/
+  justify-content: left;
    text-indent: -1100%;
-}
+}*/
 @media(max-width: 800px){
     nav .mainMenu {
         height: 70vh;
