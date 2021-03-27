@@ -284,7 +284,7 @@ html {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 240px) {
   html {
     font-size: 10px;
   }
