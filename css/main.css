@@ -39,8 +39,9 @@ nav .mainMenu .closeMenu , .icons i {
 nav .logo {
     margin: 6px;
     cursor: pointer;
-    /*align-self: center;*/
-    justify-content: left;	
+    align-self: center;
+    /*justify-content: left;	*/
+   text-indent: -1100%;
 }
 @media(max-width: 800px){
     nav .mainMenu {
