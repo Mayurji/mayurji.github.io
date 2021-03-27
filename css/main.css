@@ -26,7 +26,7 @@ nav .mainMenu li a {
 nav .openMenu {
 
     margin: 20px;
-    display: list-item;
+    display:None;
     cursor: pointer;
 }
 nav .mainMenu .closeMenu , .icons i {
@@ -64,7 +64,7 @@ nav .logo {
 
     }
     nav .openMenu {
-        display: list-item;
+        display: block;
     }
     nav .mainMenu li a:hover {
         background: none;
