@@ -8,7 +8,7 @@ date:   2021-03-28 13:43:52 +0530
 ### An attempt to understand transformers
 
 <center>
-<img src="{{site.url}}/assets/images/transformer/arseny-togulev-4YoINz4XvnQ-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="100%" height=auto/><br>
+<img src="{{site.url}}/assets/images/transformer/arseny-togulev-4YoINz4XvnQ-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
 <p>Photo by Arseny Togulev - Unsplash</p> 
 </center>
 
