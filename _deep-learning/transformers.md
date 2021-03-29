@@ -46,6 +46,13 @@ Transforming Words into Word Embedding
 
 Positional encoding is simple a vector generated using a function based on condition. For instance, we can condition that on odd input embedding, we’ll use cos function to generate a position encoding (a vector) and on even input embedding we’ll use sin function to generate a positional encoding (a vector).
 
+<p>
+  $$
+  PE_{(pos,2i)} \ = \ sin(pos/10000^{2i/dmodel}) 
+
+  PE_{(pos,2i+1)} \ = \ cos(pos/10000^{2i/dmodel})
+	$$
+</p>
 <center>
 <img src="{{site.url}}/assets/images/transformer/transformer_step2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
 <p>Create Positional Encoding</p> 
