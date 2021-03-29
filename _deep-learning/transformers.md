@@ -1,17 +1,33 @@
+---
+layout: deep-learning
+title: Transformers — Visual Guide
+description: An attempt to understand transformers
+date:   2020-11-08 13:43:52 +0530
+---
 ## Transformers — Visual Guide
 ### An attempt to understand transformers
 
-Image Dummy
+<center>
+<img src="{{site.url}}/assets/images/transformer/arseny-togulev-4YoINz4XvnQ-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="100%" height=auto/><br>
+<p>Photo by Arseny Togulev - Unsplash</p> 
+</center>
 
 Transformers architecture was introduced in Attention is all you need paper. Similar to CNN for Computer vision, the transformers are for NLP. A simple daily use case one can build using transformers is Conversational Chatbot.
 
-Conversational Chatbot Image
+<center>
+<img src="{{site.url}}/assets/images/transformer/chatbot.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Conversational Chatbot</p> 
+</center>
+
 
 I won’t get into the history of models like LSTMs, RNN and GRU which were used for similar use case but just one thing to keep in mind, these models weren’t able to capture long range dependencies as the passage or text becomes longer and longer.
 
 Transformer architecture consists of an encoder and a decoder network. In the below image, the block on the left side is the encoder (with one multi-head attention) and the block on the right side is decoder (with two multi-head attention).
 
-Transformer Archtectute Image
+
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_architecture_1.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+</center>
 
 First, I will explain the encoder block i.e. from creating input embedding to generating encoded output and then decoder block starting from passing decoder side input to output probabilities using softmax function.
 
@@ -21,18 +37,26 @@ First, I will explain the encoder block i.e. from creating input embedding to ge
 
 Transforming Words into Word Embedding
 
-Encoder_step_1 Image Word to Word Embedding
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_step_1.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Word to Word Embedding</p> 
+</center>
 
 ### Creating Positional Encoding
 
 Positional encoding is simple a vector generated using a function based on condition. For instance, we can condition that on odd input embedding, we’ll use cos function to generate a position encoding (a vector) and on even input embedding we’ll use sin function to generate a positional encoding (a vector).
 
-Encoder_step_2 Image Create Positional Encoding
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_step2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Create Positional Encoding</p> 
+</center>
 
 ### Adding Positional Encoding and Input Embedding
 
-
-Encoder_step_3 Image Combing Input with Position Encoding
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformers_step3.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Combing Input with Position Encoding</p> 
+</center>
 
 ### Multi-Head Attention Module
 
@@ -40,7 +64,10 @@ Encoder_step_3 Image Combing Input with Position Encoding
 
 In the last step, we generated Positional Input Embedding. Using this embedding, we create a set of Query, Key and Value Vectors using Linear Layers. To be clear, for each word we’ll have Q, K and V vectors.
 
-Encoder_step_4 Image Creating Q, K and V
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformers_step4.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Creating Q, K and V</p> 
+</center>
 
 *A best analogy is seen in stack overflow for Q, K and V is of Youtube Search, where the text search of a video is the Query and that words in query is mapped to keys in youtube DB and which inturn brings out values i.e. videos.*
 
@@ -48,17 +75,25 @@ Encoder_step_4 Image Creating Q, K and V
 
 Multi-head attention uses a specific attention mechanism called as self-attention. The purpose of self-attention is to associate each word with every other words in the sequence.
 
-Figure 2 of transformer architecture Inside Single Head and Multi-Head Attention
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_architecture_2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+</center>
 
 In the above image, we can see Mask (opt.) in attention network because we’ll use masking while decoding and its not required in encoder’s multi-head attention. We’ll discussing masking while exploring decoder side of transformer network.
 
 ### Dot Product Between Q and V
 
-Encoder_step_5 Image Matrix Multiplication Between Query and Keys
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformers_step_5.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Matrix Multiplication Between Query and Keys</p> 
+</center>
 
 ### Scaling Down Score Matrix
 
-Encoder_step_6 Image Scaling, Softmax and then MatMul with Value
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_step_6.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Scaling, Softmax and then MatMul with Value</p> 
+</center>
 
     * Score matrix is generated after performing dot product between queries and keys.
 
@@ -66,7 +101,10 @@ Encoder_step_6 Image Scaling, Softmax and then MatMul with Value
 
     * After scaling down the score matrix, we perform a softmax on top of scaled score matrix to get probabilities score. This matrix with probability score is called as attention weight.
 
-Encoder_step_6.1 Image Creating Attention Weights
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_step_6.1(1).png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Creating Attention Weights</p> 
+</center>
 
     * And after that we perform the dot product between values and attention weights.
 
@@ -74,21 +112,33 @@ Encoder_step_6.1 Image Creating Attention Weights
 
 ### Drowning Out Irrelevant Words using Attention Weights
 
-Encoder_step_7 Image Drowning Out Irrelevant Word using Attention Weights
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformer_step_7.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Drowning Out Irrelevant Word using Attention Weights</p> 
+</center>
 
 ### Feed Forward Neural Network
 
-Encoder_step_8 Image Refining results using FFNN
+<center>
+<img src="{{site.url}}/assets/images/transformer/transformers_step_8.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Refining results using FFNN</p> 
+</center>
 
 The encoder output we have seen is of one encoder or one single attention block. Next we’ll see what is multi-head means here.
 
 Now, all the steps we’ve seen under Encoder Block is just Single Head of Multi-Head Attention, to make it multi-head, we copy Q, K and V vectors across different N heads. Operations after generating Q, K and V vectors is called self-attention module.
 
-Image Multi-Head Attention
+<center>
+<img src="{{site.url}}/assets/images/transformer/multi-head-encoder.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Multi-Head Attention</p> 
+</center>
 
 ### Multi-Head Attention Output
 
-Image Multi-Head Attention Output
+<center>
+<img src="{{site.url}}/assets/images/transformer/multi-head-attention-output.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Multi-Head Attention Output</p> 
+</center>
 
 ### Encoder Output
 
@@ -96,7 +146,10 @@ If we checkout the transformer architecture, we see multiple residual layers and
 
 Residual layers are used to overcome degradation problem and vanishing gradient problem. Checkout Resnet paper for the same.
 
-Image Encoder Block Output
+<center>
+<img src="{{site.url}}/assets/images/transformer/Encoder_layer_done.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Encoder Block Output</p> 
+</center>
 
 *In Summary, Multi-Head Attention Module in transformer network computes the attention weights for the inputs and produces output vector with encoded information of how each word should attend to all other words in the sequence.*
 
@@ -108,7 +161,11 @@ In decoder block, we have two multi-head attention module. In the bottom masked 
 
 *Decoder does similar function as encoder but with only one change, that is Masking. We’ll see down the line what is masking and why it is used.*
 
-Image Encoder and Decoder Block
+<center>
+<img src="{{site.url}}/assets/images/transformer/decoder_1.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Encoder and Decoder Block</p> 
+</center>
+
 
 **It should be noted that decoder is a auto-regressive model meaning it predicts future behavior based on past behavior.** Decoder takes in the list of previous output as input along with Encoders output which contains the attention information of input (Hi How are you). The decoder stops decoding once it generates <End> token.
 
@@ -118,7 +175,10 @@ Image Encoder and Decoder Block
 
 First step is creating the value vectors using decoder input and generating attention weights.
 
-Decoder_step_1 Image Creating Value Vector
+<center>
+<img src="{{site.url}}/assets/images/transformer/decoder_1.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Creating Value Vector</p> 
+</center>
 
 Masked Multi-Head Attention generates the sequence word by word we must condition it to prevent it from looking into future tokens.
 
