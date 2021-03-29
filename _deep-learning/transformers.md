@@ -1,0 +1,155 @@
+## Transformers — Visual Guide
+### An attempt to understand transformers
+
+Image Dummy
+
+Transformers architecture was introduced in Attention is all you need paper. Similar to CNN for Computer vision, the transformers are for NLP. A simple daily use case one can build using transformers is Conversational Chatbot.
+
+Conversational Chatbot Image
+
+I won’t get into the history of models like LSTMs, RNN and GRU which were used for similar use case but just one thing to keep in mind, these models weren’t able to capture long range dependencies as the passage or text becomes longer and longer.
+
+Transformer architecture consists of an encoder and a decoder network. In the below image, the block on the left side is the encoder (with one multi-head attention) and the block on the right side is decoder (with two multi-head attention).
+
+Transformer Archtectute Image
+
+First, I will explain the encoder block i.e. from creating input embedding to generating encoded output and then decoder block starting from passing decoder side input to output probabilities using softmax function.
+
+<center>...</center>
+
+## Encoder Block
+
+Transforming Words into Word Embedding
+
+Encoder_step_1 Image Word to Word Embedding
+
+### Creating Positional Encoding
+
+Positional encoding is simple a vector generated using a function based on condition. For instance, we can condition that on odd input embedding, we’ll use cos function to generate a position encoding (a vector) and on even input embedding we’ll use sin function to generate a positional encoding (a vector).
+
+Encoder_step_2 Image Create Positional Encoding
+
+### Adding Positional Encoding and Input Embedding
+
+
+Encoder_step_3 Image Combing Input with Position Encoding
+
+### Multi-Head Attention Module
+
+#### Creating Query, Key and Value Vectors
+
+In the last step, we generated Positional Input Embedding. Using this embedding, we create a set of Query, Key and Value Vectors using Linear Layers. To be clear, for each word we’ll have Q, K and V vectors.
+
+Encoder_step_4 Image Creating Q, K and V
+
+*A best analogy is seen in stack overflow for Q, K and V is of Youtube Search, where the text search of a video is the Query and that words in query is mapped to keys in youtube DB and which inturn brings out values i.e. videos.*
+
+### Inside Single Head Attention
+
+Multi-head attention uses a specific attention mechanism called as self-attention. The purpose of self-attention is to associate each word with every other words in the sequence.
+
+Figure 2 of transformer architecture Inside Single Head and Multi-Head Attention
+
+In the above image, we can see Mask (opt.) in attention network because we’ll use masking while decoding and its not required in encoder’s multi-head attention. We’ll discussing masking while exploring decoder side of transformer network.
+
+### Dot Product Between Q and V
+
+Encoder_step_5 Image Matrix Multiplication Between Query and Keys
+
+### Scaling Down Score Matrix
+
+Encoder_step_6 Image Scaling, Softmax and then MatMul with Value
+
+    * Score matrix is generated after performing dot product between queries and keys.
+
+    * To stabilize the gradients from having gradient explosion, we scale the score matrix by dividing it using √d_k, d_k is dimension of keys and queries.
+
+    * After scaling down the score matrix, we perform a softmax on top of scaled score matrix to get probabilities score. This matrix with probability score is called as attention weight.
+
+Encoder_step_6.1 Image Creating Attention Weights
+
+    * And after that we perform the dot product between values and attention weights.
+
+    * It helps in attending specific words and omit other words with lower probability score.
+
+### Drowning Out Irrelevant Words using Attention Weights
+
+Encoder_step_7 Image Drowning Out Irrelevant Word using Attention Weights
+
+### Feed Forward Neural Network
+
+Encoder_step_8 Image Refining results using FFNN
+
+The encoder output we have seen is of one encoder or one single attention block. Next we’ll see what is multi-head means here.
+
+Now, all the steps we’ve seen under Encoder Block is just Single Head of Multi-Head Attention, to make it multi-head, we copy Q, K and V vectors across different N heads. Operations after generating Q, K and V vectors is called self-attention module.
+
+Image Multi-Head Attention
+
+### Multi-Head Attention Output
+
+Image Multi-Head Attention Output
+
+### Encoder Output
+
+If we checkout the transformer architecture, we see multiple residual layers and x N on both sides of Encoder and Decoder Block, which means multiple Multi-Head Attention each focusing and learning wide representation of the sequences.
+
+Residual layers are used to overcome degradation problem and vanishing gradient problem. Checkout Resnet paper for the same.
+
+Image Encoder Block Output
+
+*In Summary, Multi-Head Attention Module in transformer network computes the attention weights for the inputs and produces output vector with encoded information of how each word should attend to all other words in the sequence.*
+
+<center>...</center>
+
+## Decoder Block
+
+In decoder block, we have two multi-head attention module. In the bottom masked multi-head attention, we pass in decoder input and in second multi-head attention we pass in encoder’s output along with the first Multi-head attention’s output.
+
+*Decoder does similar function as encoder but with only one change, that is Masking. We’ll see down the line what is masking and why it is used.*
+
+Image Encoder and Decoder Block
+
+**It should be noted that decoder is a auto-regressive model meaning it predicts future behavior based on past behavior.** Decoder takes in the list of previous output as input along with Encoders output which contains the attention information of input (Hi How are you). The decoder stops decoding once it generates <End> token.
+
+    *Encoder’s output is considered as Query and Keys of second Multi-Head Attention’s input in decoder and First masked multi-head attention’s output is considered as value of second Multi-Head Attention Module.*
+
+### Creating Value Vectors
+
+First step is creating the value vectors using decoder input and generating attention weights.
+
+Decoder_step_1 Image Creating Value Vector
+
+Masked Multi-Head Attention generates the sequence word by word we must condition it to prevent it from looking into future tokens.
+
+### Masked Score
+
+As said earlier, decoder is a auto-regressive model and it takes previous inputs to predict future behavior. But now, we have our input <Start> I am fine, our decoder shouldn’t see the next input before hand because the next input is the future input for decoder to learn.
+
+For instance, while computing attention score for input word I, the model should not have access to future word am. Because it is the future word that is generated after. Each word can attend to all the other previous words. To prevent the model from seeing the future input, we create a look-ahead mask.
+
+Image step1.1 Masking
+
+### Masking is added before calculating the softmax and after scaling the scores
+
+Image step1.1 Softmax on Masked Score
+
+The marked zeros essentially becomes irrelevant and similarly, this is done on multiple heads and the end vectors are concatenated and passed to Linear layer for further processing and refining.
+
+    *In summary, the first Masked Multi-Head Attention creates a masked output vector with information on how the model should attend on the decoders input.*
+
+### Decoder’s Multi-Head Attention Output
+
+Image Decoder’s Multi-Head Attention Output
+
+   * Multi-Head attention matches the encoder’s output with decoder output (masked output) allowing the decoder to decide which encoder output is relevant and to focus on.
+   * Then output from second multi-head attention is passed through pointwise FFNN for further processing.
+   * The output of FFNN through Linear Layer, which acts as Classifier Layer
+   * Each word of vocab has a probability score after going through softmax function.
+   * The max. probability is our predicted word. This word is again sent back to lists of decoder inputs.
+   * This process continues until the decoder generates the <END> token.
+   * I’ve not mentioned the residual network as drawn in architecture.
+
+The above process is extended again with N head with copies of Q, K and V making different heads. Each head learns different proportion of relationship between the encoders output and decoder’s input.
+
+**Connect with me on LinkedIn and Twitter 🐅 ✋**
