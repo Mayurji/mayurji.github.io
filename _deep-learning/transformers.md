@@ -88,7 +88,7 @@ Multi-head attention uses a specific attention mechanism called as self-attentio
 <img src="{{site.url}}/assets/images/transformer/transformer_architecture_2.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
 </center>
 
-In the above image, we can see Mask (opt.) in attention network because we’ll use masking while decoding and its not required in encoder’s multi-head attention. We’ll discussing masking while exploring decoder side of transformer network.
+In the above image, we can see Mask (opt.) in attention network because we’ll use masking while decoding and its not required in encoder’s multi-head attention. We’ll discuss about masking while exploring decoder side of transformer network.
 
 ### Dot Product Between Q and V
 
