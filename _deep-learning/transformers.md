@@ -31,7 +31,7 @@ Transformer architecture consists of an encoder and a decoder network. In the be
 
 First, I will explain the encoder block i.e. from creating input embedding to generating encoded output and then decoder block starting from passing decoder side input to output probabilities using softmax function.
 
-<center>...</center>
+<center style='color: White'>...</center>
 
 ## Encoder Block
 
@@ -95,20 +95,20 @@ In the above image, we can see Mask (opt.) in attention network because we’ll 
 <p>Scaling, Softmax and then MatMul with Value</p> 
 </center>
 
-    * Score matrix is generated after performing dot product between queries and keys.
+   * Score matrix is generated after performing dot product between queries and keys.
 
-    * To stabilize the gradients from having gradient explosion, we scale the score matrix by dividing it using √d_k, d_k is dimension of keys and queries.
+   * To stabilize the gradients from having gradient explosion, we scale the score matrix by dividing it using √d_k, d_k is dimension of keys and queries.
 
-    * After scaling down the score matrix, we perform a softmax on top of scaled score matrix to get probabilities score. This matrix with probability score is called as attention weight.
+   * After scaling down the score matrix, we perform a softmax on top of scaled score matrix to get probabilities score. This matrix with probability score is called as attention weight.
 
 <center>
 <img src="{{site.url}}/assets/images/transformer/transformer_step_6.1(1).png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
 <p>Creating Attention Weights</p> 
 </center>
 
-    * And after that we perform the dot product between values and attention weights.
+   * And after that we perform the dot product between values and attention weights.
 
-    * It helps in attending specific words and omit other words with lower probability score.
+   * It helps in attending specific words and omit other words with lower probability score.
 
 ### Drowning Out Irrelevant Words using Attention Weights
 
@@ -153,7 +153,7 @@ Residual layers are used to overcome degradation problem and vanishing gradient 
 
 *In Summary, Multi-Head Attention Module in transformer network computes the attention weights for the inputs and produces output vector with encoded information of how each word should attend to all other words in the sequence.*
 
-<center>...</center>
+<center style='color: White'>...</center>
 
 ## Decoder Block
 
@@ -169,14 +169,14 @@ In decoder block, we have two multi-head attention module. In the bottom masked 
 
 **It should be noted that decoder is a auto-regressive model meaning it predicts future behavior based on past behavior.** Decoder takes in the list of previous output as input along with Encoders output which contains the attention information of input (Hi How are you). The decoder stops decoding once it generates <End> token.
 
-    *Encoder’s output is considered as Query and Keys of second Multi-Head Attention’s input in decoder and First masked multi-head attention’s output is considered as value of second Multi-Head Attention Module.*
+   *Encoder’s output is considered as Query and Keys of second Multi-Head Attention’s input in decoder and First masked multi-head attention’s output is considered as value of second Multi-Head Attention Module.*
 
 ### Creating Value Vectors
 
 First step is creating the value vectors using decoder input and generating attention weights.
 
 <center>
-<img src="{{site.url}}/assets/images/transformer/decoder_1.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<img src="{{site.url}}/assets/images/transformer/decoder_step_1.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
 <p>Creating Value Vector</p> 
 </center>
 
@@ -188,19 +188,29 @@ As said earlier, decoder is a auto-regressive model and it takes previous inputs
 
 For instance, while computing attention score for input word I, the model should not have access to future word am. Because it is the future word that is generated after. Each word can attend to all the other previous words. To prevent the model from seeing the future input, we create a look-ahead mask.
 
-Image step1.1 Masking
+<center>
+<img src="{{site.url}}/assets/images/transformer/masking.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Masking</p> 
+</center>
+
 
 ### Masking is added before calculating the softmax and after scaling the scores
 
-Image step1.1 Softmax on Masked Score
+<center>
+<img src="{{site.url}}/assets/images/transformer/softmax_attention_weightspng.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Softmax on Masked Score</p> 
+</center>
 
 The marked zeros essentially becomes irrelevant and similarly, this is done on multiple heads and the end vectors are concatenated and passed to Linear layer for further processing and refining.
 
-    *In summary, the first Masked Multi-Head Attention creates a masked output vector with information on how the model should attend on the decoders input.*
+   *In summary, the first Masked Multi-Head Attention creates a masked output vector with information on how the model should attend on the decoders input.*
 
 ### Decoder’s Multi-Head Attention Output
 
-Image Decoder’s Multi-Head Attention Output
+<center>
+<img src="{{site.url}}/assets/images/transformer/decoder_final.png" style="zoom: 5%; background-color:#DCDCDC;"  width="50%" height=auto/><br>
+<p>Decoder’s Multi-Head Attention Output</p> 
+</center> 
 
    * Multi-Head attention matches the encoder’s output with decoder output (masked output) allowing the decoder to decide which encoder output is relevant and to focus on.
    * Then output from second multi-head attention is passed through pointwise FFNN for further processing.
@@ -211,5 +221,10 @@ Image Decoder’s Multi-Head Attention Output
    * I’ve not mentioned the residual network as drawn in architecture.
 
 The above process is extended again with N head with copies of Q, K and V making different heads. Each head learns different proportion of relationship between the encoders output and decoder’s input.
+<center style='color: White'>...</center>
 
 **Connect with me on LinkedIn and Twitter 🐅 ✋**
+
+### Reference
+
+[Illustrated Guide to Transformers Neural Network: A step by step explanation](https://www.youtube.com/watch?v=4Bdc55j80l8&t=694s)
