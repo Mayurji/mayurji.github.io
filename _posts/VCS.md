@@ -1,0 +1,366 @@
+### Version Control System
+
+Useful when multiple developers are working on the same project. It maintains the code intact, helps in restoring previous developed code. Going back and forth for a feature in web dev. and nowadays in any project including ML it helps in keep track of code updates from various developers of the same team.
+
+### Why Git ?
+
+* Its Distributed Version Control System.
+* Multiple Users can keep different version of their code block.
+* Easy to track
+* Easy to rollback if anything goes wrong
+
+### Install Git
+
+*cmd:* **`sudo apt-get update`**
+
+*cmd:* **`sudo apt-get install git`**
+
+### Finding Git Version
+
+*cmd:* **`git --version`**
+
+### To Create Repository
+
+*cmd*: **`git init sample_repo`**
+
+### Check if Repository is created
+
+*cmd:* **`ls`**
+*cmd:* **`cd sample_repo`**
+*cmd:* **`ls -a`** // Shows the hidden files in git repo
+
+The above commands create git repo from scratch. But if you have an existing project which is loitering around without linked to git repo then,
+You can move to the main folder of that project in terminal and then type the command as cmd: `git init`
+
+Note: **`git init`** without the Repository name takes the folder name as Repository name and you check the **`.git`** file in the project folder after **`git init`** command. I've used  **//** to write comment next to command, it will be incorrect to copy/paste it.
+
+***************************************************************************************************************************************************************
+
+### To change the project name of the git repo then move the folder to new folder as below
+
+*cmd:* **`mv sample_repo/ git_basics_lessons`**
+
+### To delete git repo from a project then you can delete the .git file from project folder
+
+*cmd:* **`rm -r git_basics_lessons/.git`**
+
+***************************************************************************************************************************************************************
+
+### Creating git repo and commiting the files
+
+*cmd:* **`git init git_basics`** // create git repo
+*cmd:* **`nano README`** // create a readme file with nano editor
+
+### Save the ReadME file
+
+*cmd:* **`git add README`** // the command makes the git to keep track of the changes in the file, it helps not to send all unnecessary files to repository.
+*cmd:* **`git command -m 'Added a README file'`** // -m (message) while committing the file. 
+
+***************************************************************************************************************************************************************
+
+### Setting the username and email to make sure who is making the commit:
+
+*cmd:* **`git config --global user.name "mayur"`**
+*cmd:* **`git config --global user.email "mayur@xyz.com"`**
+
+***************************************************************************************************************************************************************
+
+### Edit the existing the ReadME & Commit again
+
+*cmd:* **`nano README`**
+
+*write few lines to the files*
+
+*save the file*
+
+***************************************************************************************************************************************************************
+
+### Commit changes in the ReadME file
+
+*cmd:* **`git commit -a -m "new feature statement added"`** // -a (includes all the changes)
+
+***************************************************************************************************************************************************************
+
+### Staging  Area 
+
+**It helps in selecting exactly what we need to commit**
+
+### To get the status of the repo
+
+*cmd:* **`git status`**
+
+*We won't see any interesting messages in status command unless we made any changes to file without committing it or add the files without committing it.*
+
+### Add few files in git repo
+
+// creates two files
+*cmd:* **`touch file1`**
+*cmd:* **`touch file2`**
+
+*cmd:* **`git status`**
+
+**The git status will show the two files which are untracked.** 
+
+### Add file1 that needs to be tracked 
+
+*cmd:* **`git add file1`**
+*cmd:* **`git status `**
+
+**The git status will show us two messages, First, the file is added but didn't get committed and second is the file2 is untracked.**
+
+*cmd:* **`git add file2`**
+*cmd:* **`git commit -m "Added two files"`**
+*cmd:* **`git status`**
+
+***************************************************************************************************************************************************************
+
+### Making changes to file1 and file2
+
+*cmd:* **`nano file1`**
+
+*write few lines in file1*
+
+*save the file1*
+
+*cmd:* **`nano file2`**
+
+*write few lines in file2*
+
+*save the file2*
+
+**Since we had already added the file in repo before, git sends the status as the files are modified but not added to commit.**
+
+*cmd:* **`git status`**
+
+***************************************************************************************************************************************************************
+
+### Commit the modified file1 and file2
+
+*cmd:* **`git add file1`**
+*cmd:* **`git commit -m "changed file1"`**
+*cmd:* **`git status`**
+
+*cmd:* **`git add file2`**
+*cmd:* **`git commit -m "changed file2"`**
+*cmd:* **`git status`**
+
+***************************************************************************************************************************************************************
+
+### View history of commits made. 
+
+**Each commit is named  with a unique hash value.**
+
+*cmd:* **`git log`** //commit e279hf92h9823e39...
+
+**View what each commit was, commit identifier. By giving partial identifier detail like e279, we can extract what was committed.**
+
+*cmd:* **`git checkout e279..`**
+
+**It will give us the details of the commit, like we are checking out the status of the repo at that time of the commit. And we can checkout files, which we added any by that time or made any changes in the code by that time.**
+
+*cmd:* **`cat file1`**
+*cmd:* **`cat file2`**
+
+***************************************************************************************************************************************************************
+
+### To move back to our current status of repo with all changes that had been made, we can check this from branch.
+
+*cmd:* **`git checkout master`** // 'master' is the branch name of the repo
+
+***************************************************************************************************************************************************************
+
+### To find the difference between the two different commits, we can use there commit identifier.
+
+*cmd:* **`git diff gh887 hjk89`**
+
+*This will show the difference between the two commits. gh887 and hjk89 are commits identifier as mentioned earlier.*
+
+***************************************************************************************************************************************************************
+
+### Powerful Concepts Of Git Is Branching
+
+* A branch represents an independent line of development. Branches serve as an abstraction for the edit/stage/commit process. 
+* You can think of them as a way to request a brand new working directory, staging area, and project history. 
+* New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
+* The git branch command lets you create, list, rename, and delete branches. 
+* It doesn’t let you switch between branches or put a forked history back together again.
+* For this reason, git branch is tightly integrated with the **git checkout and git merge commands.**
+
+***************************************************************************************************************************************************************
+
+**Status will let us know which branch we are in. Master is the default branch in git repo.** 
+
+### Consider adding to new feature your project
+
+*cmd:* **`git branch feature_menu_bar`**
+*cmd:* **`git status`**
+
+Still in master branch
+### Move to new branch
+
+*cmd:* **`git checkout feature_menu_bar`** // **`checkout`** command helps in switching to the new branch, **`checkout`** keeps the branch on latest commit for that branch. It like head commit for the branch.
+
+*cmd:* **`git status`**
+
+### Move to master again
+
+*cmd:* **`git checkout master`**
+
+***************************************************************************************************************************************************************
+
+*cmd:* **`git checkout feature_menu_bar`**
+*cmd:* **`nano file1`**
+
+*write some lines*
+*save the file*
+
+*cmd:* **`git commit -a -m "Getting stated with Menu Bar"`**
+*cmd:* **`git log`**
+
+### Latest commit details is present in new branch
+
+**Switch to master to see what happened using git log**
+
+*cmd:* **`git checkout master`**
+*cmd:* **`git log`**
+
+**The last commit will not be "Getting started with Menu Bar". Since it was made in feature_menu_bar branch.**
+
+***************************************************************************************************************************************************************
+
+### Creating and Switching to Branch in one command
+
+*cmd:* **`git checkout -b "feature_Sidebar"`**
+*cmd:* **`git log`**
+
+**Note: the latest commit in this branch will be same as master branch because we created this branch while staying in master branch. Its a version started from master branch.**
+
+**If i move to feature_menu_bar and then create feature_Sidebar branch, then my latest commit would be taken from "feature_menu_bar"** 
+**since i have started a version from it.**
+
+***************************************************************************************************************************************************************
+
+### Finding all branches
+
+*cmd:* **`git branch`**
+
+**Shows all the branches and current branch with * symbol.**
+
+### Delete branch
+
+*cmd:* **`git branch -D feature_Sidebar`**
+
+***************************************************************************************************************************************************************
+
+### Important Concepts Of Git Is Merging 
+
+**If file1 in branch1 and same file in branch2 has undergone a changes then conflict can happen.**
+
+*cmd:* **`git checkout master`**
+*cmd:* **`git status`**
+
+**Merge the feature_menu_bar to master, In feature_menu_bar, where we have committed a file change in file1.**
+
+*cmd:* **`git merge feature_menu_bar`**
+*cmd:* **`git log`**
+
+**Now, the branch histroy will be merged i.e. the latest commit in master would be "Getting started with Menu Bar".**
+
+***************************************************************************************************************************************************************
+
+### Creating Conflict And Resolving It
+
+*cmd:* **`nano ReadME`**
+
+*make change in file ReadME*
+*save the file*
+
+*cmd:* **`git commit -a -m "Changes made in README"`**
+*cmd:* **`git checkout feature_menu_bar`**
+*cmd:* **`nano ReadME`**
+
+*make change in file README*
+*save the file*
+
+*cmd:* **`git commit -a -m "Changes made in ReadME"`**
+*cmd:* **`git checkout master`**
+*cmd:* **`git merge feature_menu_bar`**
+
+**If git is able to find the conflict, it tries to resolve it on its own. "Auto-Merging". If the same line in same file is changed in both the branches the git cannot rectify the conflict.**
+
+***************************************************************************************************************************************************************
+
+### Change same file and the same line in two Branches
+
+*cmd:* **`git branch`**
+*cmd:* **`nano file1`**
+
+*edit line 1*
+*save the file*
+
+*cmd:* **`git commit -a -m "Changed line 1"`**
+*cmd:* **`git checkout feature_menu_bar`**
+*cmd:* **`nano file1`**
+
+*edit line 1*
+*save the file*
+
+*cmd:* **`git commit -a -m "Changed Line 1"`**
+*cmd:* **`git checkout master`**
+*cmd:* **`git merge feature_menu_bar`**
+
+**Now the Auto-Merging fails.**
+
+**Note: the conflicted files shows us the both the changes we have made and asks us to how to handle it. we can edit it manually and then**
+**add and commit again.**
+
+*cmd:* **`nano file1`**
+
+*edit line 1*
+*save the file*
+
+*cmd:* **`git add file1`**
+*cmd:* **`git commit -a -m "Conflict removed"`**
+
+***************************************************************************************************************************************************************
+
+### Working on Remote Repository
+
+*cmd:* **`git clone url_of_the_repo new_clone`** // creates a folder new_clone with all the files from remote repository.
+
+*cmd:* **`git remote`** // it shows all the remotes to this repository,"origin". It creates a copy/originated from the remote repo. 
+
+**Note: if you clone a repo from local repo (git clone /git_basics), then it won't be remote. We need to add the cloned repo to remote first.**
+
+*cmd:* **`git clone /git_basics git_basic_cloned`** // origin (name of the remote)
+*cmd:* **`git remote`**
+*cmd:* **`cd git_basics`**
+*cmd:* **`git remote`**
+*cmd:* **`git remote add our_clone /git_basic_cloned`**
+*cmd:* **`git remote`**
+
+**It will help in making the both the repo to talk to each other.**
+
+***************************************************************************************************************************************************************
+
+### Push and Pull From Remote
+
+*cmd:* **`cd git_basic_cloned`**
+
+*cmd:* **`git checkout -b notification_bar`**
+*cmd:* **`nano file1`**
+
+*edit the file*
+*save the file*
+
+*cmd:* **`git commit -a -m "change made in file1"`**
+*cmd:* **`git push`** // Won't do anything specific
+*cmd:* **`git push notification_bar`** // edit to mention explictly to which remote
+*cmd:* **`git push origin notification_bar`**
+
+**Switch to git_basics and see if the commits made by above branch is reflecting or not**
+
+*cmd:* **`cd git_basics`**
+*cmd:* **`git branch`**
+
+The notification_bar branch should be available in **`git_basics`** repo as well.
