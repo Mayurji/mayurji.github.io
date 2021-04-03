@@ -1,6 +1,19 @@
+---
+layout: post
+title: Version Control System
+description: Understanding Git and all related terms
+category: Blog
+date:   2021-01-14 13:43:52 +0530
+---
 ### Version Control System
 
 Useful when multiple developers are working on the same project. It maintains the code intact, helps in restoring previous developed code. Going back and forth for a feature in web dev. and nowadays in any project including ML it helps in keep track of code updates from various developers of the same team.
+
+<center>
+<img src="{{site.url}}/assets/images/Hyperparameter/yancy-min-842ofHC6MaI-unsplash.jpg" class="post-body" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Version Control System: Photo by <a href="https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yancy Min</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+</p>
+</center>
 
 ### Why Git ?
 
