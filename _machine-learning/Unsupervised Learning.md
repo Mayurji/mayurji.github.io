@@ -31,7 +31,9 @@ It is an efficient iterative method to estimate the parameters of the latent var
 
 **EM In Action**
 
+<center>
 <p><a href="https://commons.wikimedia.org/wiki/File:EM_Clustering_of_Old_Faithful_data.gif#/media/File:EM_Clustering_of_Old_Faithful_data.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/EM_Clustering_of_Old_Faithful_data.gif" alt="EM Clustering of Old Faithful data.gif"></a><br>By &lt;a href="//commons.wikimedia.org/wiki/User:Chire" title="User:Chire"&gt;Chire&lt;/a&gt; - &lt;span class="int-own-work" lang="en"&gt;Own work&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=20494862">Link</a></p>
+</center>
 
 **E-Step:** Evaluate the posterior probability $$Q_i (z^{(i)})$$ that each data point $$ x^{(i)} $$ came from a particular cluster $$z^{(i)}$$ as follows
 
@@ -87,7 +89,9 @@ $$
 
 **K-Means IN Action**
 
+<center>
 <p><a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif#/media/File:K-means_convergence.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="K-means convergence.gif"></a><br>By &lt;a href="//commons.wikimedia.org/wiki/User:Chire" title="User:Chire"&gt;Chire&lt;/a&gt; - &lt;span class="int-own-work" lang="en"&gt;Own work&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=59409335">Link</a></p>
+</center>
 
 ##### Simple Understanding
 
