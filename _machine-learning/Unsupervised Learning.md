@@ -7,7 +7,7 @@ date:   2021-04-05 17:43:52 +0530
 {% include mathjax.html %}
 
 <center>
-<img src="{{site.url}}/assets/images/ml/omar-flores-lQT_bOWtysE-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height="60%"/><br>
+<img src="{{site.url}}/assets/images/ml/omar-flores-lQT_bOWtysE-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="50%" height=auto/><br>
 <p>Photo by <a href="https://unsplash.com/@omarg247?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Omar Flores</a> on <a href="https://unsplash.com/s/photos/pattern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
 </center>
 
@@ -30,10 +30,7 @@ $$
 It is an efficient iterative method to estimate the parameters of the latent variables through maximum-likelihood estimation. In each iteration, the algorithm performs two alternate steps, first performing an expectation (E) step, which creates a function for the expectation of the [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood) evaluated using the current estimate for the parameters, and a  maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the *E* step. These parameter-estimates are then used to determine the distribution of the latent variables in the next E step.
 
 
-<center>
-<img src="{{site.url}}/assets/images/ml/EM_Clustering_of_Old_Faithful_data.gif" decoding="async" style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Unsupervised Learning - EM Algorithm</p> 
-</center>
+![EM Clustering]("{{site.url}}/assets/images/ml/EM_Clustering_of_Old_Faithful_data.gif")
 
 **E-Step:** Evaluate the posterior probability $$Q_i (z^{(i)})$$ that each data point $$ x^{(i)} $$ came from a particular cluster $$z^{(i)}$$ as follows
 
