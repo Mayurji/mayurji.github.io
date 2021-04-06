@@ -6,6 +6,7 @@ category: Blog
 image_url: "/assets/images/Hyperparameter/hyperparameter.jpg"
 date:   2020-08-06 13:43:52 +0530
 ---
+{% include mathjax.html %}
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
@@ -56,13 +57,6 @@ Sometimes keeping only one learning rate may not help us in reaching the global 
 ### Adaptive Learning Rate
 
 Sometimes its crucial to understand the problem and change the learning rate accordingly like increasing it or decreasing it. Algorithms like Adam Optimizer and Adagrad Optimizer.
-
-[Exponential Decay](https://www.tensorflow.org/api_docs/python/tf/train/exponential_decay)
-
-[Adam Optimizer](https://www.tensorflow.org/api_docs/python/tf/train/AdamOptimizer)
-
-[Adagrad Optimizer](https://www.tensorflow.org/api_docs/python/tf/train/AdagradOptimizer)
-
 
 ### Minibatch Size
 
@@ -135,12 +129,15 @@ To conclude, keep track of validation error while increasing the number of hidde
 
 [Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)
 
-### References
+### Further Reading
 
-[How batch size affects the model performance](https://arxiv.org/abs/1606.02228)
-[Stackexchange](https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent)
-[BGD vs SGD](https://towardsdatascience.com/difference-between-batch-gradient-descent-and-stochastic-gradient-descent-1187f1291aa1)
-[Visualizing Networks](http://jalammar.github.io)\
-[Practical recommendations for gradient-based training of deep architectures](https://arxiv.org/abs/1206.5533)\
-[Deep Learning Book by Ian Goodfellow](http://www.deeplearningbook.org/contents/guidelines.html)\
-[Generate Good Word Embedding](https://arxiv.org/abs/1507.05523)
+[How batch size affects the model performance](https://arxiv.org/abs/1606.02228) |
+[Stackexchange](https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent) |
+[BGD vs SGD](https://towardsdatascience.com/difference-between-batch-gradient-descent-and-stochastic-gradient-descent-1187f1291aa1) |
+[Visualizing Networks](http://jalammar.github.io) |
+[Practical recommendations for gradient-based training of deep architectures](https://arxiv.org/abs/1206.5533) |
+[Deep Learning Book by Ian Goodfellow](http://www.deeplearningbook.org/contents/guidelines.html) |
+[Generate Good Word Embedding](https://arxiv.org/abs/1507.05523) |
+[Exponential Decay](https://www.tensorflow.org/api_docs/python/tf/train/exponential_decay) |
+[Adam Optimizer](https://www.tensorflow.org/api_docs/python/tf/train/AdamOptimizer) |
+[Adagrad Optimizer](https://www.tensorflow.org/api_docs/python/tf/train/AdagradOptimizer)
