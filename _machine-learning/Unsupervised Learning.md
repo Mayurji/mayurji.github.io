@@ -31,6 +31,12 @@ $$
 
 It is an efficient iterative method to estimate the parameters of the latent variables through maximum-likelihood estimation. In each iteration, the algorithm performs two alternate steps, first performing an expectation (E) step, which creates a function for the expectation of the [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood) evaluated using the current estimate for the parameters, and a  maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the *E* step. These parameter-estimates are then used to determine the distribution of the latent variables in the next E step.
 
+
+<center>
+<img src="{{site.url}}/assets/images/ml/EM_Clustering_of_Old_Faithful_data.gif"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Unsupervised Learning - EM Algorithm</p> 
+</center>
+
 **E-Step:** Evaluate the posterior probability $$Q_i (z^{(i)})$$ that each data point $$ x^{(i)} $$ came from a particular cluster $$z^{(i)}$$ as follows
 
 <p>
@@ -82,6 +88,13 @@ c^{(i)} -  cluster\ of\ data\ point\ i. \\
 $$
 
 </p>
+
+
+<center>
+<img src="{{site.url}}/assets/images/ml/K-means_convergence.gif"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Unsupervised Learning - K-Means Algorithm</p> 
+</center>
+
 ##### Simple Understanding
 
 1. Pick the number of clusters k.
