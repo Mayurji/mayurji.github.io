@@ -7,11 +7,8 @@ image_url: "/assets/images/Hyperparameter/hyperparameter.jpg"
 date:   2020-08-06 13:43:52 +0530
 ---
 
-## Hyperparameter Tuning
-#### Discover a way to efficiently tune hyperparameters
-
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
 <p>Figure 1: Neurons</p> 
 </center>
 
