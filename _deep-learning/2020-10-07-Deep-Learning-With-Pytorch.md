@@ -6,8 +6,6 @@ date:   2020-10-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
-### Deep Learning Using Pytorch
-
 In Deep Learning, it is preferred to use a pre-trained model as an initialization for your new model rather than 
 training a model from scratch. Pre-training provides a major boost to your model, by retaining essential features, 
 in initial layers of the pre-trained model. And also, the training time cost and hardware required is drastically
