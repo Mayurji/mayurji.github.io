@@ -85,11 +85,9 @@ $$
 
 </p>
 
+**K-Means IN Action**
 
-<center>
-<img src="{{site.url}}/assets/images/ml/K-means_convergence.gif" decoding="async" style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Unsupervised Learning - K-Means Algorithm</p> 
-</center>
+<p><a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif#/media/File:K-means_convergence.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="K-means convergence.gif"></a><br>By &lt;a href="//commons.wikimedia.org/wiki/User:Chire" title="User:Chire"&gt;Chire&lt;/a&gt; - &lt;span class="int-own-work" lang="en"&gt;Own work&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=59409335">Link</a></p>
 
 ##### Simple Understanding
 
