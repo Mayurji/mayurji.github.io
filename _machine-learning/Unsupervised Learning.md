@@ -29,9 +29,9 @@ $$
 
 It is an efficient iterative method to estimate the parameters of the latent variables through maximum-likelihood estimation. In each iteration, the algorithm performs two alternate steps, first performing an expectation (E) step, which creates a function for the expectation of the [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood) evaluated using the current estimate for the parameters, and a  maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the *E* step. These parameter-estimates are then used to determine the distribution of the latent variables in the next E step.
 
-<center>
-<img src="{{site.url}}/assets/images/ml/EM_Clustering_of_Old_Faithful_data.gif" width="75%" height=auto/><br>
-</center>
+**EM In Action**
+
+<p><a href="https://commons.wikimedia.org/wiki/File:EM_Clustering_of_Old_Faithful_data.gif#/media/File:EM_Clustering_of_Old_Faithful_data.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/EM_Clustering_of_Old_Faithful_data.gif" alt="EM Clustering of Old Faithful data.gif"></a><br>By &lt;a href="//commons.wikimedia.org/wiki/User:Chire" title="User:Chire"&gt;Chire&lt;/a&gt; - &lt;span class="int-own-work" lang="en"&gt;Own work&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=20494862">Link</a></p>
 
 **E-Step:** Evaluate the posterior probability $$Q_i (z^{(i)})$$ that each data point $$ x^{(i)} $$ came from a particular cluster $$z^{(i)}$$ as follows
 
