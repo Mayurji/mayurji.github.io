@@ -1,12 +1,27 @@
 ---
 layout: default
+------
+layout: default
 ---
+<!-- link to main stylesheet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <head>
-  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<center>
+<h2>{{ title }}</h2> 
+<p >Posted by <b>Mayur</b></p>
+</center>
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
 </head>
-<h1>{{ title }}</h1>
-{{ content }}
+
+<div>
+  {{ content }}
+</div>
 
 
 <center><p>...</p></center>
