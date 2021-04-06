@@ -1,12 +1,17 @@
 
 layout: machine-learning
 title: Unsupervised Learning
-description: Clustering Algorithms a
+description: Clustering Algorithms
 date:   2021-04-05 17:43:52 +0530
 
 {% include mathjax.html %}
 
 ## Unsupervised Learning
+
+<center>
+<img src="{{site.url}}/assets/images/ml/omar-flores-lQT_bOWtysE-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/><br>
+<p>Photo by <a href="https://unsplash.com/@omarg247?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Omar Flores</a> on <a href="https://unsplash.com/s/photos/pattern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+</center>
 
 In previous blog post on [supervised learning](https://mayurji.github.io/machine-learning/Supervised%20Learning), we have seen that each observed data has a label attached to it, making it easy to train a model. However, in unsupervised learning, **the algorithm finds the hidden patterns in unlabeled data.** A popular technique in unsupervised learning is **Clustering Algorithms**.
 <p>
@@ -41,9 +46,12 @@ $$
 $$
 </p>
 
-IMAGE EM Algorithm
+<center>
+<img src="{{site.url}}/assets/images/ml/em_alog.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Unsupervised Learning - EM Algorithm</p> 
+</center>
 
-Simple understanding:
+**Simple Understanding**
 
 * Generating Latent variables z using conditional probability over observed variable x.
 * Estimating parameters θ at step t using z, x and previous θ. θ is initialized randomly.
@@ -53,7 +61,10 @@ Simple understanding:
 
 K-Means is the most popular clustering algorithm used in unsupervised learning. The algorithm tries to partition the n observations into K-Cluster in which each observation belongs to the cluster with the nearest mean (Cluster centers or centroid).
 
-Image Kmeans Clustering
+<center>
+<img src="{{site.url}}/assets/images/ml/kmean_algo.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Unsupervised Learning - K-Means</p> 
+</center>
 
 At first, we randomly intialize the cluster centroids, $$ \mu_1, \mu_2, ..., \mu_k \ \in R^n $$, the k-means algorithm repeats the following steps until convergence
 
@@ -99,7 +110,10 @@ In order to decide which clusters should be combined (for  agglomerative), or wh
 
 For example, in two dimensions, under the  Manhattan distance metric, the distance between the origin (0,0) and  (0.5, 0.5) is the same as the distance between the origin and (0, 1),  while under the Euclidean distance metric the latter is strictly  greater.
 
-IMAGE Different Distance Wikipedia
+<center>
+<img src="{{site.url}}/assets/images/ml/distance_metric.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Agglomerative Clustering - Distance Metrics</p> 
+</center>
 
 The linkage criterion determines the distance between sets of  observations as a function of the pairwise distances between observation and is applied in agglomerative clustering to identify the merge strategy. There different linkages
 
@@ -108,17 +122,21 @@ The linkage criterion determines the distance between sets of  observations as a
 * Single Linkage - minimizes the distance between the closest observations of pairs of clusters.
 * Average Linkage - minimizes the average of the distances between all observations of pairs of clusters.
 
-Image Agglomerative Clustering
+<center>
+<img src="{{site.url}}/assets/images/ml/hierarchical_clustering.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Unsupervised Learning - Agglomerative Clustering</p> 
+</center>
 
 ### Evaluation Strategy For Clustering Algorithm
 
 Evaluation of a clustering algorithm is tricky because the algorithm has no metric validate against unlike supervised learning. Anyway, there are few metric which can tell us how well our cluster are formed either data points are lying at the edge of cluster or in between two cluster in a confused state or clusters are separate from each other with neat boundaries between them. Couple of metrics used to asses the clustering algorithms are as follows
 
 * **Silhouette Coefficient** - By noting a and b the mean distance between a sample and all other points in the same class, and between a sample and all other points in the next nearest cluster, the silhouette coefficient s for a single sample is defined as follows:
+<p>
   $$
   s = {b - a \over max(a, b)}
   $$
-  
+</p>
 
   **Simple Understanding**
 
@@ -128,13 +146,16 @@ Evaluation of a clustering algorithm is tricky because the algorithm has no metr
 
 * **Calinksi-Harabaz Index** - It is also known as Variance Ratio Criterion. It is the ratio between how all the data-points in the all clusters are dispersed within cluster and how all the clusters are dispersed between themselves.
 
-​       By noting k the number of clusters, B_k and W_k the between and within-clustering dispersion matrices respectively defined as
+By noting k the number of clusters, B_k and W_k the between and within-clustering dispersion matrices respectively defined as
+<p>
 $$
 B_k = \sum_{i=1}^k n_{c^{(i)}} \ (\mu_{c^{(i)}} - \mu) (\mu_{c^{(i)}} - \mu)^T \\
 
 W_k = \sum_{i=1}^k  \ ({x^{(i)}} - \mu_{c^{(i)}}) (x^{(i)} - \mu_{c^{(i)}})^T
 $$
-​      the Calinski-Harabaz index s(k) indicates how well a clustering model defines its clusters, such that the higher the score, the more dense and well                    	separated the clusters are. It is defined as follows:
+</p>
+the Calinski-Harabaz index s(k) indicates how well a clustering model defines its clusters, such that the higher the score, the more dense and well                    separated the clusters are. It is defined as follows:
+<p>
 $$
 s_k = { Tr(B_k) \over Tr(W_k)} * {n \ - k \over k \ - 1} \\
 
@@ -142,6 +163,7 @@ n - Number\ of\ Data\ points \\
 k - Number\ of\ Clusters \\
 
 $$
+</p>
 
 *B*(*k*) has *k*−1 degrees of freedom, while *W*(*k*) has *n*−*k* degrees of freedom. 
 
@@ -152,15 +174,11 @@ So if we scale for those degrees of freedom, it puts them more on the same scale
 #### Further reading
 
 * [EM-Algorithm](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm)
-
 * [MAP](https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation)
-
 * [Posterior Probability](https://en.wikipedia.org/wiki/Posterior_probability)
 * [MLE](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
 * [Likelihood Function](https://en.wikipedia.org/wiki/Likelihood_function)
 * [K-Means](https://en.wikipedia.org/wiki/K-means_clustering)
-
 * [Hierarchical Clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering)
 * [Linkage](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.cluster)
-
 * CS229 Standford Class
