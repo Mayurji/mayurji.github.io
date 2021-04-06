@@ -7,7 +7,7 @@ date:   2021-03-06 17:43:52 +0530
 {% include mathjax.html %}
 
 <center>
-<img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
 <p>Photo by Chris Liverani on Unsplash</p>
 </center>
 
