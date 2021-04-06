@@ -93,7 +93,7 @@ The number of iteration or epoch can decided based on the validation error, as l
 
 [**Validation Monitor**](https://www.tensorflow.org/get_started/monitors#early_stopping_with_validationmonitor)
 
-```
+```python
 validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
       test_set.data,
       test_set.target,
