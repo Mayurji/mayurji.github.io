@@ -6,8 +6,6 @@ date:   2021-03-07 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-## Keepsake - A Version Control For Machine Learning
-
 <center>
 <img src="{{site.url}}/assets/images/ml/dmitry-pavlovsky-mZrBq4iklHY-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
 <p>Photo by Dmitry Pavlovsky on Unsplash</p>
