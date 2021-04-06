@@ -6,12 +6,8 @@ date:   2021-03-28 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center><h2>Transformers — Visual Guide</h2></center>
-<center><h3>An attempt to understand transformers</h3></center>
-
 <center>
-<img src="{{site.url}}/assets/images/transformer/arseny-togulev-4YoINz4XvnQ-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
-<p>Photo by Arseny Togulev - Unsplash</p> 
+<img src="{{site.url}}/assets/images/transformer/arseny-togulev-4YoINz4XvnQ-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br><p>Photo by Arseny Togulev - Unsplash</p> 
 </center>
 
 Transformers architecture was introduced in Attention is all you need paper. Similar to CNN for Computer vision, the transformers are for NLP. A simple daily use case one can build using transformers is Conversational Chatbot.
