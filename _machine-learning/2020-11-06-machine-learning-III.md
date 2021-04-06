@@ -5,7 +5,6 @@ description: "Data preparation and evaluation of machine learning models"
 date:   2020-11-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
-## Machine Learning Concepts II
 
 <center>
 <img src="{{site.url}}/assets/images/ml/arseny-togulev-MECKPoKJYjM-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;"  width="100%" height=auto/><br>    
