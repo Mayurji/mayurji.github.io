@@ -6,8 +6,6 @@ date:   2020-11-06 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-### Machine Learning
-
 <center>
 <img src="{{site.url}}/assets/images/ml/yannis-h-uaPaEM7MiQQ-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="100%" height=auto/><br>
 <p><span>Photo by <a href="https://unsplash.com/@yanphotobook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yannis H</a> on <a href="https://unsplash.com/s/photos/teaching?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
