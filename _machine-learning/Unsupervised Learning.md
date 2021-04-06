@@ -31,7 +31,7 @@ It is an efficient iterative method to estimate the parameters of the latent var
 
 
 <center>
-<img src="{{site.url}}/assets/images/ml/EM_Clustering_of_Old_Faithful_data.gif"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/EM_Clustering_of_Old_Faithful_data.gif" decoding="async" style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Unsupervised Learning - EM Algorithm</p> 
 </center>
 
@@ -89,7 +89,7 @@ $$
 
 
 <center>
-<img src="{{site.url}}/assets/images/ml/K-means_convergence.gif"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/K-means_convergence.gif" decoding="async" style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Unsupervised Learning - K-Means Algorithm</p> 
 </center>
 
