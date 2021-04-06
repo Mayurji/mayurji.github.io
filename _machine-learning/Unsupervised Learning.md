@@ -6,10 +6,8 @@ date:   2021-04-05 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-## Unsupervised Learning
-
 <center>
-<img src="{{site.url}}/assets/images/ml/omar-flores-lQT_bOWtysE-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/omar-flores-lQT_bOWtysE-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height="60%"/><br>
 <p>Photo by <a href="https://unsplash.com/@omarg247?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Omar Flores</a> on <a href="https://unsplash.com/s/photos/pattern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
 </center>
 
