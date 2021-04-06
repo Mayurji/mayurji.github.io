@@ -6,7 +6,6 @@ category: Blog
 image_url: "/assets/images/profiling/profiling.gif"
 date:   2021-01-02 13:43:52 +0530
 ---
-### *Finding Bottlenecks in Code!*
 
 Code is a simple set of instruction to perform an action. It occupies resources like RAM and CPU for its compilation. But a explainable and efficient code should occupy less time and resources to complete its execution. There are various techniques to check out the performance of the code written.
 
