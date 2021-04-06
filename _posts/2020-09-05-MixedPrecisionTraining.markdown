@@ -5,10 +5,8 @@ description: Why training a model in 16 bit floating point is important and how 
 category: Blog
 date:   2020-09-05 13:43:52 +0530
 ---
-### Discover a way to efficiently utilize your GPU
-
 <center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;"   width="80%" height=auto/><br>
+<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;"   width="75%" height=auto/><br>
 <p>Figure 1: GPU</p> 
 </center>
 
