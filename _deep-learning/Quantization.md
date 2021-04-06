@@ -6,10 +6,8 @@ date:   2021-03-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
-## Quantization: Dealing with Large Deep Models
-
 <center>
-<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="100%" height=auto/><br>
+<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
 <p>Photo by Patrick Tomasso - Unsplash</p> 
 </center>
 
