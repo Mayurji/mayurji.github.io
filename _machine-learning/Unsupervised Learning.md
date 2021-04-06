@@ -1,11 +1,20 @@
+---
+layout: machine-learning
+title: Unsupervised Learning
+description: Clustering Algorithms a
+date:   2021-02-14 17:43:52 +0530
+---
+{% include mathjax.html %}
+
 ## Unsupervised Learning
 
 In previous blog post on [supervised learning](https://mayurji.github.io/machine-learning/Supervised%20Learning), we have seen that each observed data has a label attached to it, making it easy to train a model. However, in unsupervised learning, **the algorithm finds the hidden patterns in unlabeled data.** A popular technique in unsupervised learning is **Clustering Algorithms**.
+<p>
 $$
 x_1 , \ x_2, \ .....x_m \\
 and \ there \ is \ no \ label \ y.
 $$
-
+</p>
 
 **Clustering Algorithms** are a set of algorithms, which clusters data points based on similarity metric either measured in terms of distance or using probability to categorize the data point etc. In simple terms, we can think of clustering as a way to group the data points that are similar in nature from group of data points which are dissimilar.
 
@@ -18,13 +27,20 @@ $$
 It is an efficient iterative method to estimate the parameters of the latent variables through maximum-likelihood estimation. In each iteration, the algorithm performs two alternate steps, first performing an expectation (E) step, which creates a function for the expectation of the [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood) evaluated using the current estimate for the parameters, and a  maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the *E* step. These parameter-estimates are then used to determine the distribution of the latent variables in the next E step.
 
 **E-Step:** Evaluate the posterior probability $$Q_i (z^{(i)})$$ that each data point $$ x^{(i)} $$ came from a particular cluster $$z^{(i)}$$ as follows
+
+<p>
 $$
 Q_i \ (z^{(i)}) = P(z^{(i)} | x^{(i)}; \theta)
 $$
+</p>
+
 **M-Step:** Use the posterior probability $$ Q_i (z^{(i)}) $$ as cluster specific weights on data points x^{(i)} to separately re-estimate each cluster model as follows 
+<p>
 $$
 \theta_i = argmax_\theta \sum_{i} \int_{z^{(i)}}  Q_i (z^{(i)}) \ log \ {P(x^{(i)}, \ z^{(i)}; \theta \over Q_i(z^{(i)})}. dz^{(i)}
 $$
+</p>
+
 IMAGE EM Algorithm
 
 Simple understanding:
@@ -41,11 +57,10 @@ Image Kmeans Clustering
 
 At first, we randomly intialize the cluster centroids, $$ \mu_1, \mu_2, ..., \mu_k \ \in R^n $$, the k-means algorithm repeats the following steps until convergence
 
-
+<p>
 $$
 c^{(i)} \ = \ {arg \ min}_j || \ x^{(i)} - \mu_j ||^2 \\
 $$
-
 $$
 \mu_j \ = \ {\sum_{i=1}^{m} 1_{c^{(i)}=j}x^{(i)} \over \sum_{i=1}^m 1_{c^{(i)}=j}}
 $$
@@ -55,6 +70,7 @@ c^{(i)} -  cluster\ of\ data\ point\ i. \\
 \mu_j - center\ of\ cluster\ j.
 $$
 
+</p>
 ##### Simple Understanding
 
 1. Pick the number of clusters k.
