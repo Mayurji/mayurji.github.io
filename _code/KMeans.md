@@ -34,7 +34,8 @@ class KMeans:
 
     def initialize_centroid(self, X, K):
         """
-        Initialization Technique is KMeans++. Thanks to stackoverflow. https://stackoverflow.com/questions/5466323/how-could-one-implement-the-k-means-algorithm
+        Initialization Technique is KMeans++. Thanks to stackoverflow. 
+        https://stackoverflow.com/questions/5466323/how-could-one-implement-the-k-means-algorithm
         :param X: Input Tensor
         :param K: Number of clusters to build
         :return: Selection of three centroid vector from X
