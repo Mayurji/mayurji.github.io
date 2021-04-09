@@ -1,5 +1,5 @@
 ---
-layout: deep-learning
+layout: code
 title: Linear Regression Using Pytorch
 description: Learning and Building ML using Pytorch
 date:   2021-03-07 16:43:52 +0530
