@@ -2,7 +2,7 @@
 layout: code
 title: Decision Tree Using Pytorch
 description: Learning and Building ML using Pytorch
-date:   2021-04-07 16:43:52 +0530
+date:   2021-04-09 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
