@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset="UTF-8">
-    <meta name='viewport' content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Machine Learning Using Pytorch </title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <slider>
-      <slide><p>Linear Regression</p></slide>
-      <slide><p>Logistic Regression</p></slide>
-      <slide><p>Decision Tree</p></slide>
-    </slider>
-  </body>
-  </html>
+---
+layout: default
+title: Code
+---
+<head>
+<!-- link to main stylesheet -->
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+</head>
+<ul class="posts">
+
+  {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}
+      <p>{{ post.description }}</p></a>
+  </li>
+  {% endfor %}
+</ul>
