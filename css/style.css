@@ -28,7 +28,7 @@ slide:nth-child(1){
 	left: 0%;
 	animation-delay: -1s;
 	/*animation-play-state: paused;*/
-	background-image: url(https://github.com/Mayurji/mayurji.github.io/blob/main/assets/images/code/LinearRegression.png);
+	background-image: url({{site.url}}/assets/images/code/LinearRegression.png);
 	background-size: cover;
 	background-position: center;
 
