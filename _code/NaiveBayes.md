@@ -1,6 +1,6 @@
 ---
 layout: code
-title: Logistic Regression Using Pytorch
+title: Naive Bayes Using Pytorch
 description: Classification Problem
 date:   2021-04-10 16:43:52 +0530
 ---
