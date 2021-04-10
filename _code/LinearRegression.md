@@ -1,7 +1,7 @@
 ---
 layout: code
 title: Linear Regression Using Pytorch
-description: Learning and Building ML using Pytorch
+description: Regression Problem
 date:   2021-04-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
