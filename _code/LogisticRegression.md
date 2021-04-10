@@ -1,7 +1,7 @@
 ---
 layout: code
 title: Logistic Regression Using Pytorch
-description: Learning and Building ML using Pytorch
+description: Classification Problem
 date:   2021-04-08 16:43:52 +0530
 ---
 {% include mathjax.html %}
