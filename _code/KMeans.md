@@ -1,7 +1,7 @@
 ---
 layout: code
 title: KMeans Using Pytorch
-description: Learning and Building ML using Pytorch
+description: Unsupervised Clustering Algorithm
 date:   2021-04-10 01:20:52 +0530
 ---
 {% include mathjax.html %}
