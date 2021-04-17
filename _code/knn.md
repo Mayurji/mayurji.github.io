@@ -5,7 +5,7 @@ description: Classification Problem
 date:   2021-04-11 16:43:52 +0530
 ---
 {% include mathjax.html %}
-```
+```python
 import torch
 from scipy.stats import mode
 from sklearn.datasets import load_iris
