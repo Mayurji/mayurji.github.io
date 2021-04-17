@@ -5,7 +5,7 @@ description: NLP Preprocessing
 date:   2021-04-13 16:43:52 +0530
 ---
 {% include mathjax.html %}
-```
+```python
 import torch
 from nltk.tokenize import word_tokenize
 
