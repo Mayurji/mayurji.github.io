@@ -5,7 +5,7 @@ description: Dimensionality Reduction
 date:   2021-04-14 16:43:52 +0530
 ---
 {% include mathjax.html %}
-```
+```python
 import torch
 from sklearn.datasets import load_iris
 import seaborn as sb
