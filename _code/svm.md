@@ -5,7 +5,7 @@ description: Classification Problem
 date:   2021-04-12 16:43:52 +0530
 ---
 {% include mathjax.html %}
-```
+```python
 import torch
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
