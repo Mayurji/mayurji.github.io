@@ -1,3 +1,10 @@
+---
+layout: deep-learning
+title: Five Pointers After 30 Days of ML with PyTorch
+description: PyTorch Pointers
+date:   2021-05-08 13:43:52 +0530
+---
+
 ### After 30DaysOfML with Pytorch
 
 Recently, I've completed 30 Days of ML with Pytorch, where I explored all the major machine learning algorithms and basics of deep learning with concepts like activations, optimizers, loss functions etc.
