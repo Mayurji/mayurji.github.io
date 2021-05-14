@@ -109,7 +109,7 @@ However, the idea behind starting 30 Days of ML with Pytorch is to learn the imp
   """
   ```
 
-  **Replacing Diagonal with Vector**
+* **Replacing Diagonal with Vector**
 
   Not sure, how often this is used in building ML algorithms, but this is  quite tedious because, to set diagonal elements with one specific values is simple but it becomes difficult when we need to replace the diagonal elements of a matrix with a vector.
 
