@@ -8,12 +8,14 @@ title: code
       <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
       <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
-<ul class="posts">
-
+<details>
+      <summary>Machine Learning With PyTorch</summary>
+<ul class="posts">  
   {% assign sorted_pages = site.code | sort:"date" %}
   {% for item in sorted_pages reversed %}
   <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}
     <p>{{ item.description }}</p></a></li>
   {% endfor %}
-
+   
 </ul>
+<details>
