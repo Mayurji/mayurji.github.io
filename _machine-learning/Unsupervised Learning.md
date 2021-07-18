@@ -7,9 +7,11 @@ date:   2021-04-05 17:43:52 +0530
 {% include mathjax.html %}
 
 <center>
-<img src="{{site.url}}/assets/images/ml/omar-flores-lQT_bOWtysE-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
-<p>Photo by <a href="https://unsplash.com/@omarg247?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Omar Flores</a> on <a href="https://unsplash.com/s/photos/pattern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+<img src="{{site.url}}/assets/images/ml/guillermo-ferla-7D9QH-rUnq0-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
+<p>Photo by <a href="https://unsplash.com/@gferla?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Guillermo Ferla</a> on <a href="https://unsplash.com/s/photos/cluster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
 </center>
+
+  
 
 In previous blog post on [supervised learning](https://mayurji.github.io/machine-learning/Supervised%20Learning), we have seen that each observed data has a label attached to it, making it easy to train a model. However, in unsupervised learning, **the algorithm finds the hidden patterns in unlabeled data.** A popular technique in unsupervised learning is **Clustering Algorithms**.
 <p>
