@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  Lists and Tuples in Python
-description: Finding the right data structure is an art!
+description: Mutable vs Immutable
 category: Blog
-image_url: "/assets/images/lists_tuples/lists_tuples.png"
 date:   2020-10-02 13:43:52 +0530
 ---
 Writing efficient programs involves understanding a couple of things, first, what is the input to the program and second is selecting the best data structure to process that input.
