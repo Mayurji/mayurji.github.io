@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Iterators and Generators in Python
-description: Saving memory is an essential aspect of performant programming!
+description: Save memory
 category: Blog
 date:   2020-12-05 13:43:52 +0530
 ---
