@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  Curse of High Dimensionality
-description: Why high dimensional data is difficult to model on and why its important to reduce the dimension.
+title:  Dimension Reduction
+description: Projecting High Dim To Low Dim
 category: Blog
-image_url: "/assets/images/highdimension/highdimension.jpeg"
 date:   2020-07-06 13:43:52 +0530
 ---
 
