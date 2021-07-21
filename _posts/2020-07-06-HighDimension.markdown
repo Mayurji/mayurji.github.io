@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dimension Reduction
-description: Projecting High Dim To Low Dim
+description: Projecting High Dim. To Low Dim.
 category: Blog
 date:   2020-07-06 13:43:52 +0530
 ---
