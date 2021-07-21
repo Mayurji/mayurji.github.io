@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Lists and Tuples in Python
+title:  Lists and Tuples
 description: Mutable vs Immutable
 category: Blog
 date:   2020-10-02 13:43:52 +0530
