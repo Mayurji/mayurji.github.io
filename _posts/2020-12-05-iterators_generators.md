@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Iterators and Generators in Python
-description: Save memory
+title:  Iterators and Generators
+description: Which one saves memory?
 category: Blog
 date:   2020-12-05 13:43:52 +0530
 ---
