@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dictionary and Sets in Python
-description: Understanding data structure helps in performant programming!
+description: Constant time lookup
 category: Blog
 date:   2020-11-06 13:43:52 +0530
 ---
