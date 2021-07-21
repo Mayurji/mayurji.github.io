@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vector Computation in Python
+title: Vector Computation
 description: Do it Parallelly!
 category: Blog
 date:   2021-01-07 13:43:52 +0530
