@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Dictionary and Sets in Python
+title:  Dictionary and Sets
 description: Constant time lookup
 category: Blog
 date:   2020-11-06 13:43:52 +0530
