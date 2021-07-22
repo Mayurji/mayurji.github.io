@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making Python Faster - Part II
+title: Vector Computations
 description: Get the tools working!
 category: Blog
 date:   2021-01-14 13:43:52 +0530
