@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making Python Faster - Part I
+title: Cython, Numba and Others
 description: Compile it down!
 category: Blog
 date:   2021-01-09 13:43:52 +0530
