@@ -5,11 +5,11 @@ description: PyTorch Pointers
 date:   2021-05-07 16:43:52 +0530
 ---
 
-### After 30DaysOfML with Pytorch
+### After 30 Days Of ML With Pytorch
 
 Recently, I've completed 30 Days of ML with Pytorch, where I explored all the major machine learning algorithms and basics of deep learning with concepts like activations, optimizers, loss functions etc.
 
-However, the idea behind starting 30 Days of ML with Pytorch is to learn the implementation of machine learning algorithm along with strengthening my grasp on PyTorch Library. So moving forward with this blog, I will share few important functions in pytorch which remains part of every ML and DL algorithms.
+However, the idea behind starting with 30 Days of ML with Pytorch was to learn the implementation of machine learning algorithm, and also strengthening the grasp on PyTorch Library. So moving forward with this blog, I will share the few important functions in pytorch which is widely used in every ML and DL algorithms.
 
 * **Initializing Weights**
 
@@ -140,4 +140,4 @@ However, the idea behind starting 30 Days of ML with Pytorch is to learn the imp
   """
   ```
 
-Try out machine learning algorithm using PyTorch by following this **[github repository.](https://github.com/Mayurji/MLWithPytorch)**
+Try out machine learning algorithm using PyTorch by following this ***[github repository.](https://github.com/Mayurji/MLWithPytorch)***
