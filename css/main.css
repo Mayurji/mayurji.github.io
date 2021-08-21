@@ -1,6 +1,20 @@
-body {
+/*body {
     margin: 60px auto;
     width: 90%;
+}*/
+
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 nav {
