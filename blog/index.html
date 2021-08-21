@@ -9,12 +9,15 @@ title: Blogs
 </head>
 <ul class="posts">
 
-  {% for post in site.posts %}
+{% for post in site.posts %}
+ <h2>
     <li>
-      <span>{{ post.date | date_to_string }}</span> » <h2><a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}
-      {{ post.description }}</a></h2>
+      <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }}
+      {{ post.description }}</a>
   </li>
+</h2>
   {% endfor %}
+
 <!--<p>
 <img src= "{{post.image_url}}" style="zoom: 5%; background-color:#DCDCDC;" width="800" height="400" />
 </p>-->
