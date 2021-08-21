@@ -1,7 +1,7 @@
 /*body {
     margin: 60px auto;
     width: 90%;
-}*/
+}
 
 html, body {
   height: 100%;
@@ -10,7 +10,7 @@ html, body {
 html {
   display: table;
   margin: auto;
-}
+}*/
 
 body {
   display: table-cell;
