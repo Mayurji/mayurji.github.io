@@ -140,9 +140,4 @@ However, the idea behind starting 30 Days of ML with Pytorch is to learn the imp
   """
   ```
 
-  
-
-​		  If anyone is interested in checking out the machine learning algorithm using PyTorch and try out how all the functions play     
-
-​		  out in ML, then  check out of [github repository](https://github.com/Mayurji/MLWithPytorch) for 30 Days of ML with PyTorch.
-
+Try out machine learning algorithm using PyTorch by following this **[github repository.](https://github.com/Mayurji/MLWithPytorch)**
