@@ -11,7 +11,7 @@ title: Blogs
 
   {% for post in site.posts %}
     <li>
-      <h1><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</h1>
+      <span>{{ post.date | date_to_string }}</span> » <h1></h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</h1>
       <h2>{{ post.description }}</h2></a>
   </li>
   {% endfor %}
