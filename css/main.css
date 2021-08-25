@@ -107,27 +107,27 @@ ul {
 }
 
 ol li {
-  color: white;
+  color: black;
   padding: 0px;
   margin-left: 35px;
   /*font-size: 1.1vw;*/
 }
 
 ul li {
-  color: white;
+  color: black;
   margin: 5px;
   /*font-size: 1.1vw;	*/
 }
 
 ul li::before {
-  color: white;
+  color: black;
   list-style: disc;
   /*font-size: 1.1vw;*/
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 a:hover {
     text-decoration: underline;
@@ -135,38 +135,38 @@ a:hover {
 h1 {
     /*font-size: 3vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: white;
+    color: black;
 }
 
 h2 {
     /*font-size: 2vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: white;
+    color: black;
 }
 
 h3 {
     /*font-size: 1.5vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: white;
+    color: black;
 }
 
 p {
     /*font-size: 1.3em;*/
     /*font-size: 1vw;*/
     line-height: 1.4em;
-    color: white;
+    color: black;
 }
 
 h4 {
     /*font-size: 1.3vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: white;
+    color: black;
 }
 
 h5 {
     /*font-size: 1.0vw;*/
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: white;
+    color: black;
     height: 0px;
 }
 
@@ -179,12 +179,12 @@ footer {
 ul.posts { 
     margin: 20px auto 40px; 
     /*font-size: 1vw;*/
-    color: white;
+    color: black;
 }
 
 ul.posts li {
     list-style: disc;
-    color: white;
+    color: black;
     /*font-size: 1vw;*/
 }
 
