@@ -28,7 +28,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(240, 235, 235, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #1111;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
