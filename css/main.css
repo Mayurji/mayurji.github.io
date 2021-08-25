@@ -33,7 +33,7 @@ nav .mainMenu li a {
     display: inline-block;
     padding: 5px;
     text-decoration: none;
-    color: #fff;
+    color: rgb(10, 10, 10);
     
 }
 /*nav .mainMenu li a:hover {
