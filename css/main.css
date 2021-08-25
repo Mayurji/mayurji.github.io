@@ -19,8 +19,8 @@ body {
 */
 
 nav {
-    background: #17202a;
-    color: #fff;
+    background: #d2e3f7;
+    color: rgb(17, 17, 17);
     display: flex;
     /*justify-content: space-between;*/
     justify-content: center;
