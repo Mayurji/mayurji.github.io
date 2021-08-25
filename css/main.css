@@ -69,7 +69,7 @@ nav .mainMenu .closeMenu , .icons i {
         flex-direction: column;
         justify-content: safe;
         align-items: safe;
-        background: #17202a;
+        background: #d2e3f7;
         /*transition: top 1s ease;*/
 	transition: top 1s linear;
         display: none;
