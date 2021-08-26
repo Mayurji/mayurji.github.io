@@ -91,7 +91,7 @@ code {
     }
     nav .mainMenu li a:hover {
         background: none;
-        color: rgb(255, 249, 249);
+        color: rgb(0, 0, 0);
         
     }
     .icons i {
