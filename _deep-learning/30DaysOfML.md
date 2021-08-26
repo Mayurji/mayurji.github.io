@@ -16,7 +16,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   How we initialize weights plays a great role in convergence of the model and a common but inefficient way to initialize weight is to declare weights as zeros, but other efficient way includes using **uniform** or **normal** or **xaviers** technique to initialize weights.
 
   ```python
-  
+
       import torch
       from torch import nn
       
@@ -49,6 +49,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
       tensor([[ 0.2606, -0.3418, -0.1334,  0.6496, -0.4526, -0.5594, -0.1503, -0.4093,
                 0.4468,  0.4897, -0.2890,  0.0265, -0.6017]])
       """
+
   ```
 
 * **Creating Mask And Removing based on threshold**
@@ -72,6 +73,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
       tensor([[ 0.3296,  0.0000, -0.7962, -0.8314,  0.0000, -0.5515,  0.0733, -0.6384,
                 0.3541,  0.3678,  0.0000, -0.5216, -0.1539]])
       """
+
   ```
 
 * **Filling Values Matrix**
@@ -88,6 +90,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
       tensor([[0.0100, 0.0100, 0.0100, 0.0100, 0.0100, 0.0100, 0.0100, 0.0100, 0.0100,
               0.0100]])
       """
+
   ```
 
 * **Calculating Distance**
@@ -110,6 +113,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
       """
       tensor([[10.]])
       """
+
   ```
 
 * **Replacing Diagonal with Vector**
@@ -142,6 +146,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
               [0.8008, 0.5944, 0.4959],
               [0.7629, 0.2106, 0.5522]])
       """
+      
   ```
 
 Try out machine learning algorithm using PyTorch by following this ***[github repository.](https://github.com/Mayurji/MLWithPytorch)***

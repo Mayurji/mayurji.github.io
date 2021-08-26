@@ -19,6 +19,7 @@ Pytorch provides three sets of libraries i.e. torchvision, torchaudio, torchtext
 Text tasks respectively.
 
 **Importing Libraries**
+
 ```python
 
 import torch
@@ -31,6 +32,7 @@ from PIL import Image
 import torch.optim as optim
 import torch.nn as nn
 import matplotlib.pyplot as plt
+
 ```
 **Loading Pretrained Model**
 
@@ -41,7 +43,8 @@ Pytorch if it doesn't exists in your system.
 
 ```python
 
-resnet = models.resnet34(pretrained=True)
+        resnet = models.resnet34(pretrained=True)
+
 ```
 pretrained=True returns a pre-trained model.
 
@@ -53,14 +56,15 @@ torchvision.transforms.
 
 ```python
 
-preprocess= transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
-    transforms.ToTensor(),
-    transforms.Normalize(
-        mean = [0.5, 0.5, 0.5],
-        std = [0.2, 0.2, 0.2])
-    ])
+        preprocess= transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(
+                mean = [0.5, 0.5, 0.5],
+                std = [0.2, 0.2, 0.2])
+            ])
+
 ```
 
 **Loading your Single Image**
@@ -72,10 +76,11 @@ preprocess= transforms.Compose([
 
 ```python
 
-img = Image.open('../Images/traffic.jpeg')
-img_p = preprocess(img)
-print(img_p.shape)
-#torch.Size([3, 224, 224])
+        img = Image.open('../Images/traffic.jpeg')
+        img_p = preprocess(img)
+        print(img_p.shape)
+        #torch.Size([3, 224, 224])
+
 ```
 
 Pytorch uses first dimension of matrix to represent the batch size. So the pretrained model requires batch size as first dimension, 
@@ -83,9 +88,10 @@ so we reshape the image dimension. In pytorch, we use unsqueeze to add an dimens
 
 ```python
 
-batch_t = torch.unsqueeze(img_p, 0)
-batch_t.shape
-#torch.Size([1, 3, 224, 224])
+        batch_t = torch.unsqueeze(img_p, 0)
+        batch_t.shape
+        #torch.Size([1, 3, 224, 224])
+
 ```
 Pytorch, we can use a model in two modes, train mode and an eval mode. In train mode, the model learns model parameters
 and we perform batch normalization and dropout layers to avoid overfitting. In eval mode, pytorch automatically disables the
@@ -97,10 +103,11 @@ Imagenet, which has 1000 classes.
 
 ```python
 
-resnet.eval()
-out = resnet(batch_t)
-print(out.shape)
-#torch.Size([1, 1000])
+        resnet.eval()
+        out = resnet(batch_t)
+        print(out.shape)
+        #torch.Size([1, 1000])
+
 ```
 **Loading Images Classes from txt file**
 
@@ -108,8 +115,9 @@ Below, we are loading the class names of the classes in Imagenet. We can downloa
 
 ```python
 
-with open('imagenet_class.txt') as f:
-    classes = [line.strip().split(",")[1].strip() for line in f.readlines()]
+        with open('imagenet_class.txt') as f:
+            classes = [line.strip().split(",")[1].strip() for line in f.readlines()]
+
 ```
 **Finding Index of the max probability class**
 
@@ -119,9 +127,10 @@ maximum among 1000 classes.
 
 ```python
 
-_, index = torch.max(out, 1)
-index
-#tensor([920])
+        _, index = torch.max(out, 1)
+        index
+        #tensor([920])
+
 ```
 **Prediction Confidence**
 
@@ -130,9 +139,11 @@ So the all 1000 weights are squeezed between 0 to 1 and all summing up to 1. We 
 label of the class and present it as confidence percentage.
 
 ```python
-percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
-classes[index[0]], percentage[index[0]].item()
-#('traffic_light', 99.99995422363281)
+
+        percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
+        classes[index[0]], percentage[index[0]].item()
+        #('traffic_light', 99.99995422363281)
+
 ```
 
 **Top 5 predictions**
@@ -140,14 +151,15 @@ classes[index[0]], percentage[index[0]].item()
 Similar to above code, only showing top five predictions of an image.
 ```python
 
-_, indices = torch.sort(out, descending=True)
-[(classes[idx], percentage[idx].item()) for idx in indices[0][:5]]
+        _, indices = torch.sort(out, descending=True)
+        [(classes[idx], percentage[idx].item()) for idx in indices[0][:5]]
 
-[('traffic_light', 99.99995422363281),
- ('street_sign', 2.8018390366923995e-05),
- ('pole', 9.717282409837935e-06),
- ('loudspeaker', 2.9554805678344565e-06),
- ('binoculars', 1.4750306718269712e-06)]
+        [('traffic_light', 99.99995422363281),
+        ('street_sign', 2.8018390366923995e-05),
+        ('pole', 9.717282409837935e-06),
+        ('loudspeaker', 2.9554805678344565e-06),
+        ('binoculars', 1.4750306718269712e-06)]
+
 ```
 **Reference** 
 

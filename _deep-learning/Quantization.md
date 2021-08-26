@@ -60,74 +60,82 @@ Dequantization is reverse of quantization, multiply with scale and minus the off
 ### Quantization - Pytorch Sample 
 
 ```python
-# Static Quantization also known as post training quantization
 
-import torch
+        # Static Quantization also known as post training quantization
 
-# define a floating point model where some layers could be statically quantized
-class M(torch.nn.Module):
-    def __init__(self):
-        super(M, self).__init__()
-        # QuantStub converts tensors from floating point to quantized
-        self.quant = torch.quantization.QuantStub()
-        self.conv = torch.nn.Conv2d(1, 1, 1)
-        self.relu = torch.nn.ReLU()
-        # DeQuantStub converts tensors from quantized to floating point
-        self.dequant = torch.quantization.DeQuantStub()
+        import torch
 
-    def forward(self, x):
-        # manually specify where tensors will be converted from floating
-        # point to quantized in the quantized model
-        x = self.quant(x)
-        x = self.conv(x)
-        x = self.relu(x)
-        # manually specify where tensors will be converted from quantized
-        # to floating point in the quantized model
-        x = self.dequant(x)
-        return x
+        # define a floating point model where some layers could be statically quantized
+        class M(torch.nn.Module):
+            def __init__(self):
+                super(M, self).__init__()
+                # QuantStub converts tensors from floating point to quantized
+                self.quant = torch.quantization.QuantStub()
+                self.conv = torch.nn.Conv2d(1, 1, 1)
+                self.relu = torch.nn.ReLU()
+                # DeQuantStub converts tensors from quantized to floating point
+                self.dequant = torch.quantization.DeQuantStub()
 
-# create a model instance
-model_fp32 = M()
+            def forward(self, x):
+                # manually specify where tensors will be converted from floating
+                # point to quantized in the quantized model
+                x = self.quant(x)
+                x = self.conv(x)
+                x = self.relu(x)
+                # manually specify where tensors will be converted from quantized
+                # to floating point in the quantized model
+                x = self.dequant(x)
+                return x
 
-# model must be set to eval mode for static quantization logic to work
-model_fp32.eval()
+        # create a model instance
+        model_fp32 = M()
 
-# attach a global qconfig, which contains information about what kind
-# of observers to attach. Use 'fbgemm' for server inference and
-# 'qnnpack' for mobile inference. Other quantization configurations such
-# as selecting symmetric or assymetric quantization and MinMax or L2Norm
-# calibration techniques can be specified here.
-model_fp32.qconfig = torch.quantization.get_default_qconfig('fbgemm')
+        # model must be set to eval mode for static quantization logic to work
+        model_fp32.eval()
 
-# Fuse the activations to preceding layers, where applicable.
-# This needs to be done manually depending on the model architecture.
-# Common fusions include `conv + relu` and `conv + batchnorm + relu`
-model_fp32_fused = torch.quantization.fuse_modules(model_fp32, [['conv', 'relu']])
+        # attach a global qconfig, which contains information about what kind
+        # of observers to attach. Use 'fbgemm' for server inference and
+        # 'qnnpack' for mobile inference. Other quantization configurations such
+        # as selecting symmetric or assymetric quantization and MinMax or L2Norm
+        # calibration techniques can be specified here.
+        model_fp32.qconfig = torch.quantization.get_default_qconfig('fbgemm')
 
-# Prepare the model for static quantization. This inserts observers in
-# the model that will observe activation tensors during calibration.
-model_fp32_prepared = torch.quantization.prepare(model_fp32_fused)
+        # Fuse the activations to preceding layers, where applicable.
+        # This needs to be done manually depending on the model architecture.
+        # Common fusions include `conv + relu` and `conv + batchnorm + relu`
+        model_fp32_fused = torch.quantization.fuse_modules(model_fp32, [['conv', 'relu']])
 
-# calibrate the prepared model to determine quantization parameters for activations
-# in a real world setting, the calibration would be done with a representative dataset
-input_fp32 = torch.randn(4, 1, 4, 4)
-model_fp32_prepared(input_fp32)
+        # Prepare the model for static quantization. This inserts observers in
+        # the model that will observe activation tensors during calibration.
+        model_fp32_prepared = torch.quantization.prepare(model_fp32_fused)
 
-# Convert the observed model to a quantized model. This does several things:
-# quantizes the weights, computes and stores the scale and bias value to be
-# used with each activation tensor, and replaces key operators with quantized
-# implementations.
-model_int8 = torch.quantization.convert(model_fp32_prepared)
+        # calibrate the prepared model to determine quantization parameters for activations
+        # in a real world setting, the calibration would be done with a representative dataset
+        input_fp32 = torch.randn(4, 1, 4, 4)
+        model_fp32_prepared(input_fp32)
 
-# run the model, relevant calculations will happen in int8
-res = model_int8(input_fp32)
+        # Convert the observed model to a quantized model. This does several things:
+        # quantizes the weights, computes and stores the scale and bias value to be
+        # used with each activation tensor, and replaces key operators with quantized
+        # implementations.
+        model_int8 = torch.quantization.convert(model_fp32_prepared)
+
+        # run the model, relevant calculations will happen in int8
+        res = model_int8(input_fp32)
+
 ```
 
 ### Different Modes of Quantization
 
-* **Dynamic Quantization** - Converting the weights to int8 - as happens in all quantization variants - but also converting the activations to int8 on the fly, just before  doing the computation (hence “dynamic”). The computations will thus be performed using efficient int8 matrix multiplication and convolution implementations, resulting in faster  compute. 
-* **Post-Training Static Quantization** quantizes the weights and activations of the model. It fuses activations into preceding layers where possible.  It requires calibration with a representative dataset to determine optimal quantization parameters for activations. Post Training Quantization is typically used when both memory bandwidth and compute savings are important with CNNs being a typical use case.
-* **Quantization-aware training(QAT)** is the third method, and the one that typically results in highest accuracy of these three.  With QAT, all weights and activations are “fake quantized” during both  the forward and backward passes of training: that is, float values are  rounded to mimic int8 values, but all computations are still done with  floating point numbers. Thus, all the weight adjustments during training are made while “aware” of the fact that the model will ultimately be  quantized; after quantizing, therefore, this method usually yields  higher accuracy than the other two methods.
+* **Dynamic Quantization** - Converting the weights to int8 - as happens in all quantization variants - but also converting the activations to int8 on the fly, just before  doing the computation (hence “dynamic”). The computations will thus be performed using efficient int8 matrix multiplication and convolution implementations, resulting in faster  compute.
+
+* **Post-Training Static Quantization** quantizes the weights and activations of the model. It fuses activations into preceding layers where possible.  It requires calibration with a representative dataset to determine optimal quantization parameters for activations. 
+
+Post Training Quantization is typically used when both memory bandwidth and compute savings are important with CNNs being a typical use case.
+
+* **Quantization-aware training(QAT)** is the third method, and the one that typically results in highest accuracy of these three.  With QAT, all weights and activations are “fake quantized” during both  the forward and backward passes of training: that is, float values are  rounded to mimic int8 values, but all computations are still done with  floating point numbers. 
+
+Thus, all the weight adjustments during training are made while “aware” of the fact that the model will ultimately be  quantized; after quantizing, therefore, this method usually yields  higher accuracy than the other two methods.
 
 ### Performance Measure After Quantization
 
@@ -136,7 +144,7 @@ res = model_int8(input_fp32)
 <p>Figure 2: Performance After Quantization</p> 
 </center>
 
-We have just scratched the surface of quantization, it is a wide topic with different variants of quantization. But we can get the idea that we can reduce our model inference time using quantization because of the computation in type INT is faster than floating point.
+We have just scratched the surface of quantization, it is a wide topic with variants of quantization. But we can get the idea that we can reduce our model inference time using quantization because of the computation in type INT is faster than floating point.
 
 **Reference and more reading material**
 
