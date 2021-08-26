@@ -11,11 +11,11 @@ date:   2020-11-06 15:43:52 +0530
 <p><span>Photo by <a href="https://unsplash.com/@yanphotobook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yannis H</a> on <a href="https://unsplash.com/s/photos/teaching?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </center>
 
-In the second part of machine learning series, we will discuss the most common concepts in machine learning. Let's start.
+In the second part of machine learning series, we will discuss the most common concepts in machine learning. 
 
 When designing features or algorithms for learning features, our goal is to separate the **factors of variation** that explain the observed data.
 
-**Features** are the components in our dataset which helps in building ML Algorithm. There are different types features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by algorithm. For instance, we can handle categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
+**Features** are the components in our dataset which helps in building ML Algorithm. There are different types of features like Categorical, Numerical, Ordinal etc. So before applying algorithm on a dataset, we need to convert the dataset into a format, which is consumable by an algorithm. For instance, we can handle categorical value, by converting it into an one-hot encoding, similar to mapping category to numeric value.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_things.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="80%" height=auto/><br>

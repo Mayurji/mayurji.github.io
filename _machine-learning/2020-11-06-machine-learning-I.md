@@ -11,7 +11,7 @@ date:   2020-11-06 13:43:52 +0530
 <p><span>Photo by <a href="https://unsplash.com/@yanphotobook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yannis H</a> on <a href="https://unsplash.com/s/photos/teaching?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
 </center>
 
-Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
+Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can use data to learn from it.
 
 **Other definitions**
 
