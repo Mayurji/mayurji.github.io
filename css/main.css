@@ -70,7 +70,7 @@ nav .mainMenu .closeMenu , .icons i {
         flex-direction: column;
         justify-content: safe;
         align-items: safe;
-        background: #d2e3f7;
+        background: #f7f7f7;
         /*transition: top 1s ease;*/
 	transition: top 1s linear;
         display: none;
@@ -87,7 +87,7 @@ nav .mainMenu .closeMenu , .icons i {
     }
     nav .mainMenu li a:hover {
         background: none;
-        color: rgb(255, 123, 0);
+        color: rgb(255, 249, 249);
         
     }
     .icons i {
