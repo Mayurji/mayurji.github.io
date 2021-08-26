@@ -52,6 +52,10 @@ nav .mainMenu .closeMenu , .icons i {
     cursor: pointer;
 }
 
+code {
+  white-space : pre-wrap !important;
+}
+
 /*nav .logo {
     margin: 6px;
     cursor: pointer;
