@@ -16,6 +16,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   How we initialize weights plays a great role in convergence of the model and a common but inefficient way to initialize weight is to declare weights as zeros, but other efficient way includes using **uniform** or **normal** or **xaviers** technique to initialize weights.
 
   ```python
+  
       import torch
       from torch import nn
       
@@ -55,6 +56,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   It is applied for creating **dropout** functionality in neural network for regularization.
 
   ```python
+
       y_ = torch.FloatTensor(1, 13).uniform_(-1,1)
       """
       tensor([[ 0.3296,  0.9327, -0.7962, -0.8314,  0.9889, -0.5515,  0.0733, -0.6384,
@@ -77,6 +79,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   When specific set of value needs to be assigned as weight with equal weight to each feature based on sample size. Used in Boosting algorithm like **Adaboost**.
 
   ```python
+
       n_samples = 100
       n_features = 13
       weight = torch.zeros(1,n_features).fill_(1/n_samples)
@@ -92,6 +95,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   While performing **clustering, dimensionality** **reduction** and many other ml algorithms, we use various distance metrics to find  distance between vectors and matrices. In PyTorch, we can perform these  operations using **cdist**.
 
   ```python
+
       w1 = torch.FloatTensor(1, 10).uniform_(0, 1)
       w2 = torch.FloatTensor(1, 10).uniform_(0, 1)
       torch.cdist(w1, w2) # default p=2, L2 Norm or Euclidean Distance
@@ -113,6 +117,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   Not sure, how often this is used in building ML algorithms, but this is  quite tedious because, to set diagonal elements with one specific values is simple but it becomes difficult when we need to replace the diagonal elements of a matrix with a vector.
 
   ```python
+
       w = torch.FloatTensor(3,3).uniform_(0, 1)
       w
       """
