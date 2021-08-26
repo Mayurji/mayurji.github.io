@@ -16,21 +16,21 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   How we initialize weights plays a great role in convergence of the model and a common but inefficient way to initialize weight is to declare weights as zeros, but other efficient way includes using **uniform** or **normal** or **xaviers** technique to initialize weights.
 
   ```python
-  import torch
-  from torch import nn
-  
-  #1. Simple and Inefficient
-  weight_vector = torch.zeros(1, n_features)
-  """
-  tensor([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])
-  """
-  
-  #2. Better than zero initialization
-  weight_vector = torch.FloatTensor(1, n_features).uniform_(-1,1) #normal
-  """
-  tensor([[ 0.8193, -0.7194,  0.5021, -0.0658, -0.6250,  0.5181, -0.0742,  0.4049,
-            0.9357, -0.8531,  0.4650,  0.8140, -0.2959]])
-  
+      import torch
+      from torch import nn
+      
+      #1. Simple and Inefficient
+      weight_vector = torch.zeros(1, n_features)
+      """
+      tensor([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])
+      """
+      
+      #2. Better than zero initialization
+      weight_vector = torch.FloatTensor(1, n_features).uniform_(-1,1) #normal
+      """
+      tensor([[ 0.8193, -0.7194,  0.5021, -0.0658, -0.6250,  0.5181, -0.0742,  0.4049,
+                0.9357, -0.8531,  0.4650,  0.8140, -0.2959]])
+            
   """
   
   #3 Using nn Module
