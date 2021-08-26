@@ -153,6 +153,7 @@ h3 {
 p {
     /*font-size: 1.3em;*/
     /*font-size: 1vw;*/
+    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
     line-height: 1.4em;
     color: black;
 }
