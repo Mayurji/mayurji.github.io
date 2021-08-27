@@ -1,6 +1,6 @@
 ---
 layout: machine-learning
-title: Machine Learning - II
+title: Machine Learning Series - Part II
 description: "Concepts In Machine Learning"
 date:   2020-11-06 15:43:52 +0530
 ---

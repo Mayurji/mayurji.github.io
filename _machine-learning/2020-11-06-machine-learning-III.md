@@ -1,6 +1,6 @@
 ---
 layout: machine-learning
-title: Machine Learning - III
+title: Machine Learning Series - Part III
 description: "Data preparation and evaluation of machine learning models"
 date:   2020-11-06 17:43:52 +0530
 ---
