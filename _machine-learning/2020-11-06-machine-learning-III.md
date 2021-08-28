@@ -6,11 +6,6 @@ date:   2020-11-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center>
-<img src="{{site.url}}/assets/images/ml/arseny-togulev-MECKPoKJYjM-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;"  width="75%" height=auto/><br>    
-<p><span>Photo by <a href="https://unsplash.com/@tetrakiss?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Arseny Togulev</a> on <a href="https://unsplash.com/s/photos/machine-learning?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-</center>
-
 ### Creating Datasets and Evaluation Metrics
 
 Before applying ML Algorithm, we should check the dataset and split it for modeling for ML. We should split our dataset into training, testing, and validation set. It helps in understanding certain factors of the ML model like bias and variance i.e. also termed as Underfitting and Overfitting.

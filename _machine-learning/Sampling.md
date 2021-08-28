@@ -6,11 +6,6 @@ date:   2021-03-04 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center>
-<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
-<p><span>Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/books?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-</center>
-
 In this blog post, we'll discuss sampling and its related components. This topic is usually not given much importance compared to other fancy statistics terms such as Bayes, frequency, distribution, etc. In machine learning, sampling refers to the subset of the data from the population, where the population means every possible data available for the task, which is infinite because, in the real-world task, we are continuously collecting data for the model to train and validate on.
 
 The topic of sampling is quite dry and requires special effort from the user reading it. My objective from this blog is to share the sampling topic in a more visual form.

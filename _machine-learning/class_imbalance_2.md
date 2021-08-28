@@ -6,11 +6,6 @@ date:   2021-03-06 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center>
-<img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
-<p>Photo by Chris Liverani on Unsplash</p>
-</center>
-
 In the previous blog post, I've discussed [what and why of class imbalance](mayurji.github.io/machine-learning/class_imbalance), and I have briefly touched upon the solutions for class imbalance. Now, we'll deep dive into solving the class imbalance problem with the proposed solution from the previous blog post.
 
 * **Resampling**

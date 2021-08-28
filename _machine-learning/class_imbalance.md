@@ -5,10 +5,6 @@ description: To avoid chaos things must be balanced.
 date:   2021-03-05 17:43:52 +0530
 ---
 {% include mathjax.html %}
-<center>
-<img src="{{site.url}}/assets/images/ml/chris-liverani-dBI_My696Rk-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
-<p>Photo by Chris Liverani on Unsplash</p>
-</center>
 
 In this blog post, we'll discuss class imbalance problem, what causes it, and how to overcome it. From my experience of attending interviews, interviewers ask at least one scenario-based question on **Class Imbalance** and widely being *how to handle class imbalance?*
 

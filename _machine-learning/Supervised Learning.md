@@ -6,11 +6,6 @@ date:   2021-02-14 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center>
-<img src="{{site.url}}/assets/images/ml/yannis-h-uaPaEM7MiQQ-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
-<p><span>Photo by <a href="https://unsplash.com/@yanphotobook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Yannis H</a> on <a href="https://unsplash.com/s/photos/teaching?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-</center>
-
 In this blog post, we'll discuss supervised learning and the class of problems that comes under its umbrella. Before getting into supervised learning, I would highly recommend going through machine learning jargon like what is a dataset, target, predictor, model, etc. from the [previous blog posts](https://mayurji.github.io/machine-learning/).
 
 

@@ -6,12 +6,7 @@ date:   2021-02-20 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center>
-<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"  style="zoom: 5%  background-color:#DCDCDC;" width="75%" height=auto/><br>
-<p><span>Photo by <a href="https://unsplash.com/@impatrickt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Patrick Tomasso</a> on <a href="https://unsplash.com/s/photos/books?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></p>
-</center>
-
-In this blog post, we'll discuss the Loss function, parameter θ, and different types of the loss function. I've learned a lot while researching this topic and hope you'll feel the same. Without further a due, let's starts off with loss function. 
+In this blog post, we'll discuss the Loss function, parameter θ, and different types of loss functions. I've learned a lot while researching this topic and hope you'll feel the same. Without further a due, let's starts off with loss function. 
 
 In simple terms, the objective of the loss function is to find the difference between or deviation between the actual ground truth of a value and an estimated approximation of the same value.
 
@@ -52,60 +47,68 @@ Consider the iris data with features as sepal width, sepal length, petal width, 
 We'll experiment with a simple Logistic Regression fit on iris data with a different number of iteration to converge the estimate with actual.
 
 ```python
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
-import numpy as np
 
-iris = load_iris #Load Dataset
-x_train, x_test, y_train, y_test = train_test_split(iris()['data'], iris()['target'], test_size=0.2) #train and test split
-LR = LogisticRegression(max_iter=1) # Change max_iter from 1 to 100, to see the effects on learning coefficient θ.
-LR.fit(x_train, y_train)
+        from sklearn.linear_model import LogisticRegression
+        from sklearn.datasets import load_iris
+        from sklearn.model_selection import train_test_split
+        from sklearn.metrics import confusion_matrix
+        import numpy as np
+
+        iris = load_iris #Load Dataset
+        x_train, x_test, y_train, y_test = train_test_split(iris()['data'], iris()['target'], test_size=0.2) #train and test split
+        LR = LogisticRegression(max_iter=1) # Change max_iter from 1 to 100, to see the effects on learning coefficient θ.
+        LR.fit(x_train, y_train)
+
 ```
 
 Check out the coefficient of Logistic Regression at max_iter=1, the **LR.coef_** represents three rows, each row represents one class with its feature's **coefficient value θ**, and **intercept_** refers to the bias of the Logistic regression for each class. With the help of θ and intercept, the model creates its decision function.
 
 ```python
-"""
-LR.coef_
-array([[-0.06626003,  0.00156274, -0.11994002, -0.04727278],
-       [ 0.03090311,  0.00097671,  0.03840425,  0.0103922 ],
-       [ 0.03535691, -0.00253945,  0.08153577,  0.03688058]])
 
-LR.intercept_
-array([ 4.83768518e-18, -1.00170102e-03,  1.00170102e-03])
+        """
+        LR.coef_
+        array([[-0.06626003,  0.00156274, -0.11994002, -0.04727278],
+            [ 0.03090311,  0.00097671,  0.03840425,  0.0103922 ],
+            [ 0.03535691, -0.00253945,  0.08153577,  0.03688058]])
 
-LR.decision_function(np.array([x_train[3]]))
-array([[-3.49185211,  1.63301032,  1.85884179]])
-"""
+        LR.intercept_
+        array([ 4.83768518e-18, -1.00170102e-03,  1.00170102e-03])
+
+        LR.decision_function(np.array([x_train[3]]))
+        array([[-3.49185211,  1.63301032,  1.85884179]])
+        """
+
 ```
 
 To arrive at a decision function for sample no. 3 i.e. x_train[3], do the following calculation with coefficient and intercept.
 
 ```python
-y_estimate = np.sum(np.multiply(LR.coef_, np.array([x_train[3]])), axis=1) + LR.intercept_
-"""
-y_estimate
-array([-3.49185211,  1.63301032,  1.85884179])
-"""
+
+        y_estimate = np.sum(np.multiply(LR.coef_, np.array([x_train[3]])), axis=1) + LR.intercept_
+        """
+        y_estimate
+        array([-3.49185211,  1.63301032,  1.85884179])
+        """
+
 ```
 
 Each value in y_estimate is the confidence score of the sample for each class. When we iterate the Logistic Regression for max_iter=100, the y_estimate values start to converge and the parameter values are updated as follows
 
 ```python
-"""
-LR.coef_
-array([[-0.45753939,  0.80624315, -2.38307659, -0.9789476 ],
-       [ 0.32666965, -0.29473046, -0.16163767, -0.73956488],
-       [ 0.13086974, -0.5115127 ,  2.54471426,  1.71851248]])
 
-LR.intercept_
-array([ 10.00706074,   2.72893805, -12.73599879])
+        """
+        LR.coef_
+        array([[-0.45753939,  0.80624315, -2.38307659, -0.9789476 ],
+            [ 0.32666965, -0.29473046, -0.16163767, -0.73956488],
+            [ 0.13086974, -0.5115127 ,  2.54471426,  1.71851248]])
 
-y_estimate
-array([  7.64747156,   3.0268779 , -10.67434946])
-"""
+        LR.intercept_
+        array([ 10.00706074,   2.72893805, -12.73599879])
+
+        y_estimate
+        array([  7.64747156,   3.0268779 , -10.67434946])
+        """
+
 ```
 
 For sample x_train[3], the y_train[3] is 0, thus the confidence score of class 0 is increased from **-3.49 to 7.64** when max_iter=100. With each iteration, the loss is reduced with the help of parameters **θ**.
@@ -143,8 +146,10 @@ MSE values are mostly positive and not zero, because of the uncertainty of the e
 #### Mean Squared Error Code 
 
 ```python
-def MSE(yHat, y):
-    return np.sum((yHat - y)**2) / y.size
+
+        def MSE(yHat, y):
+            return np.sum((yHat - y)**2) / y.size
+
 ```
 
 In regression problems, MSE is used to measure the distance between the data point and the predicted regression line. It helps in determine to which extent the model is fit to the data. When the errors are large, it becomes obvious to use MSE. Because the square of a large number means bigger the error distance thus more the penalizing for bigger errors. Thus, making MSE sensitive to outliers.
@@ -173,8 +178,10 @@ $$
 #### Mean Absolute Loss Code
 
 ```python
-def L1(yHat, y):
-    return np.sum(np.absolute(yHat - y)) / y.size
+
+        def L1(yHat, y):
+            return np.sum(np.absolute(yHat - y)) / y.size
+
 ```
 
 MAE is less sensitive to outliers. [To reduce MAE, minimize the median and to reduce MSE, minimize the mean.](https://forecasters.org/wp-content/uploads/gravity_forms/7-621289a708af3e7af65a7cd487aee6eb/2015/07/Kolassa_Stephan_ISF2015.pdf)
@@ -199,8 +206,10 @@ $$
 #### Hinge Loss Code
 
 ```python
-def Hinge(yHat, y):
-    return np.max(0, y - (1-2*y)*yHat)
+
+        def Hinge(yHat, y):
+            return np.max(0, y - (1-2*y)*yHat)
+
 ```
 
 where *y_hat* is the output of the SVM and *y* is the true class (-1 or 1). Note that the loss is nonzero for misclassified points, as well as correctly classified points that fall within the margin. Hinge Loss is a loss function used for classification problems. [Check out this awesome resource on how to minimize hinge loss](https://math.stackexchange.com/questions/782586/how-do-you-minimize-hinge-loss). Hinge Loss has massive documentation because of its so many variants.
@@ -256,12 +265,14 @@ $$
 #### Cross Entropy Loss Code
 
  ```python
-def CrossEntropy(yHat, y):
-    if y == 1:
-      return -log(yHat)
-    else:
-      return -log(1 - yHat)
- ```
+
+        def CrossEntropy(yHat, y):
+            if y == 1:
+            return -log(yHat)
+            else:
+            return -log(1 - yHat)
+
+```
 
 For more information on log loss, [find this amazing blog on Log Loss](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a).
 
