@@ -13,20 +13,20 @@ date:   2020-11-06 17:43:52 +0530
 
 ### Creating Datasets and Evaluation Metrics
 
-Before applying ML Algorithm, we should check the dataset and split it for modeling for ML. We should split our dataset into training, testing and validation set. It helps in understanding certain factors of ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
+Before applying ML Algorithm, we should check the dataset and split it for modeling for ML. We should split our dataset into training, testing, and validation set. It helps in understanding certain factors of the ML model like bias and variance i.e. also termed as Underfitting and Overfitting.
 
 #### Training Set
 
-Training Set: Before Big Data came into the picture of analytics, training data made around 70-75% data of total data. But with millions of records or data, training data occupies 95% of the total data. We model our algorithm on training set.
+Training Set: Before Big Data came into the picture of analytics, training data made around 70-75% data of total data. But with millions of records or data, training data occupies 95% of the total data. We model our algorithm on a training set.
 
 
 #### Validation and Testing Set
 
-Validation Set: A set of examples used to tune the parameters [i.e., architecture, not weights] of a classifier, for example to choose the number of hidden units in a neural network. Before Big Data era, validation set occupied 15-12.5% data, but in Big Data times, it occupies 2.5%.
+Validation Set: A set of examples used to tune the parameters [i.e., architecture, not weights] of a classifier, for example, to choose the number of hidden units in a neural network. Before the Big Data era, the validation set occupied 15-12.5% of data, but in Big Data times, it occupies 2.5%.
 
-Test Set: A set of examples used only to assess the performance [generalization] of a fully specified classifier. Before Big Data era, validation set occupied 15-12.5% data, but in Big Data times, it occupies 2.5%. 
+Test Set: A set of examples used only to assess the performance [generalization] of a fully specified classifier. Before the Big Data era, the validation set occupied 15-12.5% of data, but in Big Data times, it occupies 2.5%. 
 
-The validation and testing set are also called as hold-out sets.
+The validation and testing sets are also called hold-out sets.
 
 #### Factors for selecting an algorithm
 
@@ -36,7 +36,7 @@ The validation and testing set are also called as hold-out sets.
 * Categorical Vs Numerical Features
 * Nonlinearity of the data
 * Training speed
-* Predicton speed
+* Prediction speed
 
 <center>
 <img src="{{site.url}}/assets/images/ml/ml_map.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -54,7 +54,7 @@ Consider a model trained two classify Cat and Dog images. And after training, we
 <p>Figure 2: Confusion Matrix</p> 
 </center>
 
-From above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called as False Negative and when a Dog is misclassified is called as False Positive. In essence, it consider Positive as Cat and Negative as Dog.
+From the above image, we can see our True Positive is Cat's Image and True Negative is Dog's Image. And a Cat getting misclassified is called a False Negative and when a Dog is misclassified is called a False Positive. In essence, it considers Positive as Cat and Negative as Dog.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/confusion_matrix.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -100,15 +100,15 @@ From above image, we can see our True Positive is Cat's Image and True Negative 
 
 **Drawback of using only Precision and Recall**
 
-Consider having built a model to classify whether a patient suffers from cancer or not from a sample of 1000000 (1 million). We know that 100 in 1 million suffer from cancer. After training, we test the model and it misclassifies the 100 cancer as 90 with no cancer (False Negative) and 10 with (True Positive). It correctly classifies Non-cancer patient as no cancer.
+Consider having built a model to classify whether a patient suffers from cancer or not from a sample of 1000000 (1 million). We know that 100 in 1 million suffer from cancer. After training, we test the model and it misclassifies the 100 cancer as 90 with no cancer (False Negative) and 10 with (True Positive). It correctly classifies Non-cancer patients as having no cancer.
 
-Lets find accuracy of such model, accuracy = (999900+10) / 1000000 = 99.99%. Wow what a great model, wrong such sensitive usecase we cannot relie on accuracy.
+Lets find accuracy of such model, accuracy = (999900+10) / 1000000 = 99.99%. Wow-what a great model, wrong such sensitive use case we cannot rely on accuracy.
 
 Lets calculate Precision, P = 10/(10+0) = 100%.
 
 Lets calculate Recall, R = 10/(10 + 90) = 10%.
 
-Clearly we can see that the model failed to classify the cancer patient, and these metrics gets dominated by class with large numbers which is otherwise referred as **Imbalanced class problem**. Here, the number of non cancer class are 999900 and cancer class are 100. So its vital to check if these metric really telling story we want to hear.
+We can see that the model failed to classify the cancer patient, and these metrics get dominated by class with large numbers which is otherwise referred to as **Imbalanced class problem**. Here, the number of non-cancer class are 999900 and cancer class are 100. So it's vital to check if these metrics telling the story we want to hear.
 
 #### F1-Score & F1-Beta Score
 
@@ -123,9 +123,9 @@ In statistical analysis of binary classification, the F1 score (also F-score or 
 
 **F1 Beta Score**
 
-As we have seen in drawback of using metrics like precision and recall alone would result it false understanding of the model output. Based on usecase, we can give importance to precision and recall with help of **F1 Beta score**.
+As we have seen in the drawback of using metrics like precision and recall alone would result in it false understanding of the model output. Based on the use case, we can give importance to precision and recall with help of the **F1 Beta score**.
 
-Find this below snippet from wikipedia:
+Find this below snippet from Wikipedia:
 
 <center>
 <img src="{{site.url}}/assets/images/ml/f1_beta_score.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -134,21 +134,21 @@ Find this below snippet from wikipedia:
 
 **[ROC Curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)**
 
-ROC- Receiver Operating Characteristics, its a plot between True Positive rate (Sensitivity) vs False Positive Rate (1 - specificity). Its a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
+ROC- Receiver Operating Characteristics, its a plot between True Positive rate (Sensitivity) vs False Positive Rate (1 - specificity). It's a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
 
 <center>
 <img src="{{site.url}}/assets/images/ml/roc.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 9: Area under the ROC curve</p> 
 </center>
 
-ROC curves are frequently used to show in a graphical way the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
+ROC curves are frequently used to show graphically the connection/trade-off between clinical sensitivity and specificity for every possible cut-off for a test or a combination of tests. In addition, the area under the ROC curve gives an idea about the benefit of using the test(s) in question.
 
 <p>$$TPR = {TP \over (TP + FN)}$$</p>
 
 <p>$$FPR = {FP \over (FP + TN)}$$</p>
 
 It’s easy to see that if the threshold is 0, all our predictions will be positive, so both TPR and FPR will be 1 (the upper right corner). On
-the other hand, if the threshold is 1, then no positive prediction will be made, both TPR and FPR will be 0 which corresponds to the lower left corner.
+On the other hand, if the threshold is 1, then no positive prediction will be made, both TPR and FPR will be 0 which corresponds to the lower-left corner.
 
 The higher the area under the ROC curve (AUC), the better the classifier. A classifier with an AUC higher than 0.5 is better than a random classifier. If AUC is lower than 0.5, then something is wrong with your model. A perfect classifier would have an AUC of 1. Usually, if our model behaves well, we obtain a good classifier by selecting the value of the threshold that gives TPR close to 1 while keeping FPR near 0.
 
@@ -160,9 +160,9 @@ The higher the area under the ROC curve (AUC), the better the classifier. A clas
   
 #### Selecting Hyperparameters
 
-While training the model, the model learns parameters W. But there are other set of parameters called Hyperparameter, which are tuned manually by user/ML developer. For instance, there are models such Decision Tree, where we tune the **depth of the tree** or Support Vector Machine where we tune penalty parameter **C** etc.
+While training the model, the model learns parameters W. But there are other sets of parameters called Hyperparameter, which is tuned manually by the user/ML developer. For instance, there are models such as Decision Tree, where we tune the **depth of the tree** or Support Vector Machine where we tune penalty parameter **C**, etc.
 
-To select an optimal hyperparameter, we can use basic technique like **Grid Search**. In Grid search, we assign set of values to hyperparameters and perform modeling on each hyperparameter value, it is expensive if there many hyperparameters to tune. 
+To select an optimal hyperparameter, we can use a basic technique like **Grid Search**. In Grid search, we assign a set of values to hyperparameters and perform modeling on each hyperparameter value, it is expensive if there are many hyperparameters to tune. 
 
 Let’s say you train an SVM and you have two hyperparameters to tune: the penalty parameter C (a positive real number) and the kernel (either “linear” or “rbf”).
 
@@ -174,12 +174,12 @@ You use the training set and train 14 models, one for each combination of hyperp
 Other techniques to find better hyperparameters
 * Random Search
 * Bayesian Hyperparameter
-* Gradient based techniques
+* Gradient-based techniques
 * Evolutionary optimization techniques
 
 #### Cross Validation
 
-If we have less data or poor validation set for evaluating the model, then we can use cross-validation technique to find hyperparameter. Note, validation set is used for tuning model with help of better hyperparameter and reduced validation error.
+If we have less data or poor validation set for evaluating the model, then we can use the cross-validation technique to find hyperparameters. Note, the validation set is used for tuning the model with help of a better hyperparameter and reduced validation error.
 
 To perform cross-validation, Cross-validation works like follows. First, you fix the values of the hyperparameters you want to evaluate. Then you split your training set into several subsets of the same size. Each subset is called a fold. Typically, five-fold cross-validation is used in practice. With five-fold
 cross-validation, you randomly split your training data into five folds: $${F_1 , F_2 , . . . , F_5 }$$. Each $$F_k , k = 1, . . . , 5$$ contains 20% of your training data. Then you train five models as follows.

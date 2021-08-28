@@ -1,7 +1,7 @@
 ---
 layout: machine-learning
 title: Keepsake - A Version Control For Machine Learning
-description:  Machines - Deploy, Track, Repair and Repeat
+description:  Machines - Deploy, Track, Repair, and Repeat
 date:   2021-03-07 13:43:52 +0530
 ---
 {% include mathjax.html %}
@@ -11,15 +11,15 @@ date:   2021-03-07 13:43:52 +0530
 <p>Photo by Dmitry Pavlovsky on Unsplash</p>
 </center>
 
-Hey everyone, I am a Machine Learning Engineer and I've been experimenting with different tools in ML for deployment. When ML was getting started like 4 to 5 years back in all the industry, everyone were talking about how to build great models either by classical machine learning or DNN etc, and today with tools like AutoML and Model Search, building models has taken a little backseat. **Today, a major challenge is not about building a great model but its about keeping track of all the built models.**
+Hey everyone, I am a Machine Learning Engineer and I've been experimenting with different tools in ML for deployment. When ML was getting started like 4 to 5 years back in all the industry, everyone was talking about how to build great models either by classical machine learning or DNN, etc, and today with tools like AutoML and Model Search, building models has taken a little backseat. **Today, a major challenge is not about building a great model but about keeping track of all the built models.**
 
-In this blog post, we'll discuss about **Keepsake**. In simple terms, we can think of keepsake as the **version control** tool for machine learning.
+In this blog post, we'll discuss **Keepsake**. In simple terms, we can think of keepsake as the **version control** tool for machine learning.
 
 **From Keepsake Official Documents**
 
-*Everyone uses version control for their software and it's much less common in Machine Learning. This causes all sorts of problems: people are manually keeping track  of things in spreadsheets, model weights are scattered on S3, and  nothing is reproducible. It's hard enough getting your own model from a  month ago running, let alone somebody else's.*
+*Everyone uses version control for their software and it's much less common in Machine Learning. This causes all sorts of problems: people are manually keeping track of things in spreadsheets, model weights are scattered on S3, and nothing is reproducible. It's hard enough getting your own model from a  month ago running, let alone somebody else's.*
 
-*So why isn’t everyone using Git? **Git doesn’t work well with machine learning.** It can’t handle large files, it can’t handle key/value metadata like  metrics, and it can’t record information automatically from inside a  training script. There are some solutions for these things, but they  feel like band-aids.*
+*So why isn’t everyone using Git? **Git doesn’t work well with machine learning.** It can’t handle large files, it can’t handle key/value metadata like metrics, and it can’t record information automatically from inside a  training script. There are some solutions for these things, but they  feel like band-aids.*
 
 **Installing Keepsake**
 
@@ -118,22 +118,22 @@ if __name__ == "__main__":
     train(args.learning_rate, args.num_epochs)
 ```
 
-* First line, we initialize **keepsake.init()**, which creates an experiment, each experiment is the one run of our training script. It stores hyperparameter and makes the copy of our training code and stores it into the path mentioned in the *init()*.
-* Second line is **experiment.checkpoint()**, It creates an checkpoint for the experiment we are running. It tracks and saves all metrics we want to the path as mentioned in **checkpoint function**.
+* First line, we initialize **keepsake.init()**, which creates an experiment, each experiment is the one run of our training script. It stores hyperparameter and makes a copy of our training code and stores it into the path mentioned in the *init()*.
+* Second line is **experiment.checkpoint()**, It creates a checkpoint for the experiment we are running. It tracks and saves all metrics we want to the path as mentioned in the **checkpoint function**.
 
-**Each experiment contains multiple checkpoints.** You  typically save your model periodically during training, because the best result isn't necessarily the most recent one. A checkpoint is created  just after you save your model, so Keepsake can keep track of versions  of your saved model.
+**Each experiment contains multiple checkpoints.** You typically save your model periodically during training, because the best result isn't necessarily the most recent one. A checkpoint is created just after you save your model, so Keepsake can keep track of versions of your saved model.
 
 ### Storing Experiments
 
-To store the experiments, we need to tell keepsake where to dump for experiment.
+To store the experiments, we need to tell keepsake where to dump for the experiment.
 
-**For Local** : With below, we will create a hidden folder with name **.keepsake** and store the experiments, checkpoints and related metadata inside it. **Store the below line in a .yaml file and in the same path as your training script.**
+**For Local**: With below, we will create a hidden folder with the name **.keepsake** and store the experiments, checkpoints, and related metadata inside it. **Store the below line in a .yaml file and in the same path as your training script.**
 
 ```yaml
 repository: "file://.keepsake"
 ```
 
-**For Cloud** : With below, we will pass all the experiments, checkpoints and related metadata inside a s3 bucket in your AWS setup. Here, **keepsake-trial is the bucket name.**
+**For Cloud**: With below, we will pass all the experiments, checkpoints, and related metadata inside an S3 bucket in your AWS setup. Here, **keepsake-trial is the bucket name.**
 
 ```yaml
 repository: "s3://keepsake-trial"
@@ -161,10 +161,10 @@ repository: "s3://keepsake-trial"
 
 **Setting Up AWS For Keepsake**
 
-* I am expecting people to know how to create a AWS account. Its as simple as creating Facebook account. 
+* I am expecting people to know how to create an AWS account. It's as simple as creating a Facebook account. 
 * Use the Free tier provided by **AWS**.
-* Create bucket in S3, keep the required options default if you don't know what to give while creating S3 bucket.
-* Go to your profile name on the top right corner and go to **My Security Credentials** for access key and secret key, store it in some text file if required.
+* Create a bucket in S3, keep the required options default if you don't know what to give while creating an S3 bucket.
+* Go to your profile name on the top right corner and go to **My Security Credentials** for the access key and secret key, store it in some text file if required.
 
 <div>
 <center>
@@ -173,8 +173,8 @@ repository: "s3://keepsake-trial"
 </center>
 </div>
 
-* Then Install AWS Cli for the system. Installing [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html). 
-* Once the installation is done, Go to terminal and type
+* Then Install AWS CLI for the system. Installing [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html). 
+* Once the installation is done, Go to the terminal and type
   `aws configure`
 * I've done it on Ubuntu, I am not sure if the command changes in other OS. 
 
@@ -186,13 +186,13 @@ repository: "s3://keepsake-trial"
 </div>
 
 * Fill in the details as mentioned in the above image.
-* **JSON is default option for last question, and for region, check out the what is mentioned in S3 bucket.**
+* **JSON is the default option for the last question, and for the region, check out what is mentioned in the S3 bucket.**
 
-Note: While trying to save experiment in S3, keep the yaml with S3 and bucket name as the option.
+Note: While trying to save the experiment in S3, keep the yaml with S3 and bucket name as the option.
 
 ### Cool Results from Keepsake
 
-**Find out all experiment with *ls* command**
+**Find out all experiments with *ls* command**
 
 Each experiment has **experiment id** and **checkpoint id**
 
@@ -219,7 +219,7 @@ Each experiment has **experiment id** and **checkpoint id**
 </center>
 </div>
 
-**Find out difference between multiple experiment or checkpoints with *diff* command**
+**Find out the difference between multiple experiments or checkpoints with *diff* command**
 
 <div>
 <center>

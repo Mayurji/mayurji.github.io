@@ -4,16 +4,15 @@ title: Five Pointer After 30 Days Of ML With PyTorch
 description: PyTorch Pointers
 date:   2021-05-07 16:43:52 +0530
 ---
-
 ### After 30 Days Of ML With Pytorch
 
-Recently, I've completed 30 Days of ML with Pytorch, where I explored all the major machine learning algorithms and basics of deep learning with concepts like activations, optimizers, loss functions etc.
+Recently, I've completed 30 Days of ML with Pytorch, where I explored all the major machine learning algorithms and basics of deep learning with concepts like activations, optimizers, loss functions, etc.
 
-However, the idea behind starting with 30 Days of ML with Pytorch was to learn the implementation of machine learning algorithm, and also strengthening the grasp on PyTorch Library. So moving forward with this blog, I will share the few important functions in pytorch which is widely used in every ML and DL algorithms.
+However, the idea behind starting with 30 Days of ML with Pytorch was to learn the implementation of machine learning algorithms, and also strengthening the grasp on PyTorch Library. So moving forward with this blog, I will share the few important functions in PyTorch which are widely used in every ML and DL algorithm.
 
 * **Initializing Weights**
 
-  How we initialize weights plays a great role in convergence of the model and a common but inefficient way to initialize weight is to declare weights as zeros, but other efficient way includes using **uniform** or **normal** or **xaviers** technique to initialize weights.
+  How we initialize weights plays a great role in the convergence of the model and a common but inefficient way to initialize weight is to declare weights as zeros, but other efficient way includes using **uniform** or **normal** or **Xavier** technique to initialize weights.
 
   ```python
 
@@ -54,7 +53,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
 
 * **Creating Mask And Removing based on threshold**
 
-  It is applied for creating **dropout** functionality in neural network for regularization.
+  It is applied for creating **dropout** functionality in a neural network for regularization.
 
   ```python
 
@@ -78,7 +77,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
 
 * **Filling Values Matrix**
 
-  When specific set of value needs to be assigned as weight with equal weight to each feature based on sample size. Used in Boosting algorithm like **Adaboost**.
+  When a specific set of values needs to be assigned as the weight with equal weight to each feature based on sample size. Used in Boosting algorithm like **Adaboost**.
 
   ```python
 
@@ -95,7 +94,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
 
 * **Calculating Distance**
 
-  While performing **clustering, dimensionality** **reduction** and many other ml algorithms, we use various distance metrics to find  distance between vectors and matrices. In PyTorch, we can perform these  operations using **cdist**.
+  While performing **clustering, dimensionality** **reduction** and many other ml algorithms, we use various distance metrics to find the distance between vectors and matrices. In PyTorch, we can perform these operations using **cdist**.
 
   ```python
 
@@ -118,7 +117,7 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
 
 * **Replacing Diagonal with Vector**
 
-  Not sure, how often this is used in building ML algorithms, but this is  quite tedious because, to set diagonal elements with one specific values is simple but it becomes difficult when we need to replace the diagonal elements of a matrix with a vector.
+  Not sure, how often this is used in building ML algorithms, but this is quite tedious because to set diagonal elements with one specific value is simple but it becomes difficult when we need to replace the diagonal elements of a matrix with a vector.
 
   ```python
 
