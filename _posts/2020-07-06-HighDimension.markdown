@@ -98,14 +98,15 @@ From the results, we notice that when all the components are included in the mod
 
 ```python
 
-fig = plt.figure()
-ax = fig.add_subplot(111)
-plt.plot(variance,components)
-for xy in zip(variance, components):
-    ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')
-plt.xlabel("Variance Explained")
-plt.ylabel("Principal Components")
-plt.show()
+        fig = plt.figure()
+        ax = fig.add_subplot(111)
+        plt.plot(variance,components)
+        for xy in zip(variance, components):
+            ax.annotate('(%s, %s)' % xy, xy=xy, textcoords='data')
+        plt.xlabel("Variance Explained")
+        plt.ylabel("Principal Components")
+        plt.show()
+
 ```
 
 <center>
