@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Cython, Numba and Others
+title: Cython, Numba, and Others
 description: Compile it down!
 category: Blog
 date:   2021-01-09 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
-To make code run faster, a number of things can be done like reducing the number of preprocessing steps or compile the code down to machine code or use a machine which has high clock speed. 
+To make code run faster, a number of things can be done like reducing the number of preprocessing steps or compile the code down to machine code or use a machine that has high clock speed. 
 
-Python offers many options to perform efficient compiling like pure C compilers, Cython and LLVM-based compiling via Numba or a replacement virtual machine PyPy, which has Just-In-Time Compiler. 
+Python offers many options to perform efficiently compiling like pure C compilers, Cython and LLVM-based compiling via Numba, or a replacement virtual machine PyPy, which has Just-In-Time Compiler. 
 
 * Cython, the most commonly used tool for compiling to C, covering both `numpy` and normal Python code (requires some knowledge of C)
 * Numba, a new compiler specialized for `numpy` code
@@ -24,7 +24,7 @@ Sometimes even compiled code will not bring in greater gains, for instance, if t
 
 ### JIT and AOT
 
-Just-in-time compiler, compiles just the right parts of the code at the time of use. If a code is small but called frequently, then JIT runs it slowly while it compiles. While AOT (ahead of time) compiler, it compiles all libraries required for execution ahead of time using Cython , which makes it faster in some cases as mentioned earlier.
+Just-in-time compiler, compiles just the right parts of the code at the time of use. If a code is small but called frequently, then JIT runs it slowly while it compiles. While AOT (ahead of time) compiler, compiles all libraries required for execution ahead of time using Cython, which makes it faster in some cases as mentioned earlier.
 
 The current state of affairs shows us that compiling ahead of time buys us the best speedups, but often this requires the most manual effort. Just-in-time compiling offers some impressive speedups with very little manual intervention, but it can also run into the problem just described. You’ll have to consider these trade-offs when choosing the right technology for your problem.
 
@@ -50,7 +50,7 @@ Before calling `abs` on a variable, Python first has to look up the type of the 
 
 #### Sample Code
 
-We'll check out sample code (Julia set) for our compilation, which I've already mentioned in one of the [previous blog](https://mayurji.github.io/blog/2021/01/02/profiling).  Its a CPU bound problem and helps in understanding the potential bottleneck in the code.
+We'll check out the sample code (Julia set) for our compilation, which I've already mentioned in one of the [previous blog](https://mayurji.github.io/blog/2021/01/02/profiling).  It's a CPU-bound problem and helps in understanding the potential bottleneck in the code.
 
 ```python
 def calculate_z_serial_purepython(maxiter, zs, cs):
@@ -123,7 +123,7 @@ For the Julia example, we’ll use the following:
 - *cythonfn.pyx*, which contains the CPU-bound function that we can annotate
 - *setup.py*, which contains the build instructions
 
-setup.py is called to compile the .pyx file using Cython into compiled module. On Unix-like systems, the compiled module will probably be a *.so* file; on Windows it should be a *.pyd* (DLL-like Python library). 
+setup.py is called to compile the .pyx file using Cython into the compiled module. On Unix-like systems, the compiled module will probably be a *.so* file; on Windows, it should be a *.pyd* (DLL-like Python library). 
 
 setup.py converts the ***.pyx*** to ***.so*** file.
 
@@ -137,11 +137,11 @@ gcc -pthread -B /home/ian/miniconda3/envs/high_performance_python_book_2e/...
 gcc -pthread -shared -B /home/ian/miniconda3/envs/high_performance_python_...
 ```
 
-The `--inplace` argument tells Cython to build the compiled module into the current directory rather than into a separate *build* directory. After the build has completed, we’ll have the intermediate *cythonfn.c*, which is rather hard to read, along with *cythonfn[…].so*.
+The `--inplace` argument tells Cython to build the compiled module into the current directory rather than into a separate *build* directory. After the build has been completed, we’ll have the intermediate *cythonfn.c*, which is rather hard to read, along with *cythonfn[…].so*.
 
 Now when the *julia.py* code is run, the compiled module is imported, and the Julia set is calculated, it takes 4.7 seconds, rather than the more usual 8.3 seconds. This is a useful improvement for very little effort.
 
-To avoid using setup.py completely, we can use ***pyximport*** library. In ***julia.py*** file, we can import the library and to do an install statement as mentioned,  in the code below. It will create the compiled version of ***.pyx*** file mentioned below the install statement.
+To avoid using setup.py completely, we can use ***pyximport*** library. In ***julia.py*** file, we can import the library and do an install statement as mentioned,  in the code below. It will create the compiled version of ***.pyx*** file mentioned below the install statement.
 
 ```python
 import pyximport
@@ -152,7 +152,7 @@ import cythonfn
 
 ### Understanding Cython Annotation
 
-Lets view the intermediate `cythonfn.c` file, we can type `cython -a cythonfn.pyx` , and generate `cythonfn.html` file. We cannot optimize any block of code blindly, that's why we can check if line acts as bottleneck. Once the `html` file is generated, we can view it in a browser.
+Lets view the intermediate `cythonfn.c` file, we can type `cython -a cythonfn.pyx` , and generate `cythonfn.html` file. We cannot optimize any block of code blindly, that's why we can check if the line acts as a bottleneck. Once the `HTML file is generated, we can view it in a browser.
 
 <center>
 <img src="{{site.url}}/assets/images/PythonFaster/shrinked_cython.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -170,9 +170,9 @@ Each line can be expanded with a double-click to show the generated C code. More
 
 Although “more yellow lines” means more calls into the virtual machine, this won’t necessarily cause your code to run slower. Each call into the virtual machine has a cost, but the cost of those calls will be significant only if the calls occur inside large loops. Calls outside large loops (for example, the line used to create `output` at the start of the function) are not expensive relative to the cost of the inner calculation loop. 
 
-In above example, the lines with the most calls back into the Python virtual machine (the “most yellow”) are lines 4 and 8. From previous [profiling blog](https://mayurji.github.io/blog/2021/01/02/profiling), we know that line 8 is likely to be called over 30 million times, so that’s a great candidate to focus on.
+In the above example, the lines with the most calls back into the Python virtual machine (the “most yellow”) are lines 4 and 8. From previous [profiling blog](https://mayurji.github.io/blog/2021/01/02/profiling), we know that line 8 is likely to be called over 30 million times, so that’s a great candidate to focus on.
 
-To improve the execution time, the inner loops needs to be declared with objects type rather than leaving it for inference while running. These loops can then make fewer of the relatively expensive calls back into the Python virtual machine, saving us time. 
+To improve the execution time, the inner loops need to be declared with objects type rather than leaving them for inference while running. These loops can then make fewer of the relatively expensive calls back into the Python virtual machine, saving us time. 
 
 In general, the lines that probably cost the most CPU time are those:
 
@@ -182,11 +182,11 @@ In general, the lines that probably cost the most CPU time are those:
 
 #### Adding Type Annotations
 
-We can see from the above images, that almost all the lines are yellow, meaning they are accessing python virtual machine. The code utilizes the high level python objects. To reduce the overhead of type reference, we can declare C based type reference in the code.
+We can see from the above images, that almost all the lines are yellow, meaning they are accessing the python virtual machine. The code utilizes high-level python objects. To reduce the overhead of type reference, we can declare C-based type reference in the code.
 
 * int for a signed integer
 * unsigned int for an integer that can only be positive
-* double complex for double precision complex numbers
+* double complex for double-precision complex numbers
 
 ```python
 # Adding primitive C types to start making our compiled function run faster by doing more work in C and less via the Python virtual machine
@@ -213,7 +213,7 @@ def calculate_z(int maxiter, zs, cs):
 
 *The `cdef` keyword lets us declare variables inside the function body. These changes are made in .pyx file*
 
-The benefits of giving annotation to variable is visible from the above images, critically,  we can see that line no. 11 and 12—**two of the most frequently called lines—have now turned from yellow to white, indicating that they no longer call back to the Python virtual machine.** We can anticipate a great speedup compared to the previous version.
+The benefits of giving annotation to a variable are visible from the above images, critically,  we can see that line no. 11 and 12—**two of the most frequently called lines—have now turned from yellow to white, indicating that they no longer call back to the Python virtual machine.** We can anticipate a great speedup compared to the previous version.
 
 After compiling, this version takes 0.49 seconds to complete. With only a few changes to the function, we are running at 15 times the speed of the original Python version.
 
@@ -240,25 +240,25 @@ def calculate_z(int maxiter, zs, cs):
     return output
 ```
 
-The `while` statement may look like we are doing more work than usual but its not immediately visible, how much of a speed gain it brings. Since we know from previous blog post on profiling, that this line is iterated over 30 million times.
+The `while` statement may look like we are doing more work than usual but it's not immediately visible, how much of a speed gain it brings. Since we know from a previous blog post on profiling, that this line is iterated over 30 million times.
 
 This change has a dramatic effect—by reducing the number of Python calls in the innermost loop, we greatly reduce the calculation time of the function. This new version completes in just 0.19 seconds, an amazing 40× speedup over the original version. As ever, take a guide from what you see, but *measure* to test all of your changes!
 
-*Mathematical calculations are faster in general when reduced to low level functions!*
+*Mathematical calculations are faster in general when reduced to low-level functions!*
 
-Under the hood, there is something called as bound checking for each dereference in the list. The goal of the bounds checking is to ensure that the program does not access data outside the allocated array—in C it is easy to accidentally access memory outside the bounds of an array, and this will give unexpected results (and probably a segmentation fault!). We can disable bound checking if required.
+Under the hood, there is something called bound checking for each dereference in the list. The goal of the bounds checking is to ensure that the program does not access data outside the allocated array—in C it is easy to accidentally access memory outside the bounds of an array, and this will give unexpected results (and probably a segmentation fault!). We can disable bound checking if required.
 
 Cython has a set of flags that can be expressed in various ways. The easiest is to add them as single-line comments at the start of the *.pyx* file. It is also possible to use a decorator or compile-time flag to change these settings. To disable bounds checking, we add a directive for Cython inside a comment at the start of the *.pyx* file:
 
 ```python
 #cython: boundscheck=False
 def calculate_z(int maxiter, zs, cs):
-```								
+```                             
 
 *From **Wikipedia***
 
-*In computer programming, **bounds checking** is any method of detecting whether a variable is within some **bounds** before it is used. It is usually used to ensure that a number fits into a given type (range **checking**), or that a variable being used as an array index is within the **bounds** of the array (index **checking**).*
+*In computer programming, **bounds checking** is any method of detecting whether a variable is within some **bounds** before it is used. It is usually used to ensure that a number fits into a given type (range **checking**), or that a variable is used as an array index is within the **bounds** of the array (index **checking**).*
 
 ### References
 
-[High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)																				
+[High-Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)                                                                              

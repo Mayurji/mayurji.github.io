@@ -25,17 +25,17 @@ It refers to phenomena that arise when analyzing and organizing data in high-dim
 
 ### What is Dimensionality Reduction
 
-It is a technique to transform the X’s (1 to p)predictors/independent variables into linear combination of predictor with reduced number of transformed Z’s(1 to m) variables, where m < p. What happens when we don’t reduce the dimension? Curse Of Dimensionality.
+It is a technique to transform the X’s (1 top)predictors/independent variables into a linear combination of the predictor with a reduced number of transformed Z’s(1 to m) variables, where m < p. What happens when we don’t reduce the dimension? Curse Of Dimensionality.
 
 In machine learning and statistics, dimensionality reduction or dimension reduction is the process of reducing the number of random variables under consideration by obtaining a set of principal variables.
 
 ### Why Dimensionality Reduction is important
 
-**Nowadays, Data comes in all forms video, audio, images, texts etc., with huge number of features. Is it that all features are relevant ?, NO, not all feature are important or relevant. Based on business requirement or redundancy nature of the data captured we have to reduce the feature size through Feature selection and Feature Extraction. These techniques not only reduce computation cost but it also helps in avoiding the misclassification because of highly correlated variable.**
+**Nowadays, Data comes in all forms video, audio, images, texts, etc., with a huge number of features. Is it that all features are relevant ?, NO, not all features are important or relevant. Based on the business requirement or redundancy nature of the data captured we have to reduce the feature size through Feature Selection and Feature Extraction. These techniques not only reduce computation cost but also helps in avoiding misclassification because of a highly correlated variable.**
 
 ### Dimension Reduction Using PCA
 
-Here we’ll try to understand PCA by working on MNIST Dataset. Since images have higher dimension, we’ll be loading a built in dataset from sklearn.datasets. We make all the import statements respective from loading the dataset to measuring the metrics.
+Here we’ll try to understand PCA by working on MNIST Dataset. Since images have higher dimensions, we’ll be loading a built-in dataset from sklearn.datasets. We make all the import statements respective from loading the dataset to measuring the metrics.
 
 ### Loading Packages
 
@@ -54,23 +54,23 @@ import skimage as img
 import seaborn as sns
 ```
 
-We are loading the digits dataset for our problem. We can notice that we have around 64 feature representing the digit.
+We are loading the digits dataset for our problem. We can notice that we have around 64 features representing the digit.
 
 ```python
 
 load_digits = load_digits()
 ```
 
-We can visualize the all column(64) value of an image as an 8x8 pixel value in gray scale.
+We can visualize the all-column (64) value of an image as an 8x8 pixel value in grayscale.
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Dimension Reduction</p>
 </center>
 
-Variance of an feature with respect to target variable, explains a lot about the relationship between feature and target variable.We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
+The variance of a feature concerning the target variable, explains a lot about the relationship between the feature and the target variable. We have a list of components included in our list over which we try to explain the variance. As the components are increasing the variance also increases.
 
-First, we are iterating over a number of components to find the best match between variance and component. And as we notice the number of components are increased, the explained variance is also increasing but after a certain value the increase components doesn't increase the explained variance which causes saturates the explained variance.
+First, we are iterating over several components to find the best match between variance and component. And as we notice the number of components is increased, the explained variance is also increasing but after a certain value, the increased components don't increase the explained variance which causes saturates the explained variance.
 
 From the results, we can notice how the variance value increases to 1 when all the 63 components are included.
 
@@ -134,13 +134,13 @@ print("Accuracy: ",m.accuracy_score(y_test,y_predict))
 **Explained Variance:  0.92**\
 **Accuracy:  0.93**
 
-From 64 Feature vector to 24 Feature,it means we are able to maintain the good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happens with respect to number of components, these changes saturate after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain maximum variance of 0.92 with 24 principal components at the accuracy of 93%.
+From 64 Feature vectors to 24 Feature, it means we can maintain a good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happen concerning several components, these changes saturate after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain the maximum variance of 0.92 with 24 principal components at the accuracy of 93%.
 
-Thus comes the ending to Dimensionality reduction, with a small note to think about dimensionality reduction with the movie Interstellar, Where Cooper stays in 5 dimension (hypothetically) and which is difficult to visualize, but we try to understand the scene from our 2 dimension screen.
+Thus comes the ending to Dimensionality reduction, with a small note to think about dimensionality reduction with the movie Interstellar, Where Cooper stays in five dimensions (hypothetically) and which is difficult to visualize, but we try to understand the scene from our 2 dimension screen.
 
 ### Techniques to overcome the Curse of Dimensionality
 
-There are number of ways of Dimensionality reduction such as feature selection and Feature Extraction.
+There are several ways of dimensionality reduction such as feature selection and Feature Extraction.
 
 1. PCA
 2. Missing Value Ratio
@@ -155,46 +155,46 @@ There are number of ways of Dimensionality reduction such as feature selection a
 </center>
 
 
-Let’s look at the image shown above. It shows 2 dimensions x1 and x2, which are let us say measurements of an object in Km (x1) and Miles (x2). Now, if you were to use both these dimensions in machine learning, they will convey similar information and introduce a lot of noise in system, so you are better of just using one dimension. Here we have converted the dimension of data from 2D (from x1 and x2) to 1D (PC1), which has made the data relatively easier to explain.
+Let’s look at the image shown above. It shows 2 dimensions x1 and x2, which are let us say measurements of an object in Km (x1) and Miles (x2). Now, if you were to use both these dimensions in machine learning, they will convey similar information and introduce a lot of noise in the system, so you are better of just using one dimension. Here we have converted the dimension of data from 2D (from x1 and x2) to 1D (PC1), which has made the data relatively easier to explain.
 
 ### Principal Component Analysis
 
-Principal Components Analysis means components which are able to explain the maximum amount of variance of the features with respect to target variable, if we include all feature as components then we get the variance of 1. PCA transforms all the interrelated variable into uncorrelated variable.Each uncorrelated variable is a Principal Component and each components is a linear combination of original variable.
+Principal Components Analysis means components that can explain the maximum amount of variance of the features concerning the target variable, if we include all features as components then we get the variance of 1. PCA transforms all the interrelated variables into an uncorrelated variables. Each uncorrelated variable is a Principal Component and each component is a linear combination of the original variable.
 
-Each uncorrelated variable or components holds feature information which is explained as variance. Each component with its variance add up to 1. Since each principal component is combination of original variable, some principal components explains more variance than others.
+Each uncorrelated variable or component holds feature information which is explained as a variance. Each component with its variance adds up to 1. Since each principal component is a combination of the original variable, some principal components explain more variance than others.
 
-The variance explained by one principal component is uncorrelated with other principal components which means with each component we are learning or explaining a new feature. Now raises a question, how many components will be able to explain the maximum variance?. We don’t have any text book method for calculating the number of components for a given number of feature or variables.But We can maintain a variance threshold which needs to explained by the variance of the components.
+The variance explained by one principal component is uncorrelated with other principal components which means with each component we are learning or explaining a new feature. Now raises a question, how many components will be able to explain the maximum variance?. We don’t have any textbook method for calculating the number of components for a given number of features or variables. But We can maintain a variance threshold that needs to explain by the variance of the components.
 
-**Consider we have set a threshold variance of 0.8, and if have ten components with a variance as follows 0.3, 0.25, 0.15, 0.1, 0.08, 0.08, 0.07, 0.07. then we can notice 0.3 is a component with maximum variance and is called as First Principal Component. Now since the threshold is kept at 0.8, we can add up components untill it reaches a variance of 0.8.**\
-**By adding first 3 components, we have variance explained at 0.7 and by including 4th component we reach a variance of 0.8.So we can including 4 components instead of ten components thus reducing the dimension from 10 to 4.**
+**Consider we have set a threshold variance of 0.8, and if have ten components with a variance as follows 0.3, 0.25, 0.15, 0.1, 0.08, 0.08, 0.07, 0.07. then we can notice 0.3 is a component with maximum variance and is called as First Principal Component. Now since the threshold is kept at 0.8, we can add up components until it reaches a variance of 0.8.**\
+**By adding the first 3 components, we have variance explained at 0.7 and by including the 4th component we reach a variance of 0.8. So we can including 4 components instead of ten components thus reducing the dimension from 10 to 4.**
 
 ### Missing Value Ratio
 
-In a Dataset, We have various columns and each column contains values but if data columns contains missing values then we have think about the feature selection based on Missing value ratio i.e. we can set a threshold for number of Missing value a column may contain and if we have ratio of Missing value greater than the threshold then we can drop the feature.
+In a Dataset, We have various columns and each column contains values but if data columns contain missing values then we have to think about the feature selection based on the Missing value ratio i.e. we can set a threshold for several Missing values a column may contain and if we have a ratio of Missing value greater than the threshold then we can drop the feature.
 
-Higher the threshold, more aggressive the drop in features.
+Higher the threshold, the more aggressive the drop-in features.
 
 ### Low Variance Filter
 
-It is similar to PCA Conceptually i.e. if a column carries very little information or has variance lower than a threshold value then we can drop feature i.e. variance value acts as Filter for Feature Selection.
+It is similar to PCA Conceptually i.e. if a column carries very little information or has variance lower than a threshold value then we can drop the feature i.e. variance value acts as Filter for Feature Selection.
 
-Variance is range dependent, so normalization is required before applying this technique.
+Variance is range-dependent, so normalization is required before applying this technique.
 
 ### Backward Feature Elimination
 
-In Simple terms, If a model is trained on n-input feature and error rate is calculated, then again if model is trained on n-1 feature and error rate is calculated, now if error rate is increased by small value then the feature is dropped from the dataset.
+In simple terms, If a model is trained on the n-input feature and the error rate is calculated, then again if the model is trained on the n-1 feature and error rate is calculated, now if the error rate is increased by a small value then the feature is dropped from the dataset.
 
-Backward feature Elimination can be performed iteratively to get better feature.
+Backward feature Elimination can be performed iteratively to get a better feature.
 
 ### Forward Feature Construction
 
-In this Feature Selection process, we train a model with one feature and calculate the performance measure. We keeping adding feature, one by one and calculate the performance if the performance decreases with increase in Feature, we should drop the feature and if the performance increases with increase in Feature, We iteratively add feature to the model.
+In this Feature Selection process, we train a model with one feature and calculate the performance measure. We kept adding a feature, one by one, and calculate the performance of the performance decreases with increase in Feature, we should drop the feature and if the performance increases with increase in Feature, We iteratively add a feature to the model.
 
 ### High Correlation Filter
 
-Here, If the columns present in the dataset are high correlated then the information becomes redundant and we drop these highly redundant variables from features. We can calculate the **correlation coefficient** between Numerical columns/variables.We can calculate the ‘correlation coefficient’ between Nominal columns / variables.
+Here, If the columns present in the dataset are highly correlated then the information becomes redundant and we drop these highly redundant variables from features. We can calculate the **correlation coefficient** between Numerical columns/variables. We can calculate the ‘correlation coefficient’ between Nominal columns/variables.
 
-We can use the **pearson product moment coefficient** between Numerical columns/variables. We can use the ‘pearson Chi squared’ value between Nominal columns / variables. Before doing correlation operation, Perform normalization on the columns as correlation is scale sensitive.
+We can use the **Pearson product-moment coefficient** between Numerical columns/variables. We can use the ‘Pearson Chi squared’ value between Nominal columns/variables. Before doing correlation operation, Perform normalization on the columns as correlation is scaled sensitive.
 
 ### Note
 

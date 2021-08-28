@@ -6,7 +6,7 @@ category: Blog
 date:   2020-12-05 13:43:52 +0530
 ---
 
-In this post, We'll discuss the python's ***Iterators and Generators*** objects and decode why generators are memory efficient and why iterators are used over generators irrespective of memory usage.
+In this post, We'll discuss python's ***Iterators and Generators*** objects and decode why generators are memory efficient and why iterators are used over generators irrespective of memory usage.
 
 <center>
 <img src="{{site.url}}/assets/images/dicts_sets/front-ds.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -15,7 +15,7 @@ In this post, We'll discuss the python's ***Iterators and Generators*** objects 
 
 ### Iterators
 
-In python, *for* loop requries an object we are looping through to support iterator function, python provides a built-in function *__iter__* to convert lists, set, dictionary, tuples into an iterator such that we can iterate over keys or items in that object. While building an iterator like list iterator, a number of functions are built like *__iter__*, *__next__*, keeping track of the states and raising exception *StopIteration* when no values are present to iterate over.
+In python, *for* loop requires an object we are looping through to support iterator function, python provides a built-in function *__iter__* to convert lists, set, dictionary, tuples into an iterator such that we can iterate over keys or items in that object. While building an iterator-like list iterator, a number of functions are built like *__iter__*, *__next__*, keeping track of the states and raising exception *StopIteration* when no values are present to iterate over.
 
 ### Dismantling For loops
 
@@ -40,7 +40,7 @@ while True:
 <p>Figure 2: Iterators</p>
 </center>
 
-In the above image, once the iteration starts, the for loop iterates over all the elements one by one, processes it and then store the elements in list inside the *for loop* as shown in green circle. The processed element are made accessible after all the elements are iterated over, the unpause here refers to accessing or a call to the *__next__* function of the list.
+In the above image, once the iteration starts, the for loop iterates over all the elements one by one processes it, and then stores the elements in the list inside the *for loop* as shown in the green circle. The processed element is made accessible after all the elements are iterated over, the unpause here refers to accessing or a call to the *__next__* function of the list.
 
 *List iterator based fibonacci series*
 
@@ -55,31 +55,31 @@ def fibonacci_list(num_items):
 ```
 ### Generators
 
-Generator is a function that returns an object(iterator) which we can iterate over (one value at a time). A normal function terminates with return statement, it evaluation comes out of the function, while a generator function *yields* the results of evaluation while pausing the execution, starts again with next value of iteration, during the pause state, the control is passed to the caller. Function like *__iter__*, *__next__* are implemented automatically. 
+The generator is a function that returns an object(iterator) which we can iterate over (one value at a time). A normal function terminates with the return statement, its evaluation comes out of the function, while a generator function *yields* the results of evaluation while pausing the execution, starts again with the next value of iteration, during the pause state, the control is passed to the caller. Function like *__iter__*, *__next__* are implemented automatically. 
 
-*Generator based fibonacci series*
+*Generator based Fibonacci series*
 
 ```python
 def fibonacci_gen(num_items):
     a, b = 0, 1
     while num_items:
-    	yield a  
+        yield a  
         a, b = b, a+b
         num_items -= 1
 ```
 
-In Generator, we don't store the element in array for further evaluation/usage, unlike in lists, where we can reference the list anywhere, without performing iteration over all elements again.
+In Generator, we don't store the element in an array for further evaluation/usage, unlike in lists, where we can reference the list anywhere, without performing iteration over all elements again.
 
 <center>
 <img src="{{site.url}}/assets/images/iterators/generator.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
 <p>Figure 3: Generator</p>
 </center>
 
-In the above image, once the generator starts, the for loop iterates over all the elements one by one and processes it and then make it accessible outside the function and then unpause by moving to next element in generator, thus avoiding memory cost.
+In the above image, once the generator starts, the for loop iterates over all the elements one by one and processes it and then makes it accessible outside the function and then unpause by moving to the next element in the generator, thus avoiding memory cost.
 
 ### Memory Efficiency 
 
-A major benefit of using a Generator is the memory saved during the iteration, because we don't store the elements anywhere after processing. For instance, consider an iteration over a million numbers, if we store the numbers in a list, it occupies hundreds of megabytes for storing it, while on the other hand, generator there is no concept of storing the items, we perform lazy evaluation when the generator is called. ***Lazy Evaluation, we don't priorly identify or evaluate all the element, we evaluate element when required.***
+A major benefit of using a Generator is the memory saved during the iteration because we don't store the elements anywhere after processing. For instance, consider an iteration over a million numbers, if we store the numbers in a list, it occupies hundreds of megabytes for storing it, while on the other hand, generator there is no concept of storing the items, we perform lazy evaluation when the generator is called. ***Lazy Evaluation, we don't priorly identify or evaluate all the elements, we evaluate elements when required.***
 
 ```python
 def test_fibonacci_list():
@@ -106,23 +106,23 @@ def test_fibonacci_gen():
         pass
 ```
 
-Right now, we may believe we should utilize generators everywhere to save the memory, but what if the results generated by iterator (either be list or generator) are to be referenced in future. For referencing in future, we should iterate over generator again to get the processed results again, but instead we can utilize all the processed elements stored in a list. 
+Right now, we may believe we should utilize generators everywhere to save the memory, but what if the results generated by iterator (either be list or generator) are to be referenced in the future. For reference in the future, we should iterate over the generator again to get the processed results again, but instead, we can utilize all the processed elements stored in a list. 
 
-Thus, it comes to down what you want optimize, ***memory consumption or CPU optimization***. Extra memory helps in storing the processed result and if the memory is a constrain, then recalculate the processed element again using generator.
+Thus, it comes to down what you want to optimize, ***memory consumption or CPU optimization***. Extra memory helps in storing the processed result and if the memory is a constrain, then recalculate the processed element again using a generator.
 
-*It is important to note that many of python's built-in function like range, map, zip, filter, reveresed or enumerate utilize generator in the backend, they all perform the calculations required and doesn't store the result.*
+*It is important to note that many of python's built-in function like range, map, zip, filter, reversed or enumerate utilize generator in the backend, they all perform the calculations required and doesn't store the result.*
 
 ### Generator Example
 
 **In Data Analysis**
 
-*Consider working on a NLP based project, where we iterate over millions of text samples from a csv or a text file for text processing. If we use a generator, we might end up doing processing faster, but, without storing the processed text. We know that text processing is a computionally expensive task, and it is better to avoid generator on such occasion.*
+*Consider working on NLP based project, where we iterate over millions of text samples from a CSV or a text file for text processing. If we use a generator, we might end up doing processing faster, but, without storing the processed text. We know that text processing is a computationally expensive task, and it is better to avoid generators on such occasions.*
 
-*Anyway, while working on such huge files, we can apply filter function on each row of the text samples and interestingly, the filter function, internally runs on generator based iteration, just fetching the records with conditon (as mentioned below in example, finding numbers divisible by 3).*
+*Anyway, while working on such huge files, we can apply filter function on each row of the text samples, and interestingly, the filter function, internally runs on generator based iteration, just fetching the records with condition (as mentioned below in example, finding numbers divisible by 3).*
 
 **In Reducing Memory**
 
-*Creating a list of numbers that are divisible by 3. The memory consumption is high and can be avoided by using generator.*
+*Creating a list of numbers that are divisible by 3. The memory consumption is high and can be avoided by using a generator.*
 
 *List Iterator*
 
@@ -136,8 +136,8 @@ divisible_by_three = len([n for n in fibonacci_gen(100000) if n % 3 == 0])
 divisible_by_three = sum(1 for n in fibonacci_gen(100000) if n % 3 == 0)
 ```
 
-In conclusion, both the iterators and generator are applied based on requirement, as mentioned earlier the trade-off between the CPU optimization and Memory consumption. It's upto the individual, how to utilize these python objects efficiently.
+In conclusion, both the iterators and generator are applied based on the requirement, as mentioned earlier the trade-off between the CPU optimization and Memory consumption. It's up to the individual, how to utilize these python objects efficiently.
 
 ### Reference
 
-* [High Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)
+* [High-Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)
