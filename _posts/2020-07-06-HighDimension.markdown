@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dimension Reduction
-description: Projecting High Dim. To Low Dim.
+description: Projecting high dimensions to low dimensions
 category: Blog
 date:   2020-07-06 13:43:52 +0530
 ---
@@ -192,6 +192,6 @@ We train a model with one feature and calculate the performance measure. We keep
 
 If the columns present in the dataset are highly correlated, then the information becomes redundant and we drop these highly redundant variables from our features. 
 
-We can calculate the **correlation coefficient** between numerical columns. We can also use the **Pearson product-moment coefficient** between Numerical columns. We can use the **Pearson Chi squared** value between Nominal columns. Before doing correlation operation, perform normalization on the columns as correlation is scaled sensitive.
+There are various correlation techniques to find the redundancy between the variables. Like **correlation coefficient**, **Pearson product-moment coefficient**, **Pearson Chi squared**. Each correlation technqiue depend on the variable type like categorical or numerical etc. Before doing correlation operation, perform normalization on the columns as correlation is scaled sensitive.
 
 Note: Both Forward Feature Construction and Backward Feature Elimination are computationally expensive tasks.
