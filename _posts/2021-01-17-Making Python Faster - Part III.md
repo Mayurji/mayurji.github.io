@@ -80,7 +80,7 @@ We’ll implement the [***diffusion equation***]() using Pytorch.
 This speedup is a result of how parallelizable the diffusion problem is. As we said before, the GPU we are using has 4,362 independent computation cores (GPU RTX 2080 TI). It seems that once the diffusion problem is parallelized, none of the GPU core is utilized completely. Next, we can profile GPU and see how efficiently GPU is utilized.
 
 <center>
-<img src="{{site.url}}/assets/images/PythonFaster/gpu-profile.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>=
+<img src="{{site.url}}/assets/images/PythonFaster/gpu-profile.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>
 <p>Figure 3: Profiling GPU</p>
 </center>
 
