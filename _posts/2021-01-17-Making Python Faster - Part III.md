@@ -38,71 +38,50 @@ We’ll implement the [***diffusion equation***]() using Pytorch.
 
 ```python
 
-import torch
+        import torch
+        from torch import (roll, zeros) #1
 
-from torch import (roll, zeros) #1
+        grid_shape = (640, 640)
 
-grid_shape = (640, 640)
+        def laplacian(grid):
+            return (
+                roll(grid, +1, 0)
+                + roll(grid, -1, 0)
+                + roll(grid, +1, 1)
+                + roll(grid, -1, 1)
+                - 4 * grid
+            )
 
-def laplacian(grid):
+        def evolve(grid, dt, D=1):
+            return grid + dt * D * laplacian(grid)
 
-    return (
+        def run_experiment(num_iterations):
+            grid = zeros(grid_shape)
+            block_low = int(grid_shape[0] * 0.4)
+            block_high = int(grid_shape[0] * 0.5)
+            grid[block_low:block_high, block_low:block_high] = 0.005
+            grid = grid.cuda() #2
 
-        roll(grid, +1, 0)
+            for i in range(num_iterations):
+                grid = evolve(grid, 0.1)
 
-        + roll(grid, -1, 0)
-
-        + roll(grid, +1, 1)
-
-        + roll(grid, -1, 1)
-
-        - 4 * grid
-
-    )
-
-def evolve(grid, dt, D=1):
-
-    return grid + dt * D * laplacian(grid)
-
-def run_experiment(num_iterations):
-
-    grid = zeros(grid_shape)
-
-    block_low = int(grid_shape[0] * 0.4)
-
-    block_high = int(grid_shape[0] * 0.5)
-
-    grid[block_low:block_high, block_low:block_high] = 0.005
-
-    grid = grid.cuda() #2
-
-    for i in range(num_iterations):
-
-        grid = evolve(grid, 0.1)
-
-    return grid
+            return grid
 
 ```
 
 1. We import `torch` instead of `numpy`.
-2. We move the ***grid*** data to GPU, where the actual manipulation happens with the help `torch`. 
+2. We move the ***grid*** data to GPU, where the actual manipulation happens with the help of `torch`. 
 
 <center>
-
-<img src=”{{site.url}}/assets/images/PythonFaster/gpu vs numpy.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>
-
+<img src=”{{site.url}}/assets/images/PythonFaster/gpu_vs_numpy.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>
 <p>Figure 2: GPU vs NumPy</p>
-
 </center>
 
 This speedup is a result of how parallelizable the diffusion problem is. As we said before, the GPU we are using has 4,362 independent computation cores (GPU RTX 2080 TI). It seems that once the diffusion problem is parallelized, none of the GPU core is utilized completely. Next, we can profile GPU and see how efficiently GPU is utilized.
 
 <center>
-
-<img src="{{site.url}}/assets/images/PythonFaster/gpu-profile.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>
-
+<img src="{{site.url}}/assets/images/PythonFaster/gpu-profile.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>=
 <p>Figure 3: Profiling GPU</p>
-
 </center>
 
 Using `nvidia-smi` command, we can inspect the resource utilization of GPU. Check out the *power usage* and *GPU utilization*. GPU utilization, here at 95%, is a slightly mislabeled field. It tells us what percentage of the last second was spent on running at least one kernel. So it isn’t telling us what percentage of the GPU’s total computational power we’re using, but rather how much time was spent not being idle. This is a very useful measurement to look at when debugging memory transfer issues and making sure that the CPU is providing the GPU with enough work.
