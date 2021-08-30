@@ -18,12 +18,6 @@ body {
 }
 */
 
-#logo{ 
-	position:fixed; 
-	top:5%; 
-	left:5%; 
-}
-
 nav {
     background: #f7f7f7;
     color: rgb(17, 17, 17);
@@ -70,7 +64,7 @@ code {
 }*/
 @media(max-width: 900px){
     nav .mainMenu {
-        height: 70vh;
+        height: 40vh;
         position: fixed;
         top: 0;
         right: 0;
@@ -96,8 +90,7 @@ code {
     }
     nav .mainMenu li a:hover {
         background: none;
-        color: rgb(0, 0, 0);
-        
+        color: rgb(0, 0, 0);     
     }
     .icons i {
         display: inline-block;
@@ -286,6 +279,12 @@ ul#horizontal-list li {
 html {
   font-size: 20px;
 }*/
+
+#logo{ 
+	position:fixed; 
+	top:5%; 
+	left:5%; 
+}
 
 @media (max-width: 1921px) {
   html {
