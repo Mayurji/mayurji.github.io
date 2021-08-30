@@ -11,7 +11,11 @@
 		
 	</head>
 	<body style="background-color:#f7f7f7;" style="width:90%"> <!-- #d9d6d6 -->
-		 <nav>
+		<div id="logo"> 
+			<img src="{{site.url}}/assets/images/logo/math_compute.png"> 
+		</div>
+		
+		<nav>
 		   <!-- <div class="logo"><h2>📝</h2></div>-->
 		    <div class="openMenu"><i class="fa fa-bars"></i></div>
 		    <ul class="mainMenu">
@@ -24,9 +28,7 @@
 			<div class="closeMenu"><i class="fa fa-times"></i></div>
 		    </ul>
 		</nav>
-		<!--<div id="logo"> 
-			<img src="{{site.url}}/assets/images/logo/math_compute.png"> 
-		</div>-->
+		
 		<div class="container" style="width:90%";>
 		{{ content }}
 		</div><!-- /.container -->
