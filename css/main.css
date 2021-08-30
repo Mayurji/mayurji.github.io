@@ -47,7 +47,6 @@ nav .mainMenu li a {
     background: rgb(255,94,0);
 }*/
 nav .openMenu {
-
     margin: 20px;
     display:None;
     cursor: pointer;
