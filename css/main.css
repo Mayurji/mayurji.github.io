@@ -18,6 +18,12 @@ body {
 }
 */
 
+#logo{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+}
+
 nav {
     background: #f7f7f7;
     color: rgb(17, 17, 17);
