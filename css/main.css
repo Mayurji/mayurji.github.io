@@ -51,6 +51,11 @@ nav .mainMenu .closeMenu , .icons i {
     cursor: pointer;
 }
 
+pre {
+  overflow-x: auto;
+}
+
+
 /*code {
   white-space : pre-wrap !important;
 }*/
