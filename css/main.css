@@ -51,9 +51,9 @@ nav .mainMenu .closeMenu , .icons i {
     cursor: pointer;
 }
 
-code {
+/*code {
   white-space : pre-wrap !important;
-}
+}*/
 
 /*nav .logo {
     margin: 6px;
