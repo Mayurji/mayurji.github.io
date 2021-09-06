@@ -20,13 +20,19 @@ audio, text, etc.
 
 **Idea Behind Neural Network**
 
-The idea behind the neural network was inspired by the human brain, researchers believed that a neuron in the brain is fired, when it crosses a threshold of sensitivity, the brain is a logical inference machine because the neurons are binary. Neurons compute a weighted sum of inputs and compare that sum to the threshold. It turns ON if it is above the threshold and turns OFF if it is below, and this is how a neural network works in a broader sense.
+The idea behind the neural network was inspired by the human brain, researchers believed that a neuron in the brain is fired, when it crosses a threshold of sensitivity, the brain is a logical inference machine because the neurons in our brain are binary. 
+
+Neurons compute a weighted sum of inputs and compare that sum to a threshold. The neuron is activated if the weighted sum is greater than the threshold, or else the neuron remains inactive if the weighted sum is lesser than the threshold.
 
 **Difference between ML and DL**
 
-The main difference between an ml model and a dl model is the feature extraction technique. We perform feature engineering in a machine learning model manually and use our creativity and domain expertise to build better features for the model to learn. But for a deep learning model uses multiple layers of neurons(parameters) to learns extensive features from the data during training.
+The main difference between an ml model and a dl model is the feature extraction technique. 
 
-The complexity of a neural network increases with the complexity of the data and the task at hand. A neural network is preferred less over the machine learning models because of the explainability and interpretability. While using neural networks, there is a trade-off between explainability and performance in terms of accuracy. Currently, there is active research being done to unravel the black box called neural nets.
+We perform feature engineering in a machine learning model manually and use our creativity and domain expertise to build features for the model to learn from. But a deep learning model uses multiple layers of neurons(parameters) to learns extensive features from the data during training.
+
+The complexity of a neural network increases with the complexity of the data and the task at hand. A neural network is preferred less over the machine learning models because of the explainability and interpretability. 
+
+While using neural networks, there is a trade-off between explainability and performance in terms of accuracy. Currently, there is active research being done to unravel the black box called neural nets.
 
 **General Equation of Neural Network**
 
