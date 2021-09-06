@@ -30,8 +30,9 @@ nav {
     background: #f7f7f7;
     color: rgb(17, 17, 17);
     display: flex;
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-    /*justify-content: space-between;*/
+    /*font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    justify-content: space-between;*/
+    font-family: "Lora", serif;
     justify-content: center;
 }
 nav .mainMenu {
@@ -116,82 +117,100 @@ pre {
 
 ol {
   padding: 20px;
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  /*font-size: 1.1vw;*/
+  font-family: "Lora", serif;
+  /*font-size: 1.1vw;
+  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
 }
 
 ul {
   padding: 20px;
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  /*font-size: 1.1vw;*/
+  font-family: "Lora", serif;
+  /*font-size: 1.1vw;
+  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
 }
 
 ol li {
   color: black;
   padding: 0px;
   margin-left: 35px;
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  /*font-size: 1.1vw;*/
+  font-family: "Lora", serif;
+  
+  /*font-size: 1.1vw;
+  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
 }
 
 ul li {
   color: black;
   margin: 5px;
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  /*font-size: 1.1vw;	*/
+  font-family: "Lora", serif;
+  /*font-size: 1.1vw;	
+  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
 }
 
 ul li::before {
   color: black;
   list-style: disc;
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  /*font-size: 1.1vw;*/
+  font-family: "Lora", serif;
+  /*font-size: 1.1vw;
+  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
 }
 
 a {
     text-decoration: none;
     color: black;
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    font-family: "Lora", serif;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
-    /*font-size: 3vw;*/
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    /*font-size: 3vw;
+    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
+    font-family: "Lora", serif;
+    
     color: black;
 }
 
 h2 {
-    /*font-size: 2vw;*/
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    /*font-size: 2vw;
+    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
+    font-family: "Lora", serif;
+    
     color: black;
 }
 
 h3 {
-    /*font-size: 1.5vw;*/
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    /*font-size: 1.5vw;
+    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
+    font-family: "Lora", serif;
     color: black;
 }
 
 p {
     /*font-size: 1.3em;*/
-    /*font-size: 1vw;*/
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    /*font-size: 1vw;
+    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
+    font-family: "Lora", serif;
     line-height: 1.4em;
     color: black;
 }
 
 h4 {
-    /*font-size: 1.3vw;*/
+    /*font-size: 1.3vw;
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    */
+    font-family: "Lora", serif;
+    
     color: black;
 }
 
 h5 {
     /*font-size: 1.0vw;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';*/
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    */
+    font-family: "Lora", serif;
+    
     color: black;
     height: 0px;
 }
