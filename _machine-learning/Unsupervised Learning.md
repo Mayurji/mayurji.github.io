@@ -85,7 +85,7 @@ $$
 **K-Means IN Action**
 
 <center>
-<p><a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif#/media/File:K-means_convergence.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="K-means convergence.gif"></a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif#/media/File:K-means_convergence.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto alt="K-means convergence.gif"></a></p>
 </center>
 
 ##### Simple Understanding
