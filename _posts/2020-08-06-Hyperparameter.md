@@ -5,21 +5,7 @@ description: Things we control in DL
 category: Blog
 date:   2020-08-06 13:43:52 +0530
 ---
-{% include mathjax.html %}
-
-<center>
-<img src="{{site.url}}/assets/images/Hyperparameter/hyperparameter.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
-<p>Figure 1: Neurons</p> 
-</center>
-
-### Topics covered
-
-  1. What is Hyperparameter
-  2. Learning Rate
-  3. Minibatch Size
-  4. Number of Iterations
-  5. Number of Hidden Units and Layers
-    
+{% include mathjax.html %}    
 
 ### What is Hyperparameter
 
@@ -35,7 +21,7 @@ It is the most important of all hyperparameters. Even for a pre-trained model, w
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/learning_rate.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 2: Learning Rate</p>
+<p>Figure 1: Learning Rate</p>
 </center>
 
 A **large value** of learning rate tends to overshoot the gradient value making it difficult for the weight to converge to the global minimum.
@@ -49,8 +35,8 @@ An **optimum value** of learning rate will lead to a global minimum, which can b
 Keeping only one learning rate may not help the weight to reach the global minimum. So we can change the value of the learning rate after a certain number of epochs. It helps when the gradients are stuck in a local minimum.
 
 <center>
-<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 3: Learning Rate Decay</p>
+<img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;"  width="60%" height=auto/><br>
+<p>Figure 2: Learning Rate Decay</p>
 </center>
 
 ### Adaptive Learning Rate
@@ -67,7 +53,7 @@ If we keep Minibatch size = 1, then the weights are updated for every record aft
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/minibatch.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 4: Minibatch</p>
+<p>Figure 3: Minibatch</p>
 </center>
 
 
@@ -87,7 +73,7 @@ The number of epochs can be decided based on the validation error. Now, as long 
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/iterations.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 5: Iterations</p> 
+<p>Figure 4: Iterations</p> 
 </center>
 
 [**Validation Monitor**](https://www.tensorflow.org/get_started/monitors#early_stopping_with_validationmonitor)
@@ -104,9 +90,6 @@ validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
 ```
 The last parameter indicates to ValidationMonitor that it should stop the training process if the loss did not decrease in 200 steps (rounds) of training.
 
-[**Session Run Hook**](https://www.tensorflow.org/api_docs/python/tf/train/SessionRunHook)
-
-It is an evolving part of tf.train and going forward appear to be the proper place where you’d implement early stopping.
 
 [**StopAtStepHook**](https://www.tensorflow.org/api_docs/python/tf/train/StopAtStepHook)
 
@@ -124,12 +107,11 @@ Note, if we create too complex a model, then it overfits the training data. We c
 
 To conclude, keep track of validation errors while increasing the number of hidden units.
 
-**As stated by Andrej Karpathy, a three-layer net outperforms the two-layer net but going beyond that rarely helps the network. While in CNN, the greater the # of layers, the greater will be the performance of the network.**
-
-[Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)
+*As stated by Andrej Karpathy, a three-layer net outperforms the two-layer net but going beyond that rarely helps the network. While in CNN, the greater the of layers, the greater will be the performance of the network.*
 
 ### Further Reading
 
+[Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)
 [How does batch size affect the model performance](https://arxiv.org/abs/1606.02228) |
 [Stackexchange](https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent) |
 [BGD vs SGD](https://towardsdatascience.com/difference-between-batch-gradient-descent-and-stochastic-gradient-descent-1187f1291aa1) |
