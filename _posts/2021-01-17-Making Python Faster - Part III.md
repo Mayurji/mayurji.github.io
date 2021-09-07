@@ -67,7 +67,7 @@ We’ll implement the ***diffusion equation*** using Pytorch.
 2. We move the ***grid*** data to GPU, where the actual manipulation happens with the help of `torch`.
 
 <center>
-<img src=”{{site.url}}/assets/images/PythonFaster/gpu_vs_numpy.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>
+<img src="{{site.url}}/assets/images/PythonFaster/gpu_vs_numpy.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto /><br>
 <p>Figure 1: GPU vs NumPy</p>
 </center>
 
