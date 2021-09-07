@@ -43,7 +43,7 @@ Code Snippet: This is the piece of code on which the profiling is tested. Feel f
                 output[i] = n
             return output
 
-            def calc_pure_python(desired_width, max_iterations):
+        def calc_pure_python(desired_width, max_iterations):
             """Create a list of complex coordinates (zs) and complex    parameters (cs), build Julia set"""
             x_step = (x2 - x1) / desired_width
             y_step = (y1 - y2) / desired_width
