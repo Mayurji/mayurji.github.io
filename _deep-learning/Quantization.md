@@ -6,39 +6,38 @@ date:   2021-03-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
-<center>
-<img src="{{site.url}}/assets/images/ml/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" style="zoom: 5%; background-color:#DCDCDC;"  width="75%" height=auto/><br>
-<p>Photo by Patrick Tomasso - Unsplash</p> 
-</center>
+Deploying a memory-intensive large deep model has a major downside if we're planning to deploy these models in edge devices for real-time inference or systems with memory constraints. Edge devices have limited memory, computing resources, and power, which means a deep learning model must be optimized for this embedded deployment. 
 
-Deploying memory-intensive large deep models has a great downside if you're planning to deploy the model in edge devices for real-time inference or systems with memory constraints. Edge devices have limited memory, computing resources, and power that means a deep learning network must be optimized for embedded deployment. For instance, a relatively simple network like AlexNet is over 200 MB, while a large network like VGG-16 is over 500 MB. Networks of this size cannot fit on low-power micro-controllers and smaller FPGAs. To overcome such challenges, techniques like Quantization, Distillation is introduced.
+For instance, a simple network like AlexNet has a memory size of over 200 MB, while a network like VGG-16 has a memory size of over 500 MB. Networks of this size cannot fit on low-power micro-controllers and smaller FPGAs. To overcome such challenges, techniques like Quantization, Distillation is introduced.
 
- In this blog post, we'll discuss the Quantization technique and how it reduces the size of the model and increases inference time with very small accuracy loss.
+ In this blog post, we discuss Quantization and how it reduces the size of the model & the inference time with very small accuracy loss.
 
 ### What is Quantization?
 
-* It is a technique to perform computation and store the tensors in lower bit widths.
-* Without Quantization, the default type of model parameter is float.
-* Idea with quantization is to move the model parameter's type from float to integer type.
-* **Changing parameter type from FP32 to INT8 reduces the memory by 4X.**
-* Quantized model executes some or all the operations on tensor with **Integer values**.
+* It is a technique to perform computation on tensors and store the tensors in lower bit widths.
+* Without quantization, the default datatype of the model parameter is float.
+* Using quantization, we move the model parameters from float to an integer type.
+* Changing parameter type from FP32 to INT8 reduces the memory by 4X.
+* Quantized model executes some or all the operations in the tensor with integer values.
 
-### What Quantization Brings In
+### What Quantization does?
 
-* Compact size model
-* Memory bandwidth required reduces by 4X
+* It creates a compact size model
+* It reduces the memory bandwidth required by 4X
 * Hardware support for integer computation is 2x to 4x faster than FP32.
-* Power consumed in transferring all the data, since energy consumption is dominated by memory access.
+* Reduces the power consumed in transferring the data. Since energy consumption is dominated by memory access.
 * Faster inference
 
-**Currently, Tensorflow and Pytorch natively support quantization modules.** Two ways to use quantization, 
+Currently, Tensorflow and Pytorch natively support the quantization modules. 
+
+Two ways to use quantization
 
 * Widely used approach, training on FP32 and convert it to INT8
 * Running quantization aware training (available both in PyTorch and TensorFlow)
 
-### How quantization is done
+### How quantization is done?
 
-Conversion from float to Int is the ultimate goal of quantization.
+Conversion from float to int is the ultimate goal of quantization.
 
 <center>
 <img src="{{site.url}}/assets/images/mixedPrecisionTraining/float_to_int.png" style="zoom: 5%; background-color:#DCDCDC;"  width="60%" height=auto/><br>
@@ -51,9 +50,9 @@ x_{int} \ = \ {x_{float} \over x_{scale}} \ + \ x_{offset}
 $$
 </p> 
 
-In a trained model, we'll have parameters values in float between a range of floating-point numbers and now we need to map these float numbers range to integer number range using the above mapping function. 
+In a trained model, we'll have parameters values in float between a range of floating-point numbers, and now we need to map these float numbers range to integer number range using the above mapping function. 
 
-Say the trained weights have a floating range of between -1.0 and +1.0 and the integer has a range between 0 and 128. Now mark a point (-1.0, 0) and another point (+1.0, 128), then draw a straight line connecting them.  The inverse of the slope of the line is the scale and the y value at the intersection of the line with x=0 is the offset which is 64 (rounded from 63.5) in this example.
+Say the trained weights have a floating-point range in between -1.0 and +1.0. We create an integer range between 0 and 128. Now mark a point (-1.0, 0) and another point at (+1.0, 128), then draw a straight line connecting them.  The inverse of the slope of the line is the scale, and the y value at the intersection of the line with x=0 is the offset, which is 64 (rounded from 63.5) in this example.
 
 Dequantization is the reverse of quantization, multiply with scale and minus the offset to get back the floating-point number. We can see from the below sample, how during inference (eval), the model is quantized and dequantized.
 
@@ -114,7 +113,7 @@ Dequantization is the reverse of quantization, multiply with scale and minus the
         input_fp32 = torch.randn(4, 1, 4, 4)
         model_fp32_prepared(input_fp32)
 
-        # Convert the observed model to a quantized model. This does several things:
+        # Convert the observed model to a quantized model. It does several things:
         # quantizes the weights, computes, and stores the scale and bias value to be
         # used with each activation tensor and replaces key operators with quantized
         # implementations.
@@ -127,13 +126,17 @@ Dequantization is the reverse of quantization, multiply with scale and minus the
 
 ### Different Modes of Quantization
 
-* **Dynamic Quantization** - Converting the weights to int8 - as happens in all quantization variants - but also converting the activations to int8 on the fly, just before doing the computation (hence “dynamic”). The computations will thus be performed using efficient int8 matrix multiplication and convolution implementations, resulting in faster compute.
+* **Dynamic Quantization** - Converting the weights to int8 happens in all quantization variants. But, converting the activations to int8 on the fly just before performing the computation is known as dynamic quantization.
+
+The computations will thus be performed using efficient int8 matrix multiplication and convolution implementations, resulting in faster compute.
 
 * **Post-Training Static Quantization** quantizes the weights and activations of the model. It fuses activations into preceding layers where possible.  It requires calibration with a representative dataset to determine optimal quantization parameters for activations. 
 
-Post Training Quantization is typically used when both memory bandwidth and compute savings are important with CNNs being a typical use case.
+Post Training Quantization is typically used, when both the memory bandwidth and the compute savings are important. CNN network is a typical use case.
 
-* **Quantization-aware training(QAT)** is the third method and the one that typically results in the highest accuracy of these three.  With QAT, all weights and activations are “fake quantized” during both the forward and backward passes of training: that is, float values are rounded to mimic int8 values, but all computations are still done with floating-point numbers. 
+* **Quantization-aware training(QAT)** is the third method and the one that typically results in the highest accuracy of these three.  
+
+With QAT, all the weights and activations are fake quantized during both the forward and backward passes of the training. The float values are rounded to mimic the int8 values however all the computations are still done in floating-point numbers. 
 
 Thus, all the weight adjustments during training are made while “aware” of the fact that the model will ultimately be quantized; after quantizing, therefore, this method usually yields higher accuracy than the other two methods.
 
