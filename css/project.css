@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  font-family: "Lora", serif;
 }
 
 /* Float four columns side by side */
@@ -28,7 +28,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(240, 235, 235, 0.2); /* this adds the "card" effect */
   padding: 16px;
   text-align: center;
-  background-color: #1111;
+  background-color: #f7f7f7;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
