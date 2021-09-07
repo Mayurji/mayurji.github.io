@@ -29,56 +29,56 @@ Profiling helps in finding the bottlenecks in the code to receive a large practi
 Code Snippet: This is the piece of code on which the profiling is tested. Feel free to try your code using profiling tools. This piece of code is known as Julia Set.
 
 ```python
-def calculate_z_serial_purepython(maxiter, zs, cs):
-    """Calculate output list using Julia update rule"""
-    output = [0] * len(zs)
-    for i in range(len(zs)):
-        n = 0
-        z = zs[i]
-        c = cs[i]
-        while abs(z) < 2 and n < maxiter:
-            z = z * z + c
-            n += 1
-        output[i] = n
-    return output
 
-```
-```python
-    def calc_pure_python(desired_width, max_iterations):
-    """Create a list of complex coordinates (zs) and complex    parameters (cs), build Julia set"""
-    x_step = (x2 - x1) / desired_width
-    y_step = (y1 - y2) / desired_width
-    x = []
-    y = []
-    ycoord = y2
-    while ycoord > y1:
-        y.append(ycoord)
-        ycoord += y_step
-    xcoord = x1
-    while xcoord < x2:
-        x.append(xcoord)
-        xcoord += x_step
-    #build a list of coordinates and the initial condition for each cell.
-    #Note that our initial condition is a constant and could easily be removed,
-    #we use it to simulate a real-world scenario with several inputs to our
-    # function
-    zs = []
-    cs = []
-    for ycoord in y:
-        for xcoord in x:
-            zs.append(complex(xcoord, ycoord))
-            cs.append(complex(c_real, c_imag))    print("Length of x:", len(x))
-    print("Total elements:", len(zs))
-    start_time = time.time()
-    output = calculate_z_serial_purepython(max_iterations, zs, cs)
-    end_time = time.time()
-    secs = end_time - start_time
-    print(calculate_z_serial_purepython.__name__ + " took", secs, "seconds")
-    # This sum is expected for a 1000^2 grid with 300 iterations
-    # It ensures that our code evolves exactly as we'd intended
-    assert sum(output) == 33219980
+        def calculate_z_serial_purepython(maxiter, zs, cs):
+            """Calculate output list using Julia update rule"""
+            output = [0] * len(zs)
+            for i in range(len(zs)):
+                n = 0
+                z = zs[i]
+                c = cs[i]
+                while abs(z) < 2 and n < maxiter:
+                    z = z * z + c
+                    n += 1
+                output[i] = n
+            return output
 
-calc_pure_python(desired_width=1000, max_iterations=300)
+            def calc_pure_python(desired_width, max_iterations):
+            """Create a list of complex coordinates (zs) and complex    parameters (cs), build Julia set"""
+            x_step = (x2 - x1) / desired_width
+            y_step = (y1 - y2) / desired_width
+            x = []
+            y = []
+            ycoord = y2
+            while ycoord > y1:
+                y.append(ycoord)
+                ycoord += y_step
+            xcoord = x1
+            while xcoord < x2:
+                x.append(xcoord)
+                xcoord += x_step
+            #build a list of coordinates and the initial condition for each cell.
+            #Note that our initial condition is a constant and could easily be removed,
+            #we use it to simulate a real-world scenario with several inputs to our
+            # function
+            zs = []
+            cs = []
+            for ycoord in y:
+                for xcoord in x:
+                    zs.append(complex(xcoord, ycoord))
+                    cs.append(complex(c_real, c_imag))    print("Length of x:", len(x))
+            print("Total elements:", len(zs))
+            start_time = time.time()
+            output = calculate_z_serial_purepython(max_iterations, zs, cs)
+            end_time = time.time()
+            secs = end_time - start_time
+            print(calculate_z_serial_purepython.__name__ + " took", secs, "seconds")
+            # This sum is expected for a 1000^2 grid with 300 iterations
+            # It ensures that our code evolves exactly as we'd intended
+            assert sum(output) == 33219980
+
+        calc_pure_python(desired_width=1000, max_iterations=300)
+
 ```
 
 ### cProfile
@@ -154,11 +154,13 @@ This tool is useful in the production environment with long-running processes or
 Since it works on the existing running python process, we need to mention the PID (process id) of the process on which we intend to spy on.
 
 ```python
-$ ps -A -o pid,rss,cmd | ack python
 
-15953 96156 python julia1_nopil.py
+        $ ps -A -o pid,rss,cmd | ack python
 
-$ sudo env "PATH=$PATH" py-spy --pid 15953
+        15953 96156 python julia1_nopil.py
+
+        $ sudo env "PATH=$PATH" py-spy --pid 15953
+
 ```
 
 <center>
@@ -185,20 +187,22 @@ The dis module helps in inspecting the underlying bytecode that we run inside th
 Consider two versions of a program, To find a Sum of N number, N=1000000.
 
 ```python
-def fn_expressive(upper=1000000):
-    total = 0
-    for n in range(upper):
-        total += n
-    return total
 
-def fn_terse(upper=1000000):
-    return sum(range(upper))
+        def fn_expressive(upper=1000000):
+            total = 0
+            for n in range(upper):
+                total += n
+            return total
 
-In [2]: %timeit fn_expressive()
-52.4 ms ± 86.4 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+        def fn_terse(upper=1000000):
+            return sum(range(upper))
 
-In [3]: %timeit fn_terse()
-18.1 ms ± 1.38 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)
+        In [2]: %timeit fn_expressive()
+        52.4 ms ± 86.4 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+
+        In [3]: %timeit fn_terse()
+        18.1 ms ± 1.38 ms per loop (mean ± std. dev. of 7 runs, 100 loops each)
+
 ```
 Bytecode version of the functions
 
