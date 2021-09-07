@@ -6,38 +6,37 @@ date:   2020-10-07 16:43:52 +0530
 ---
 {% include mathjax.html %}
 
-In Deep Learning, it is preferred to use a pre-trained model as initialization for your new model rather than training a model from scratch. Pre-training provides a major boost to your model, by retaining essential features, in the initial layers of the pre-trained model. And also, the training time cost and hardware required is drastically
-brought down because pre-trained models are SOTA models which are trained on the huge dataset and expensive hardware.
+In Deep Learning, a pre-trained model is used as an initialization for the new model instead of training a model from scratch. Pre-training provides a huge boost to the new model by retaining essential features in the initial layers of the pre-trained model. 
 
-So, we'll learn how to use a pre-trained model in Pytorch and then we'll look into the basics of PyTorch.
+The training time and the hardware cost required for training a model are drastically brought down because pre-trained models are SOTA models which are trained on large datasets with expensive hardware.
+
+So, we'll learn how to use a pre-trained model in Pytorch, and then we'll look into the basics of PyTorch.
 
 #### How to load and predict using Pre-trained Model - Resnet34
 
-Pytorch provides three sets of libraries i.e. torchvision, torchaudio, torchtext for Vision tasks, Audio tasks and 
-Text tasks respectively.
+Pytorch provides three sets of libraries, i.e., torchvision, torchaudio, torchtext for Vision tasks, Audio tasks, and Text tasks respectively.
 
 **Importing Libraries**
 
 ```python
 
-import torch
-import numpy as np
-import os
-import cv2
-from torchvision import models
-from torchvision import transforms
-from PIL import Image
-import torch.optim as optim
-import torch.nn as nn
-import matplotlib.pyplot as plt
+        import torch
+        import numpy as np
+        import os
+        import cv2
+        from torchvision import models
+        from torchvision import transforms
+        from PIL import Image
+        import torch.optim as optim
+        import torch.nn as nn
+        import matplotlib.pyplot as plt
 
 ```
 **Loading Pretrained Model**
 
-Using the models' module from Torchvision, we can load many pre-trained models which exist in PyTorch. I am loading a resnet34 
-the model with pretrained=True, which means I will be using weights of the model on which it was trained. For Instance, 
-resnet34 was trained on the Imagenet dataset. On executing the below line, the model's module will download the model from 
-Pytorch if it doesn't exist in your system.
+Using the models' module from torchvision, we can load any of the pre-trained models, which exist in the PyTorch hub. Here, we'll load the resnet34 model with pretrained=True, which means we use the model weights on which it was trained. 
+
+For instance, resnet34 was trained on the Imagenet dataset. On executing the below line, the model's module will download the model from the Pytorch hub if it doesn't exist in your system.
 
 ```python
 
@@ -48,8 +47,7 @@ pretrained=True returns a pre-trained model.
 
 **Creating Transforms**
 
-Transforms is a cool feature in torchvision, because we can apply a list of transforms/augmentation on an image by just simply adding it as a parameter in the transforms module. We can also customize other transforms if required, if it's not included in 
-torchvision.transforms.
+Transforms is a cool feature in torchvision, because we can apply a list of transforms/augmentation on an image by simply adding it as a parameter into the transforms module. We can also customize other transforms if required.
 
 ```python
 
@@ -68,8 +66,8 @@ torchvision.transforms.
 
   * Using Python Image Library (PIL) for loading a single image.
   * Applying the transformation declared above.
-  * Checking out the shape of the image.
-  * Note the shape of the image, it should apply the transforms.centercrop() and resize the image.
+  * Check the shape of the image.
+  * transforms.centercrop() will resize the image.
 
 ```python
 
@@ -81,7 +79,7 @@ torchvision.transforms.
 ```
 
 Pytorch uses the first dimension of the matrix to represent the batch size. So the pre-trained model requires batch size as the first dimension, 
-so we reshape the image dimension. In PyTorch, we use unsqueeze to add a dimension to the existing matrix.
+so we reshape the image dimension. In PyTorch, we use unsqueeze method to add a dimension to an existing matrix.
 
 ```python
 
@@ -90,13 +88,14 @@ so we reshape the image dimension. In PyTorch, we use unsqueeze to add a dimensi
         #torch.Size([1, 3, 224, 224])
 
 ```
-Pytorch, we can use a model in two modes, train mode, and eval mode. In train mode, the model learns model parameters
-and we perform batch normalization and dropout layers to avoid overfitting. In eval mode, PyTorch automatically disables the
-batch norm and dropout layer.
+In PyTorch, we can run a model in two modes, either in train mode or in an eval mode. 
+
+In train mode, the model learns the model parameters, and we perform batch normalization and dropout layers to avoid overfitting. In eval mode, PyTorch automatically disables the batch norm and dropout layer.
 
 Since we are predicting using a pre-trained model, we use the model under eval mode. We are initializing the resnet34 model and predicting
-one image under the batch_t variable. The out variable contains our predicted output over 1000 classes. Since resnet was trained on 
-Imagenet, which has 1000 classes.
+one image under the batch_t variable. 
+
+The out variable contains the predicted output over 1000 classes. Since the resnet model is trained on imagenet, it has 1000 classes.
 
 ```python
 
@@ -119,7 +118,7 @@ Below, we are loading the class names of the classes in Imagenet. We can downloa
 **Finding Index of the max probability class**
 
 The variable out is a vector with 1000 elements with a set of values providing weights to each class. The higher weight of the class
-results as predicted class of the image. Using max and dimension=1, we are fetching the index of the vector, where the weight is
+results in the predicted class of the image. Using max and dimension=1, we are fetching the index of the vector, where the weight is
 maximum among 1000 classes.
 
 ```python
@@ -131,9 +130,9 @@ maximum among 1000 classes.
 ```
 **Prediction Confidence**
 
-The softmax function is used in Multiclass classification, it squeezes the value/weight as mentioned above between 0 and 1. 
-So all 1000 weights are squeezed between 0 to 1 and all summing up to 1. We further convert the class index into 
-label of the class and present it as a confidence percentage.
+The softmax function is used in Multiclass classification. It squeezes the value/weight as mentioned above between 0 and 1. 
+
+So all 1000 weights are squeezed between 0 to 1 and summing up to 1. We further convert the class index into a label for the class and present it as a confidence percentage.
 
 ```python
 
