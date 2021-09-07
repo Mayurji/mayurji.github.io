@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Python Profiling
-description: Coding is easy, profiling is tough!
+description: Coding is easy, but profiling is tough.
 category: Blog
 image_url: "/assets/images/profiling/profiling.gif"
 date:   2021-01-02 13:43:52 +0530
@@ -9,12 +9,13 @@ date:   2021-01-02 13:43:52 +0530
 
 Code is a simple set of instructions to perform an action. It occupies resources like RAM and CPU for its compilation. But an explainable and efficient code should occupy less time and resources to complete its execution. There are various techniques to check out the performance of the code written.
 
-In this blog post, I will introduce all the tools, tips, and tricks to check the code’s performance and how it can be made efficient with minor tweaks
+In this blog post, we introduce the tools, tips, and tricks to check the code's performance and how it can be made efficient with minor tweaks.
+
 Profiling
 
-Profiling helps in finding bottlenecks in our code to receive the large practical performance gain. While we all believe to run the code faster with a reduction in resource usage, we practically want our code to be ‘fast enough’ and ‘lean enough’ that fits our requirements. Profiling will let you make the most pragmatic decisions for the least overall effort.
+Profiling helps in finding the bottlenecks in the code to receive a large practical performance gain. While we all believe that to run the code faster with a reduction in resource usage, we practically want our code to be fast enough and lean enough that fits our requirements. Profiling will let us make the most pragmatic decisions for the least overall effort.
 
-### *Profiling Tools*
+### Profiling Tools
 
 *  cProfile (To identify which function takes max time in your code)
 *  line_profiler (time taken for each line of code in a function)
@@ -25,7 +26,7 @@ Profiling helps in finding bottlenecks in our code to receive the large practica
 
 ### *Tools to measure RAM and CPU consumption*
 
-Code Snippet: The piece of code on which the profiling is tested! Feel free to try your code using profiling tools. This piece of code is known as “Julia Set”.
+Code Snippet: This is the piece of code on which the profiling is tested. Feel free to try your code using profiling tools. This piece of code is known as Julia Set.
 
 ```python
 def calculate_z_serial_purepython(maxiter, zs, cs):
@@ -82,9 +83,9 @@ calc_pure_python(desired_width=1000, max_iterations=300)
 
 ### cProfile
 
-It is a built-in profiling tool in the standard library. It hooks into the virtual machine in CPython to measure the time taken to run every function that it sees. This introduces a greater overhead, but you get correspondingly more information. Sometimes the additional information can lead to surprising insights into your code.
+It is a built-in profiling tool in the standard library. It hooks into the virtual machine in CPython to measure the time taken to run every function that it sees. It introduces a great overhead, but we get correspondingly more information. Sometimes the additional information can lead to surprising insights into your code.
 
-cProfile is one of two profilers in the standard library, alongside profile. the profile is the original and slower pure Python profiler; cProfile has the same interface as the profile and is written in C for lower overhead.
+cProfile is one of two profilers in the standard library, alongside profile. The profile is the original and slower pure Python profiler; cProfile has the same interface as the profile and is written in C for lower overhead.
 
 snakeviz is a visualizer that draws the output of cProfile as a diagram in which larger boxes are areas of code that take longer to run. It replaces the older runsnake tool.
 
@@ -93,11 +94,11 @@ snakeviz is a visualizer that draws the output of cProfile as a diagram in which
 <p>Figure 1: cProfile statistics of the whole code</p>
 </center>
 
-From the above image, it can be noted, what is the time taken for each function. Sorting by cumulative time gives us an idea about where the majority of execution time is spent. This result shows us that 36,221,995 function calls occurred in just over 12 seconds (this time includes the overhead of using cProfile).
+From the above image, we can note, what is the time taken for each function. Sorting by cumulative time gives us an idea about where the majority of the execution time is spent. This result shows us that 36,221,995 function calls occurred in just over 12 seconds (this time includes the overhead of using cProfile).
 
-The function call to calc_pure_python takes 1 second and the function call to calculate_z_serial_purepython takes 11 seconds, these two functions are called only once.
+The function call to calc_pure_python takes one second, and the function call to calculate_z_serial_purepython takes 11 seconds, and these two functions are called only once.
 
-the call to calculate_z_serial_purepython function is CPU-intensive since the manipulation happens inside this function. However, we can’t derive which lines take the time inside the function using cProfile.
+The call to calculate_z_serial_purepython function is CPU-intensive since the manipulation happens inside this function. However, we cannot derive which lines take the most time inside the function using cProfile.
 
 <center>
 <img src="{{site.url}}/assets/images/profiling/snakeViz.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -108,18 +109,18 @@ The above visualization represents the time taken for each function to execute.
 
 ### line_profiler
 
-cProfile acts as a guide to identifying which functions are costly in terms of execution time, while the line_profiler acts on top of each function, to identify, which line takes the max amount of time for execution. line_profiler helps in finding the CPU usage.
+cProfile acts as a guide in identifying which functions are costly in terms of execution time. While the line_profiler acts on top of each function, to identify the line that takes the max amount of time for execution. line_profiler helps in finding the CPU usage.
 
 <center>
 <img src="{{site.url}}/assets/images/profiling/line_profiler.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: line_profilier</p>
 </center>
 
-The % Time column is the most helpful — we can see that 38% of the time is spent while testing. We don’t know whether the first statement (abs(z) < 2) is more expensive than the second (n < maxiter), though. Inside the loop, we see that the update to z is also fairly expensive. Even n += 1 is expensive! Python’s dynamic lookup machinery is at work for every loop, even though we’re using the same types for each variable in each loop — this is where compiling and type specialization gives us a massive win. The creation of the output list and the updates on line 20 are relatively cheap compared to the cost of the while loop.
+The % time column is the most helpful — we can see that 38% of the time is spent while testing. We don’t know whether the first statement (abs(z) < 2) is more expensive than the second (n < maxiter). Inside the loop, we see that the update to z is also fairly expensive. Even n += 1 is expensive. Python’s dynamic lookup machinery is at work for every loop, even though we are using the same types for each variable in each loop — this is where compiling and type specialization gives us a massive win. The creation of the output list and the updates on line 20 are relatively cheap compared to the cost of the while loop.
 
 ### memory_profiler
 
-memory_profiler finds the amount of memory (RAM) being used from line to line basis. memory_profiler helps in answering two question
+memory_profiler finds the amount of memory (RAM) used on line to line basis. memory_profiler helps in answering two question
 
 * Can a function be rewritten efficiently such that it takes less RAM?
 * Can we use more RAM and save the CPU cycle by caching?
@@ -129,11 +130,11 @@ memory_profiler finds the amount of memory (RAM) being used from line to line ba
 <p>Figure 4: memory_profiler</p>
 </center>
 
-From the above image, check line no. 12, the amount of memory added to the process is 7MB i.e. the output variable increases the occupancy of RAM by 7MB.
+From the above image, check line no. 12, the amount of memory added to the process is 7MB, i.e., the output variable increases the occupancy of RAM by 7MB.
 
-Similarly in the parent function, ‘calc_pure_python’ at line 46, the memory is increased from 48MB to 126MB, which is the result of bringing in two lists zs and cs, irrespective of these true array sizes, process size grew when the list was created.
+Similarly in the parent function, calc_pure_python on line 46, the memory is increased from 48MB to 126MB. It results in bringing in the two lists zs & cs, irrespective of their true array sizes the process size grew when the list was created.
 
-To reduce the RAM usage, we can perform a runtime calculation of z_serial instead of creating a separate list for zs and cs, and then passing that as a parameter to calculate_z_serial_purepython.
+To reduce the RAM usage, we can perform a runtime calculation of z_serial instead of creating a separate list for zs & cs and passing that as a parameter to calculate_z_serial_purepython.
 
 Find the below snippet
 
@@ -148,7 +149,7 @@ After making the following changes, the amount of RAM utilized is reduced from 1
 
 py-spy is an intriguing new sampling profiler — rather than requiring any code changes, it introspects an already-running Python process. Being a sampling profiler, it has almost no runtime impact on the code. It is written in Rust and requires elevated privileges to introspect another process.
 
-This tool could be very useful in a production environment with long-running processes or complicated installation requirements.
+This tool is useful in the production environment with long-running processes or complicated installation requirements.
 
 Since it works on the existing running python process, we need to mention the PID (process id) of the process on which we intend to spy on.
 
@@ -175,11 +176,11 @@ We can utilize plots like the flame chart to represent the time taken by the cod
 
 ### Under the Hood — Bytecode
 
-Bytecode helps in understanding the slow function of the code, while we are compiling it. A tool to understand the bytecode is the dis module, it examines the CPython Bytecode.
+Bytecode helps in understanding the slow function of the code, while we are compiling it. A tool to understand the bytecode is the dis module. It examines the CPython Bytecode.
 
 **dis Module**
 
-The dis module lets us inspect the underlying bytecode that we run inside the stack-based CPython virtual machine. Having an understanding of what’s happening in the virtual machine that runs your higher-level Python code will help us in understanding why some styles of coding are faster than others. It will also help when we come to use a tool like Cython, which steps outside of Python and generates C code.
+The dis module helps in inspecting the underlying bytecode that we run inside the stack-based CPython virtual machine. Having an understanding of what’s happening in the virtual machine that runs your higher-level Python code will help us in understanding why some styles of coding are faster than others. It will also help when we come to use a tool like Cython, which steps outside of Python and generates C code.
 
 Consider two versions of a program, To find a Sum of N number, N=1000000.
 
@@ -206,7 +207,7 @@ Bytecode version of the functions
 <p>Figure 8: Bytecode</p>
 </center>
 
-The number of bytecode lines generated for fn_expressive is 17 and for fn_terse is 6 lines. The fn_expressive maintains two variables and a loop that checks the type of variable during addition on each iteration which makes the operation expensive compared to fn_terse, which is an optimized C list comprehension, it generates results without any python object in between.
+The number of bytecode lines generated for fn_expressive is 17 and for fn_terse is six lines. The fn_expressive maintains two variables and a loop that checks the type of variable during addition on each iteration which makes the operation expensive compared to fn_terse, which is an optimized C list comprehension, it generates results without any python object in between them.
 
 Decreasing the lines of code automatically reduces the number of bytecodes generated, causing the time taken for execution to reduce drastically.
 
