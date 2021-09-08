@@ -224,12 +224,12 @@ footer {
 ul.posts { 
     margin: 20px auto 40px; 
     /*font-size: 1vw;*/
-    color: black;
+    color: #2a7ae2;
 }
 
 ul.posts li {
     list-style: disc;
-    color: black;
+    color: #2a7ae2;
     /*font-size: 1vw;*/
 }
 
