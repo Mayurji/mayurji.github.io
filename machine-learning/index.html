@@ -12,8 +12,8 @@ title: Machine Learning
 
   {% assign sorted_pages = site.machine-learning | sort:"date" %}
   {% for item in sorted_pages reversed %}
-  <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}" style="color:#2a7ae2">{{ item.title }}
-    <p style="color:#2a7ae2">{{ item.description }}</p></a></li>
+  <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}
+    <p>{{ item.description }}</p></a></li>
   {% endfor %}
 
 </ul>

@@ -238,6 +238,11 @@ ul.posts p {
   /*font-size: 1vw;*/
 }
 
+ul.posts a {
+  color: #2a7ae2;
+  /*font-size: 1vw;*/
+}
+
 img {
 max-width: 100%;
 display: block;

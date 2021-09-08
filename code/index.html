@@ -12,7 +12,7 @@ title: code
 <ul class="posts">  
   <!--{% assign sorted_pages = site.code | sort:"date" %}
   {% for item in sorted_pages reversed %}-->
-  <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}" style="color:#2a7ae2">{{ item.title }}</a></li>
+  <li><span>{{ item.date | date_to_string }}</span> » <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
   <br>
   <!--{% endfor %}-->
 </ul>
