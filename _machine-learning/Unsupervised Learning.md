@@ -1,8 +1,8 @@
 ---
 layout: machine-learning
 title: Unsupervised Learning
-description: Clustering Algorithms
-date:   2021-04-05 17:43:52 +0530
+description: Working with unlabelled data, Clustering Algorithms etc
+date:   2021-02-16 17:43:52 +0530
 ---
 {% include mathjax.html %}
 
@@ -22,7 +22,9 @@ $$
 
 #### Expectation-Maximization Algorithm
 
-It is an efficient iterative method to estimate the parameters of the latent variables through maximum-likelihood estimation. In each iteration, the algorithm performs two alternate steps, first performing an expectation (E) step, which creates a function for the expectation of the [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood) evaluated using the current estimate for the parameters, and a  maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the *E* step. These parameter estimates are then used to determine the distribution of the latent variables in the next E step.
+It is an efficient iterative method to estimate the parameters of the latent variables through maximum-likelihood estimation. 
+
+In each iteration, the algorithm performs two alternate steps, first performing an expectation (E) step, which creates a function for the expectation of the [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood) evaluated using the current estimate for the parameters, and a  maximization (M) step, which computes parameters maximizing the expected log-likelihood found on the *E* step. These parameter estimates are then used to determine the distribution of the latent variables in the next E step.
 
 **EM In Action**
 
@@ -85,7 +87,7 @@ $$
 **K-Means IN Action**
 
 <center>
-<p><a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif#/media/File:K-means_convergence.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto alt="K-means convergence.gif"></a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif#/media/File:K-means_convergence.gif"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" style="zoom: 5%  background-color:#DCDCDC;"  width="60%" height=auto alt="K-means convergence.gif"></a></p>
 </center>
 
 ##### Simple Understanding
