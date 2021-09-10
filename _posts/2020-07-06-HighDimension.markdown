@@ -58,6 +58,8 @@ First, we iterate over several components to find the best match between the var
 
 From the results, when all the components are included in the model, the variance adds up to 1.
 
+### PCA Implementation
+
 ```python
 
         X = load_digits.data
@@ -93,12 +95,14 @@ From the results, when all the components are included in the model, the varianc
             print("--------------------------------------------------")
 
 ```
-**Increased Components Increases Acccuracy**
+**Increased Components Increases Accuracy**
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/results.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Components vs Accuracy</p>
 </center>
+
+### Plotting PCA With Explained Variance
 
 ```python
 
@@ -119,6 +123,8 @@ From the results, when all the components are included in the model, the varianc
 <img src="{{site.url}}/assets/images/highdimension/plots.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 3: Plotting</p>
 </center>
+
+### Measured Accuracy At 24 Components
 
 ```python
 
