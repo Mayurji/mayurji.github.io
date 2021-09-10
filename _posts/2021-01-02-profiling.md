@@ -215,6 +215,8 @@ The number of bytecode lines generated for fn_expressive is 17 and for fn_terse 
 
 Decreasing the lines of code automatically reduces the number of bytecodes generated, causing the time taken for execution to reduce drastically.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### References
 
 [High-Performance Python by Micha Gorelick, Ian Ozsvald](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)

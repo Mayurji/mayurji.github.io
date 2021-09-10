@@ -206,3 +206,5 @@ If the columns present in the dataset are highly correlated, then the informatio
 There are various correlation techniques to find the redundancy between the variables. Like **correlation coefficient**, **Pearson product-moment coefficient**, **Pearson Chi-squared**. Each correlation technique depends on the variable type like categorical or numerical etc. Before doing correlation operation, perform normalization on the columns as correlation is scaled sensitive.
 
 Both Forward Feature Construction and Backward Feature Elimination are computationally expensive tasks.
+
+If you've liked this post, please don't forget to subscribe to the newsletter.

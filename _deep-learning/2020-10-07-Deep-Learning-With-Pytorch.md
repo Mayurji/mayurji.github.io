@@ -157,6 +157,8 @@ Similar to the above code, only showing the top five predictions of an image.
         ('binoculars', 1.4750306718269712e-06)]
 
 ```
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 **Reference** 
 
 [Deep Learning With Pytorch by Eli Stevens and Luca Antiga](https://www.manning.com/books/deep-learning-with-pytorch)

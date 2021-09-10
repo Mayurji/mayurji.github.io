@@ -49,4 +49,6 @@ is a simple function, which introduces a non-linearity to the neural network's w
 
 <p align=center>. . . . .</p>
 
-Find an annotated research paper that explains the role of an individual unit in the neural network, [**Role of Individual Units in Deep Neural Networks**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate%20DNN)
+Find an annotated research paper that explains the role of an individual unit in the neural network, [**Role of Individual Units in Deep Neural Networks.**](https://github.com/Mayurji/Deep-Learning-Papers/tree/master/Investigate%20DNN)
+
+If you've liked this post, please don't forget to subscribe to the newsletter.

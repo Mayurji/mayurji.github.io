@@ -143,6 +143,8 @@ Similarly, **RUSBoost**(Random UnderSampling Boost) achieves the same goal by pe
 
 All the algorithms based approach for class imbalance performs well only when its included with other sampling approaches.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 **CS 329S: Machine Learning Systems Design** by [Chip Huyen](https://huyenchip.com), [Michael Cooper](https://michaeljohncooper.com/)

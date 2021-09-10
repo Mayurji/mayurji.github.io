@@ -138,6 +138,8 @@ divisible_by_three = sum(1 for n in fibonacci_gen(100000) if n % 3 == 0)
 
 In conclusion, both the iterators and generator are applied based on the requirement, as mentioned earlier the trade-off between the CPU optimization and Memory consumption. It's up to the individual, how to utilize these python objects efficiently.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 * [High-Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)

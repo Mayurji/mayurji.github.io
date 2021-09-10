@@ -76,3 +76,4 @@ date:   2021-04-07 16:43:52 +0530
             w = regression.run(y, X)
 
 ```
+If you've liked this post, please don't forget to subscribe to the newsletter.

@@ -149,9 +149,9 @@ Thus, all the weight adjustments during training are made while “aware” of t
 
 We have just scratched the surface of quantization, it is a wide topic with variants of quantization. But we can get the idea that we can reduce our model inference time using quantization because the computation in type INT is faster than floating-point.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 **Reference and more reading material**
 
 * [Math behind Quantization](https://leimao.github.io/article/Neural-Networks-Quantization/)
 * [Pytorch Quantization](https://pytorch.org/docs/stable/quantization.html)
-
-  

@@ -119,3 +119,4 @@ date:   2021-04-13 16:43:52 +0530
             print(tfidf_vectorizer.fit_tranform(new_document[0],vocabulary, wordToInt, vocab_frequecy, documents))
 
 ```
+If you've liked this post, please don't forget to subscribe to the newsletter.

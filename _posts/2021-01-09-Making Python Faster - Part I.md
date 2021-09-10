@@ -259,6 +259,8 @@ def calculate_z(int maxiter, zs, cs):
 
 *In computer programming, **bounds checking** is any method of detecting whether a variable is within some **bounds** before it is used. It is usually used to ensure that a number fits into a given type (range **checking**), or that a variable is used as an array index is within the **bounds** of the array (index **checking**).*
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### References
 
 [High-Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)                                                                              

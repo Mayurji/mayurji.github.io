@@ -161,6 +161,8 @@ With this in mind, a more readable solution would be to set a local variable wit
 * Memory footprint is high
 * Complex hashing function leads to slower lookup.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 * [Dictionary’s Internals](https://www.freecodecamp.org/news/exploring-python-internals-the-dictionary-a32c14e73efa/)

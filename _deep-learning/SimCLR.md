@@ -115,6 +115,8 @@ For complete code: [**SimCLR**](https://github.com/Mayurji/SimCLR)
 
 With growing research in self-supervised learning along with massive amounts of unlabelled data makes the path of self-supervised learning in computer vision a fruitful one.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 * SimCLR Paper

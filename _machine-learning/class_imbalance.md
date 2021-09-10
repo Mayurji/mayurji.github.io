@@ -69,6 +69,8 @@ Various ensemble-based models
 * Bagging Based Ensemble Learning
 * Hybrid Combined Ensembles
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 **CS 329S: Machine Learning Systems Design** by [Chip Huyen](https://huyenchip.com), [Michael Cooper](https://michaeljohncooper.com/)

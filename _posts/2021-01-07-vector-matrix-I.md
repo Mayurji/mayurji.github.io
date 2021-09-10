@@ -349,6 +349,8 @@ Much of the extra machinery we are bringing into our program with `numexpr` deal
 
 In conclusion, there are various tools and tips for better utilization of memory and RAM. Follow a process to tackle issues of performance by profiling and solve each issue one by one and keep track of how the readability and maintainability of the code are affected after each change is. Always write a unit test, if the code complexity increases, you'll never regret spending some time on it.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### References
 
 [High-Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)

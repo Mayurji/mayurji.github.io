@@ -143,3 +143,5 @@ Based on the complexity of the data, the model tends to be complex. So the lambd
 The complexity of the model is defined by the number of parameters(w) in the equation.
 
 <p align='center'>. . . . .</p>
+
+If you've liked this post, please don't forget to subscribe to the newsletter.

@@ -107,7 +107,7 @@ Another benefit of using tuples is resource caching. Python is garbage collected
 ```
 Both the lists and tuples have their pros and cons. It is important to understand their properties like overallocation in the list and immutability & resource caching in the tuple.
 
-I hope you liked reading the article.
+If you've liked this post, please don't forget to subscribe to the newsletter.
 
 ### Reference
 

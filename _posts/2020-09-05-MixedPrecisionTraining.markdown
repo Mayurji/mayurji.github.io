@@ -123,6 +123,8 @@ Interesting point, Nvidia’s tensor cores are designed in such a fashion that k
 
 Details related to How to set the alpha value, How to scale & unscale a parameter, how the performance is affected if a poor scaling factor is chosen, how to match the performance of FP32 using FP16, check out the reference link to NVIDIA Mixed Precision.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### References
 
 [Loss Scaling while training in Mixed Precision](https://arxiv.org/pdf/1910.12385.pdf)\

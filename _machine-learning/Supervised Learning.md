@@ -112,7 +112,7 @@ In a regression problem, we can keep the margin of error that is allowed by the 
 
 ❌**Warning** ❌ Never use the training set to evaluate the model!
 
-I hope to cover almost everything required for performing supervised learning. Next, we'll deep dive into unsupervised learning. Thanks for reading.
+If you've liked this post, please don't forget to subscribe to the newsletter.
 
 **Reference**
 

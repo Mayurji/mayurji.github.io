@@ -109,6 +109,8 @@ To conclude, keep track of validation errors while increasing the number of hidd
 
 *As stated by Andrej Karpathy, a three-layer net outperforms the two-layer net but going beyond that rarely helps the network. While in CNN, the greater the of layers, the greater will be the performance of the network.*
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Further Reading
 
 [Andrej Karpathy](https://cs231n.github.io/neural-networks-1/)

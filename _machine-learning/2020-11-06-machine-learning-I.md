@@ -121,4 +121,4 @@ For example Data on house price is based on various factors like area, rooms, la
 
    The Algorithm learns from performing some action and receiving rewards(+ve/-ve) for those actions. Here, the algorithms interact with an environment, so there is a feedback loop between the learning system and its experience. For instance: Self Driving Cars and Game Playing Agents.
 
-As part of this series, I will share separate blogs on each topic. Please make sure to subscribe to the newsletter if you wish to get an update on future articles. Thanks for reading.
+If you've liked this post, please don't forget to subscribe to the newsletter.

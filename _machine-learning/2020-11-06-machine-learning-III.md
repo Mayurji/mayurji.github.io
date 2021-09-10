@@ -181,6 +181,4 @@ cross-validation, you randomly split your training data into five folds: $${F_1 
 
 To train the first model, $$f_1$$ , you use all examples from folds $$F_2 , F_3 , F_4 , and F_5$$ as the training set and the examples from $$F_1$$ as the validation set. To train the second model, $$f_2$$ , you use the examples from folds $$F_1 , F_3, F_4 , and F_5$$ to train and the examples from $$F_2$$ as the validation set. You continue building models iteratively like this and compute the value of the metric of interest on each validation set, from $$F_1 to F_5$$. Then you average the five values of the metric to get the final value.
 
-#### Reference
-
-The Hundred-Page Machine Learning by Andriy Burkov
+If you've liked this post, please don't forget to subscribe to the newsletter.

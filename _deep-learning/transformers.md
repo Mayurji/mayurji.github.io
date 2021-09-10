@@ -223,7 +223,7 @@ The marked zeros essentially become irrelevant and similarly, this is done on mu
 The above process is extended again with N head with copies of Q, K, and V making different heads. Each head learns a different proportion of the relationship between the encoder's output and decoder’s input.
 <center style='color: White'>...</center>
 
-**Connect with me on LinkedIn and Twitter 🐅 ✋**
+If you've liked this post, please don't forget to subscribe to the newsletter.
 
 ### Reference
 

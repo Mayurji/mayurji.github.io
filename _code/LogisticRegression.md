@@ -98,3 +98,4 @@ date:   2021-04-08 16:43:52 +0530
 
             print(f"Accuracy: {torch.sum(y == y_predict) // X.shape[0]}")
 ```
+If you've liked this post, please don't forget to subscribe to the newsletter.

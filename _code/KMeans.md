@@ -167,3 +167,4 @@ date:   2021-04-10 01:20:52 +0530
             print(f'Accuracy Score: {accuracy_score(y_test, ypred)}')
 
 ```
+If you've liked this post, please don't forget to subscribe to the newsletter.

@@ -124,6 +124,8 @@ The general recipe for evaluating whether to use the GPU comprises the following
 
 However, there are times when PyTorch doesn't support an operation (such as dealing with complex numbers) or else the API is slightly different (for example, with generating random numbers).
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### References
 
 [High-Performance Python](https://www.oreilly.com/library/view/high-performance-python/9781449361747/)

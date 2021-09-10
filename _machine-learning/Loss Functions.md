@@ -282,6 +282,8 @@ For more information on log loss, [find this amazing blog on Log Loss](https://t
 
 Long story short, the loss function built should be based on the problem at hand and how small changes in some factors have a significant impact on the system.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 * [ML Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html)

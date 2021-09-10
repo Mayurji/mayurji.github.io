@@ -137,6 +137,8 @@ For example, we would process a stream with three elements as follows:
 2. Store the second element with a probability of 1/2. Now both elements have equal probabilities of being in the reservoir.
 3. Store the third element with a probability of 1/3. The previous two elements also have a final probability of (1/2) ∗ (2/3) = 1/3 to be chosen.
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 ### Reference
 
 * **CS 329S: Machine Learning Systems Design** By [Chip Huyen](https://huyenchip.com), [Michael Cooper](https://michaeljohncooper.com/)

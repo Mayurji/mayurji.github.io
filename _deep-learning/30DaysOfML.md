@@ -149,3 +149,5 @@ However, the idea behind starting with 30 Days of ML with Pytorch was to learn t
   ```
 
 Try out machine learning algorithm using PyTorch by following this ***[github repository.](https://github.com/Mayurji/MLWithPytorch)***
+
+If you've liked this post, please don't forget to subscribe to the newsletter.

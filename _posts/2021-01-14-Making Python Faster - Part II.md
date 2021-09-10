@@ -153,3 +153,5 @@ The [PyData compilers page](http://compilers.pydata.org) lists a set of high-per
 [PyCUDA](https://oreil.ly/Lg4H3) and [PyOpenCL](https://oreil.ly/8e3OA) offer CUDA and OpenCL bindings into Python for direct access to GPUs. Both libraries are mature and support Python 3.4+.
 
 [Nuitka](https://oreil.ly/dLPEw) is a Python compiler that aims to be an alternative to the usual CPython interpreter, with the option of creating compiled executables. It supports all of Python 3.7, though in our testing it didn’t produce any noticeable speed gains for our plain Python numerical tests.
+
+If you've liked this post, please don't forget to subscribe to the newsletter.

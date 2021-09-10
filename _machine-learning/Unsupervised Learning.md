@@ -179,6 +179,8 @@ As *k* grows, if the clusters were all actually just from the same population, *
 
 So if we scale for those degrees of freedom, it puts them more on the same scale (apart, of course, from the effectiveness of the clustering, which is what the index attempts to measure).
 
+If you've liked this post, please don't forget to subscribe to the newsletter.
+
 #### Further reading
 
 * [EM-Algorithm](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm)
