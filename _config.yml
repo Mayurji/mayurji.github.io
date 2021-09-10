@@ -12,8 +12,7 @@ collections:
     output: true
   data-structure-algorithms:
     output: true
-  code:
-    output: true
+  
 ---
 
 # Google services
