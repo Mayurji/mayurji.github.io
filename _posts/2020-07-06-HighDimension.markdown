@@ -133,6 +133,14 @@ From the results, when all the components are included in the model, the varianc
         """
 
 ```
+
+<center>
+<img src="{{site.url}}/assets/images/highdimension/pca.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
+<p>Figure 4: PCA projections of subset of MNIST data—markers correspond to image labels</p>
+</center>
+
+In the above image, it is interesting to see how much of a 64-dimensional dataset can be captured in just 3 dimensions.
+
 **Understanding The Plot**
 
 The dimension reduction from 64 features to 24 features doesn't affect the results massively. It means we can maintain a good model without losing much information by reducing the variables which are redundant in this case. The changes in variance happen concerning the several components, the variance saturates after n_components turns 24. Thus we can assign the n_components as 24 i.e. we can explain the maximum variance of 0.92 with 24 principal components at the accuracy of 93%.
