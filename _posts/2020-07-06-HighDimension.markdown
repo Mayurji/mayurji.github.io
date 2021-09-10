@@ -147,14 +147,6 @@ Feature selection and feature extraction are the common techniques to overcome d
 * Forward Feature Construction
 * High Correlation Filter
 
-<center>
-<img src="{{site.url}}/assets/images/highdimension/hd.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 4: 2D to 1D</p>
-</center>
-
-
-Let us look at the image shown above. It has two dimensions x1 and x2, which measure an object in Km (x1) and Miles (x2). Now, if you were to use both these dimensions in machine learning, they will convey similar information and introduce a lot of noise in the system, so you are better of just using one dimension. Here we have converted the dimension of data from 2D (from x1 and x2) to 1D (PC1), which has made the data relatively easier to explain.
-
 ### Principal Component Analysis
 
 Principal Components Analysis is a process to identify components that can explain the maximum amount of variance of the features concerning the target variable, if we include all features as components then we get the variance of 1. 
