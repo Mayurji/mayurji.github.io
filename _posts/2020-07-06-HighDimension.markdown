@@ -45,6 +45,8 @@ We will understand PCA by working on MNIST Dataset. Since images have higher dim
 ```
 We are loading the digits dataset for our problem. We can notice that we have 64 features representing a digit. We can visualize all the 64 column values of an image as an 8x8 two-dimensional matrix in grayscale.
 
+**Visualizing One Image**
+
 <center>
 <img src="{{site.url}}/assets/images/highdimension/visualize.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 1: Loading MNIST Image</p>
@@ -91,6 +93,8 @@ From the results, when all the components are included in the model, the varianc
             print("--------------------------------------------------")
 
 ```
+**Increased Components Increases Acccuracy**
+
 <center>
 <img src="{{site.url}}/assets/images/highdimension/results.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
 <p>Figure 2: Components vs Accuracy</p>
@@ -108,6 +112,8 @@ From the results, when all the components are included in the model, the varianc
         plt.show()
 
 ```
+
+**Increasing Principal Components Increases Measured Variance**
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/plots.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -133,6 +139,8 @@ From the results, when all the components are included in the model, the varianc
         """
 
 ```
+
+**Projecting 64 dimensions on 3 dimension**
 
 <center>
 <img src="{{site.url}}/assets/images/highdimension/pca.png" style="zoom: 5%; background-color:#DCDCDC;" width="80%" height=auto/><br>
