@@ -81,17 +81,18 @@ There is also a technique called early stopping, which helps in determining the 
 [**Validation Monitor**](https://www.tensorflow.org/get_started/monitors#early_stopping_with_validationmonitor)
 
 ```python
-validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
-      test_set.data,
-      test_set.target,
-      every_n_steps=50,
-      metrics=validation_metrics,
-      early_stopping_metric="loss",
-      early_stopping_metric_minimize=True,
-      early_stopping_rounds=200)
+
+      validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
+            test_set.data,
+            test_set.target,
+            every_n_steps=50,
+            metrics=validation_metrics,
+            early_stopping_metric="loss",
+            early_stopping_metric_minimize=True,
+            early_stopping_rounds=200)
+
 ```
 The last parameter indicates the ValidationMonitor. It suggests that the training process should stop if the loss doesn't decrease in the 200 training steps (rounds).
-
 
 [**StopAtStepHook**](https://www.tensorflow.org/api_docs/python/tf/train/StopAtStepHook)
 
