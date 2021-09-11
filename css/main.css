@@ -77,7 +77,7 @@ pre {
 }*/
 @media(max-width: 900px){
     nav .mainMenu {
-        height: 40vh;
+        height: 15vh;
         position: fixed;
         top: 0;
         right: 0;
