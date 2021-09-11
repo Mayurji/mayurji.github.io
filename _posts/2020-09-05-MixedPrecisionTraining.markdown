@@ -5,21 +5,10 @@ description: Training models in lesser bytes
 category: Blog
 date:   2020-09-05 13:43:52 +0530
 ---
-<center>
-<img src="{{site.url}}/assets/images/mixedPrecisionTraining/mpt-bg.jpg" style="zoom: 5%; background-color:#DCDCDC;"   width="75%" height=auto/><br>
-<p>Figure 1: GPU</p> 
-</center>
-
-### Topics covered
-
- 1. What is Mixed Precision Training
- 2. Why MPT is Important
- 3. How MPT reduces memory
- 4. Frameworks with AMP (Automatic Mixed Precision)
 
 ### What is Mixed Precision Training
 
-*Mixed precision training is a technique used in training a large neural network where the model’s parameters are stored in different datatype precision (FP16 vs FP32 vs FP64). It offers significant performance and computational boost by training large neural networks in lower precision formats. With the release of the 30X series of GPUs, it becomes even more important to utilize these features.*
+Mixed precision training is a technique used in training a large neural network where the model’s parameters are stored in different datatype precision (FP16 vs FP32 vs FP64). It offers significant performance and computational boost by training large neural networks in lower precision formats.
 
 For instance, In Pytorch, the single-precision float means float32 and by default, the parameters take float32 datatype. Now if we have a parameter (W) that could be stored in FP16 while ensuring that no task-specific accuracy is affected by this movement between precision, then why should we use FP32 or FP64?
 
@@ -29,7 +18,9 @@ FP16 — Half-Precision, 16bit Floating Point-occupies 2 bytes of memory.\
 FP32 — Single-Precision, 32bit Floating Point-occupies 4 bytes of memory.\
 FP64 — Double-Precision, 64bit Floating Point-occupies 8 bytes of memory.
 
-Since the introduction of Tensor Cores in the Volta and Turing architectures (NVIDIA), significant training speedups are experienced by switching to mixed-precision — up to 3x overall speedup on the most arithmetically intense model architectures. The ability to train deep learning networks with lower precision was introduced in the Pascal architecture and first supported in CUDA® 8 in the NVIDIA Deep Learning SDK.
+Since the introduction of Tensor Cores in the Volta and Turing architectures (NVIDIA), significant training speedups are experienced by switching to mixed-precision — up to 3x overall speedup on the most arithmetically intense model architectures. 
+
+The ability to train deep learning networks with lower precision was introduced in the Pascal architecture and first supported in CUDA® 8 in the NVIDIA Deep Learning SDK.
 
 ### Why MPT is important
 
@@ -40,7 +31,7 @@ FP16 requires 2 bytes, as the number of bytes is reduced to capture the same num
 
 <center>
 <img src="{{site.url}}/assets/images/mixedPrecisionTraining/small-fast.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 2: Smaller Vs Faster</p>
+<p>Figure 1: Smaller Vs Faster</p>
 </center>
 
 ### For 1 million parameters
@@ -57,7 +48,7 @@ There is a significant improvement in memory required for the same number of par
 
 <center>
 <img src="{{site.url}}/assets/images/mixedPrecisionTraining/training_iteration.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 3: Training Iteration</p> 
+<p>Figure 2: Training Iteration</p> 
 </center>
 
 ### Steps in Mixed Precision Training
@@ -69,7 +60,7 @@ The first point, Porting model to use FP16 is simple, we access the model parame
 
 <center>
 <img src="{{site.url}}/assets/images/mixedPrecisionTraining/paper-derivation.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 4: Paper</p> 
+<p>Figure 3: Paper</p> 
 </center>
 
 The second point, Adding loss scaling to preserve small gradient values, refer to scaling the parameter by multiplying alpha value to it, before backpropagation and then unscale it by dividing the gradient by alpha before updating the weight. Loss scaling is done to avoid the gradient exploding/vanishing.
@@ -97,7 +88,7 @@ AllowList operations are operations that take advantage of GPU Tensor Cores. Den
 
 <center>
 <img src="{{site.url}}/assets/images/mixedPrecisionTraining/amp.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 5: AMP</p> 
+<p>Figure 4: AMP</p> 
 </center>
 
 With recent updates in deep learning frameworks, a technique called Automatic Mixed Precision has been introduced. It helps the developers in performing these casting and scaling operations automatically
@@ -111,7 +102,7 @@ In those frameworks with automatic support, using mixed precision can be as simp
 
 <center>
 <img src="{{site.url}}/assets/images/mixedPrecisionTraining/pytorch-amp.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
-<p>Figure 6: Pytorch - AMP</p> 
+<p>Figure 5: Pytorch - AMP</p> 
 </center>
 
 Interesting point, Nvidia’s tensor cores are designed in such a fashion that keeping the dimension of the matrix as a multiple of 8 helps in the faster calculation. Do read NVIDIA’s Mixed Precision article to understand,
