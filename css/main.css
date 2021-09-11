@@ -193,12 +193,10 @@ h5 {
 footer {
     border-top: 1px solid #d5d5d5;
     /*font-size: 1vw;*/
-	
 }
 
 ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 22px;
+    margin: 20px auto 40px;
     color: #2a7ae2;
 }
 
