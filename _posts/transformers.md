@@ -1,5 +1,5 @@
 ---
-layout: deep-learning
+layout: post
 title: Transformers — Visual Guide
 description: An attempt to understand transformers
 date:   2021-03-28 13:43:52 +0530

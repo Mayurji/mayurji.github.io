@@ -1,5 +1,5 @@
 ---
-layout: deep-learning
+layout: post
 title: Five Pointer After 30 Days Of ML With PyTorch
 description: PyTorch Pointers
 date:   2021-05-07 16:43:52 +0530

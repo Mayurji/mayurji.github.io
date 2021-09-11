@@ -1,5 +1,5 @@
 ---
-layout: deep-learning
+layout: post
 title: Introduction to Quantization
 description: Making model small with faster inference
 date:   2021-03-07 16:43:52 +0530

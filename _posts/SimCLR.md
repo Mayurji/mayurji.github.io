@@ -1,5 +1,5 @@
 ---
-layout: deep-learning
+layout: post
 title: SimCLR 
 description: An Answer To Unlabelled Data
 date:   2021-08-08 13:43:52 +0530
