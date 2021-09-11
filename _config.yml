@@ -4,14 +4,6 @@ kramdown:
  input: GFM
  highlighter: rouge
 permalink: /blog/:year/:month/:day/:title
-
-collections:
-  deep-learning:
-    output: true
-  machine-learning:
-    output: true
-  data-structure-algorithms:
-    output: true
   
 ---
 
