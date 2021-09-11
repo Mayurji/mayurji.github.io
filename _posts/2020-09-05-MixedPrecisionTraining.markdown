@@ -70,9 +70,9 @@ Interestingly, there is adaptive scaling technique is introduced for a layer-wis
 ### What happens when we switch to Mixed Precision
 
 1. Decreased memory usage to train and deploy large models.
-2. Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. Nvidia GPUs offer up to 8x more half-precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers.
+2. Less time required for inference, execution time can be sensitive to memory or arithmetic bandwidth. Half-precision halves the number of bytes accessed, thus reducing the time spent in memory-limited layers. 
 
-The term Mixed Precision Training is realized because the training utilizes both the half-precision and single precision representations.
+Nvidia GPUs offer up to 8x more half-precision arithmetic throughput when compared to single-precision, thus speeding up math-limited layers. The term Mixed Precision Training is realized because the training utilizes both the half-precision and single precision representations.
 
 ### How Mixed Precision works
 
@@ -105,7 +105,7 @@ In those frameworks with automatic support, using mixed precision can be as simp
 <p>Figure 5: Pytorch - AMP</p> 
 </center>
 
-Interesting point, Nvidia’s tensor cores are designed in such a fashion that keeping the dimension of the matrix as a multiple of 8 helps in the faster calculation. Do read NVIDIA’s Mixed Precision article to understand,
+Note, Nvidia’s tensor cores are designed in such a fashion that keeping the dimension of the matrix as a multiple of 8 helps in the faster calculation. Do read NVIDIA’s Mixed Precision article to understand,
 
 1. How to set the dimension in CNN.
 2. How to choose a mini-batch size.
