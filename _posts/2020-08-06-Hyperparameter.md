@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Hyperparameter Tuning
-description: Things we control in DL
+description: Things we control in Deep Learning models.
 category: Blog
 date:   2020-08-06 13:43:52 +0530
 ---
@@ -26,13 +26,13 @@ It is the most important of all hyperparameters. Even for a pre-trained model, w
 
 A **large value** of learning rate tends to overshoot the gradient value making it difficult for the weight to converge to the global minimum.
 
-A **small value** of learning rate makes the convergence towards global minimum very slow. It is recognized from the validation and training loss.
+A **small value** of learning rate makes the convergence towards the global minimum very slow. We can recognize this from the training and validation loss.
 
 An **optimum value** of learning rate will lead to a global minimum, which can be viewed by constantly decreasing loss.
 
 ### Learning Rate Decay
 
-Keeping only one learning rate may not help the weight to reach the global minimum. So we can change the value of the learning rate after a certain number of epochs. It helps when the gradients are stuck in a local minimum.
+Keeping only one learning rate may not help the weight to reach the global minimum. So we can change the value of the learning rate after a certain number of epochs. It helps gradient stuck in a local minimum.
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/learning_rate_decay.png" style="zoom: 5%; background-color:#DCDCDC;"  width="60%" height=auto/><br>
@@ -41,11 +41,11 @@ Keeping only one learning rate may not help the weight to reach the global minim
 
 ### Adaptive Learning Rate
 
-Sometimes it is crucial to understand the problem and change the learning rate accordingly like increasing it or decreasing it. Functions like Adam and Adagrad Optimizer helps in adapting the learning rate following the objective function.
+Sometimes it is crucial to understand the problem and change the learning rate accordingly, like increasing or decreasing it. Functions like Adam and Adagrad Optimizer helps in adapting the learning rate following the objective function.
 
 ### Minibatch Size
 
-It is one of the most commonly tuned hyperparameters in deep learning. If we have 1000 records for training the model then we can have three different sets of minibatch sizes.
+It is one of the most commonly tuned hyperparameters in deep learning. Let's consider we have 1000 records and we have to train a model on top of it. Now, for training, we can select different batch sizes for the model. Let's check out different batch sizes.
 
 **First**
 
@@ -59,17 +59,19 @@ If we keep Minibatch size = 1, then the weights are updated for every record aft
 
 **Second**
 
-If we keep Minibatch Size = # of records in the dataset, then the weights are updated after all records passed through the forward propagation. It is called Batch gradient descent.
+If the Minibatch Size = # of records in the dataset, then the weight update is done after all the records are passed through the forward propagation. It is called Batch gradient descent.
 
 **Third**
 
-If we keep Minibatch Size = value between 1 to total no. of records, then the weights are updated after all the set number of records are passed through the forward propagation. It is called Mini-batch gradient descent.
+If the Minibatch Size = value between 1 to total no. of records, then the weight update is done after the set values of records are passed through the forward propagation. It is called Mini-batch gradient descent.
 
 The most commonly used value for **Minibatch sizes is 32, 64, 128, 256.** Values more than 256 require more memory and computational efficiency.
 
 ### Number of Epochs
 
-The number of epochs can be decided based on the validation error. Now, as long as the validation error keeps decreasing, we can assume that our model is learning and updating the weights positively. There is also a technique called early stopping, which helps in determining the no. of iterations.
+The number of epochs is decided based on the validation error. As the validation error keeps reducing, we can assume that our model is learning and updating the weights positively. 
+
+There is also a technique called early stopping, which helps in determining the no. of iterations.
 
 <center>
 <img src="{{site.url}}/assets/images/Hyperparameter/iterations.png" style="zoom: 5%; background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -88,7 +90,7 @@ validation_monitor = tf.contrib.learn.monitors.ValidationMonitor(
       early_stopping_metric_minimize=True,
       early_stopping_rounds=200)
 ```
-The last parameter indicates to ValidationMonitor that it should stop the training process if the loss did not decrease in 200 steps (rounds) of training.
+The last parameter indicates the ValidationMonitor. It suggests that the training process should stop if the loss doesn't decrease in the 200 training steps (rounds).
 
 
 [**StopAtStepHook**](https://www.tensorflow.org/api_docs/python/tf/train/StopAtStepHook)
@@ -101,13 +103,15 @@ It monitors losses and stops training if it encounters a NaN loss.
 
 ### Number of Hidden Units/Layers
 
-Highly mysterious parameters are deciding the # of hidden units and layers. What we are trying to achieve in deep learning is building a complex mapping function between features and targets. **To develop a complex function, the complexity is directly proportional to the # of hidden units, greater hidden units mean more the complexity of the function.** 
+Highly mysterious hyper-parameters to decide is the number of hidden units and layers. The objective of the deep learning model is to build a complex mapping function between features and targets. 
+
+In complex mapping, the complexity is directly proportional to the number of hidden units. More number of hidden units leads to more complex mapping.
 
 Note, if we create too complex a model, then it overfits the training data. We can see this from the validation error while training, then in such a case, we should reduce the hidden units in that case.
 
 To conclude, keep track of validation errors while increasing the number of hidden units.
 
-*As stated by Andrej Karpathy, a three-layer net outperforms the two-layer net but going beyond that rarely helps the network. While in CNN, the greater the of layers, the greater will be the performance of the network.*
+*As stated by Andrej Karpathy, a three-layer net outperforms the two-layer net but going beyond that rarely helps the network. While in CNN, the more the number of layers, the better is the performance.
 
 If you've liked this post, please don't forget to subscribe to the newsletter.
 
