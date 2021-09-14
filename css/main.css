@@ -52,7 +52,7 @@ pre {
 
 @media(max-width: 900px){
     nav .mainMenu {
-        height: 15vh;
+        height: 18vh;
         position: fixed;
         top: 0;
         right: 0;
