@@ -4,8 +4,12 @@ kramdown:
  input: GFM
  highlighter: rouge
 permalink: /blog/:year/:month/:day/:title
-  
+
+collections:
+  ml-glossary:
+    output: true
 ---
+
 
 # Google services
 google_analytics: UA-108823315-1
