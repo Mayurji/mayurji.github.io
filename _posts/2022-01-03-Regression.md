@@ -45,6 +45,7 @@ In linear regression, we are solving for parameters with x and y, to find the re
 ​                                                                         ![weight vs height plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/heightweight.jpeg)
 
 																						         	**Figure 2: Approx. Best Fit Lines**
+<p>
 $$
 y^{`}_i = b_0 + b_1 x_i \\
 \\
@@ -52,6 +53,8 @@ x_i - predictor\ value \\
 y^{`}_i - predicted\ response \\
 b_0,\ b_1 - parameters
 $$
+</p>
+
 In the above plot, we can see the multiple line equations with different set of parameters and each representing an approximate line of fit. Lets consider the line equation y = -266.5 + 6.1 x. For first sample, x=63, we find y` as 120.1, which is 6.9 less than ground truth value.
 
 The difference between y and y` is referred as **prediction error** or **residual error**.
@@ -64,9 +67,13 @@ The difference between y and y` is referred as **prediction error** or **residua
 Prediction error depends on the data point, consider sample five, x = 69, whose weight (y) is not available. On substituting, x = 69, we find y`as 157 pounds, thus we get a prediction error of 162 - 157 = 5.
 
 A line that fits the data "**best**" will be one for which the **n prediction errors —** one for each observed data point **— are as small as possible in some overall sense**. We can find the best fit line by using the **least square criterion**, which minimizes the sum of the squared prediction errors.
+
+<p>
 $$
 Error\ = \ {\sum_{i=1}^n}\ (y_i\ -\ y_i^`)^2
 $$
+</p>
+
 **Why square the prediction error?**
 
 For each data point, we'll have positive and negative prediction error. If we don't square the prediction error, we'll end up cancelling the positive and negative prediction error yielding zero as the net result.
@@ -83,13 +90,18 @@ Lets check how the other line fits and its corresponding prediction error.
 For dashed line, we get a prediction error of 766.5, while for the solid line, we get a prediction error of 597.4.  We can point out from the prediction error that the solid line has better summarization of data point with smaller prediction error overall. But does this solid line represent the best line? No. Because there are **n lines** passing through the data points.
 
 To formulate the best parameters (**intercept** $b_0$ and **slope** $b_1$) for the line equation, a formula is determined using methods of calculus. We minimize the equation for the sum of the squared prediction errors:
+
+<p>
 $$
 Error\ =\ \sum_{i=1}^n\ (\ y_i\ -\ (b_0\ +\ b_1\ x_i ))^2
 $$
+</p>
+
 (that is, take the derivative with respect to $b_0$ and $b_1$, set to 0, and solve for $b_0$ and $b_1$) and get the "**least squares estimates**" for $b_0$ and $b_1$:
+
+<p>
 $$
 For\ finding\ parameter\ b_0: \\
-
 b_0\ =\ y^`\ -\ b_1\ x^` \\
 \\
 For\ finding\ parameter\ b_1: \\
@@ -98,15 +110,20 @@ b_1\ =\ {\sum_{i=1}^n\ (x_i\ -\ x^`)\ (y_i\ -\ y^`) \over \sum_{i=1}^n\ (x_i\ -\
 x^`\ refers\ to\ mean\ value\ of\ x's. \\
 y^`\ refers\ to\ mean\ value\ of\ y's.
 $$
+</p>
+
 The formula for $b_0$ and $b_1$ is derived from least squares criterion. The resulting equation:
+<p>
 $$
 y^`\ =\ b_0\ +\ b_1\ x_i
 $$
+</p>
+
 is referred as **least square regression line**, or simply the **least squares line**. It is also called as **estimated regression equation**.
 
 **What is $$b_0$$ and $$b_1$$?**
 
-$$b_0$$, when x = 0, then y becomes -267 pounds, which is incorrect. Here, x = 0 is outside the scope of the model because it is not meaningful to have 0 inch height. For other instances, $$b_0$$ refers to predicted mean response at x=0, otherwise, $$b_0$$ is not meaningful.
+$b_0$, when x = 0, then y becomes -267 pounds, which is incorrect. Here, x = 0 is outside the scope of the model because it is not meaningful to have 0 inch height. For other instances, $$b_0$$ refers to predicted mean response at x=0, otherwise, $$b_0$$ is not meaningful.
 
 **$$b_1$$**, it represents that for every unit (inch) increase in height, the weight increases by **6.1**.
 
@@ -149,13 +166,9 @@ Consider an experiment where we are measuring the temperature (Celsius) using tw
 
 **For Brand A - Celsius vs Fahrenheit**
 
-
-
 ![fahrenheit vs celcius plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/thermometera.jpeg)
 
 ​																									**Figure 7: Brand A - Celsius vs Fahrenheit**
-
-
 
 **For Brand B - Celsius vs Fahrenheit**
 
@@ -174,9 +187,13 @@ Let us understand, how variance is estimated from the below plot of IQ distribut
 ​																													**Figure 9: Distribution of IQ** 
 
 **Sample Variance**
+
+<p>
 $$
 s^2\ =\ {\sum_{i=1}^n\ (y_i\ -\ y^`)^2 \over n-1}
 $$
+</p>
+
 In numerator, we have summation of deviation of response $y_i$ from $y^`$ estimated mean in square units. 
 
 In denominator, we have n-1, not n since we are estimating $y^`$, which reduces degree of freedom by one.
@@ -186,10 +203,11 @@ In denominator, we have n-1, not n since we are estimating $y^`$, which reduces 
 Let's think about population variance $\sigma^2$ in the simple linear regression setting. Previously, we have seen plot between GPA vs Entrance Test score. For each sub-population we have mean. Each sub-population mean can be estimated using regression equation $y^`_i\ = b_0\ +\ b_1\ x_i$ 
 
 > Mean Square Error
+> <p>
 > $$
 > MSE\ =\ {\sum_{i=1}^n\ (y_i\ -\ y^`_i)^2 \over n-2}
 > $$
-> 
+> </p>
 
 The mean square error estimates $\sigma^2$, the common variance of the many sub-populations. Here, instead of n, we have n-2, because we are estimating two parameters $b_0$ and $b_1$, thus reducing the degree of freedom by two.
 
@@ -212,11 +230,14 @@ Some of the metrics to represent the relation between response and estimated res
 **SSE** - It refers to **Sum Of Square Errors**. It quantifies how far the data points $y_i$ vary from the estimated regression line $\hat{y}$.
 
 **SSTO** - It refers to **Total Sum of Squares**. It quantifies how far the data points $y_i$ vary from their mean, $\bar{y}$.
+
+<p>
 $$
 SSR=\sum_{i=1}^{n}(\hat{y}_i -\bar{y})^2=119.1 \\
 SSE=\sum_{i=1}^{n}(y_i-\hat{y}_i)^2=1708.5 \\
 SSTO=\sum_{i=1}^{n}(y_i-\bar{y})^2=1827.6
 $$
+</p>
 
 > **Note** that SSTO = SSR + SSE. The sums of squares appear to tell the story pretty well. They tell us that most of the variation in the response *y* (*SSTO* = 1827.6) is just due to random variation (*SSE* = 1708.5), not due to the regression of *y* on *x* (*SSR* = 119.1). You might notice that *SSR* divided by *SSTO* is 119.1/1827.6 or 0.065.
 
@@ -227,11 +248,14 @@ $$
 ​																					**Figure 11: Fairly strong relationship between x and y**
 
 In the above plot, there is a fair amount relationship between x and y, with steeper slope of the regression line. It suggests that change (increase) in x leads to substantial change (decrease) in y.  Here, we can see the data points touches the estimated regression line.
+
+<p>
 $$
 SSR=\sum_{i=1}^{n}(\hat{y}_i-\bar{y})^2=6679.3 \\
 SSE=\sum_{i=1}^{n}(y_i-\hat{y}_i)^2=1708.5 \\
 SSTO=\sum_{i=1}^{n}(y_i-\bar{y})^2=8487.8 
 $$
+</p>
 
 > **Note** The sums of squares for this data set tell a very different story, namely that most of the variation in the response *y* (*SSTO* = 8487.8) is due to the regression of *y* on *x* (*SSR* = 6679.3) not just due to random error (*SSE* = 1708.5). And, *SSR* divided by *SSTO* is 6679.3/8487.8 or 0.799.
 
@@ -240,9 +264,12 @@ $$
 **Coefficient Of Determination or r-squared value**
 
 It is sum of square of regression divided by total sum of squares.
+<p>
 $$
 r^2\ =\ {SSR\ \over SSTO}\ or\ 1\ -\ {SSE\ \over SSTO}
 $$
+</p>
+
 **Characteristics of $r^2$**
 
 - $r^2$ is always a number between 0 and 1.
@@ -265,12 +292,15 @@ We can say that 68% (shaded area above) of the variation in the skin cancer mort
 
 ### Pearson Correlation Coefficient $r$
 
-It is directly related to coefficient of determination $r^2$. 
+It is directly related to coefficient of determination $r^2$.
+<p>
 $$
 r= \pm \sqrt{r^2} \\
 where, \\
 0 \le\ r^2\ \le\ 1\ and\ -1 \le r^2 \le +1\\
 $$
+</p>
+
 The sign of *r* depends on the sign of the estimated slope coefficient $b_1$:
 
 - If $b_1$ is negative, then *r* takes a negative sign.
@@ -279,9 +309,12 @@ The sign of *r* depends on the sign of the estimated slope coefficient $b_1$:
 The slope of the estimated regression and the correlation coefficient has similar sign. 
 
 **Correlation Coefficient, $r$**
+
+<p>
 $$
 r=\dfrac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2\sum_{i=1}^{n}(y_i-\bar{y})^2}}
 $$
+</p>
 
 - If the estimated slope $b_1$ of the regression line is 0, then the correlation coefficient *r* must also be 0.
 
@@ -296,8 +329,3 @@ All other values of *r* tell us that the relationship between *x* and *y* is not
 **Reference**
 
 [Penn State - Stat 501](https://online.stat.psu.edu/stat501/)
-
-
-
-
-
