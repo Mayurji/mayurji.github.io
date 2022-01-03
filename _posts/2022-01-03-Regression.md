@@ -45,6 +45,11 @@ In linear regression, we are solving for parameters with x and y, to find the re
 ![weight vs height plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/heightweight.jpeg)
 **Figure 2: Approx. Best Fit Lines**
 
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/heightweight.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 2: Approx. Best Fit Lines</p> 
+</center>
+
 <p>
 $$
 y^{`}_i = b_0 + b_1 x_i \\
@@ -135,7 +140,7 @@ Consider we have a population sample of High School GPA and College Entrance tes
 
 ​																													**Figure 5: GPA vs Test Score**
 
-$$\mu_y$$ is the estimate of population and the line is called as **population regression line**. From the above plot, we see that for each GPA score of 1, 2, 3, and 4, we see a corresponding set of test scores. We can also express the average college entrance test score for the $$i^{th}$$ student, $$E(Yi)\ =\ β_0 +\ β_1\ x_i$$. Of course, not every student's college entrance test score will equal the average $$E(Yi)$$. There will be some error. That is, any student's response $y_i$ will be the linear trend $$β_0\ +\ β_1\ x_i$$ plus some error $$ϵ_i$$. So, another way to write the simple linear regression model is $$y_i=E(Yi)+ϵ_i=β_0+β_1 x_i+ϵ_i$$.
+$$\mu_y$$ is the estimate of population and the line is called as **population regression line**. From the above plot, we see that for each GPA score of 1, 2, 3, and 4, we see a corresponding set of test scores. We can also express the average college entrance test score for the $$i^{th}$$ student, $$E(Yi)\ =\ β_0 +\ β_1\ x_i$$. Of course, not every student's college entrance test score will equal the average $$E(Yi)$$. There will be some error. That is, any student's response $$y_i$$ will be the linear trend $$β_0\ +\ β_1\ x_i$$ plus some error $$ϵ_i$$. So, another way to write the simple linear regression model is $$y_i=E(Yi)+ϵ_i=β_0+β_1 x_i+ϵ_i$$.
 
 Practically it is impossible to get all the available data, thus we have to rely on taking the sub-population of the data and build a model on that sub-population. Let us take three random data point for each GPA score as mentioned in the plot below, thus resulting in a total of 12 data points.
 
