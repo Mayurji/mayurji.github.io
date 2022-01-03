@@ -89,7 +89,7 @@ Lets check how the other line fits and its corresponding prediction error.
 
 For dashed line, we get a prediction error of 766.5, while for the solid line, we get a prediction error of 597.4.  We can point out from the prediction error that the solid line has better summarization of data point with smaller prediction error overall. But does this solid line represent the best line? No. Because there are **n lines** passing through the data points.
 
-To formulate the best parameters (**intercept** <p>$b_0$</p> and **slope** $b_1$) for the line equation, a formula is determined using methods of calculus. We minimize the equation for the sum of the squared prediction errors:
+To formulate the best parameters (**intercept** <p>$$b_0$$</p> and **slope** $b_1$) for the line equation, a formula is determined using methods of calculus. We minimize the equation for the sum of the squared prediction errors:
 
 <p>
 $$
