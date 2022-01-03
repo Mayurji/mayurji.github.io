@@ -4,6 +4,7 @@ title: Regression
 description: Everything about regression
 date:   2022-01-03 13:43:52 +0530
 ---
+{% include mathjax.html %}
 
 # Regression
 
