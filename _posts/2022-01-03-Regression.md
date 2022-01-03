@@ -41,10 +41,10 @@ In the above figure, the linear line is the hypothesis.
 ### Best Fit Line
 
 In linear regression, we are solving for parameters with x and y, to find the relationship between them. Here, this relationship is translated into best fit line between the parameters, x and y. but how to find the best fit line?. Lets understand the plot between weight (y) and height (x).
-
+<center>
 ​                                                                         ![weight vs height plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/heightweight.jpeg)
 
-​																								         	**Figure 2: Approx. Best Fit Lines**
+</center>																						         	**Figure 2: Approx. Best Fit Lines**
 $$
 y^{`}_i = b_0 + b_1 x_i \\
 \\
