@@ -27,9 +27,10 @@ With machine learning aspect, we solve **statistical relationship** rather than 
 
 Relationship between variables where the statistical uncertainty is present. For instance, relation between skin cancer mortality and state latitude. Below, we can see there is negative linear relationship between latitude and skin cancer mortality. Though its not a perfect linear relationship, it forms a trend.
 
-![skin cancer vs state latitude plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/scatterplot_skin_cancer.png)
-
-​      																										**Figure 1: Skin Cancer Mortality vs Latitude**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/scatterplot_skin_cancer.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 1: Skin Cancer Mortality vs Latitude</p> 
+</center>
 
 Similar statistical relationship can be found in following instances
 
@@ -41,9 +42,6 @@ In the above figure, the linear line is the hypothesis.
 ### Best Fit Line
 
 In linear regression, we are solving for parameters with x and y, to find the relationship between them. Here, this relationship is translated into best fit line between the parameters, x and y. but how to find the best fit line?. Lets understand the plot between weight (y) and height (x).
-
-![weight vs height plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/heightweight.jpeg)
-**Figure 2: Approx. Best Fit Lines**
 
 <center>
 <img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/heightweight.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
@@ -136,17 +134,20 @@ $$b_0$$, when x = 0, then y becomes -267 pounds, which is incorrect. Here, x = 0
 
 Consider we have a population sample of High School GPA and College Entrance test score.
 
-![entrance test vs gpa plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/gpatestscore.jpeg)
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/gpatestscore.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 5: GPA vs Test Score</p> 
+</center>
 
-​																													**Figure 5: GPA vs Test Score**
 
 $$\mu_y$$ is the estimate of population and the line is called as **population regression line**. From the above plot, we see that for each GPA score of 1, 2, 3, and 4, we see a corresponding set of test scores. We can also express the average college entrance test score for the $$i^{th}$$ student, $$E(Yi)\ =\ β_0 +\ β_1\ x_i$$. Of course, not every student's college entrance test score will equal the average $$E(Yi)$$. There will be some error. That is, any student's response $$y_i$$ will be the linear trend $$β_0\ +\ β_1\ x_i$$ plus some error $$ϵ_i$$. So, another way to write the simple linear regression model is $$y_i=E(Yi)+ϵ_i=β_0+β_1 x_i+ϵ_i$$.
 
 Practically it is impossible to get all the available data, thus we have to rely on taking the sub-population of the data and build a model on that sub-population. Let us take three random data point for each GPA score as mentioned in the plot below, thus resulting in a total of 12 data points.
 
-![entrance test vs gpa plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/gpatestscoresample.jpeg)
-
-​																													**Figure 6: Plot sub-population**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/gpatestscoresample.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 6: Plot sub-population</p> 
+</center>
 
 From above plot, the dashed line represents the sub-population regression line estimating the population regression line. Here, $$b_0$$ and $$b_1$$ represents the estimate of $$\beta_0$$ and $$\beta_1$$ from the population line. From sub-population line, we can draw some conclusions.
 
@@ -171,15 +172,17 @@ Consider an experiment where we are measuring the temperature (Celsius) using tw
 
 **For Brand A - Celsius vs Fahrenheit**
 
-![fahrenheit vs celcius plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/thermometera.jpeg)
-
-​																									**Figure 7: Brand A - Celsius vs Fahrenheit**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/thermometera.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 7: Brand A - Celsius vs Fahrenheit</p> 
+</center>
 
 **For Brand B - Celsius vs Fahrenheit**
 
-![fahrenheit vs celcius plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/thermometerb.jpeg)
-
-​																									**Figure 8: Brand B - Celsius vs Fahrenheit**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/thermometerb.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 8: Brand B - Celsius vs Fahrenheit</p>
+</center>
 
 Clearly from the above two plots, if we can make an estimation $$y^`$$ based on **brand B thermometer**, then we'll have less deviation from estimated regression line than compared to **brand A thermometer**. Therefore, brand B thermometer should yield more precise future predictions than the brand A thermometer.
 
@@ -187,9 +190,10 @@ To find how precise the future predictions are, we should know how much the resp
 
 Let us understand, how variance is estimated from the below plot of IQ distribution. The population mean of the plot is at 100, how much does the IQ vary w.r.t to mean.
 
-![probability density vs IQ](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/iqnorm.jpeg)
-
-​																													**Figure 9: Distribution of IQ** 
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/01simple/iqnorm.jpeg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 9: Distribution of IQ</p>
+</center>
 
 **Sample Variance**
 
@@ -222,9 +226,10 @@ Consider two different examples - each representing a relationship between x and
 
 **Weak relationship between x and y**
 
-![y vs x plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/04linear_assoc/situation_1_plot.gif)
-
-​																							**Figure 10: Weak Relationship between x and y**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/04linear_assoc/situation_1_plot.gif"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 10: Weak Relationship between x and y</p>
+</center>
 
 In the above plot, there are two lines. One representing a horizontal line placed at the average response of $$\bar{y}$$ and another line with shallow slope represents the estimated regression line $$\hat{y}$$. Since slope is not steep, the change in predictor x doesn't change much in response y. Even the data points are closer to regression line.
 
@@ -248,9 +253,10 @@ $$
 
 **Strong relationship between x and y**
 
-![y vs x plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/04linear_assoc/situation_2_plot.gif)
-
-​																					**Figure 11: Fairly strong relationship between x and y**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/04linear_assoc/situation_2_plot.gif"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 11: Fairly strong relationship between x and y</p>
+</center>
 
 In the above plot, there is a fair amount relationship between x and y, with steeper slope of the regression line. It suggests that change (increase) in x leads to substantial change (decrease) in y.  Here, we can see the data points touches the estimated regression line.
 
@@ -289,9 +295,10 @@ In the above two examples, we had $$r^2$$ value of 6.5%  and 79.9%. We can inter
 
 **Note** Here, x is associated with y, different from causation.
 
-![mortality vs latitude plot](https://online.stat.psu.edu/onlinecourses/sites/stat501/files/04linear_assoc/mort_plot_rsq_01.png)
-
-​																			               **Figure 12: $$r^2$$ - Skin Cancer Mortality vs Latitude**
+<center>
+<img src="https://online.stat.psu.edu/onlinecourses/sites/stat501/files/04linear_assoc/mort_plot_rsq_01.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Figure 12: r-square value: Skin Cancer Mortality vs Latitude</p>
+</center>
 
 We can say that 68% (shaded area above) of the variation in the skin cancer mortality rate is reduced by taking into account latitude. Or, we can say — with knowledge of what it really means — that 68% of the variation in skin cancer mortality is 'due to' or is 'explained by' latitude.
 
