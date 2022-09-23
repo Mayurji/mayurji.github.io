@@ -112,7 +112,7 @@ ul {
 }
 
 ol li {
-  color: black;
+  color: white;
   padding: 0px;
   margin-left: 35px;
   font-family: "Segoe UI";
@@ -122,7 +122,7 @@ ol li {
 }
 
 ul li {
-  color: black;
+  color: white;
   margin: 5px;
   font-family: "Segoe UI";
   /*font-size: 1.1vw;	
@@ -130,7 +130,7 @@ ul li {
 }
 
 ul li::before {
-  color: black;
+  color: white;
   list-style: disc;
   font-family: "Segoe UI";
   /*font-size: 1.1vw;
@@ -139,7 +139,7 @@ ul li::before {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: "Segoe UI";
 }
 a:hover {
@@ -150,7 +150,7 @@ h1 {
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
     font-family: "Segoe UI";
     
-    color: black;
+    color: white;
 }
 
 h2 {
@@ -158,14 +158,14 @@ h2 {
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
     font-family: "Segoe UI";
     
-    color: black;
+    color: white;
 }
 
 h3 {
     /*font-size: 1.5vw;
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
     font-family: "Segoe UI";
-    color: black;
+    color: white;
 }
 
 p {
@@ -174,7 +174,7 @@ p {
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;*/
     font-family: "Segoe UI";
     line-height: 1.4em;
-    color: black;
+    color: white;
 }
 
 h4 {
@@ -182,8 +182,7 @@ h4 {
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
     */
     font-family: "Segoe UI";
-    
-    color: black;
+    color: white;
 }
 
 h5 {
@@ -191,9 +190,9 @@ h5 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
     */
-    font-family: "Lora", serif;
+    font-family: "Segoe UI";
     
-    color: black;
+    color: white;
     height: 0px;
 }
 
