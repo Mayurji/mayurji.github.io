@@ -3,6 +3,11 @@ body {
     width: 90%;
 }
 
+@font-face{
+            font-family: "Segoe UI";
+            src: url('../fonts/segoeuil.ttf');
+        }
+
 .wrapper{
   max-width: calc(900px - (30px * 2));
   margin-right: auto;
@@ -17,7 +22,7 @@ nav {
     display: flex;
     /*font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
     justify-content: space-between;*/
-    font-family: "Lora", serif;
+    font-family: "Segoe UI";
     justify-content: center;
     margin-top: -60px;
 }
