@@ -18,12 +18,15 @@ In this post, we’ll execute commands which will make us a better user of Jupyt
 
 
 ```python
+
 pip install ipykernel
+
 ```
 
 ### Time taken to execute a block of code? %%time
 
 ```python
+
 %%time
 count = 0
 for i in range(10000):
@@ -31,11 +34,13 @@ for i in range(10000):
     
 CPU times: user 1.39 ms, sys: 0 ns, total: 1.39 ms 
 Wall time: 1.4 ms
+
 ```
 
 ### Time taken to execute each line of code? %time
 
 ```python
+
 %time print("a")
 %time print("b")
 a 
@@ -45,14 +50,17 @@ Wall time: 37.9 µs
 b 
 CPU times: user 8 µs, sys: 0 ns, total: 8 µs 
 Wall time: 9.06 µs
+
 ```
 
 ### How to push code of your Jupyter cell into Python file? %%writefile
 ```python
+
 %%writefile addition.py
 def add(a, b):
     return a+b
 add(5, 6)
+
 ```
 
 In the above code, the function add or the lines below “%%writefile addition.py” is pushed into addition.py file. It will overwrite existing file or create a new file.
@@ -60,65 +68,82 @@ In the above code, the function add or the lines below “%%writefile addition.p
 ### How to load the content of python file into Jupyter cell? %load
 
 ```python
+
 %load addition.py
+
 ```
 On running above code, the contents of the file will be loaded into jupyter cell as follows
 
 ```python
+
 # %load addition.py
 def add(a, b):
     return a+b
 add(5, 6)
+
 ```
 
 ### How to run a python file in Jupyter cell? %run
 
 ```python
+
 %run addition.py
 11
+
 ```
 
 ### How to check the environment variables? %env
 
 ```python
+
 %env
 {'ELECTRON_RUN_AS_NODE': '1',  'USER': 'mayur',  'LANGUAGE': 'en_IN:en',  'TEXTDOMAIN': 'im-config',  'XDG_SEAT': 'seat0',  'XDG_SESSION_TYPE': 'x11',  'SSH_AGENT_PID': '1711',  'SHLVL': '1',
 ...
 'PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING': '1'}
+
 ```
 
 ### How to set environment variable? %set_env
 
 ```python
+
 %set_env NEW_PATH=/usr/bin/python1
+
 ```
 You can verify the newly created environment variable using %env.
 
 ### How to find all the initialized variables in Jupyter? %who
 
 ```python
+
 %who
 count i
+
 ```
 
 ### How to all the variables based on datatype? %who datatype
 
 ```python
+
 %who int
 count i
+
 ```
 
 ### How to find all the available magic commands? %lsmagic
 
 ```python
+
 %lsmagic
 {"line":{"automagic":"AutoMagics","autocall":"AutoMagics","alias_magic":"BasicMagics","lsmagic":"BasicMagics","magic":"BasicMagics","page":"BasicMagics","pprint":"BasicMagics","colors":"BasicMagics","xmode":"BasicMagics","quickref":"BasicMagics","doctest_mode":"BasicMagics","gui":"BasicMagics",..............
 "python3":"Other","pypy":"Other","SVG":"Other","HTML":"Other","file":"Other"}}
+
 ```
 
 ### How to write html code in Jupyter cell? %%html
 
 ```python
+
 %%html
 <html>
    <body>
@@ -126,7 +151,8 @@ count i
    </body>
 </html>
 
-**This is %%HTML magic commands**
+This is %%HTML magic commands
+
 ```
 
 Find the above post as jupyter notebook here: [github](https://github.com/Mayurji/LearningPython/blob/main/miscellaneous/magic_commands.ipynb)
