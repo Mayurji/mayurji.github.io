@@ -19,7 +19,7 @@ In this post, we’ll execute commands which will make us a better user of Jupyt
 
 ```python
 
-pip install ipykernel
+    pip install ipykernel
 
 ```
 
@@ -27,13 +27,13 @@ pip install ipykernel
 
 ```python
 
-%%time
-count = 0
-for i in range(10000):
-    count += i
+    %%time
+    count = 0
+    for i in range(10000):
+        count += i
     
-CPU times: user 1.39 ms, sys: 0 ns, total: 1.39 ms 
-Wall time: 1.4 ms
+    CPU times: user 1.39 ms, sys: 0 ns, total: 1.39 ms 
+    Wall time: 1.4 ms
 
 ```
 
@@ -41,25 +41,25 @@ Wall time: 1.4 ms
 
 ```python
 
-%time print("a")
-%time print("b")
-a 
-CPU times: user 35 µs, sys: 0 ns, total: 35 µs 
-Wall time: 37.9 µs
- 
-b 
-CPU times: user 8 µs, sys: 0 ns, total: 8 µs 
-Wall time: 9.06 µs
+    %time print("a")
+    %time print("b")
+    a 
+    CPU times: user 35 µs, sys: 0 ns, total: 35 µs 
+    Wall time: 37.9 µs
+
+    b 
+    CPU times: user 8 µs, sys: 0 ns, total: 8 µs 
+    Wall time: 9.06 µs
 
 ```
 
 ### How to push code of your Jupyter cell into Python file? %%writefile
 ```python
 
-%%writefile addition.py
-def add(a, b):
-    return a+b
-add(5, 6)
+    %%writefile addition.py
+    def add(a, b):
+        return a+b
+    add(5, 6)
 
 ```
 
@@ -69,17 +69,17 @@ In the above code, the function add or the lines below “%%writefile addition.p
 
 ```python
 
-%load addition.py
+    %load addition.py
 
 ```
 On running above code, the contents of the file will be loaded into jupyter cell as follows
 
 ```python
 
-# %load addition.py
-def add(a, b):
-    return a+b
-add(5, 6)
+    # %load addition.py
+    def add(a, b):
+        return a+b
+    add(5, 6)
 
 ```
 
@@ -87,8 +87,8 @@ add(5, 6)
 
 ```python
 
-%run addition.py
-11
+    %run addition.py
+    11
 
 ```
 
@@ -96,10 +96,10 @@ add(5, 6)
 
 ```python
 
-%env
-{'ELECTRON_RUN_AS_NODE': '1',  'USER': 'mayur',  'LANGUAGE': 'en_IN:en',  'TEXTDOMAIN': 'im-config',  'XDG_SEAT': 'seat0',  'XDG_SESSION_TYPE': 'x11',  'SSH_AGENT_PID': '1711',  'SHLVL': '1',
-...
-'PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING': '1'}
+    %env
+    {'ELECTRON_RUN_AS_NODE': '1',  'USER': 'mayur',  'LANGUAGE': 'en_IN:en',  'TEXTDOMAIN': 'im-config',  'XDG_SEAT': 'seat0',  'XDG_SESSION_TYPE': 'x11',  'SSH_AGENT_PID': '1711',  'SHLVL': '1',
+    ...
+    'PYDEVD_IPYTHON_COMPATIBLE_DEBUGGING': '1'}
 
 ```
 
@@ -107,7 +107,7 @@ add(5, 6)
 
 ```python
 
-%set_env NEW_PATH=/usr/bin/python1
+    %set_env NEW_PATH=/usr/bin/python1
 
 ```
 You can verify the newly created environment variable using %env.
@@ -116,8 +116,8 @@ You can verify the newly created environment variable using %env.
 
 ```python
 
-%who
-count i
+    %who
+    count i
 
 ```
 
@@ -125,8 +125,8 @@ count i
 
 ```python
 
-%who int
-count i
+    %who int
+    count i
 
 ```
 
@@ -134,9 +134,9 @@ count i
 
 ```python
 
-%lsmagic
-{"line":{"automagic":"AutoMagics","autocall":"AutoMagics","alias_magic":"BasicMagics","lsmagic":"BasicMagics","magic":"BasicMagics","page":"BasicMagics","pprint":"BasicMagics","colors":"BasicMagics","xmode":"BasicMagics","quickref":"BasicMagics","doctest_mode":"BasicMagics","gui":"BasicMagics",..............
-"python3":"Other","pypy":"Other","SVG":"Other","HTML":"Other","file":"Other"}}
+    %lsmagic
+    {"line":{"automagic":"AutoMagics","autocall":"AutoMagics","alias_magic":"BasicMagics","lsmagic":"BasicMagics","magic":"BasicMagics","page":"BasicMagics","pprint":"BasicMagics","colors":"BasicMagics","xmode":"BasicMagics","quickref":"BasicMagics","doctest_mode":"BasicMagics","gui":"BasicMagics",..............
+    "python3":"Other","pypy":"Other","SVG":"Other","HTML":"Other","file":"Other"}}
 
 ```
 
@@ -144,14 +144,14 @@ count i
 
 ```python
 
-%%html
-<html>
-   <body>
-       <strong>This is %%HTML magic commands</strong>
-   </body>
-</html>
+    %%html
+    <html>
+       <body>
+           <strong>This is %%HTML magic commands</strong>
+       </body>
+    </html>
 
-This is %%HTML magic commands
+    This is %%HTML magic commands
 
 ```
 
