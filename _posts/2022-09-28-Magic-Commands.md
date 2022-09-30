@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Magic Commands & Jupyter Notebooks
+title:  How to use Jupyter Notebook effectively with Magic commands?
 description: Tricks you can use in Jupyter Notebook.
 category: Blog
 date:   2022-09-28 13:43:52 +0530
