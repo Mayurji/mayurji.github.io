@@ -56,7 +56,7 @@ Here, the distillation loss aims to capture and reduce the variation in logits b
 <p>Relation Distillation</p> 
 </center>
 
-In feature and response-based knowledge distillation, the outputs from feature activation and logits are used as a lever to build the student model. However, in this case, we use the interrelationship of the layers as input with a hidden layer or a hidden layer with output as the source of learning for the student model.
+In feature and response-based knowledge distillation, the outputs from feature activation and logits are used as a leverage to build the student model. However, in this case, we use the interrelationship of the layers as input with a hidden layer or a hidden layer with output as the source of learning for the student model.
 
 These relationships now consist of layers that can be thought of as probability distributions, similarity matrices, or feature embeddings. As a result, the student learns from the teacher’s model how to construct its embedding or distribution.
 
