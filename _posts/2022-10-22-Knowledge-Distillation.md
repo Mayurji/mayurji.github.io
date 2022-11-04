@@ -60,6 +60,55 @@ In feature and response-based knowledge distillation, the outputs from feature a
 
 These relationships now consist of layers that can be thought of as probability distributions, similarity matrices, or feature embeddings. As a result, the student learns from the teacher’s model how to construct its embedding or distribution.
 
+### How to train a student model from teacher model?
+
+Training a student model also called as Distillation Schemes, refers to how a teacher model can distil the knowledge to a student model, whether a student model can be trained along with teacher model or not. 
+
+Distillation scheme is divided into three main categories as follows
+
+- Offline Distillation
+
+- Online Distillation
+
+- Self-Distillation
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/5-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Distillation Schemes</p> 
+</center>
+
+ ### Offline Distillation
+
+Training a student model in offline mode consists of two steps
+
+1. Training a large teacher model on a set of training samples.
+
+2. Extracting knowledge from pre-trained teacher model in the form of logits or intermediate features.
+
+Logits and intermediate features are used as guide to train a student model. Usually the first step is not considered as knowledge distillation step as it assumed to be pre-defined. Offline Distillation mainly focuses on transfer of knowledge from specific parts of the teacher model like sharing probability distribution of data in the feature space or loss function for matching features. The main advantage of offline distillation is that it is easy to implement, but the only drawback is the initial training time required for the high-capacity teacher model.
+
+### Online Distillation
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/6-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Online Distillation</p> 
+</center>
+
+Though offline distillation is simple to implement, the issue remains in finding a large-capacity high performance teacher model, which is a prerequisite for offline distillation. Thus, to resolve this issue, comes the online distillation. In Online Distillation, the student and teacher model are updated simultaneously and the whole knowledge distillation is end-to-end trainable. Various works have been developed over the years like deep mutual learning, multiple neural network work in a collaborative way. 
+
+Researchers employed a online distillation to train large-scale distributed neural network, and proposed a variant of online distillation called co-distillation. Co-distillation in parallel trains multiple models with the same architectures and any one model is trained by transferring the knowledge from the other models. However, existing online methods (e.g., mutual learning) usually fails to address the high-capacity teacher in online settings.
+
+### Self-Distillation
+
+In self-distillation, the same network is used for both the teacher and student model. In 2019, researchers proposed a self-distillation method, in which knowledge from the deeper sections of the network is distilled into its shallow sections. 
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/7-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Self-Distillation: (i) A ResNet has been divided into four sections according to their depth. (ii) Additional bottleneck and fully connected layers are set after each section, which constitutes multiple classifiers. (iii) All of the classifiers can be utilized independently, with different accuracy and response time. (iv) Each classifier is trained under three kinds of supervision as depicted. (v) Parts under the dash line can be removed in inference.</p> 
+</center>
+
+Similar to self-distillation, self-attention was proposed for lane detection. The network utilizes the attention maps of its own layers as distillation targets for its lower layers. In other approach, knowledge from earlier epochs of the teacher model can be transferred to its later epochs to train the student model.
+
 To be continued. Til then
 
 <iframe src="https://giphy.com/embed/H48YKEw3fXrcvIF2xE" width="480" height="460" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wearebottle-study-information-absorbing-H48YKEw3fXrcvIF2xE">via GIPHY</a></p>
