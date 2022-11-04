@@ -67,9 +67,7 @@ Training a student model also called as Distillation Schemes, refers to how a te
 Distillation scheme is divided into three main categories as follows
 
 - Offline Distillation
-
 - Online Distillation
-
 - Self-Distillation
 
 <center>
@@ -82,7 +80,6 @@ Distillation scheme is divided into three main categories as follows
 Training a student model in offline mode consists of two steps
 
 1. Training a large teacher model on a set of training samples.
-
 2. Extracting knowledge from pre-trained teacher model in the form of logits or intermediate features.
 
 Logits and intermediate features are used as guide to train a student model. Usually the first step is not considered as knowledge distillation step as it assumed to be pre-defined. Offline Distillation mainly focuses on transfer of knowledge from specific parts of the teacher model like sharing probability distribution of data in the feature space or loss function for matching features. The main advantage of offline distillation is that it is easy to implement, but the only drawback is the initial training time required for the high-capacity teacher model.
