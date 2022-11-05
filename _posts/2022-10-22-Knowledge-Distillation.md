@@ -177,3 +177,7 @@ The data or labels for some modalities might not be available during training or
 Consider a pretrained teacher model, trained on RGB images (one modality) with large number of well annotated samples, now transfer this knowledge from teacher to student model with a new unlabeled input modality, such as depth or optical flow of the image. Specifically, the proposed method relies on unlabeled paired samples involving both modalities, i.e., both RGB and depth images. The features obtained from RGB images by the teacher are then used for the supervised training of the student.
 
 The idea behind the paired samples is to transfer the annotation or label information via pair-wise sample registration and has been widely used for cross-modal applications.
+
+### Reference
+
+**Paper: Knowledge Distillation: A Survey**
