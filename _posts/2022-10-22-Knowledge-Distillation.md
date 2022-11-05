@@ -104,6 +104,76 @@ In self-distillation, the same network is used for both the teacher and student 
 
 Similar to self-distillation, self-attention was proposed for lane detection. The network utilizes the attention maps of its own layers as distillation targets for its lower layers. In other approach, knowledge from earlier epochs of the teacher model can be transferred to its later epochs to train the student model.
 
-To be continued. Til then.
+### Teacher-Student Architecture 
 
-<iframe src="https://giphy.com/embed/H48YKEw3fXrcvIF2xE" width="480" height="460" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wearebottle-study-information-absorbing-H48YKEw3fXrcvIF2xE">via GIPHY</a></p>
+For knowledge distillation, the teacher-student architecture forms the generic carrier for knowledge transfer. The quality of knowledge acquisition and distillation from teacher to student is determined based on the design of the architecture. 
+
+Earlier, knowledge distillation was designed to compress an ensemble of deep neural networks. The complexity of deep neural network comes from two dimension: depth and width of the neural network. And we transfer knowledge from deeper and wider neural network to shallower and thinner neural network. 
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/8-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Building Student Model</p> 
+</center>
+
+A student models are built as a
+
+- Simplified version of teacher model with fewer layers and fewer neuron per layer.
+- A quantized version of teacher network, in which the structure of the network is maintained.
+- A small network with efficient basic operations.
+- A small network with optimized global network structure.
+- Network same as teacher network.
+
+Knowledge transfer degrades as the model capacity gap between the teacher and student model increases. Thus, to effectively share the knowledge a variety of methods are proposed as a Distillation Algorithms.
+
+1. Adversarial Distillation
+2. Multi-Teacher Distillation
+3. Cross-Model Distillation
+4. Graph-based Distillation
+5. Attention based Distillation
+6. Data-Free Distillation
+7. Quantized Distillation
+8. Lifelong Distillation
+9. NAS-based Distillation
+
+Now, each of these method is worth a separate blog post, so we'll learn few of these distillation which are widely used.
+
+### Adversarial Distillation
+
+GANs, generative adversarial networks contains a generator and a discriminator network, **the discriminator in a GAN estimates the probability that a sample comes from the training data distribution while the generator tries to fool the discriminator using generated data samples.** Inspired from this, many adversarial knowledge distillation methods are proposed to enable the teacher and student networks to have a better understanding of the true data distribution.
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/9-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>The different categories of the main adversarial distillation methods. (a) Generator in GAN produces training data to improve KD performance; the teacher may be used as discriminator. (b) Discriminator in GAN ensures that the student (also as generator) mimics the teacher. (c) Teacher and student form a generator; online knowledge distillation is enhanced by the discriminator.</p> 
+</center>
+
+Adversarial Learning is mainly divided into three categories as follows
+
+1. Building adversarial generator, that generates synthetic data either to create a training dataset or to augment the training dataset. 
+2. To match a student model to teacher model, a discriminator is used to distinguish the samples from the student and teacher models by using logits or the features.
+3. Adversarial learning-based distillation technique focuses on online distillation where the student and the teacher models are jointly optimized. 
+
+### Multi-Teacher Distillation
+
+Different teacher architectures can provide their own useful knowledge for a student network. The multiple teacher networks can be individually and integrally used for distillation during the period of training a student network. In a typical teacher-student framework, the teacher usually has a large model or an ensemble of large models. To transfer knowledge from multiple teachers, the simplest way is to use the averaged response from all teachers as the supervision signal.
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/10-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Multi-Teacher Distillation</p> 
+</center>
+
+Multiple teacher networks have turned out to be effective for training student model usually using logits and feature representation as the knowledge. In addition to the averaged logits from all teachers, we can further incorporate features from the intermediate layers in order to encourage the dissimilarity among different training samples. 
+
+Generally, multi-teacher knowledge distillation can provide rich knowledge and tailor a versatile student model because of the diverse knowledge from different teachers. However, how to effectively integrate different types of knowledge from multiple teachers needs to be further studied.
+
+### Cross-Modal Distillation
+
+The data or labels for some modalities might not be available during training or testing. For this reason it is important to transfer knowledge between different modalities. Several typical scenarios using cross-modal knowledge transfer are reviewed as follows.
+
+<center>
+<img src="{{site.url}}/assets/images/knowledgeDistillation/11-kd.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Cross-Modal Distillation</p> 
+</center>
+
+Consider a pretrained teacher model, trained on RGB images (one modality) with large number of well annotated samples, now transfer this knowledge from teacher to student model with a new unlabeled input modality, such as depth or optical flow of the image. Specifically, the proposed method relies on unlabeled paired samples involving both modalities, i.e., both RGB and depth images. The features obtained from RGB images by the teacher are then used for the supervised training of the student.
+
+The idea behind the paired samples is to transfer the annotation or label information via pair-wise sample registration and has been widely used for cross-modal applications.
