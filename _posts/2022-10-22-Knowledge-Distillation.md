@@ -106,6 +106,6 @@ In self-distillation, the same network is used for both the teacher and student 
 
 Similar to self-distillation, self-attention was proposed for lane detection. The network utilizes the attention maps of its own layers as distillation targets for its lower layers. In other approach, knowledge from earlier epochs of the teacher model can be transferred to its later epochs to train the student model.
 
-To be continued. Til then
+To be continued. Til then.
 
 <iframe src="https://giphy.com/embed/H48YKEw3fXrcvIF2xE" width="480" height="460" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wearebottle-study-information-absorbing-H48YKEw3fXrcvIF2xE">via GIPHY</a></p>
