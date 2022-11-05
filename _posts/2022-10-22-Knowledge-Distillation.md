@@ -62,9 +62,7 @@ These relationships now consist of layers that can be thought of as probability 
 
 ### How to train a student model from teacher model?
 
-Training a student model also called as Distillation Schemes, refers to how a teacher model can distil the knowledge to a student model, whether a student model can be trained along with teacher model or not. 
-
-Distillation scheme is divided into three main categories as follows
+Training a student model also called as Distillation Schemes, refers to how a teacher model can distil the knowledge to a student model, whether a student model can be trained along with teacher model or not. Distillation scheme is divided into three main categories as follows
 
 - Offline Distillation
 - Online Distillation
