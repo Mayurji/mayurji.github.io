@@ -75,7 +75,7 @@ Distillation scheme is divided into three main categories as follows
 <p>Distillation Schemes</p> 
 </center>
 
- ### Offline Distillation
+### Offline Distillation
 
 Training a student model in offline mode consists of two steps
 
