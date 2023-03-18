@@ -103,6 +103,62 @@ Here is an example of how to use the `transpose()` function to transpose an arra
   [2, 4, 6]]
 
 ```
+## Creating Distribution
+
+NumPy provides several functions for creating distribution. Here are some commonly used distribution functions:
+
+- `np.random.normal()`: Creates a normal distribution based on mu(mean) and sigma(variance)
+- `np.random.uniform()`: Creates a uniform distribution
+- `np.random.binomial`: Creates a binomial distribution based on n(trials) and p(probability).
+
+Here is an example of how to use the `normal()` function to create a normal distribution using an array:
+
+```python
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+
+  mu, sigma = 0, 0.1 #mean and variance
+  z = np.random.normal(mu, sigma, 100000)
+  plt.hist(z)
+  plt.show()
+
+```
+<center>
+<img src="{{site.url}}/assets/images/numpy/normal.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Normal Distribution</p> 
+</center>
+
+
+Here is an example of how to use the `uniform()` function to create a uniform distribution using an array:
+
+```python
+
+  z = np.random.uniform(0, 10, 100000)
+  plt.hist(z)
+  plt.show()
+
+```
+<center>
+<img src="{{site.url}}/assets/images/numpy/uniform.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Uniform Distribution</p> 
+</center>
+
+Here is an example of how to use the `binomial()` function to create a binomial distribution using an array:
+
+```python
+
+  n, p = 10, 0.5 
+  z = np.random.binomial(n, p, 1000000)
+  plt.hist(z)
+  plt.show()
+
+```
+<center>
+<img src="{{site.url}}/assets/images/numpy/binomial.png"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Binomial Distribution</p> 
+</center>
+
 
 ## Conclusion
 
