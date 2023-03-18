@@ -3,7 +3,7 @@ layout: post
 title:  Building An One-stop-shop For Numpy
 description: Find everything for Numpy here
 category: Blog
-date:   2022-10-25 13:43:52 +0530
+date:   2023-03-17 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
