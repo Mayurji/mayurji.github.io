@@ -15,16 +15,19 @@ If you are venturing into data science or machine learning, you will most likely
 
 Arrays are at the core of NumPy. Creating arrays in NumPy is straightforward, and there are several ways to do it. The most common way of creating arrays is by using the `array()` function, which takes in a list or tuple and returns an array. For example, to create a 1-dimensional array with three elements, you can use the following code:
 
-```
-import numpy as np
+```python
 
+import numpy as np
 my_array = np.array([1, 2, 3])
+
 ```
 
 If you want to create a two-dimensional array with three rows and two columns, you can use a nested list:
 
-```
+```python
+
 my_2d_array = np.array([[1, 2], [3, 4], [5, 6]])
+
 ```
 
 ## Mathematical operations
@@ -38,12 +41,17 @@ NumPy provides a wide range of mathematical functions to operate on arrays. Thes
 
 Here is an example of how to use the `add()` function to add two arrays:
 
-```
+```python
+
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
 c = np.add(a, b)
 
-print(c) # output: [5, 7, 9]
+print(c) 
+
+# output: 
+[5, 7, 9]
+
 ```
 
 ## Array manipulation
@@ -56,7 +64,8 @@ NumPy provides several functions for manipulating arrays. Here are some commonly
 
 Here is an example of how to use the `reshape()` function to reshape an array:
 
-```
+```python
+
 a = np.array([1, 2, 3, 4, 5, 6])
 b = np.reshape(a, (2, 3))
 print(b) 
@@ -64,11 +73,13 @@ print(b)
 # output: 
 [[1, 2, 3], 
  [4, 5, 6]]
+ 
 ```
 
 Here is an example of how to use the `concatenate()` function to join two arrays:
 
-```
+```python
+
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
 c = np.concatenate((a, b))
@@ -76,11 +87,13 @@ c = np.concatenate((a, b))
 print(c) 
 # output: 
 [1, 2, 3, 4, 5, 6]
+
 ```
 
 Here is an example of how to use the `transpose()` function to transpose an array:
 
-```
+```python
+
 a = np.array([[1, 2], [3, 4], [5, 6]])
 b = np.transpose(a)
 print(b)
@@ -88,6 +101,7 @@ print(b)
 # output: 
 [[1, 3, 5], 
  [2, 4, 6]]
+
 ```
 
 ## Conclusion
