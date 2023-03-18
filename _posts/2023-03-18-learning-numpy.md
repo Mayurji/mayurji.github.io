@@ -1,3 +1,12 @@
+---
+layout: post
+title:  Building An One-stop-shop For Numpy
+description: Find everything for Numpy here
+category: Blog
+date:   2022-10-25 13:43:52 +0530
+---
+{% include mathjax.html %}
+
 # Building a One-stop-shop for Numpy
 
 If you are venturing into data science or machine learning, you will most likely encounter the Python library NumPy. NumPy is an open-source library that is widely used in scientific computing and data analysis. It provides robust support for multi-dimensional arrays and matrices, and a wide range of mathematical functions to operate on them. Here are some of the most commonly used functions that can help you get started with NumPy.
