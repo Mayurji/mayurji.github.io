@@ -17,8 +17,8 @@ Arrays are at the core of NumPy. Creating arrays in NumPy is straightforward, an
 
 ```python
 
-import numpy as np
-my_array = np.array([1, 2, 3])
+ import numpy as np
+ my_array = np.array([1, 2, 3])
 
 ```
 
@@ -26,7 +26,7 @@ If you want to create a two-dimensional array with three rows and two columns, y
 
 ```python
 
-my_2d_array = np.array([[1, 2], [3, 4], [5, 6]])
+ my_2d_array = np.array([[1, 2], [3, 4], [5, 6]])
 
 ```
 
@@ -43,14 +43,14 @@ Here is an example of how to use the `add()` function to add two arrays:
 
 ```python
 
-a = np.array([1, 2, 3])
-b = np.array([4, 5, 6])
-c = np.add(a, b)
+ a = np.array([1, 2, 3])
+ b = np.array([4, 5, 6])
+ c = np.add(a, b)
 
-print(c) 
+ print(c) 
 
-# output: 
-[5, 7, 9]
+ # output: 
+ [5, 7, 9]
 
 ```
 
@@ -66,13 +66,13 @@ Here is an example of how to use the `reshape()` function to reshape an array:
 
 ```python
 
-a = np.array([1, 2, 3, 4, 5, 6])
-b = np.reshape(a, (2, 3))
-print(b) 
+ a = np.array([1, 2, 3, 4, 5, 6])
+ b = np.reshape(a, (2, 3))
+ print(b) 
 
-# output: 
-[[1, 2, 3], 
- [4, 5, 6]]
+ # output: 
+ [[1, 2, 3], 
+  [4, 5, 6]]
  
 ```
 
@@ -80,13 +80,13 @@ Here is an example of how to use the `concatenate()` function to join two arrays
 
 ```python
 
-a = np.array([1, 2, 3])
-b = np.array([4, 5, 6])
-c = np.concatenate((a, b))
+ a = np.array([1, 2, 3])
+ b = np.array([4, 5, 6])
+ c = np.concatenate((a, b))
 
-print(c) 
-# output: 
-[1, 2, 3, 4, 5, 6]
+ print(c) 
+ # output: 
+ [1, 2, 3, 4, 5, 6]
 
 ```
 
@@ -94,13 +94,13 @@ Here is an example of how to use the `transpose()` function to transpose an arra
 
 ```python
 
-a = np.array([[1, 2], [3, 4], [5, 6]])
-b = np.transpose(a)
-print(b)
+ a = np.array([[1, 2], [3, 4], [5, 6]])
+ b = np.transpose(a)
+ print(b)
 
-# output: 
-[[1, 3, 5], 
- [2, 4, 6]]
+ # output: 
+ [[1, 3, 5], 
+  [2, 4, 6]]
 
 ```
 
