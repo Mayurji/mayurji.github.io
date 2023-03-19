@@ -103,6 +103,32 @@ Here is an example of how to use the `transpose()` function to transpose an arra
   [2, 4, 6]]
 
 ```
+## Set Operations
+
+NumPy provides functions for performing set operations like union and intersect:
+
+- `np.union1d()`: Creates a array of unique elements in two arrays.
+- `np.intersect1d()`: Finds the intersection between two array.
+
+Here is an example for both
+
+```python
+
+  a = np.array([1, 2, 0])
+  b = np.array([1, 3, 4])
+
+  print(np.union1d(a, b))
+
+  # output:
+  [0, 1, 2, 3, 4]
+
+  print(np.intersect1d(a, b))
+
+  # output:
+  [1]
+
+```
+
 ## Creating Distribution
 
 NumPy provides several functions for creating distribution. Here are some commonly used distribution functions:
