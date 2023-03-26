@@ -128,7 +128,41 @@ Here is an example for both
   [1]
 
 ```
+## Numpy Datetime
 
+NumPy provides functions for finding and manipulating dates:
+
+- `np.datetime64()`: We can get the date in any format.
+- `np.is_busday()`: To find the business day. By default, it considers saturday and sunday as not business days, however, it is customizable.
+
+Here is an example for both
+
+```python
+
+  today = np.datetime64("today")
+  print(today)
+
+  # output:
+  2023-03-19
+
+```
+```python
+
+  print(np.is_busday(np.datetime64('today')))
+
+  # output:
+  False
+
+```
+```python
+
+  #How to generate a range of dates:
+  np.arange('2023-01', '2023-02', dtype='datetime64[W]') #W - Week, replace with D
+
+  # output:
+  ['2022-12-29' '2023-01-05' '2023-01-12' '2023-01-19']
+
+```
 ## Creating Distribution
 
 NumPy provides several functions for creating distribution. Here are some commonly used distribution functions:
