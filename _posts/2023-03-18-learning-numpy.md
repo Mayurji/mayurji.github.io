@@ -103,6 +103,68 @@ Here is an example of how to use the `transpose()` function to transpose an arra
   [2, 4, 6]]
 
 ```
+## Slicing and Dicing in Numpy
+
+NumPy provides functions to extract individual or range of elements based on index and conditions:
+
+Here are few examples,
+
+```python
+
+  'Creating Multidimensional array'
+  
+  array = np.random.randint(20, size=(4, 5)) #4 rows, 5 columns
+
+  print(array)
+
+  # output:
+  [[11, 1, 2, 10, 17],
+  [10, 11, 14, 3, 4],
+  [19, 12, 5, 7, 13],
+  [18, 15, 2, 9, 7]]
+
+  'To fetch first row, first element'
+  
+  print(array[0][0])
+
+  # output:
+  11
+
+  'To extract a subset of an array'
+
+  print(array[0:3][:2])
+
+  # output:
+  [[11, 1],
+   [10, 11],
+   [19, 12]]
+
+  'To extract one column from an array'
+
+  print(array[:,:1])
+
+  # output:
+  [[11],
+   [10],
+   [19],
+   [18],]
+
+  'To extract one row from an array'
+
+  print(array[2:3,:])
+
+  # output:
+  [[19, 12, 5, 7, 13]]
+
+  'To extract elements based on values'
+
+  print(array[array>15])
+
+  # output:
+  [17, 19, 18]
+
+```
+
 ## Set Operations
 
 NumPy provides functions for performing set operations like union and intersect:
