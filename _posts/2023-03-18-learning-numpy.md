@@ -109,10 +109,10 @@ NumPy provides functions to extract individual or range of elements based on ind
 
 Here are few examples,
 
+Creating Multidimensional array
+
 ```python
 
-  'Creating Multidimensional array'
-  
   array = np.random.randint(20, size=(4, 5)) #4 rows, 5 columns
 
   print(array)
@@ -123,15 +123,23 @@ Here are few examples,
   [19, 12, 5, 7, 13],
   [18, 15, 2, 9, 7]]
 
-  'To fetch first row, first element'
-  
+```
+
+To fetch first row, first element:
+
+```
+
   print(array[0][0])
 
   # output:
   11
 
-  'To extract a subset of an array'
+```
 
+To extract a subset of an array,
+
+```python
+  
   print(array[0:3][:2])
 
   # output:
@@ -139,7 +147,11 @@ Here are few examples,
    [10, 11],
    [19, 12]]
 
-  'To extract one column from an array'
+```
+
+To extract one column from an array,
+
+```python
 
   print(array[:,:1])
 
@@ -149,14 +161,22 @@ Here are few examples,
    [19],
    [18],]
 
-  'To extract one row from an array'
+```
+
+To extract one row from an array,
+
+```python
 
   print(array[2:3,:])
 
   # output:
   [[19, 12, 5, 7, 13]]
 
-  'To extract elements based on values'
+```
+
+To extract elements based on values'
+
+```python
 
   print(array[array>15])
 
