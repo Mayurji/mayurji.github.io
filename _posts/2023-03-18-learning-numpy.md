@@ -127,7 +127,7 @@ Creating Multidimensional array
 
 To fetch first row, first element:
 
-```
+```python
 
   print(array[0][0])
 
