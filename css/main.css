@@ -197,13 +197,13 @@ h5 {
 }
 
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #0debdc;
     /*font-size: 1vw;*/
 }
 
 ul.posts { 
     margin: 20px auto 40px;
-    color: #8eb5eb;
+    color: #178b8d;
 }
 
 ul.posts li {
