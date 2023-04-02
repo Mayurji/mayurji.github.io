@@ -7,6 +7,12 @@ date:   2023-03-24 13:43:52 +0530
 ---
 {% include mathjax.html %}
 
+<center>
+<img src="{{site.url}}/assets/images/blogs-images/code_small.jpg"  style="zoom: 5%  background-color:#DCDCDC;"  width="80%" height=auto/><br>
+<p>Photo by <a href="https://unsplash.com/ja/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Olivo</a> on <a href="https://unsplash.com/photos/4hbJ-eymZ1o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p> 
+</center>
+
 Python provides several built-in modules that can be used to handle data in various formats such as JSON, XML, CSV, and more. Here's a brief introduction to some of these modules:
 
 ## JSON
